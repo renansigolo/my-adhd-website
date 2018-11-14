@@ -1,3 +1,29 @@
+# My ADHD Landing
+
+Landing page for the app **My ADHD**
+
+## Build
+
+Run `yarn build` to build the project.
+
+## Built With
+
+* [React JS](https://reactjs.org/)
+
+## Authors
+
+* [Renan Sigolo](https://github.com/renansigolo)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Acknowledgments
+
+* Inspiring the world to be more collaborative.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
