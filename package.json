@@ -1,16 +1,28 @@
 {
   "name": "my-adhd-website",
   "version": "0.1.0",
-  "author": "Renan Sigolo <renan.sigolo@gmail.com>",
+  "description": "My ADHD Website",
+  "homepage": "https://myadhd.com.au",
+  "bugs": {
+    "url": "https://github.com/renansigolo/my-adhd-website/issues",
+    "email": "renan.sigolo@gmail.com"
+  },
   "license": "Apache-2.0",
+  "author": "Renan Sigolo <renan.sigolo@gmail.com>",
   "private": false,
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renansigolo/my-adhd-website.git"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "update": "yarn upgrade-interactive --latest",
-    "prettier": "prettier --config ./.prettierrc.json --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
+    "deploy": "yarn build && firebase deploy",
+    "prettier": "prettier --config ./.prettierrc.json --write './**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.0",

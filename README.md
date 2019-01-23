@@ -8,14 +8,14 @@ Run `yarn build` to build the project.
 
 ## Built With
 
-* [Create React App](https://facebook.github.io/create-react-app/)
-* [React JS](https://reactjs.org/)
-* [React Intl](https://github.com/yahoo/react-intl)
-* [Material UI](https://material-ui.com/)
+- [Create React App](https://facebook.github.io/create-react-app/)
+- [React JS](https://reactjs.org/)
+- [React Intl](https://github.com/yahoo/react-intl)
+- [Material UI](https://material-ui.com/)
 
 ## Authors
 
-* [Renan Sigolo](https://github.com/renansigolo)
+- [Renan Sigolo](https://github.com/renansigolo)
 
 ## License
 
@@ -23,7 +23,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-* Inspiring the world to be more collaborative.
+- Inspiring the world to be more collaborative.
 
 ## Available Scripts
 
