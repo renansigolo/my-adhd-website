@@ -11,12 +11,12 @@ import playStoreBagde from '../assets/badges/play-store.svg'
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    margin: theme.spacing.unit * 4
+    margin: theme.spacing(4)
   },
   badge: {
     width: '300px',
     height: '100px',
-    margin: '40px'
+    margin: '80px 40px 40px'
   }
 })
 
@@ -38,7 +38,7 @@ function Downloads(props) {
         direction="row"
         justify="center"
         alignItems="center"
-        spacing={16}
+        spacing={10}
       >
         <a href="https://itunes.apple.com/us/app/tdah/id1375236150?ls=1&mt=8">
           <img

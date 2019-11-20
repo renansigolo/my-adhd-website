@@ -5,19 +5,11 @@ import Typography from '@material-ui/core/Typography'
 export default class Footer extends React.Component {
   render() {
     return (
-      <Grid
-        container
-        direction="row"
-        justify="center"
-        alignItems="center"
-        spacing={24}
-      >
-        <Grid item xs={12}>
-          <Typography variant="caption" gutterBottom>
-            &copy; {1900 + new Date().getYear()}, proudly made in Australia by
-            Renan Sigolo.
-          </Typography>
-        </Grid>
+      <Grid container direction="row" justify="center" alignItems="center">
+        <Typography variant="caption" gutterBottom>
+          &copy; {1900 + new Date().getYear()}, proudly made in Australia by
+          Renan Sigolo.
+        </Typography>
       </Grid>
     )
   }

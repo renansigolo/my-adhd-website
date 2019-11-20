@@ -11,7 +11,7 @@ import { FormattedHTMLMessage } from 'react-intl'
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    margin: theme.spacing.unit * 5,
+    margin: theme.spacing(5),
     justify: 'center',
     alignItems: 'center'
   },
@@ -29,7 +29,7 @@ function ContactForm(props) {
         <FormattedHTMLMessage id="contact.title" />
       </Typography>
       <form noValidate autoComplete="off">
-        <Grid container spacing={16}>
+        <Grid container spacing={5}>
           <Grid item xs={12} sm={6}>
             <TextField
               id="outlined-name"

@@ -14,7 +14,7 @@ import iphone_03 from '../assets/features/iphone-03.png'
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    margin: theme.spacing.unit * 5
+    margin: theme.spacing(4)
   },
   fullWidth: {
     width: '100%'
@@ -26,7 +26,13 @@ function Features(props) {
 
   return (
     <div className={classes.root}>
-      <Grid item xs={12}>
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+        spacing={8}
+      >
         <Typography variant="h3" gutterBottom>
           <FormattedHTMLMessage id="features.title" />
         </Typography>
@@ -36,7 +42,7 @@ function Features(props) {
         direction="row"
         justify="center"
         alignItems="center"
-        spacing={24}
+        spacing={10}
       >
         <Grid item xs={12} sm={4}>
           <img
