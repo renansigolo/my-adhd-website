@@ -1,9 +1,7 @@
+import { Grid, Typography } from '@material-ui/core'
 import React from 'react'
-import logo from '../logo.svg'
 import { FormattedHTMLMessage } from 'react-intl'
-
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
+import logo from '../logo.svg'
 
 export default class Header extends React.Component {
   render() {

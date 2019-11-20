@@ -1,12 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import { Grid, Icon, Typography } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
-import Icon from '@material-ui/core/Icon'
-import Typography from '@material-ui/core/Typography'
-
+import PropTypes from 'prop-types'
+import React from 'react'
 import { FormattedHTMLMessage } from 'react-intl'
-
 import iphone_01 from '../assets/features/iphone-01.png'
 import iphone_02 from '../assets/features/iphone-02.png'
 import iphone_03 from '../assets/features/iphone-03.png'
