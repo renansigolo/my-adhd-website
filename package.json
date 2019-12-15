@@ -15,7 +15,7 @@
     "url": "https://github.com/renansigolo/my-adhd-website.git"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "update": "npm run upgrade-interactive --latest",
@@ -30,11 +30,9 @@
     "react-scripts": "3.2.0"
   },
   "devDependencies": {
-    "customize-cra": "^0.9.1",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
-    "prettier": "^1.18.2",
-    "react-app-rewired": "^2.1.5"
+    "prettier": "^1.18.2"
   },
   "engines": {
     "node": ">=12.0.0",
