@@ -11,13 +11,13 @@ import Downloads from './components/Downloads'
 
 window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     ...theme.mixins.gutters(),
     margin: theme.spacing(3),
     paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2)
-  }
+    paddingBottom: theme.spacing(2),
+  },
 })
 
 function App(props) {

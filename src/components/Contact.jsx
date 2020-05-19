@@ -3,16 +3,16 @@ import { withStyles } from '@material-ui/core/styles'
 import React from 'react'
 import { FormattedHTMLMessage } from 'react-intl'
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     flexGrow: 1,
     margin: theme.spacing(5),
     justify: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   messageInput: {
-    marginTop: 0
-  }
+    marginTop: 0,
+  },
 })
 
 function ContactForm(props) {

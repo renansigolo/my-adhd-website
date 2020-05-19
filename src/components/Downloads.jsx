@@ -5,16 +5,16 @@ import { FormattedHTMLMessage } from 'react-intl'
 import appleStoreBagde from '../assets/badges/app-store-badge-en.svg'
 import playStoreBagde from '../assets/badges/play-store.svg'
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     flexGrow: 1,
-    margin: theme.spacing(4)
+    margin: theme.spacing(4),
   },
   badge: {
     width: '300px',
     height: '100px',
-    margin: '80px 40px 40px'
-  }
+    margin: '80px 40px 40px',
+  },
 })
 
 function Downloads(props) {

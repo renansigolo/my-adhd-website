@@ -7,14 +7,14 @@ import iphone_01 from '../assets/features/iphone-01.png'
 import iphone_02 from '../assets/features/iphone-02.png'
 import iphone_03 from '../assets/features/iphone-03.png'
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     flexGrow: 1,
-    margin: theme.spacing(4)
+    margin: theme.spacing(4),
   },
   fullWidth: {
-    width: '100%'
-  }
+    width: '100%',
+  },
 })
 
 function Features(props) {
@@ -94,7 +94,7 @@ function Features(props) {
 }
 
 Features.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 }
 
 export default withStyles(styles)(Features)

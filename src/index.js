@@ -12,7 +12,7 @@ import * as serviceWorker from './serviceWorker'
 const messages = {
   en: messages_en,
   es: messages_es,
-  pt: messages_pt
+  pt: messages_pt,
 }
 const language = navigator.language.split(/[-_]/)[0]
 
