@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
 import React from 'react'
-import { FormattedHTMLMessage } from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 import appleStoreBagde from '../assets/badges/app-store-badge-en.svg'
 import playStoreBagde from '../assets/badges/play-store.svg'
 
@@ -23,11 +23,11 @@ function Downloads(props) {
   return (
     <div className={classes.root}>
       <Typography variant="h3" gutterBottom>
-        <FormattedHTMLMessage id="downloads.title" />
+        <FormattedMessage id="downloads.title" />
       </Typography>
 
       <Typography component="p">
-        <FormattedHTMLMessage id="downloads.description" />
+        <FormattedMessage id="downloads.description" />
       </Typography>
 
       <Grid

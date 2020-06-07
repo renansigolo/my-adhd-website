@@ -1,7 +1,7 @@
 import { Button, Grid, TextField, Typography } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
 import React from 'react'
-import { FormattedHTMLMessage } from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 const styles = (theme) => ({
   root: {
@@ -21,7 +21,7 @@ function ContactForm(props) {
   return (
     <div className={classes.root}>
       <Typography variant="h3" gutterBottom>
-        <FormattedHTMLMessage id="contact.title" />
+        <FormattedMessage id="contact.title" />
       </Typography>
       <form noValidate autoComplete="off">
         <Grid container spacing={5}>
@@ -58,7 +58,7 @@ function ContactForm(props) {
           <Grid container direction="row" justify="center" alignItems="center">
             <Grid item>
               <Button variant="contained" color="primary" size="large">
-                <FormattedHTMLMessage id="contact.submit" />
+                <FormattedMessage id="contact.submit" />
               </Button>
             </Grid>
           </Grid>
