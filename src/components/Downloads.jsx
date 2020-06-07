@@ -1,23 +1,20 @@
-import React from 'react'
-
+import { Grid, Typography } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
-import { FormattedHTMLMessage } from 'react-intl'
-
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
 import appleStoreBagde from '../assets/badges/app-store-badge-en.svg'
 import playStoreBagde from '../assets/badges/play-store.svg'
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     flexGrow: 1,
-    margin: theme.spacing.unit * 4
+    margin: theme.spacing(4),
   },
   badge: {
     width: '300px',
     height: '100px',
-    margin: '40px'
-  }
+    margin: '80px 40px 40px',
+  },
 })
 
 function Downloads(props) {
@@ -26,11 +23,11 @@ function Downloads(props) {
   return (
     <div className={classes.root}>
       <Typography variant="h3" gutterBottom>
-        <FormattedHTMLMessage id="downloads.title" />
+        <FormattedMessage id="downloads.title" />
       </Typography>
 
       <Typography component="p">
-        <FormattedHTMLMessage id="downloads.description" />
+        <FormattedMessage id="downloads.description" />
       </Typography>
 
       <Grid
@@ -38,7 +35,7 @@ function Downloads(props) {
         direction="row"
         justify="center"
         alignItems="center"
-        spacing={16}
+        spacing={10}
       >
         <a href="https://itunes.apple.com/us/app/tdah/id1375236150?ls=1&mt=8">
           <img

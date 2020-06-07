@@ -1,23 +1,18 @@
-import React from 'react'
-
+import { Button, Grid, TextField, Typography } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
-import TextField from '@material-ui/core/TextField'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
-import Grid from '@material-ui/core/Grid'
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import { FormattedHTMLMessage } from 'react-intl'
-
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     flexGrow: 1,
-    margin: theme.spacing.unit * 5,
+    margin: theme.spacing(5),
     justify: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   messageInput: {
-    marginTop: 0
-  }
+    marginTop: 0,
+  },
 })
 
 function ContactForm(props) {
@@ -26,10 +21,10 @@ function ContactForm(props) {
   return (
     <div className={classes.root}>
       <Typography variant="h3" gutterBottom>
-        <FormattedHTMLMessage id="contact.title" />
+        <FormattedMessage id="contact.title" />
       </Typography>
       <form noValidate autoComplete="off">
-        <Grid container spacing={16}>
+        <Grid container spacing={5}>
           <Grid item xs={12} sm={6}>
             <TextField
               id="outlined-name"
@@ -63,7 +58,7 @@ function ContactForm(props) {
           <Grid container direction="row" justify="center" alignItems="center">
             <Grid item>
               <Button variant="contained" color="primary" size="large">
-                <FormattedHTMLMessage id="contact.submit" />
+                <FormattedMessage id="contact.submit" />
               </Button>
             </Grid>
           </Grid>
