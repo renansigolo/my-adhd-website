@@ -23,7 +23,7 @@
     "prettier": "prettier --config ./.prettierrc.json --write './**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
-    "@material-ui/core": "^4.9.14",
+    "@material-ui/core": "^4.10.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-intl": "^3.12.1",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "husky": "^4.2.5",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.2.9",
     "prettier": "^2.0.5"
   },
   "engines": {
@@ -55,8 +55,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --config ./.prettierrc.json --write",
-      "git add"
+      "prettier --config ./.prettierrc.json --write"
     ]
   }
 }
