@@ -19,6 +19,41 @@ const styles = (theme) => ({
 
 function Features(props) {
   const { classes } = props
+  const cards = [
+    {
+      img: iphone_01,
+      icon: 'chat',
+      title: 'features.card.title-01',
+      subtitle: 'features.card.description-01',
+    },
+    {
+      img: iphone_02,
+      icon: 'call_split',
+      title: 'features.card.title-02',
+      subtitle: 'features.card.description-02',
+    },
+    {
+      img: iphone_03,
+      icon: 'face',
+      title: 'features.card.title-03',
+      subtitle: 'features.card.description-03',
+    },
+  ]
+
+  const cardItems = cards.map((card, index) => (
+    <Grid item xs={12} sm={4} key={index}>
+      <img src={card.img} className={classes.fullWidth} alt="iPhone Portrait" />
+      <Grid container direction="row" justify="center" alignItems="center">
+        <Icon fontSize="large">{card.icon}</Icon>
+      </Grid>
+      <Typography variant="h5" component="h3">
+        <FormattedMessage id={card.title} />
+      </Typography>
+      <Typography component="p">
+        <FormattedMessage id={card.subtitle} />
+      </Typography>
+    </Grid>
+  ))
 
   return (
     <div className={classes.root}>
@@ -33,6 +68,7 @@ function Features(props) {
           <FormattedMessage id="features.title" />
         </Typography>
       </Grid>
+
       <Grid
         container
         direction="row"
@@ -40,54 +76,7 @@ function Features(props) {
         alignItems="center"
         spacing={10}
       >
-        <Grid item xs={12} sm={4}>
-          <img
-            src={iphone_01}
-            className={classes.fullWidth}
-            alt="iPhone Portrait"
-          />
-          <Grid container direction="row" justify="center" alignItems="center">
-            <Icon fontSize="large">chat</Icon>
-          </Grid>
-          <Typography variant="h5" component="h3">
-            <FormattedMessage id="features.card.title-01" />
-          </Typography>
-          <Typography component="p">
-            <FormattedMessage id="features.card.description-01" />
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <img
-            src={iphone_02}
-            className={classes.fullWidth}
-            alt="iPhone Portrait"
-          />
-          <Grid container direction="row" justify="center" alignItems="center">
-            <Icon fontSize="large">call_split</Icon>
-          </Grid>
-          <Typography variant="h5" component="h3">
-            <FormattedMessage id="features.card.title-02" />
-          </Typography>
-          <Typography component="p">
-            <FormattedMessage id="features.card.description-02" />
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <img
-            src={iphone_03}
-            className={classes.fullWidth}
-            alt="iPhone Portrait"
-          />
-          <Grid container direction="row" justify="center" alignItems="center">
-            <Icon fontSize="large">face</Icon>
-          </Grid>
-          <Typography variant="h5" component="h3">
-            <FormattedMessage id="features.card.title-03" />
-          </Typography>
-          <Typography component="p">
-            <FormattedMessage id="features.card.description-03" />
-          </Typography>
-        </Grid>
+        {cardItems}
       </Grid>
     </div>
   )

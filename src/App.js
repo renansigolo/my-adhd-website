@@ -1,13 +1,11 @@
-import React from 'react'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import './App.css'
-import Paper from '@material-ui/core/Paper'
+import { CssBaseline, Grid } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
-
-import Header from './components/Header'
+import React from 'react'
+import './App.css'
+import Downloads from './components/Downloads'
 import Features from './components/Features'
 import Footer from './components/Footer'
-import Downloads from './components/Downloads'
+import Hero from './components/Hero'
 
 window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true
 
@@ -21,17 +19,24 @@ const styles = (theme) => ({
 })
 
 function App(props) {
-  const { classes } = props
   return (
     <React.Fragment>
       <CssBaseline />
-      <Header />
-      <Paper className={classes.root} elevation={2}>
-        <Downloads />
-      </Paper>
-      <Paper className={classes.root} elevation={1}>
-        <Features />
-      </Paper>
+
+      <Grid
+        container
+        direction="column"
+        justify="center"
+        alignItems="center"
+        className="hero-bg"
+      >
+        <Hero />
+      </Grid>
+
+      <Downloads />
+
+      <Features />
+
       <Footer />
     </React.Fragment>
   )

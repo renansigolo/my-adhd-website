@@ -6,15 +6,15 @@ span {
   text-align: center;
 }
 
-.Header-logo {
-  height: 40vh;
+.hero-logo {
+  height: 250px;
 }
 
-.Header-bg {
+.hero-bg {
   background-image: url('assets/header/bg-header.jpg');
   background-size: cover;
   background-position: center center;
-  min-height: 100vh;
+  min-height: 80vh;
   color: #fff;
 }
 
