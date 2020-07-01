@@ -1,14 +1,17 @@
 {
   "contact.submit": "Enviar",
   "contact.title": "Contato",
+  "downloads.android": "Baixar na Play Store",
   "downloads.description": "Nosso aplicativo está disponível em qualquer dispositivo móvel! Baixe agora para começar!",
+  "downloads.ios": "Baixar na App Store",
   "downloads.title": "Descubra tudo sobre o TDAH!",
-  "features.card.description-01": "Testes para distúrbios de TDAH, Déficit de Atenção ou Hiperatividade",
-  "features.card.description-02": "Aprenda a lidar com o TDAH de maneira prática, simples e interativa.",
-  "features.card.description-03": "Analise suas emoções em tempo real e receba feedback de possíveis ações que possam ajudá-lo naquele momento.",
-  "features.card.title-01": "Diagnósticos",
-  "features.card.title-02": "Tutoriais",
-  "features.card.title-03": "Análise de emoção",
+  "features.card.description1": "Testes para distúrbios de TDAH, Déficit de Atenção ou Hiperatividade",
+  "features.card.description2": "Aprenda a lidar com o TDAH de maneira prática, simples e interativa.",
+  "features.card.description3": "Analise suas emoções em tempo real e receba feedback de possíveis ações que possam ajudá-lo naquele momento.",
+  "features.card.title1": "Diagnósticos",
+  "features.card.title2": "Tutoriais",
+  "features.card.title3": "Análise de emoção",
   "features.title": "Características",
-  "header.title": "O primeiro aplicativo de TDAH com análise cognitiva!"
+  "hero.subtitle": "O primeiro aplicativo de TDAH com análise cognitiva!",
+  "hero.title": "My ADHD"
 }

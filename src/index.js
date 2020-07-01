@@ -1,13 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { IntlProvider } from 'react-intl'
-
+import App from './App'
+import * as serviceWorker from './serviceWorker'
 import messages_en from './translations/en.json'
 import messages_es from './translations/es.json'
 import messages_pt from './translations/pt.json'
-
-import App from './App'
-import * as serviceWorker from './serviceWorker'
 
 const messages = {
   en: messages_en,

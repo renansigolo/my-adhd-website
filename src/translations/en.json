@@ -1,14 +1,17 @@
 {
   "contact.submit": "Submit",
   "contact.title": "Contact us",
+  "downloads.android": "Download on the Play Store",
   "downloads.description": "Our app is available on any mobile device! Download now to get started!",
+  "downloads.ios": "Download on the App Store",
   "downloads.title": "Discover what ADHD is all about!",
-  "features.card.description-01": "Test for ADHD, Attention-Deficit or Hyperactivity disorders",
-  "features.card.description-02": "Learn how to deal with ADHD in a practical, simple and interactive way.",
-  "features.card.description-03": "Analyze your emotions in real time and receive feedback for possible actions that may help you in that moment.",
-  "features.card.title-01": "Diagnostics",
-  "features.card.title-02": "Comprehensive Guides",
-  "features.card.title-03": "Emotion Analysis",
+  "features.card.description1": "Test for ADHD, Attention-Deficit or Hyperactivity disorders",
+  "features.card.description2": "Learn how to deal with ADHD in a practical, simple and interactive way.",
+  "features.card.description3": "Analyze your emotions in real time and receive feedback for possible actions that may help you in that moment.",
+  "features.card.title1": "Diagnostics",
+  "features.card.title2": "Comprehensive Guides",
+  "features.card.title3": "Emotion Analysis",
   "features.title": "Features",
-  "header.title": "The first ADHD app with cognitive analysis!"
+  "hero.subtitle": "The first ADHD app with cognitive analysis!",
+  "hero.title": "My ADHD"
 }
