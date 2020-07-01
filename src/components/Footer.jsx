@@ -1,15 +1,25 @@
-import { Grid, Typography } from '@material-ui/core'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Grid, Typography, Box } from '@material-ui/core'
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 
-export default class Footer extends React.Component {
-  render() {
-    return (
-      <Grid container direction="row" justify="center" alignItems="center">
-        <Typography variant="caption" gutterBottom>
-          &copy; {1900 + new Date().getYear()}, proudly made in Australia by
-          Renan Sigolo.
-        </Typography>
-      </Grid>
-    )
-  }
+function Footer() {
+  return (
+    <footer>
+      <Box display="flex" height="60px">
+        <Grid container justify="center" alignItems="center">
+          <Typography variant="caption">
+            <FormattedMessage
+              id="footer.title"
+              defaultMessage="Made with {heartIcon} by Renan Sigolo."
+              values={{ heartIcon: <FontAwesomeIcon icon={faHeart} /> }}
+            />
+          </Typography>
+        </Grid>
+      </Box>
+    </footer>
+  )
 }
+
+export default Footer

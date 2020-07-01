@@ -1,23 +1,59 @@
-h1,
-h2,
-h3,
-p,
-span {
-  text-align: center;
+.hero-logo {
+  height: 250px;
 }
 
-.Header-logo {
-  height: 40vh;
-}
-
-.Header-bg {
+.hero-bg {
   background-image: url('assets/header/bg-header.jpg');
   background-size: cover;
   background-position: center center;
-  min-height: 100vh;
+  min-height: 80vh;
   color: #fff;
 }
 
-a:hover {
-  transform: scale(1.1);
+footer {
+  background-color: #d2d2d2;
+}
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.grid-1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+}
+@media (min-width: 960px) {
+  .grid-1 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+}
+@media (min-width: 960px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+}
+@media (min-width: 960px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
 }
