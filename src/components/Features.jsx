@@ -65,11 +65,11 @@ function Features() {
   ))
 
   return (
-    <div className={classes.root}>
+    <section className={classes.root}>
       <Container className={classes.grid}>
         <div className="grid-3">{cardItems}</div>
       </Container>
-    </div>
+    </section>
   )
 }
 

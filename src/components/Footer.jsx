@@ -6,17 +6,19 @@ import { FormattedMessage } from 'react-intl'
 
 function Footer() {
   return (
-    <Box display="flex" height="40px">
-      <Grid container justify="center" alignItems="center">
-        <Typography variant="caption" gutterBottom>
-          <FormattedMessage
-            id="footer.title"
-            defaultMessage="Made with {heartIcon} by Renan Sigolo."
-            values={{ heartIcon: <FontAwesomeIcon icon={faHeart} /> }}
-          />
-        </Typography>
-      </Grid>
-    </Box>
+    <footer>
+      <Box display="flex" height="60px">
+        <Grid container justify="center" alignItems="center">
+          <Typography variant="caption">
+            <FormattedMessage
+              id="footer.title"
+              defaultMessage="Made with {heartIcon} by Renan Sigolo."
+              values={{ heartIcon: <FontAwesomeIcon icon={faHeart} /> }}
+            />
+          </Typography>
+        </Grid>
+      </Box>
+    </footer>
   )
 }
 

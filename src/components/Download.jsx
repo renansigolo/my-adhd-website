@@ -23,41 +23,43 @@ function Download() {
   const classes = useStyles()
 
   return (
-    <Container className={classes.root}>
-      <Box mb={3}>
-        <Typography variant="h3" component="h2" align="center">
-          <FormattedMessage id="downloads.title" />
-        </Typography>
+    <section>
+      <Container className={classes.root}>
+        <Box mb={3}>
+          <Typography variant="h3" component="h2" align="center">
+            <FormattedMessage id="downloads.title" />
+          </Typography>
 
-        <Typography variant="subtitle1" component="p" align="center">
-          <FormattedMessage id="downloads.description" />
-        </Typography>
-      </Box>
+          <Typography variant="subtitle1" component="p" align="center">
+            <FormattedMessage id="downloads.description" />
+          </Typography>
+        </Box>
 
-      <Grid container justify="center">
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          className={classes.button}
-          startIcon={<FontAwesomeIcon icon={faAppStore} />}
-          href="https://itunes.apple.com/us/app/tdah/id1375236150?ls=1&mt=8"
-        >
-          Download iOS
-        </Button>
+        <Grid container justify="center">
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            className={classes.button}
+            startIcon={<FontAwesomeIcon icon={faAppStore} />}
+            href="https://itunes.apple.com/us/app/tdah/id1375236150?ls=1&mt=8"
+          >
+            Download iOS
+          </Button>
 
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          className={classes.button}
-          startIcon={<FontAwesomeIcon icon={faGooglePlay} />}
-          href="https://play.google.com/store/apps/details?id=tk.tdah"
-        >
-          Download Android
-        </Button>
-      </Grid>
-    </Container>
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            className={classes.button}
+            startIcon={<FontAwesomeIcon icon={faGooglePlay} />}
+            href="https://play.google.com/store/apps/details?id=tk.tdah"
+          >
+            Download Android
+          </Button>
+        </Grid>
+      </Container>
+    </section>
   )
 }
 
