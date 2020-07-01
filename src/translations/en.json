@@ -1,10 +1,13 @@
 {
+  "about.text": "This app first started as a graduation project with the main purpose of providing an accessible source of knowledge to people, I’ve written all the content myself based on years of treatment and I do not discourage the use of the medication whatsoever, actually I encourage it because I cannot live without it. So I’ll actually review the content and try to present it in a more encouraging way.",
+  "about.text2": "Lastly, I just wanted to clarify that the app has unexpectedly gained a lot of attention and it had thousands of downloads over night but unfortunately I’m a single person maintaining all the content and also all the development of the app without any help or any sort of income from it, thus which is the reason why it’s been so hard for me to maintain it.\nI hope that this could help clarify things and I’ll definitely address the points that you’ve mentioned.",
+  "about.title": "About",
   "contact.submit": "Submit",
   "contact.subtitle": "We'd love to hear more about your story and the techniques and experience that you've developed to deal with that.",
   "contact.title": "Share your story",
-  "downloads.android": "Download on the Play Store",
+  "downloads.android": "Get it on Google Play",
   "downloads.description": "Our app is available on any mobile device! Download now to get started!",
-  "downloads.ios": "Download on the App Store",
+  "downloads.ios": "Download on iOS",
   "downloads.title": "Discover what ADHD is all about!",
   "features.card.description1": "Test for ADHD, Attention-Deficit or Hyperactivity disorders",
   "features.card.description2": "Learn how to deal with ADHD in a practical, simple and interactive way.",
@@ -13,7 +16,7 @@
   "features.card.title2": "Comprehensive Guides",
   "features.card.title3": "Emotion Analysis",
   "features.title": "Features",
-  "footer.title": "Made with {heartIcon} by Renan Sigolo.",
+  "footer.title": "Made with {heartIcon} by Renan Sigolo",
   "hero.subtitle": "The first ADHD app with cognitive analysis!",
   "hero.title": "My ADHD"
 }

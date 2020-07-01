@@ -16,6 +16,74 @@
         <name></name>
         <children>
             <folder_node>
+                <name>about</name>
+                <children>
+                    <concept_node>
+                        <name>text</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>es-ES</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>pt-BR</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
+                        <name>text2</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>es-ES</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>pt-BR</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
+                        <name>title</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>es-ES</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>pt-BR</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                </children>
+            </folder_node>
+            <folder_node>
                 <name>contact</name>
                 <children>
                     <concept_node>
@@ -95,15 +163,15 @@
                         <translations>
                             <translation>
                                 <language>en-US</language>
-                                <approved>false</approved>
+                                <approved>true</approved>
                             </translation>
                             <translation>
                                 <language>es-ES</language>
-                                <approved>false</approved>
+                                <approved>true</approved>
                             </translation>
                             <translation>
                                 <language>pt-BR</language>
-                                <approved>false</approved>
+                                <approved>true</approved>
                             </translation>
                         </translations>
                     </concept_node>
@@ -141,11 +209,11 @@
                             </translation>
                             <translation>
                                 <language>es-ES</language>
-                                <approved>true</approved>
+                                <approved>false</approved>
                             </translation>
                             <translation>
                                 <language>pt-BR</language>
-                                <approved>true</approved>
+                                <approved>false</approved>
                             </translation>
                         </translations>
                     </concept_node>

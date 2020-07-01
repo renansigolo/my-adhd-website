@@ -1,10 +1,13 @@
 {
+  "about.text": "",
+  "about.text2": "",
+  "about.title": "",
   "contact.submit": "Enviar",
   "contact.subtitle": "Gostaríamos muito de ouvir mais sobre sua história e as técnicas e experiências que você desenvolveu para lidar com isso.",
   "contact.title": "Compartilhe sua história",
-  "downloads.android": "Baixar na Play Store",
+  "downloads.android": "Disponível no Google Play",
   "downloads.description": "Nosso aplicativo está disponível em qualquer dispositivo móvel! Baixe agora para começar!",
-  "downloads.ios": "Baixar na App Store",
+  "downloads.ios": "Baixar no iOS",
   "downloads.title": "Descubra tudo sobre o TDAH!",
   "features.card.description1": "Testes para distúrbios de TDAH, Déficit de Atenção ou Hiperatividade",
   "features.card.description2": "Aprenda a lidar com o TDAH de maneira prática, simples e interativa.",
@@ -13,7 +16,7 @@
   "features.card.title2": "Tutoriais",
   "features.card.title3": "Análise de emoção",
   "features.title": "Características",
-  "footer.title": "Feito com {heartIcon} por Renan Sigolo.",
+  "footer.title": "Feito com {heartIcon} por Renan Sigolo",
   "hero.subtitle": "O primeiro aplicativo de TDAH com análise cognitiva!",
   "hero.title": "My ADHD"
 }

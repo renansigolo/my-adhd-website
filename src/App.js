@@ -1,7 +1,6 @@
 import { CssBaseline, Grid, MuiThemeProvider } from '@material-ui/core'
 import React from 'react'
 import './App.css'
-import Contact from './components/Contact'
 import Download from './components/Download'
 import Features from './components/Features'
 import Footer from './components/Footer'
@@ -29,7 +28,9 @@ function App() {
 
           <Features />
 
-          <Contact />
+          {/* <About /> */}
+
+          {/* <Contact /> */}
 
           <Footer />
         </React.Fragment>

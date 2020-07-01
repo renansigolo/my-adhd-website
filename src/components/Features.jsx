@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     padding: theme.spacing(2, 0),
+    color: '#fff',
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
   },
   grid: {

@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     margin: theme.spacing(1),
-    minWidth: 228,
+    minWidth: 250,
   },
 }))
 
@@ -37,17 +37,19 @@ function Download() {
 
         <Grid container justify="center">
           <Button
+            target="_blank"
             variant="contained"
             color="primary"
             size="large"
             className={classes.button}
             startIcon={<FontAwesomeIcon icon={faAppStore} />}
-            href="https://itunes.apple.com/us/app/tdah/id1375236150?ls=1&mt=8"
+            href="https://apps.apple.com/au/app/my-adhd/id1375236150"
           >
-            Download iOS
+            <FormattedMessage id="downloads.ios" />
           </Button>
 
           <Button
+            target="_blank"
             variant="contained"
             color="primary"
             size="large"
@@ -55,7 +57,7 @@ function Download() {
             startIcon={<FontAwesomeIcon icon={faGooglePlay} />}
             href="https://play.google.com/store/apps/details?id=tk.tdah"
           >
-            Download Android
+            <FormattedMessage id="downloads.android" />
           </Button>
         </Grid>
       </Container>
