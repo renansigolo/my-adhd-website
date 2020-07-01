@@ -13,13 +13,7 @@ script:
   - npm run build
 
 after_success:
-
-deploy:
-  provider: firebase
-  token:
-    secure: $FIREBASE_TOKEN
-  on:
-    branch: master
+  - test $TRAVIS_BRANCH = "master" && firebase deploy --token $FIREBASE_TOKEN
 
 notifications:
   email:
