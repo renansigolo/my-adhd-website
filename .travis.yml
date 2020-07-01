@@ -6,14 +6,11 @@ branches:
   only:
     - master
 
-cache:
-  yarn: false
-
 before_script:
-  - yarn global add firebase-tools
+  - npm i -g firebase-tools
 
 script:
-  - yarn build
+  - npm run build
 
 after_success:
   - test $TRAVIS_BRANCH = "master" && firebase deploy --token $FIREBASE_TOKEN

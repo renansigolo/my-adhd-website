@@ -4,7 +4,7 @@ Landing page for the app **My ADHD**
 
 ## Build
 
-Run `yarn build` to build the project.
+Run `npm run build` to build the project.
 
 ## Built With
 
