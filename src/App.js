@@ -28,6 +28,8 @@ function App() {
 
           <Features />
 
+          {/* <Highlights /> */}
+
           {/* <About /> */}
 
           {/* <Contact /> */}

@@ -18,5 +18,7 @@
   "features.title": "Características",
   "footer.title": "Feito com {heartIcon} por Renan Sigolo",
   "hero.subtitle": "O primeiro aplicativo de TDAH com análise cognitiva!",
-  "hero.title": "My ADHD"
+  "hero.title": "My ADHD",
+  "highlights.subtitle": "",
+  "highlights.title": ""
 }
