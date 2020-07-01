@@ -19,7 +19,7 @@
   grid-column-gap: 32px;
   grid-row-gap: 32px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 960px) {
   .grid-1 {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
@@ -33,7 +33,7 @@
   grid-column-gap: 32px;
   grid-row-gap: 32px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 960px) {
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -47,7 +47,7 @@
   grid-column-gap: 32px;
   grid-row-gap: 32px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 960px) {
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;

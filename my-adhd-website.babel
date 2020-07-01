@@ -309,6 +309,32 @@
                 </children>
             </folder_node>
             <folder_node>
+                <name>footer</name>
+                <children>
+                    <concept_node>
+                        <name>title</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>en-US</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>es-ES</language>
+                                <approved>false</approved>
+                            </translation>
+                            <translation>
+                                <language>pt-BR</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                </children>
+            </folder_node>
+            <folder_node>
                 <name>hero</name>
                 <children>
                     <concept_node>
@@ -397,7 +423,7 @@
     <primary_language>en-US</primary_language>
     <configuration>
         <definitions></definitions>
-        <indent>tab</indent>
+        <indent>space2</indent>
         <format>json</format>
         <support_arrays>true</support_arrays>
     </configuration>

@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles'
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
-const styles = (theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     margin: theme.spacing(5),
@@ -13,10 +13,10 @@ const styles = (theme) => ({
   messageInput: {
     marginTop: 0,
   },
-})
+}))
 
-function ContactForm(props) {
-  const { classes } = props
+function ContactForm() {
+  const classes = useStyles()
 
   return (
     <div className={classes.root}>
@@ -55,7 +55,7 @@ function ContactForm(props) {
               className={classes.messageInput}
             />
           </Grid>
-          <Grid container direction="row" justify="center" alignItems="center">
+          <Grid container justify="center" alignItems="center">
             <Grid item>
               <Button variant="contained" color="primary" size="large">
                 <FormattedMessage id="contact.submit" />

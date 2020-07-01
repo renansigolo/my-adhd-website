@@ -5,11 +5,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Container, Grid, Typography } from '@material-ui/core'
-import { withStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
-const styles = (theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     padding: theme.spacing(2, 0),
@@ -27,10 +27,11 @@ const styles = (theme) => ({
   fullWidth: {
     width: '100%',
   },
-})
+}))
 
-function Features(props) {
-  const { classes } = props
+function Features() {
+  const classes = useStyles()
+
   const cards = [
     {
       icon: faStethoscope,
@@ -72,4 +73,4 @@ function Features(props) {
   )
 }
 
-export default withStyles(styles)(Features)
+export default Features
