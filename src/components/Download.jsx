@@ -7,6 +7,10 @@ import { FormattedMessage } from 'react-intl'
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    minHeight: '350px',
     padding: theme.spacing(4, 0),
   },
   button: {

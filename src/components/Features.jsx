@@ -13,8 +13,12 @@ const styles = (theme) => ({
   root: {
     flexGrow: 1,
     padding: theme.spacing(2, 0),
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+  },
+  grid: {
     display: 'flex',
     justifyContent: 'center',
+    minHeight: '250px',
   },
   item: {
     alignSelf: 'center',
@@ -60,11 +64,11 @@ function Features(props) {
   ))
 
   return (
-    <Container>
-      <div className={classes.root}>
+    <div className={classes.root}>
+      <Container className={classes.grid}>
         <div className="grid-3">{cardItems}</div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   )
 }
 
