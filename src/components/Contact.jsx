@@ -23,7 +23,7 @@ function ContactForm() {
   const classes = useStyles()
 
   return (
-    <section className={classes.root}>
+    <section id="contact" className={classes.root}>
       <Container maxWidth="sm">
         <Box mb={3}>
           <Typography variant="h3" align="center" gutterBottom>

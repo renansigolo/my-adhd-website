@@ -1,0 +1,86 @@
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+
+# USAGE
+.my-box {
+   @include mobile {
+     padding: 20px;
+   }
+ } 
+*/
+
+// Small devices (portrait phones, 440px and up)
+@mixin mobile {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+// Medium devices (tablets, 960px and up)
+@mixin tablet {
+  @media (min-width: 960px) {
+    @content;
+  }
+}
+
+// Large devices (desktops, 1280px and up)
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+// Extra large devices (large desktops, 1920px and up)
+@mixin widescreen {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@mixin grid($columns) {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+
+  @include desktop {
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.grid-1 {
+  @include grid(1);
+}
+.grid-2 {
+  @include grid(2);
+}
+.grid-3 {
+  @include grid(3);
+}
+
+.hero-logo {
+  height: 250px;
+}
+
+/* App
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hero-bg {
+  background-image: url('assets/header/bg-header.jpg');
+  background-size: cover;
+  background-position: center center;
+  min-height: 80vh;
+  color: #fff;
+}
+
+footer {
+  background-color: #d2d2d2;
+}

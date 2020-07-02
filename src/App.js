@@ -1,41 +1,17 @@
-import { CssBaseline, Grid, MuiThemeProvider } from '@material-ui/core'
+import { CssBaseline, MuiThemeProvider } from '@material-ui/core'
 import React from 'react'
-import './App.css'
-import Download from './components/Download'
-import Features from './components/Features'
+import './App.scss'
 import Footer from './components/Footer'
-import Hero from './components/Hero'
+import Home from './pages/Home'
 import theme from './utils/theme'
 
 function App() {
   return (
     <div className="App">
       <MuiThemeProvider theme={theme}>
-        <React.Fragment>
-          <CssBaseline />
-
-          <Grid
-            container
-            direction="column"
-            justify="center"
-            alignItems="center"
-            className="hero-bg"
-          >
-            <Hero />
-          </Grid>
-
-          <Download />
-
-          <Features />
-
-          {/* <Highlights /> */}
-
-          {/* <About /> */}
-
-          {/* <Contact /> */}
-
-          <Footer />
-        </React.Fragment>
+        <CssBaseline />
+        <Home />
+        <Footer />
       </MuiThemeProvider>
     </div>
   )

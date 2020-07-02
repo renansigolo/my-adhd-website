@@ -16,7 +16,7 @@ function About() {
   const classes = useStyles()
 
   return (
-    <section className={classes.root}>
+    <section id="about" className={classes.root}>
       <Container maxWidth="sm">
         <Box mb={3}>
           <Typography variant="h3" align="center" gutterBottom>
