@@ -66,7 +66,7 @@ function Features() {
   ))
 
   return (
-    <section className={classes.root}>
+    <section id="features" className={classes.root}>
       <Container className={classes.grid}>
         <div className="grid-3">{cardItems}</div>
       </Container>

@@ -70,7 +70,7 @@ function Highlights() {
   ))
 
   return (
-    <section className={classes.root}>
+    <section id="highlights" className={classes.root}>
       <Container className={classes.grid}>
         <div className="grid-2">{cardItems}</div>
       </Container>

@@ -6,7 +6,7 @@ import { FormattedMessage } from 'react-intl'
 
 function Footer() {
   return (
-    <footer>
+    <footer id="footer">
       <Box display="flex" height="60px">
         <Grid container justify="center" alignItems="center">
           <Typography variant="caption">

@@ -9,11 +9,9 @@ function App() {
   return (
     <div className="App">
       <MuiThemeProvider theme={theme}>
-        <React.Fragment>
-          <CssBaseline />
-          <Home />
-          <Footer />
-        </React.Fragment>
+        <CssBaseline />
+        <Home />
+        <Footer />
       </MuiThemeProvider>
     </div>
   )

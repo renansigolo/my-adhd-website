@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     flexDirection: 'column',
     minHeight: '350px',
-    padding: theme.spacing(4, 0),
   },
   button: {
     margin: theme.spacing(1),
@@ -23,7 +22,7 @@ function Download() {
   const classes = useStyles()
 
   return (
-    <section>
+    <section id="download">
       <Container className={classes.root}>
         <Box mb={3}>
           <Typography variant="h3" component="h2" align="center">
