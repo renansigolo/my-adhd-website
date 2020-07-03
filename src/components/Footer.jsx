@@ -1,27 +1,29 @@
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Grid, Typography, Box, Container } from '@material-ui/core'
+import { Box, Container, Grid, Typography } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
+const useStyles = makeStyles(() => ({
+  root: {
+    background: 'linear-gradient(#fafafa, #fff)',
+  },
+}))
+
 function Footer() {
+  const classes = useStyles()
+
   return (
-    <footer id="footer">
+    <footer id="footer" className={classes.root}>
       <Container>
-        <Box display="flex" height="120px">
+        <Box display="flex" height="60px">
           <Grid
             container
             justify="center"
             alignItems="center"
             direction="column"
           >
-            <Typography variant="caption" align="center" gutterBottom>
-              <FormattedMessage
-                id="footer.disclaimer"
-                defaultMessage="This app is for educational purposes only and does not reflect a medical opinion.ADHD can only be diagnosed by a medical professional!"
-                values={{ br: <br /> }}
-              />
-            </Typography>
             <Typography variant="caption" align="center">
               <FormattedMessage
                 id="footer.title"

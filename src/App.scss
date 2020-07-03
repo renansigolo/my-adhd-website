@@ -73,14 +73,14 @@ there.
 
 /* App
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  scroll-behavior: smooth;
+}
+
 .hero-bg {
   background-image: url('assets/header/bg-header.jpg');
   background-size: cover;
   background-position: center center;
-  min-height: 80vh;
+  min-height: 72vh;
   color: #fff;
-}
-
-footer {
-  background-color: #d2d2d2;
 }

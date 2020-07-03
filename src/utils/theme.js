@@ -1,24 +1,16 @@
+// A custom theme for this app
+import pink from '@material-ui/core/colors/pink'
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 
 let theme = createMuiTheme()
 theme = responsiveFontSizes(theme)
 
-// A custom theme for this app
-// const theme = createMuiTheme({
-//   palette: {
-//     primary: {
-//       main: '#556cd6',
-//     },
-//     secondary: {
-//       main: '#19857b',
-//     },
-//     error: {
-//       main: red.A400,
-//     },
-//     background: {
-//       default: '#fff',
-//     },
-//   },
-// })
+theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: pink[500],
+    },
+  },
+})
 
 export default theme

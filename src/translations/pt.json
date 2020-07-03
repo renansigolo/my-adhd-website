@@ -5,6 +5,7 @@
   "contact.submit": "Enviar",
   "contact.subtitle": "Gostaríamos muito de ouvir mais sobre sua história e as técnicas e experiências que você desenvolveu para lidar com isso.",
   "contact.title": "Compartilhe sua história",
+  "disclaimer.title": "Este aplicativo é apenas para fins educacionais e não reflete uma opinião médica.{br}TDAH só pode ser diagnosticado por um profissional médico!",
   "download.android": "Disponível no Google Play",
   "download.description": "Disponível para todos os dispositivos iOS e Android",
   "download.ios": "Baixar no iOS",
@@ -16,12 +17,10 @@
   "features.card.title2": "Tutoriais",
   "features.card.title3": "Análise de emoção",
   "features.title": "Características",
-  "footer.disclaimer": "Este aplicativo é apenas para fins educacionais e não reflete uma opinião médica.{br}TDAH só pode ser diagnosticado por um profissional médico!",
   "footer.title": "Feito com {heartIcon} por Renan Sigolo",
-  "hero.subtitle": "O primeiro aplicativo de TDAH com análise cognitiva!",
-  "hero.title": "My ADHD",
-  "highlights.learn-subtitle": "",
-  "highlights.learn-title": "",
-  "highlights.what-subtitle": "",
-  "highlights.what-title": ""
+  "hero.title": "O primeiro aplicativo de TDAH com análise cognitiva!",
+  "highlights.learn-subtitle": "Ao lidar com o TDAH - a informação é fundamental! Este aplicativo fornece dicas e técnicas criadas e testadas de pessoas com TDAH para pessoas com TDAH. Além disso, você terá acesso a montes de táticas usadas por psicólogos para gerenciar o distúrbio.",
+  "highlights.learn-title": "Aprenda a controlar o TDAH",
+  "highlights.what-subtitle": "O aplicativo My ADHD é uma ferramenta poderosa que analisa seu humor atual e, com base em uma sofisticada análise de Inteligência Artificial, fornece sugestões em tempo real para melhorar seu humor e sua vida cotidiana.",
+  "highlights.what-title": "O que esse app faz?"
 }
