@@ -28,7 +28,7 @@ function HighlightWhat() {
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} style={{ alignSelf: 'center' }}>
-            <Typography variant="h5" component="h3" gutterBottom>
+            <Typography variant="h4" component="h3" gutterBottom>
               <FormattedMessage id="highlights.what-title" />
             </Typography>
             <Typography variant="subtitle1" component="p">

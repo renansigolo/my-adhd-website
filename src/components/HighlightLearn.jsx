@@ -37,7 +37,7 @@ function HighlightLearn() {
             </div>
           </Grid>
           <Grid item xs={12} sm={6} style={{ alignSelf: 'center' }}>
-            <Typography variant="h5" component="h3" gutterBottom>
+            <Typography variant="h4" component="h3" gutterBottom>
               <FormattedMessage id="highlights.learn-title" />
             </Typography>
             <Typography variant="subtitle1" component="p">
