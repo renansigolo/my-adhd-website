@@ -30,7 +30,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="landing">
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
 

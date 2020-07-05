@@ -1,10 +1,10 @@
 import React from 'react'
+import Disclaimer from '../components/Disclaimer'
 import Download from '../components/Download'
 import Features from '../components/Features'
 import Hero from '../components/Hero'
 import HighlightLearn from '../components/HighlightLearn'
 import HighlightWhat from '../components/HighlightWhat'
-import Disclaimer from '../components/Disclaimer'
 
 export default function About() {
   return (
