@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "adhd-9d24a"
+    "default": "my-adhd-dev",
+    "development": "my-adhd-dev",
+    "production": "my-adhd-prod"
   }
 }
