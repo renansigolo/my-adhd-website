@@ -21,8 +21,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "update": "npm run upgrade-interactive --latest",
-    "deploy": "npm run build && firebase deploy",
-    "prettier": "prettier --config ./.prettierrc.json --write './**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
+    "deploy": "npm run build && firebase deploy -P development",
+    "deploy:prod": "npm run build && firebase deploy -P production",
+    "prettier": "prettier --config ./.prettierrc.json --write './**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "serve": "firebase serve"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
@@ -34,6 +36,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-ga": "^3.1.1",
     "react-intl": "^5.0.2",
     "react-scripts": "3.4.1"
   },
