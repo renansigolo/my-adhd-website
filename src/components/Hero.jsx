@@ -11,11 +11,11 @@ function Hero() {
         direction="column"
         justify="center"
         alignItems="center"
-        className="hero-bg"
+        className="landing-hero__bg"
       >
         <Container maxWidth="sm">
           <Box display="flex" justifyContent="center" alignItems="center">
-            <img src={logo} className="hero-logo" alt="logo" />
+            <img src={logo} className="landing-hero__logo" alt="logo" />
           </Box>
 
           <Typography
@@ -41,7 +41,7 @@ function Hero() {
               variant="contained"
               color="primary"
               size="large"
-              href="#download"
+              href="/#download"
             >
               Download Now
             </Button>

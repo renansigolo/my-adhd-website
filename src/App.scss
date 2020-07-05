@@ -67,22 +67,10 @@ there.
   @include grid(3);
 }
 
-.hero-logo {
-  height: 250px;
-}
-
 /* App
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 html {
   scroll-behavior: smooth;
-}
-
-.hero-bg {
-  background-image: url('assets/header/bg-header.jpg');
-  background-size: cover;
-  background-position: center center;
-  min-height: 72vh;
-  color: #fff;
 }
 
 .env-tag {
@@ -92,4 +80,32 @@ html {
   top: 0;
   color: #fff;
   background-color: #ff00007a;
+}
+
+.landing {
+  // &__header {
+  //   display: flex;
+  //   align-items: center;
+
+  //   &__logo {
+  //     background-image: url(./logo.svg);
+  //     width: 77px;
+  //     height: 77px;
+  //     margin: 0 !important;
+  //     background-repeat: no-repeat;
+  //     background-size: contain;
+  //   }
+  // }
+  &-hero {
+    &__logo {
+      height: 250px;
+    }
+    &__bg {
+      background-image: url('assets/header/bg-header.jpg');
+      background-size: cover;
+      background-position: center center;
+      min-height: 72vh;
+      color: #fff;
+    }
+  }
 }
