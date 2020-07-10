@@ -24,6 +24,7 @@
     "deploy": "npm run build && firebase deploy -P development",
     "deploy:prod": "npm run build && firebase deploy -P production",
     "prettier": "prettier --config ./.prettierrc.json --write './**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "postversion": "git push",
     "serve": "firebase serve"
   },
   "dependencies": {
