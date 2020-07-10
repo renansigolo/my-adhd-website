@@ -12,10 +12,10 @@ const messages = {
   es: messages_es,
   pt: messages_pt,
 }
-const language = navigator.language.split(/[-_]/)[0]
+const locale = navigator.language.split(/[-_]/)[0]
 
 ReactDOM.render(
-  <IntlProvider locale={language} messages={messages[language]}>
+  <IntlProvider locale={locale} messages={messages[locale]}>
     <App />
   </IntlProvider>,
   document.getElementById('root')
