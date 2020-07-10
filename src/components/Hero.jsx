@@ -43,7 +43,10 @@ function Hero() {
               size="large"
               href="/#download"
             >
-              Download Now
+              <FormattedMessage
+                id="download.title"
+                defaultMessage="Download Now"
+              />
             </Button>
           </Box>
         </Container>

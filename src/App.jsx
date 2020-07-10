@@ -26,6 +26,7 @@ function App() {
     initializeReactGA()
     isProd = true
   } else {
+    console.info('Environment Variables', process.env)
     isProd = false
   }
 
