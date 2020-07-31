@@ -28,20 +28,20 @@
     "serve": "firebase serve"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.29",
-    "@fortawesome/free-brands-svg-icons": "^5.13.1",
-    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@material-ui/core": "^4.11.0",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "axios": "^0.19.2",
-    "fontsource-roboto": "^2.1.4",
+    "fontsource-roboto": "^2.2.6",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-ga": "^3.1.2",
-    "react-hook-form": "^6.0.5",
-    "react-intl": "^5.2.1",
+    "react-hook-form": "^6.2.0",
+    "react-intl": "^5.4.5",
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
