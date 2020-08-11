@@ -40,9 +40,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-ga": "^3.1.2",
-    "react-hook-form": "^6.3.1",
-    "react-intl": "^5.4.6",
-    "react-scripts": "3.4.1"
+    "react-hook-form": "^6.3.2",
+    "react-intl": "^5.4.7",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.2"
   },
   "devDependencies": {
     "husky": "^4.2.5",

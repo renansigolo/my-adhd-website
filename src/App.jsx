@@ -1,9 +1,15 @@
 import { CssBaseline, MuiThemeProvider } from '@material-ui/core'
 import React from 'react'
 import ReactGA from 'react-ga'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom'
 import './App.scss'
-import Footer from './components/Footer'
 import Home from './pages/Home'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 import theme from './utils/theme'
 
 function initializeReactGA() {
@@ -37,8 +43,19 @@ function App() {
 
         {isProd ? null : <EnvTag />}
 
-        <Home />
-        <Footer />
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/privacy-policy">
+              <PrivacyPolicy />
+            </Route>
+            <Route path="*">
+              <Redirect to="" />
+            </Route>
+          </Switch>
+        </Router>
       </MuiThemeProvider>
     </div>
   )

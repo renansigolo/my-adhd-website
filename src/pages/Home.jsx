@@ -6,6 +6,7 @@ import Hero from '../components/Hero'
 import Contact from '../components/Contact'
 import HighlightLearn from '../components/HighlightLearn'
 import HighlightWhat from '../components/HighlightWhat'
+import Footer from '../components/Footer'
 import { Divider } from '@material-ui/core'
 
 export default function Home() {
@@ -28,6 +29,8 @@ export default function Home() {
       <Divider />
 
       <Contact />
+
+      <Footer />
     </React.Fragment>
   )
 }
