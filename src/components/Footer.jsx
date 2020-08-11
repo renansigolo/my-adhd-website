@@ -4,6 +4,7 @@ import { Box, Container, Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -30,6 +31,13 @@ function Footer() {
                 defaultMessage="Made with {heartIcon} by Renan Sigolo."
                 values={{ heartIcon: <FontAwesomeIcon icon={faHeart} /> }}
               />
+              <br />
+              <Link to="/privacy-policy">
+                <FormattedMessage
+                  id="footer.privacy-policy"
+                  defaultMessage="Privacy Policy"
+                />
+              </Link>
             </Typography>
           </Grid>
         </Box>

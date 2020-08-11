@@ -22,8 +22,6 @@ export default function Home() {
 
       <Disclaimer />
 
-      {/* <About /> */}
-
       <Download />
 
       <Divider />
