@@ -20,7 +20,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "update": "npm run upgrade-interactive --latest",
     "prettier": "prettier --config ./.prettierrc.json --write './**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "postversion": "git push",
     "serve": "firebase serve"
@@ -33,7 +32,6 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "axios": "^0.19.2",
-    "fontsource-roboto": "^3.0.3",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
