@@ -1,7 +1,7 @@
 import { Box, Button, Container, Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import logo from '../logo.svg'
+import logo from '../assets/logo.svg'
 
 function Hero() {
   return (
@@ -19,7 +19,7 @@ function Hero() {
           </Box>
 
           <Typography
-            variant="h3"
+            variant="h4"
             component="h1"
             color="inherit"
             align="center"
