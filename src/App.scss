@@ -85,10 +85,11 @@ html {
 .landing {
   &-hero {
     &__logo {
-      height: 250px;
+      height: 160px;
+      margin-bottom: 16px;
     }
     &__bg {
-      background-image: url('assets/header/bg-header.jpg');
+      background-image: url('assets/header/bg-header.png');
       background-size: cover;
       background-position: center center;
       min-height: 72vh;
