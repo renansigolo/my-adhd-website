@@ -1,4 +1,4 @@
-<babeledit_project be_version="2.7.1" version="1.2">
+<babeledit_project version="1.2" be_version="2.7.1">
     <!--
 
     BabelEdit project file
@@ -654,7 +654,7 @@
                 </children>
             </folder_node>
             <folder_node>
-                <name>highlights</name>
+                <name>highlight</name>
                 <children>
                     <concept_node>
                         <name>learn-subtitle</name>
