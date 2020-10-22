@@ -33,17 +33,17 @@
     "@material-ui/lab": "^4.0.0-alpha.56",
     "axios": "^0.20.0",
     "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-ga": "^3.1.2",
-    "react-hook-form": "^6.9.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-ga": "^3.2.0",
+    "react-hook-form": "^6.9.5",
     "react-intl": "^5.8.6",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.4"
   },
   "devDependencies": {
     "husky": "^4.3.0",
-    "lint-staged": "^10.4.0",
+    "lint-staged": "^10.4.2",
     "prettier": "^2.1.2"
   },
   "engines": {
