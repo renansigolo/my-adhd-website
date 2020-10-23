@@ -143,6 +143,7 @@ function ContactForm() {
                   variant="outlined"
                   inputRef={register({
                     required: true,
+                    minLength: 20,
                   })}
                 />
               </Grid>
