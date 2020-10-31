@@ -70,7 +70,6 @@ function ContactForm() {
   const { register, errors, control, handleSubmit } = useForm({ defaultValues })
 
   const onSubmit = (data, evt) => {
-    console.log('onSubmit -> data', data)
     setIsLoading(true)
     // Send a POST request to Firebase Cloud Function
     API.post('sendContactEmail', { ...data })
