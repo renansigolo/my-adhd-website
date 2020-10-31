@@ -3,14 +3,18 @@ import {
   Button,
   CircularProgress,
   Container,
+  FormControl,
   Grid,
+  InputLabel,
+  MenuItem,
+  Select,
   TextField,
   Typography,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Alert, AlertTitle } from '@material-ui/lab'
 import React, { useState } from 'react'
-import { useForm } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
 import { FormattedMessage, useIntl } from 'react-intl'
 import API from '../services/api'
 
@@ -22,7 +26,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     minHeight: 400,
   },
+  formControl: {
+    minWidth: '100%',
+  },
 }))
+
+const locale = navigator.language.split(/[-_]/)[0]
 
 function ContactForm() {
   const classes = useStyles()
@@ -40,6 +49,9 @@ function ContactForm() {
       placeholder: intl.formatMessage({ id: 'contact.form.email.placeholder' }),
       error: intl.formatMessage({ id: 'contact.form.email.error' }),
     },
+    language: {
+      title: intl.formatMessage({ id: 'contact.form.language.title' }),
+    },
     message: {
       title: intl.formatMessage({ id: 'contact.form.message.title' }),
       placeholder: intl.formatMessage({
@@ -49,11 +61,16 @@ function ContactForm() {
     },
   }
 
+  const defaultValues = {
+    language: locale,
+  }
+
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-  const { register, errors, handleSubmit } = useForm()
+  const { register, errors, control, handleSubmit } = useForm({ defaultValues })
 
   const onSubmit = (data, evt) => {
+    console.log('onSubmit -> data', data)
     setIsLoading(true)
     // Send a POST request to Firebase Cloud Function
     API.post('sendContactEmail', { ...data })
@@ -104,53 +121,68 @@ function ContactForm() {
                   </Alert>
                 </Grid>
               )}
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={8}>
                 <TextField
                   fullWidth
                   id="name"
-                  label={formatted.name.title}
                   name="name"
-                  placeholder={formatted.name.placeholder}
                   type="text"
+                  label={formatted.name.title}
+                  placeholder={formatted.name.placeholder}
                   variant="outlined"
                   inputRef={register({
                     required: true,
                     minLength: 3,
                   })}
                 />
-                <p>
-                  {errors.name?.type === 'required' && formatted.name.error}
-                </p>
+                <p>{errors.name && formatted.name.error}</p>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={4}>
+                <FormControl variant="outlined" className={classes.formControl}>
+                  <InputLabel id="language-label">
+                    {formatted.language.title}
+                  </InputLabel>
+                  <Controller
+                    as={
+                      <Select label={formatted.language.title}>
+                        <MenuItem value={'en'}>English</MenuItem>
+                        <MenuItem value={'es'}>Español</MenuItem>
+                        <MenuItem value={'pt'}>Português</MenuItem>
+                      </Select>
+                    }
+                    name="language"
+                    control={control}
+                  />
+                </FormControl>
+              </Grid>
+              <Grid item xs={12}>
                 <TextField
                   fullWidth
                   id="email"
-                  label={formatted.email.title}
                   name="email"
-                  placeholder={formatted.email.placeholder}
                   type="email"
+                  label={formatted.email.title}
+                  placeholder={formatted.email.placeholder}
                   variant="outlined"
                   inputRef={register({
                     required: true,
                     pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                   })}
                 />
-                <p>
-                  {errors.email?.type === 'required' && formatted.email.error}
-                </p>
+                <p>{errors.email && formatted.email.error}</p>
               </Grid>
+
               <Grid item xs={12}>
                 <TextField
                   className={classes.messageInput}
                   fullWidth
-                  id="message"
-                  label={formatted.message.title}
                   multiline
+                  id="message"
                   name="message"
+                  variant="outlined"
+                  label={formatted.message.title}
                   placeholder={formatted.message.placeholder}
                   rows={4}
-                  variant="outlined"
                   inputRef={register({
                     required: true,
                     minLength: 20,
@@ -158,7 +190,6 @@ function ContactForm() {
                 />
                 <p>{errors.message && formatted.message.error}</p>
               </Grid>
-
               <Grid container justify="center" alignItems="center">
                 <Grid item>
                   <Button
