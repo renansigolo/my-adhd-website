@@ -89,74 +89,11 @@
                     <folder_node>
                         <name>form</name>
                         <children>
-                            <concept_node>
-                                <name>email</name>
-                                <definition_loaded>false</definition_loaded>
-                                <description></description>
-                                <comment></comment>
-                                <default_text></default_text>
-                                <translations>
-                                    <translation>
-                                        <language>en-US</language>
-                                        <approved>false</approved>
-                                    </translation>
-                                    <translation>
-                                        <language>es-ES</language>
-                                        <approved>false</approved>
-                                    </translation>
-                                    <translation>
-                                        <language>pt-BR</language>
-                                        <approved>false</approved>
-                                    </translation>
-                                </translations>
-                            </concept_node>
-                            <concept_node>
-                                <name>message</name>
-                                <definition_loaded>false</definition_loaded>
-                                <description></description>
-                                <comment></comment>
-                                <default_text></default_text>
-                                <translations>
-                                    <translation>
-                                        <language>en-US</language>
-                                        <approved>false</approved>
-                                    </translation>
-                                    <translation>
-                                        <language>es-ES</language>
-                                        <approved>false</approved>
-                                    </translation>
-                                    <translation>
-                                        <language>pt-BR</language>
-                                        <approved>false</approved>
-                                    </translation>
-                                </translations>
-                            </concept_node>
-                            <concept_node>
-                                <name>name</name>
-                                <definition_loaded>false</definition_loaded>
-                                <description></description>
-                                <comment></comment>
-                                <default_text></default_text>
-                                <translations>
-                                    <translation>
-                                        <language>en-US</language>
-                                        <approved>false</approved>
-                                    </translation>
-                                    <translation>
-                                        <language>es-ES</language>
-                                        <approved>false</approved>
-                                    </translation>
-                                    <translation>
-                                        <language>pt-BR</language>
-                                        <approved>false</approved>
-                                    </translation>
-                                </translations>
-                            </concept_node>
                             <folder_node>
-                                <name>placeholder</name>
+                                <name>email</name>
                                 <children>
                                     <concept_node>
-                                        <name>email</name>
+                                        <name>error</name>
                                         <definition_loaded>false</definition_loaded>
                                         <description></description>
                                         <comment></comment>
@@ -177,7 +114,7 @@
                                         </translations>
                                     </concept_node>
                                     <concept_node>
-                                        <name>message</name>
+                                        <name>placeholder</name>
                                         <definition_loaded>false</definition_loaded>
                                         <description></description>
                                         <comment></comment>
@@ -198,7 +135,143 @@
                                         </translations>
                                     </concept_node>
                                     <concept_node>
-                                        <name>name</name>
+                                        <name>title</name>
+                                        <definition_loaded>false</definition_loaded>
+                                        <description></description>
+                                        <comment></comment>
+                                        <default_text></default_text>
+                                        <translations>
+                                            <translation>
+                                                <language>en-US</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>es-ES</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>pt-BR</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                        </translations>
+                                    </concept_node>
+                                </children>
+                            </folder_node>
+                            <folder_node>
+                                <name>message</name>
+                                <children>
+                                    <concept_node>
+                                        <name>error</name>
+                                        <definition_loaded>false</definition_loaded>
+                                        <description></description>
+                                        <comment></comment>
+                                        <default_text></default_text>
+                                        <translations>
+                                            <translation>
+                                                <language>en-US</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>es-ES</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>pt-BR</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                        </translations>
+                                    </concept_node>
+                                    <concept_node>
+                                        <name>placeholder</name>
+                                        <definition_loaded>false</definition_loaded>
+                                        <description></description>
+                                        <comment></comment>
+                                        <default_text></default_text>
+                                        <translations>
+                                            <translation>
+                                                <language>en-US</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>es-ES</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>pt-BR</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                        </translations>
+                                    </concept_node>
+                                    <concept_node>
+                                        <name>title</name>
+                                        <definition_loaded>false</definition_loaded>
+                                        <description></description>
+                                        <comment></comment>
+                                        <default_text></default_text>
+                                        <translations>
+                                            <translation>
+                                                <language>en-US</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>es-ES</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>pt-BR</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                        </translations>
+                                    </concept_node>
+                                </children>
+                            </folder_node>
+                            <folder_node>
+                                <name>name</name>
+                                <children>
+                                    <concept_node>
+                                        <name>error</name>
+                                        <definition_loaded>false</definition_loaded>
+                                        <description></description>
+                                        <comment></comment>
+                                        <default_text></default_text>
+                                        <translations>
+                                            <translation>
+                                                <language>en-US</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>es-ES</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>pt-BR</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                        </translations>
+                                    </concept_node>
+                                    <concept_node>
+                                        <name>placeholder</name>
+                                        <definition_loaded>false</definition_loaded>
+                                        <description></description>
+                                        <comment></comment>
+                                        <default_text></default_text>
+                                        <translations>
+                                            <translation>
+                                                <language>en-US</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>es-ES</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>pt-BR</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                        </translations>
+                                    </concept_node>
+                                    <concept_node>
+                                        <name>title</name>
                                         <definition_loaded>false</definition_loaded>
                                         <description></description>
                                         <comment></comment>

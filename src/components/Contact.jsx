@@ -31,24 +31,27 @@ function ContactForm() {
   const intl = useIntl()
   const formatted = {
     name: {
-      title: intl.formatMessage({ id: 'contact.form.name' }),
-      placeholder: intl.formatMessage({ id: 'contact.form.placeholder.name' }),
+      title: intl.formatMessage({ id: 'contact.form.name.title' }),
+      placeholder: intl.formatMessage({ id: 'contact.form.name.placeholder' }),
+      error: intl.formatMessage({ id: 'contact.form.name.error' }),
     },
     email: {
-      title: intl.formatMessage({ id: 'contact.form.email' }),
-      placeholder: intl.formatMessage({ id: 'contact.form.placeholder.email' }),
+      title: intl.formatMessage({ id: 'contact.form.email.title' }),
+      placeholder: intl.formatMessage({ id: 'contact.form.email.placeholder' }),
+      error: intl.formatMessage({ id: 'contact.form.email.error' }),
     },
     message: {
-      title: intl.formatMessage({ id: 'contact.form.message' }),
+      title: intl.formatMessage({ id: 'contact.form.message.title' }),
       placeholder: intl.formatMessage({
-        id: 'contact.form.placeholder.message',
+        id: 'contact.form.message.placeholder',
       }),
+      error: intl.formatMessage({ id: 'contact.form.message.error' }),
     },
   }
 
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-  const { register, handleSubmit } = useForm()
+  const { register, errors, handleSubmit } = useForm()
 
   const onSubmit = (data, evt) => {
     setIsLoading(true)
@@ -112,8 +115,12 @@ function ContactForm() {
                   variant="outlined"
                   inputRef={register({
                     required: true,
+                    minLength: 3,
                   })}
                 />
+                <p>
+                  {errors.name?.type === 'required' && formatted.name.error}
+                </p>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -129,6 +136,9 @@ function ContactForm() {
                     pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                   })}
                 />
+                <p>
+                  {errors.email?.type === 'required' && formatted.email.error}
+                </p>
               </Grid>
               <Grid item xs={12}>
                 <TextField
@@ -146,7 +156,9 @@ function ContactForm() {
                     minLength: 20,
                   })}
                 />
+                <p>{errors.message && formatted.message.error}</p>
               </Grid>
+
               <Grid container justify="center" alignItems="center">
                 <Grid item>
                   <Button
