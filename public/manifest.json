@@ -5,8 +5,8 @@
   "background_color": "#ff4b88",
   "display": "standalone",
   "orientation": "portrait",
-  "Scope": "/",
-  "start_url": "/",
+  "start_url": ".",
+  "splash_pages": null,
   "related_applications": [
     {
       "platform": "play",
@@ -61,6 +61,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "splash_pages": null
+  ]
 }
