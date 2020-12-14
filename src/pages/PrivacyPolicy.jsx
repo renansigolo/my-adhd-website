@@ -59,6 +59,15 @@ export default function PrivacyPolicy() {
                     Google Play Services
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://firebase.google.com/policies/analytics"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Google Analytics for Firebase
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -167,7 +176,7 @@ export default function PrivacyPolicy() {
             </p>
             <p>
               If you have any questions or suggestions about my Privacy Policy,
-              do not hesitate to contact me at renan.sigolo@gmail.com.
+              do not hesitate to contact me at app.myadhd@gmail.com.
             </p>
           </div>
         </Container>
