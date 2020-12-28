@@ -176,7 +176,7 @@ export default function PrivacyPolicy() {
             </p>
             <p>
               If you have any questions or suggestions about my Privacy Policy,
-              do not hesitate to contact me at app.myadhd@gmail.com.
+              do not hesitate to contact me at contact@myadhd.app.
             </p>
           </div>
         </Container>
