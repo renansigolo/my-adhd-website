@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2, 0),
     minHeight: '250px',
     color: '#fff',
-    background: 'linear-gradient(45deg, #23BDFF 30%, #FF4B88 90%)',
+    background: 'linear-gradient(45deg, #FF4B88 30%, #7F3BF6 90%)',
   },
   item: {
     alignSelf: 'center',
