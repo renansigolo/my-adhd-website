@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(2, 0),
     color: '#fff',
-    background: 'linear-gradient(45deg, #FF4B88 30%, #23BDFF 90%)',
+    background: 'linear-gradient(45deg, #7F3BF6 30%, #FF4B88 90%)',
   },
   grid: {
     display: 'flex',
