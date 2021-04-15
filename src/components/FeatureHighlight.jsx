@@ -15,9 +15,12 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     color: theme.palette.text.secondary,
+    display: 'flex',
+    justifyContent: 'center',
   },
   fullWidth: {
-    width: '100%',
+    width: 'auto',
+    maxHeight: '572px',
   },
 }))
 
