@@ -8,11 +8,12 @@ import { Container, Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
+// import styles from '../styles/Features.module.css'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: theme.spacing(2, 0),
+    padding: theme.spacing(4, 0),
     color: '#fff',
     background: 'linear-gradient(45deg, #7F3BF6 30%, #FF4B88 90%)',
   },
@@ -68,7 +69,7 @@ function Features() {
   return (
     <section id="features" className={classes.root}>
       <Container className={classes.grid}>
-        <div className="grid-3">{cardItems}</div>
+        <div className="grid__3">{cardItems}</div>
       </Container>
     </section>
   )

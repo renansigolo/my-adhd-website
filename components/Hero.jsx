@@ -1,7 +1,8 @@
 import { Box, Button, Container, Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import logo from '../assets/logo.svg'
+import Image from 'next/image'
+import styles from '../styles/Home.module.css'
 
 function Hero() {
   return (
@@ -11,11 +12,11 @@ function Hero() {
         direction="column"
         justify="center"
         alignItems="center"
-        className="landing-hero__bg"
+        className={styles.hero__bg}
       >
         <Container maxWidth="sm">
-          <Box display="flex" justifyContent="center" alignItems="center">
-            <img src={logo} className="landing-hero__logo" alt="logo" />
+          <Box display="flex" justifyContent="center" alignItems="center" p={4}>
+            <Image src="/images/logo.svg" alt="logo" height={160} width={180} />
           </Box>
 
           <Typography
