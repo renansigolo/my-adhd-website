@@ -36,6 +36,8 @@ function EnvTag() {
 
 export default function Home() {
   const isProd = process.env.NODE_ENV === 'production' ? true : false
+  const title = 'My ADHD'
+  const description = 'The first ADHD app with cognitive analysis!'
 
   return (
     <React.Fragment>
@@ -45,7 +47,7 @@ export default function Home() {
           <title>My ADHD Website</title>
           <meta
             name="description"
-            content="My ADHD Website - The first ADHD app with cognitive analysis!"
+            content={`My ADHD Website - ${description}`}
           />
           <meta
             name="keywords"
@@ -56,11 +58,9 @@ export default function Home() {
           {/* Open Graph / Facebook */}
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://myadhd.app/" />
-          <meta property="og:title" content="My ADHD" />
-          <meta
-            property="og:description"
-            content="The first ADHD app with cognitive analysis!"
-          />
+          <meta property="og:site_name" content={title} key="ogsitename" />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
           <meta
             property="og:image"
             content="https://myadhd.app/images/social-banner.png"
@@ -69,16 +69,14 @@ export default function Home() {
           {/* Twitter */}
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://myadhd.app/" />
-          <meta property="twitter:title" content="My ADHD" />
-          <meta
-            property="twitter:description"
-            content="The first ADHD app with cognitive analysis!"
-          />
+          <meta property="twitter:title" content={title} />
+          <meta property="twitter:description" content={description} />
           <meta
             property="twitter:image"
             content="https://myadhd.app/images/social-banner.png"
           />
 
+          <meta name="theme-color" content="#ff4b88" />
           <meta name="robots" content="index, follow" />
           <meta name="apple-itunes-app" content="app-id=1375236150" />
           <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png" />
