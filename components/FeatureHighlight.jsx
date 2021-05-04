@@ -2,6 +2,7 @@ import { Container, Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
+import Image from 'next/image'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,10 +33,11 @@ function FeatureHighlight(props) {
         <Grid container direction={props.payload.direction} spacing={3}>
           <Grid item xs={12} sm={6}>
             <div className={classes.paper}>
-              <img
+              <Image
                 src={props.payload.imgSrc}
-                className={classes.fullWidth}
                 alt="iPhone Portrait"
+                width={300}
+                height={570}
               />
             </div>
           </Grid>

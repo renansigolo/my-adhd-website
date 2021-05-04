@@ -1,4 +1,3 @@
-// import reportWebVitals from '../reportWebVitals'
 import { Divider } from '@material-ui/core'
 import Head from 'next/head'
 import React from 'react'

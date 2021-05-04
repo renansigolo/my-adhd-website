@@ -1,9 +1,8 @@
-import '../styles/globals.css'
-import { IntlProvider } from 'react-intl'
-import { useRouter } from 'next/router'
-
-import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import { ThemeProvider } from '@material-ui/core/styles'
+import { useRouter } from 'next/router'
+import { IntlProvider } from 'react-intl'
+import '../styles/globals.css'
 import theme from '../theme'
 
 const languages = {
@@ -15,7 +14,7 @@ const languages = {
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   const { locale, defaultLocale } = router
-  const messages = languages[locale]
+  const messages = languages[locale.substring(0, 2)]
   return (
     <IntlProvider
       messages={messages}
