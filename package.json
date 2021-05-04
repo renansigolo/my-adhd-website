@@ -20,7 +20,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prettier": "prettier --config ./.prettierrc.json --write './**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "lint": "eslint --fix .",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "postversion": "git push",
     "serve": "firebase serve"
   },
@@ -29,18 +30,25 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "@material-ui/core": "^4.11.3",
-    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/lab": "^4.0.0-alpha.58",
     "axios": "^0.21.1",
     "next": "^10.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-ga": "^3.3.0",
-    "react-hook-form": "^6.15.4",
-    "react-intl": "^5.15.7",
+    "react-hook-form": "^6.15.7",
+    "react-intl": "^5.17.4",
     "react-scripts": "4.0.3"
   },
   "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1"
@@ -49,9 +57,6 @@
     "node": ">=14.16.0",
     "npm": ">=6.14.11",
     "yarn": "NO LONGER USED - Please use npm"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",
@@ -65,8 +70,8 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --config ./.prettierrc.json --write"
+    "src/**/*.{js,jsx,ts,tsx,json,css,md}": [
+      "prettier --config ./.prettierrc --write"
     ]
   }
 }
