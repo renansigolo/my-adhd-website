@@ -17,12 +17,12 @@ import styles from '../styles/Home.module.css'
 
 const payloadLearn = {
   id: 'learn',
-  imgSrc: '/images/highlight/learn.png',
+  imgSrc: '/images/highlight/learn.webp',
   direction: 'row',
 }
 const payloadWhat = {
   id: 'what',
-  imgSrc: '/images/highlight/what.png',
+  imgSrc: '/images/highlight/what.webp',
   direction: 'row-reverse',
 }
 
