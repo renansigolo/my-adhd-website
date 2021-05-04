@@ -1,0 +1,16 @@
+/* Features Component */
+
+/* .grid__3 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+}
+
+@media (min-width: 1280px) {
+  .grid__3 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+} */

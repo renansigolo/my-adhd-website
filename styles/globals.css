@@ -1,3 +1,22 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Globals */
+
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
@@ -14,65 +33,53 @@ there.
  } 
 */
 
-// Small devices (portrait phones, 440px and up)
-@mixin mobile {
+/* Small devices (portrait phones, 440px and up) */
+/* @mixin mobile {
   @media (min-width: 600px) {
     @content;
   }
-}
+} */
 
-// Medium devices (tablets, 960px and up)
-@mixin tablet {
+/* Medium devices (tablets, 960px and up) */
+/* @mixin tablet {
   @media (min-width: 960px) {
     @content;
   }
-}
+} */
 
-// Large devices (desktops, 1280px and up)
-@mixin desktop {
+/* Large devices (desktops, 1280px and up) */
+/* @mixin desktop {
   @media (min-width: 1280px) {
     @content;
   }
-}
+} */
 
-// Extra large devices (large desktops, 1920px and up)
-@mixin widescreen {
+/* Extra large devices (large desktops, 1920px and up) */
+/* @mixin widescreen {
   @media (min-width: 1920px) {
     @content;
   }
-}
+} */
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@mixin grid($columns) {
+.grid__3 {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
   grid-column-gap: 32px;
   grid-row-gap: 32px;
+}
 
-  @include desktop {
-    grid-template-columns: repeat($columns, 1fr);
+@media (min-width: 1280px) {
+  .grid__3 {
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
   }
 }
 
-.grid-1 {
-  @include grid(1);
-}
-.grid-2 {
-  @include grid(2);
-}
-.grid-3 {
-  @include grid(3);
-}
-
-/* App
+/* Globals
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-html {
-  scroll-behavior: smooth;
-}
-
 .env-tag {
   width: 100%;
   text-align: center;
@@ -80,20 +87,4 @@ html {
   top: 0;
   color: #fff;
   background-color: #ff00007a;
-}
-
-.landing {
-  &-hero {
-    &__logo {
-      height: 160px;
-      margin-bottom: 16px;
-    }
-    &__bg {
-      background-image: url('assets/header/bg-header.png');
-      background-size: cover;
-      background-position: center center;
-      min-height: 720px;
-      color: #fff;
-    }
-  }
 }

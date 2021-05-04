@@ -16,7 +16,8 @@ import { Alert, AlertTitle } from '@material-ui/lab'
 import React, { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { FormattedMessage, useIntl } from 'react-intl'
-import API from '../services/api'
+import API from '../pages/api/api'
+import locale from 'next/router'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,8 +31,6 @@ const useStyles = makeStyles((theme) => ({
     minWidth: '100%',
   },
 }))
-
-const locale = navigator.language.split(/[-_]/)[0]
 
 function ContactForm() {
   const classes = useStyles()

@@ -1,0 +1,9 @@
+/* Hero Component */
+
+.hero__bg {
+  background-image: url('/images/header/bg-header.png');
+  background-size: cover;
+  background-position: center center;
+  min-height: 720px;
+  color: #fff;
+}
