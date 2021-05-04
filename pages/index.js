@@ -76,6 +76,10 @@ export default function Home() {
             content="https://myadhd.app/images/social-banner.png"
           />
 
+          <meta
+            name="viewport"
+            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+          />
           <meta name="theme-color" content="#ff4b88" />
           <meta name="robots" content="index, follow" />
           <meta name="apple-itunes-app" content="app-id=1375236150" />
