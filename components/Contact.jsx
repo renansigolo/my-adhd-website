@@ -69,7 +69,12 @@ function ContactForm() {
 
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-  const { register, errors, control, handleSubmit } = useForm({ defaultValues })
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ defaultValues })
 
   const onSubmit = (data, evt) => {
     setIsLoading(true)
@@ -131,10 +136,7 @@ function ContactForm() {
                   label={formatted.name.title}
                   placeholder={formatted.name.placeholder}
                   variant="outlined"
-                  inputRef={register({
-                    required: true,
-                    minLength: 3,
-                  })}
+                  {...register('name', { required: true, minLength: 3 })}
                 />
                 <p>{errors.name && formatted.name.error}</p>
               </Grid>
@@ -144,16 +146,16 @@ function ContactForm() {
                     {formatted.language.title}
                   </InputLabel>
                   <Controller
-                    as={
-                      <Select label={formatted.language.title}>
+                    control={control}
+                    name="language"
+                    render={({ field }) => (
+                      <Select label={formatted.language.title} {...field}>
                         <MenuItem value={'en'}>English</MenuItem>
                         <MenuItem value={'es'}>Español</MenuItem>
                         <MenuItem value={'pt'}>Português</MenuItem>
                       </Select>
-                    }
-                    name="language"
-                    control={control}
-                  />
+                    )}
+                  ></Controller>
                 </FormControl>
               </Grid>
               <Grid item xs={12}>
@@ -165,7 +167,7 @@ function ContactForm() {
                   label={formatted.email.title}
                   placeholder={formatted.email.placeholder}
                   variant="outlined"
-                  inputRef={register({
+                  {...register('email', {
                     required: true,
                     pattern:
                       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
@@ -185,10 +187,7 @@ function ContactForm() {
                   label={formatted.message.title}
                   placeholder={formatted.message.placeholder}
                   rows={4}
-                  inputRef={register({
-                    required: true,
-                    minLength: 20,
-                  })}
+                  {...register('message', { required: true, minLength: 20 })}
                 />
                 <p>{errors.message && formatted.message.error}</p>
               </Grid>
