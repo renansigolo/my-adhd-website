@@ -25,6 +25,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended', // Make this the last element so prettier config overrides other formatting rules
   ],
+  plugins: ['formatjs'],
   rules: {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
@@ -36,6 +37,7 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
+    'formatjs/no-offset': 'error',
     'prettier/prettier': [
       'error',
       { semi: false, singleQuote: true },
