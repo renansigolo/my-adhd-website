@@ -1,6 +1,6 @@
 // import { Box, Button, Container, Grid, Typography } from '@material-ui/core'
 // import React from 'react'
-// import Image from 'next/image'
+import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 // function Hero() {
@@ -191,10 +191,13 @@ export default function Example() {
             {/* Content goes here */}
             <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
               <div className="text-center">
-                <img
+                <span className="sr-only">My ADHD Logo</span>
+                <Image
+                  src="/images/logo.svg"
+                  width={112}
+                  height={112}
                   className="inline-block h-28 w-28 mb-10 rounded-full"
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt=""
+                  alt="My ADHD Logo"
                 />
                 <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                   <span className="block xl:inline">
