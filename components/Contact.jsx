@@ -104,7 +104,7 @@ function ContactForm() {
           </Typography>
         </Box>
 
-        <form noValidate onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           {isLoading ? (
             <Grid item xs={12}>
               <Box
@@ -136,6 +136,7 @@ function ContactForm() {
                   label={formatted.name.title}
                   placeholder={formatted.name.placeholder}
                   variant="outlined"
+                  error={errors.name ? true : false}
                   {...register('name', { required: true, minLength: 3 })}
                 />
                 <p>{errors.name && formatted.name.error}</p>
@@ -167,6 +168,7 @@ function ContactForm() {
                   label={formatted.email.title}
                   placeholder={formatted.email.placeholder}
                   variant="outlined"
+                  error={errors.email ? true : false}
                   {...register('email', {
                     required: true,
                     pattern:
@@ -186,6 +188,7 @@ function ContactForm() {
                   variant="outlined"
                   label={formatted.message.title}
                   placeholder={formatted.message.placeholder}
+                  error={errors.message ? true : false}
                   rows={4}
                   {...register('message', { required: true, minLength: 20 })}
                 />

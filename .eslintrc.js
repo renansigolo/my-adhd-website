@@ -42,7 +42,7 @@ module.exports = {
       'error',
       { semi: false, singleQuote: true },
       { usePrettierrc: false },
-    ], // Use our .prettierrc file as source
+    ],
     // 'arrow-body-style': 'off',
     // 'prefer-arrow-callback': 'off',
   },
