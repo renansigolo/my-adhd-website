@@ -28,8 +28,10 @@ const payloadWhat = {
 
 function EnvTag() {
   return (
-    <div className="env-tag">
-      <span>{process.env.NODE_ENV.toUpperCase()}</span>
+    <div className="fixed bottom-5 left-5">
+      <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
+        {process.env.NODE_ENV.toUpperCase()}
+      </span>
     </div>
   )
 }
@@ -94,11 +96,12 @@ export default function Home() {
 
           <Hero />
 
-          <FeatureHighlight payload={payloadLearn} />
+          <FeatureHighlight />
+          {/* <FeatureHighlight payload={payloadLearn} /> */}
 
           <Features />
 
-          <FeatureHighlight payload={payloadWhat} />
+          {/* <FeatureHighlight payload={payloadWhat} /> */}
 
           <Disclaimer />
 

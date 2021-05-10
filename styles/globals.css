@@ -4,66 +4,10 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* Globals */
-
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-
-# USAGE
-.my-box {
-   @include mobile {
-     padding: 20px;
-   }
- } 
-*/
-
-/* Small devices (portrait phones, 440px and up) */
-/* @mixin mobile {
-  @media (min-width: 600px) {
-    @content;
-  }
-} */
-
-/* Medium devices (tablets, 960px and up) */
-/* @mixin tablet {
-  @media (min-width: 960px) {
-    @content;
-  }
-} */
-
-/* Large devices (desktops, 1280px and up) */
-/* @mixin desktop {
-  @media (min-width: 1280px) {
-    @content;
-  }
-} */
-
-/* Extra large devices (large desktops, 1920px and up) */
-/* @mixin widescreen {
-  @media (min-width: 1920px) {
-    @content;
-  }
-} */
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -80,15 +24,4 @@ there.
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
   }
-}
-
-/* Globals
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.env-tag {
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  color: #fff;
-  background-color: #ff00007a;
 }
