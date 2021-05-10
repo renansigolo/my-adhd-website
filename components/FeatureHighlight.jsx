@@ -226,8 +226,8 @@ export default function FeatureHighlight() {
               className="relative mx-auto"
               src="/images/highlight/learn.webp"
               alt="iPhone Portrait"
-              width={490}
-              height={900}
+              width={300}
+              height={570}
             />
           </div>
         </div>
@@ -335,8 +335,8 @@ export default function FeatureHighlight() {
                 className="relative mx-auto"
                 src="/images/highlight/what.webp"
                 alt="iPhone Portrait"
-                width={490}
-                height={900}
+                width={300}
+                height={570}
               />
             </div>
           </div>
