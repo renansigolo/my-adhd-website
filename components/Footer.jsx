@@ -69,9 +69,16 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
+    <footer className="bg-gray-50">
+      {/* Divider */}
+      <div className="relative">
+        <div className="absolute inset-0 flex items-center" aria-hidden="true">
+          <div className="w-full border-t border-gray-300" />
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-        <div className="mt-8 flex justify-center space-x-6">
+        <div className="flex justify-center space-x-6">
           {navigation.social.map((item) => (
             <a
               key={item.name}

@@ -13,12 +13,10 @@
 // } from '@material-ui/core'
 // import { makeStyles } from '@material-ui/core/styles'
 // import { Alert, AlertTitle } from '@material-ui/lab'
-// import { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 // import React, { useState } from 'react'
 // import { Controller, useForm } from 'react-hook-form'
-// import { FormattedMessage, useIntl } from 'react-intl'
 // import API from '../pages/api/api'
-
 // const useStyles = makeStyles((theme) => ({
 //   root: {
 //     flexGrow: 1,
@@ -31,13 +29,10 @@
 //     minWidth: '100%',
 //   },
 // }))
-
 // function ContactForm() {
 //   const classes = useStyles()
 //   const router = useRouter()
-
 //   const { locale } = router
-
 //   // Assign add the translated fields to variables
 //   const intl = useIntl()
 //   const formatted = {
@@ -62,11 +57,9 @@
 //       error: intl.formatMessage({ id: 'contact.form.message.error' }),
 //     },
 //   }
-
 //   const defaultValues = {
 //     language: locale.substring(0, 2),
 //   }
-
 //   const [isLoading, setIsLoading] = useState(false)
 //   const [isSuccess, setIsSuccess] = useState(false)
 //   const {
@@ -75,7 +68,6 @@
 //     handleSubmit,
 //     formState: { errors },
 //   } = useForm({ defaultValues })
-
 //   const onSubmit = (data, evt) => {
 //     setIsLoading(true)
 //     // Send a POST request to Firebase Cloud Function
@@ -91,7 +83,6 @@
 //         evt.target.reset() // reset after form submit
 //       })
 //   }
-
 //   return (
 //     <section id="contact" className={classes.root}>
 //       <Container maxWidth="sm">
@@ -103,7 +94,6 @@
 //             <FormattedMessage id="contact.subtitle" />
 //           </Typography>
 //         </Box>
-
 //         <form onSubmit={handleSubmit(onSubmit)}>
 //           {isLoading ? (
 //             <Grid item xs={12}>
@@ -177,7 +167,6 @@
 //                 />
 //                 <p>{errors.email && formatted.email.error}</p>
 //               </Grid>
-
 //               <Grid item xs={12}>
 //                 <TextField
 //                   className={classes.messageInput}
@@ -194,18 +183,6 @@
 //                 />
 //                 <p>{errors.message && formatted.message.error}</p>
 //               </Grid>
-//               <Grid container justify="center" alignItems="center">
-//                 <Grid item>
-//                   <Button
-//                     color="primary"
-//                     size="large"
-//                     type="submit"
-//                     variant="contained"
-//                   >
-//                     <FormattedMessage id="contact.submit" />
-//                   </Button>
-//                 </Grid>
-//               </Grid>
 //             </Grid>
 //           )}
 //         </form>
@@ -213,11 +190,9 @@
 //     </section>
 //   )
 // }
-
 // export default ContactForm
-
 /*
-  This example requires Tailwind CSS v2.0+ 
+  This example requires Tailwind CSS v2.0+
   
   This example requires some changes to your config:
   
@@ -233,7 +208,8 @@
   ```
 */
 import { useState } from 'react'
-import { Switch } from '@headlessui/react'
+import { useForm } from 'react-hook-form'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -241,6 +217,41 @@ function classNames(...classes) {
 
 export default function ContactForm() {
   const [agreed, setAgreed] = useState(false)
+  const router = useRouter()
+  const { locale } = router
+  // Assign add the translated fields to variables
+  const intl = useIntl()
+  const translated = {
+    name: {
+      title: intl.formatMessage({ id: 'contact.form.name.title' }),
+      placeholder: intl.formatMessage({ id: 'contact.form.name.placeholder' }),
+      error: intl.formatMessage({ id: 'contact.form.name.error' }),
+    },
+    email: {
+      title: intl.formatMessage({ id: 'contact.form.email.title' }),
+      placeholder: intl.formatMessage({ id: 'contact.form.email.placeholder' }),
+      error: intl.formatMessage({ id: 'contact.form.email.error' }),
+    },
+    language: {
+      title: intl.formatMessage({ id: 'contact.form.language.title' }),
+    },
+    message: {
+      title: intl.formatMessage({ id: 'contact.form.message.title' }),
+      placeholder: intl.formatMessage({
+        id: 'contact.form.message.placeholder',
+      }),
+      error: intl.formatMessage({ id: 'contact.form.message.error' }),
+    },
+  }
+  const language = locale.substring(0, 2)
+
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm()
+
+  const onSubmit = (data) => console.log(data)
 
   return (
     <section id="contact">
@@ -314,51 +325,64 @@ export default function ContactForm() {
           </svg>
           <div className="text-center">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Contact us
+              <FormattedMessage id="contact.title" />
             </h2>
             <p className="mt-4 text-lg leading-6 text-gray-500">
-              Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat
-              massa dictumst amet. Sapien tortor lacus arcu.
+              <FormattedMessage id="contact.subtitle" />
             </p>
           </div>
           <div className="mt-12">
             <form
-              action="#"
-              method="POST"
+              onSubmit={handleSubmit(onSubmit)}
               className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
             >
               <div>
                 <label
-                  htmlFor="first_name"
+                  htmlFor="name"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  First name
+                  <FormattedMessage id="contact.form.name.title" />
                 </label>
                 <div className="mt-1">
                   <input
                     type="text"
-                    name="first_name"
-                    id="first_name"
-                    autoComplete="given-name"
+                    name="name"
+                    id="name"
+                    autoComplete="name"
+                    placeholder={translated.name.placeholder}
                     className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                    {...register('userName', { required: true })}
                   />
+
+                  {errors.userName?.type === 'required' && (
+                    <p className="mt-2 ml-2 text-red-900">
+                      {translated.name.error}
+                    </p>
+                  )}
                 </div>
               </div>
               <div>
                 <label
-                  htmlFor="last_name"
+                  htmlFor="language"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Last name
+                  <FormattedMessage id="contact.form.language.title" />
                 </label>
                 <div className="mt-1">
-                  <input
-                    type="text"
-                    name="last_name"
-                    id="last_name"
-                    autoComplete="family-name"
-                    className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                  />
+                  <label htmlFor="language" className="sr-only">
+                    <FormattedMessage id="contact.form.language.title" />
+                  </label>
+                  <select
+                    id="language"
+                    name="language"
+                    defaultValue={language}
+                    className="form-select h-12 w-full py-3 px-4 text-gray-500 border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 rounded-md"
+                    {...register('language', { required: true })}
+                  >
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                  </select>
                 </div>
               </div>
               <div className="sm:col-span-2">
@@ -366,7 +390,7 @@ export default function ContactForm() {
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Email
+                  <FormattedMessage id="contact.form.email.title" />
                 </label>
                 <div className="mt-1">
                   <input
@@ -374,40 +398,15 @@ export default function ContactForm() {
                     name="email"
                     type="email"
                     autoComplete="email"
+                    placeholder={translated.email.placeholder}
                     className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                    {...register('email', { required: true })}
                   />
-                </div>
-              </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="phone_number"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Phone Number
-                </label>
-                <div className="mt-1 relative rounded-md shadow-sm">
-                  <div className="absolute inset-y-0 left-0 flex items-center">
-                    <label htmlFor="country" className="sr-only">
-                      Country
-                    </label>
-                    <select
-                      id="country"
-                      name="country"
-                      className="h-full py-0 pl-4 pr-8 border-transparent bg-transparent text-gray-500 focus:ring-indigo-500 focus:border-indigo-500 rounded-md"
-                    >
-                      <option>US</option>
-                      <option>CA</option>
-                      <option>EU</option>
-                    </select>
-                  </div>
-                  <input
-                    type="text"
-                    name="phone_number"
-                    id="phone_number"
-                    autoComplete="tel"
-                    className="py-3 px-4 block w-full pl-20 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                    placeholder="+1 (555) 987-6543"
-                  />
+                  {errors.email?.type === 'required' && (
+                    <p className="mt-2 ml-2 text-red-900">
+                      {translated.email.error}
+                    </p>
+                  )}
                 </div>
               </div>
               <div className="sm:col-span-2">
@@ -415,7 +414,7 @@ export default function ContactForm() {
                   htmlFor="message"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Message
+                  <FormattedMessage id="contact.form.message.title" />
                 </label>
                 <div className="mt-1">
                   <textarea
@@ -424,10 +423,17 @@ export default function ContactForm() {
                     rows={4}
                     className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     defaultValue={''}
+                    placeholder={translated.message.placeholder}
+                    {...register('message', { required: true })}
                   />
+                  {errors.message?.type === 'required' && (
+                    <p className="mt-2 ml-2 text-red-900">
+                      {translated.message.error}
+                    </p>
+                  )}
                 </div>
               </div>
-              <div className="sm:col-span-2">
+              {/* <div className="sm:col-span-2">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
                     <Switch
@@ -468,13 +474,13 @@ export default function ContactForm() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="sm:col-span-2">
                 <button
                   type="submit"
                   className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
-                  Let's talk
+                  <FormattedMessage id="contact.submit" />
                 </button>
               </div>
             </form>
