@@ -1,4 +1,3 @@
-import { Divider } from '@material-ui/core'
 import Head from 'next/head'
 import React from 'react'
 import Contact from '../components/Contact'
@@ -7,6 +6,7 @@ import Download from '../components/Download'
 import Features from '../components/Features'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
+import Divider from '../components/shared/Divider'
 import styles from '../styles/Home.module.css'
 
 // function initializeReactGA() {
@@ -14,17 +14,10 @@ import styles from '../styles/Home.module.css'
 //   ReactGA.pageview(window.location.pathname + window.location.search)
 // }
 
-// const payloadLearn = {
-//   id: 'learn',
-//   imgSrc: '/images/highlight/learn.webp',
-//   direction: 'row',
-// }
-// const payloadWhat = {
-//   id: 'what',
-//   imgSrc: '/images/highlight/what.webp',
-//   direction: 'row-reverse',
-// }
-
+/**
+ * Display a development badge to identify the current environment being used
+ * @returns
+ */
 function EnvTag() {
   return (
     <div className="fixed bottom-5 left-5">
@@ -106,19 +99,9 @@ export default function Home() {
           <Contact />
         </main>
 
+        <Divider />
+
         <Footer />
-        {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
       </div>
     </React.Fragment>
   )
