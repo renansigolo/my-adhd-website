@@ -137,7 +137,11 @@ export default function ContactForm() {
                     autoComplete="given-name"
                     placeholder={translated.name.placeholder}
                     className="py-3 px-4 block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 border-gray-300 rounded-md"
-                    {...register('name', { required: true })}
+                    {...register('name', {
+                      required: true,
+                      minLength: 3,
+                      maxLength: 40,
+                    })}
                   />
 
                   {errors.name?.type === 'required' && (
