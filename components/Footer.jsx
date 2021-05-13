@@ -32,7 +32,7 @@ export default function Footer() {
               href={item.href}
               target="_blank"
               rel="noreferrer noopener"
-              className={`text-gray-400 hover:text-${item.color}-600 transition transform hover:scale-105`}
+              className={`text-gray-400 transition transform hover:scale-105 hover:text-${item.color}-600`}
             >
               <span className="sr-only">{item.name}</span>
               <FontAwesomeIcon icon={item.icon} size="lg" />

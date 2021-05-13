@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     // <div className="relative bg-purple-900 overflow-hidden">
     <div className="relative overflow-hidden">
-      <div className="mt-6 mb-20 flex flex-col justify-center">
+      <div className="mt-6 flex flex-col justify-center">
         <div className={styles.bgWrap}>
           <Image
             alt="Background My ADHD"
@@ -16,7 +16,7 @@ export default function Hero() {
             quality={100}
           />
         </div>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-lg md:max-w-3xl mx-auto">
             <main className="mt-16 mx-auto max-w-3xl px-4 sm:mt-20">
               <div className="text-center">
