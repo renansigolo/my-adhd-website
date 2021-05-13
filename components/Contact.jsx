@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { FormattedMessage, useIntl } from 'react-intl'
-import Loader from '../components/shared/Loader'
+import Spinner from './shared/Spinner'
 // import Notification from './shared/Notification'
 import CardSuccess from './shared/CardSuccess'
 
@@ -146,7 +146,7 @@ export default function ContactForm() {
             )
           ) : (
             <div className="h-96 grid place-items-center">
-              <Loader show />
+              <Spinner show />
             </div>
           )}
         </div>

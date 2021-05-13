@@ -7,7 +7,6 @@ import Features from '../components/Features'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import Divider from '../components/shared/Divider'
-// import Loader from '../components/shared/Loader'
 // function initializeReactGA() {
 //   ReactGA.initialize('UA-82193310-7')
 //   ReactGA.pageview(window.location.pathname + window.location.search)
@@ -86,8 +85,6 @@ export default function Home() {
           {isProd ? null : <EnvTag />}
 
           <Hero />
-
-          {/* <Loader show /> */}
 
           <Features />
 

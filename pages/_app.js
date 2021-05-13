@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'
-// import { Toaster } from 'react-hot-toast'
 import { IntlProvider } from 'react-intl'
-// import Navbar from '../components/shared/Navbar'
 import '../styles/globals.css'
+// import Navbar from '../components/shared/Navbar'
+// import { Toaster } from 'react-hot-toast'
 
 const languages = {
   en: require('../locale/en.json'),
