@@ -1,67 +1,59 @@
 import { faAppStore, faGooglePlay } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Box, Button, Container, Grid, Typography } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
-import React from 'react'
+import Image from 'next/image'
 import { FormattedMessage } from 'react-intl'
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    minHeight: '350px',
-  },
-  button: {
-    margin: theme.spacing(1),
-    minWidth: 250,
-  },
-}))
-
-function Download() {
-  const classes = useStyles()
-
+export default function Download() {
   return (
     <section id="download">
-      <Container className={classes.root}>
-        <Box mb={3}>
-          <Typography variant="h3" component="h2" align="center">
-            <FormattedMessage id="download.title" />
-          </Typography>
-
-          <Typography variant="subtitle1" component="p" align="center">
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-24 lg:px-8">
+          <Image
+            src="/images/icon-square.svg"
+            width={160}
+            height={160}
+            alt="My ADHD Logo"
+          />
+          <h2 className="text-3xl font-extrabold text-gray-900 mt-8 sm:text-4xl">
+            <span className="block">
+              <FormattedMessage id="download.title" />
+            </span>
+          </h2>
+          <p className="mb-8 text-lg leading-6 text-gray-900">
             <FormattedMessage id="download.description" />
-          </Typography>
-        </Box>
-
-        <Grid container justify="center">
-          <Button
-            target="_blank"
-            variant="contained"
-            color="primary"
-            size="large"
-            className={classes.button}
-            startIcon={<FontAwesomeIcon icon={faAppStore} />}
-            href="https://apps.apple.com/au/app/my-adhd/id1375236150"
-          >
-            <FormattedMessage id="download.ios" />
-          </Button>
-
-          <Button
-            target="_blank"
-            variant="contained"
-            color="primary"
-            size="large"
-            className={classes.button}
-            startIcon={<FontAwesomeIcon icon={faGooglePlay} />}
-            href="https://play.google.com/store/apps/details?id=tk.tdah"
-          >
-            <FormattedMessage id="download.android" />
-          </Button>
-        </Grid>
-      </Container>
+          </p>
+          <div className="mt-8 mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 md:max-w-xl">
+            <a
+              href="https://apps.apple.com/au/app/my-adhd/id1375236150"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base md:text-lg font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 hover:shadow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faAppStore}
+                size={'lg'}
+                className="-ml-1 mr-2"
+                aria-hidden="true"
+              />
+              <FormattedMessage id="download.ios" />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=tk.tdah"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base md:text-lg font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 hover:shadow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faGooglePlay}
+                size={'lg'}
+                className="-ml-1 mr-2"
+                aria-hidden="true"
+              />
+              <FormattedMessage id="download.android" />
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
-
-export default Download

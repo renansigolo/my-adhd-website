@@ -31,17 +31,22 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "@material-ui/core": "^4.11.4",
-    "@material-ui/lab": "^4.0.0-alpha.58",
+    "@headlessui/react": "^1.2.0",
+    "@heroicons/react": "^1.0.1",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/typography": "^0.4.0",
     "axios": "^0.21.1",
     "next": "^10.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-ga": "^3.3.0",
-    "react-hook-form": "^7.5.2",
+    "react-hook-form": "^7.5.3",
+    "react-hot-toast": "^1.0.2",
     "react-intl": "^5.17.5"
   },
   "devDependencies": {
+    "autoprefixer": "^10.2.5",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-formatjs": "^2.15.0",
@@ -52,7 +57,9 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
-    "prettier": "2.3.0"
+    "postcss": "^8.2.15",
+    "prettier": "2.3.0",
+    "tailwindcss": "^2.1.2"
   },
   "engines": {
     "node": ">=14.16.0",

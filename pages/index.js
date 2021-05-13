@@ -1,35 +1,27 @@
-import { Divider } from '@material-ui/core'
 import Head from 'next/head'
 import React from 'react'
 import Contact from '../components/Contact'
 import Disclaimer from '../components/Disclaimer'
 import Download from '../components/Download'
-import FeatureHighlight from '../components/FeatureHighlight'
 import Features from '../components/Features'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
-import styles from '../styles/Home.module.css'
-
+import Divider from '../components/shared/Divider'
 // function initializeReactGA() {
 //   ReactGA.initialize('UA-82193310-7')
 //   ReactGA.pageview(window.location.pathname + window.location.search)
 // }
 
-const payloadLearn = {
-  id: 'learn',
-  imgSrc: '/images/highlight/learn.webp',
-  direction: 'row',
-}
-const payloadWhat = {
-  id: 'what',
-  imgSrc: '/images/highlight/what.webp',
-  direction: 'row-reverse',
-}
-
+/**
+ * Display a development badge to identify the current environment being used
+ * @returns
+ */
 function EnvTag() {
   return (
-    <div className="env-tag">
-      <span>{process.env.NODE_ENV.toUpperCase()}</span>
+    <div className="fixed bottom-5 left-5">
+      <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-purple-100 text-purple-800 opacity-70">
+        {process.env.NODE_ENV.toUpperCase()}
+      </span>
     </div>
   )
 }
@@ -40,8 +32,8 @@ export default function Home() {
   const description = 'The first ADHD app with cognitive analysis!'
 
   return (
-    <React.Fragment>
-      <div className={styles.container}>
+    <>
+      <div>
         <Head>
           {/* Primary Meta Tags */}
           <title>My ADHD Website</title>
@@ -89,16 +81,12 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <div className="landing">
+        <main>
           {isProd ? null : <EnvTag />}
 
           <Hero />
 
-          <FeatureHighlight payload={payloadLearn} />
-
           <Features />
-
-          <FeatureHighlight payload={payloadWhat} />
 
           <Disclaimer />
 
@@ -107,64 +95,13 @@ export default function Home() {
           <Divider />
 
           <Contact />
-        </div>
+        </main>
 
-        {/* <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main> */}
+        <Divider />
 
         <Footer />
-        {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
       </div>
-    </React.Fragment>
+    </>
   )
 }
 
