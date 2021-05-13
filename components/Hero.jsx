@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     // <div className="relative bg-purple-900 overflow-hidden">
     <div className="relative overflow-hidden">
-      <div className={`pt-6 pb-20 flex flex-col justify-center`}>
+      <div className="mt-6 mb-20 flex flex-col justify-center">
         <div className={styles.bgWrap}>
           <Image
             alt="Background My ADHD"

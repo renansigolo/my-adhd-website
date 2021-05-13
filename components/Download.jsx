@@ -22,7 +22,7 @@ export default function Download() {
           <p className="mb-8 text-lg leading-6 text-gray-900">
             <FormattedMessage id="download.description" />
           </p>
-          <div className="mt-8 mx-auto grid grid-cols-1 gap-4 max-w-sm md:grid-cols-2 md:max-w-xl">
+          <div className="mt-8 mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 md:max-w-xl">
             <a
               href="https://apps.apple.com/au/app/my-adhd/id1375236150"
               className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base md:text-lg font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 hover:shadow"
