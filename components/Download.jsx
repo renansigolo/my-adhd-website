@@ -31,7 +31,8 @@ export default function Download() {
             >
               <FontAwesomeIcon
                 icon={faAppStore}
-                className="-ml-1 mr-2 h-5 w-5 text-white"
+                size={'lg'}
+                className="-ml-1 mr-2"
                 aria-hidden="true"
               />
               <FormattedMessage id="download.ios" />
@@ -44,7 +45,8 @@ export default function Download() {
             >
               <FontAwesomeIcon
                 icon={faGooglePlay}
-                className="-ml-1 mr-2 h-5 w-5 text-white"
+                size={'lg'}
+                className="-ml-1 mr-2"
                 aria-hidden="true"
               />
               <FormattedMessage id="download.android" />

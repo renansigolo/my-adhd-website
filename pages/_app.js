@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'
+// import Navbar from '../components/shared/Navbar'
+import { Toaster } from 'react-hot-toast'
 import { IntlProvider } from 'react-intl'
 import '../styles/globals.css'
-// import Navbar from '../components/shared/Navbar'
-// import { Toaster } from 'react-hot-toast'
 
 const languages = {
   en: require('../locale/en.json'),
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
     >
       {/* <Navbar /> */}
       <Component {...pageProps} />
-      {/* <Toaster /> */}
+      <Toaster position="top-right" />
     </IntlProvider>
   )
 }

@@ -35,3 +35,17 @@ html {
     transform: rotate(360deg);
   }
 }
+
+/* Scale Animation on Hover */
+.scale:hover {
+  animation: scale 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}

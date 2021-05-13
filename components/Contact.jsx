@@ -2,10 +2,10 @@ import axios from 'axios'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
 import { FormattedMessage, useIntl } from 'react-intl'
-import Spinner from './shared/Spinner'
-// import Notification from './shared/Notification'
 import CardSuccess from './shared/CardSuccess'
+import Spinner from './shared/Spinner'
 
 function BgPattern() {
   return (
@@ -109,27 +109,40 @@ export default function ContactForm() {
     handleSubmit,
   } = useForm()
 
-  const onSubmit = (data, evt) => {
+  const onSubmit = async (data, evt) => {
     const contactAPI = axios.create({
       baseURL: process.env.NEXT_PUBLIC_FIREBASE_URL,
     })
 
     setIsLoading(true)
     // Send a POST request to Firebase Cloud Function
-    contactAPI
-      .post('sendContactEmail', { ...data })
-      .then(() => {
-        console.log('success')
-        setIsSuccess(true)
-      })
-      .catch((error) => {
-        console.error(error)
-      })
-      .finally(() => {
-        console.log('finally')
-        setIsLoading(false)
-        evt.target.reset() // reset after form submit
-      })
+    try {
+      await contactAPI.post('sendContactEmail', { ...data })
+      setIsSuccess(true)
+    } catch (error) {
+      toast.error(
+        error.message || intl.formatMessage({ id: `contact.form.error` })
+      )
+      console.error(error)
+    } finally {
+      setIsLoading(false)
+      evt.target.reset() // reset after form submit
+    }
+    // contactAPI
+    //   .post('sendContactEmail', { ...data })
+    //   .then(() => {
+    //     setIsSuccess(true)
+    //   })
+    //   .catch((error) => {
+    //     toast.error(
+    //       error.message || intl.formatMessage({ id: `contact.form.error` })
+    //     )
+    //     console.error(error)
+    //   })
+    //   .finally(() => {
+    //     setIsLoading(false)
+    //     evt.target.reset() // reset after form submit
+    //   })
   }
 
   return (

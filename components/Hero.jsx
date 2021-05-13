@@ -9,7 +9,7 @@ export default function Hero() {
       <div className={`pt-6 pb-20 flex flex-col justify-center`}>
         <div className={styles.bgWrap}>
           <Image
-            alt="Mountains"
+            alt="Background My ADHD"
             src="/images/header/bg-header.webp"
             layout="fill"
             objectFit="cover"

@@ -32,7 +32,7 @@ export default function Home() {
   const description = 'The first ADHD app with cognitive analysis!'
 
   return (
-    <React.Fragment>
+    <>
       <div>
         <Head>
           {/* Primary Meta Tags */}
@@ -101,7 +101,7 @@ export default function Home() {
 
         <Footer />
       </div>
-    </React.Fragment>
+    </>
   )
 }
 

@@ -1,12 +1,4 @@
 /* Hero Component */
-.heroBg {
-  background-image: url('/images/header/bg-header.png');
-  background-size: cover;
-  background-position: center center;
-  min-height: 600px;
-  color: #fff;
-}
-
 .bgWrap {
   position: fixed;
   height: 100vh;

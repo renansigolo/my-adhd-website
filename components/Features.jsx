@@ -34,18 +34,18 @@ function FeatureHighlights() {
             key={card.title + (index + 1)}
             className="col-span-1 flex flex-col text-center bg-gradient-to-tr from-purple-800 to-pink-600 rounded-lg shadow divide-y divide-gray-200"
           >
-            <div className="flex-1 flex flex-col p-8">
+            <div className="flex-1 flex flex-col p-8 text-white">
               <FontAwesomeIcon
                 icon={card.icon}
                 size="4x"
-                className="text-white flex-shrink-0 mx-auto"
+                className="flex-shrink-0 mx-auto"
               />
-              <h3 className="mt-6 text-gray-100 text-lg font-medium">
+              <h3 className="mt-6 text-lg font-medium">
                 <FormattedMessage id={card.title + (index + 1)} />
               </h3>
               <dl className="mt-1flex-grow flex flex-col justify-between">
                 <dt className="sr-only">Title</dt>
-                <dd className="text-gray-50 text-sm">
+                <dd className="text-sm">
                   <FormattedMessage id={card.subtitle + (index + 1)} />
                 </dd>
               </dl>
