@@ -1,25 +1,12 @@
 import Image from 'next/image'
-// import { Fragment } from 'react'
-// import { Popover, Transition } from '@headlessui/react'
-// import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { FormattedMessage } from 'react-intl'
-import styles from '../styles/Hero.module.css'
-// const navigation = [
-//   { name: 'Features', href: '#features' },
-//   { name: 'Contact', href: '#contact' },
-//   { name: 'Download', href: '#download' },
-// ]
+// import styles from '../styles/Hero.module.css'
+
 export default function Hero() {
   return (
-    <div className="relative bg-purple-900 overflow-hidden">
-      {/* <div className="relative bg-gradient-to-bl from-purple-900 to-purple-600 overflow-hidden"> */}
-      {/* <div
-        className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full"
-        aria-hidden="true"
-      ></div> */}
-      <div
-        className={`${styles.hero__bg} pt-6 py-16 flex flex-col justify-center`}
-      >
+    // <div className="relative bg-purple-900 overflow-hidden">
+    <div className="relative bg-gradient-to-tr from-purple-900 via-purple-800 to-pink-800 overflow-hidden">
+      <div className={`pt-6 py-16 flex flex-col justify-center`}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-lg md:max-w-3xl mx-auto">
             <main className="mt-16 mx-auto max-w-3xl px-4 sm:mt-20">

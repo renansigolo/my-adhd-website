@@ -8,6 +8,7 @@ const navigation = {
     {
       name: 'Facebook',
       href: 'https://facebook.com/myadhdapp',
+      color: 'blue',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -21,6 +22,7 @@ const navigation = {
     {
       name: 'Instagram',
       href: 'https://instagram.com/myadhdapp',
+      color: 'pink',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -56,7 +58,7 @@ export default function Footer() {
             <a
               key={item.name}
               href={item.href}
-              className=" text-gray-400 hover:text-gray-500"
+              className={`text-gray-400 hover:text-${item.color}-600`}
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-7 w-7" aria-hidden="true" />
@@ -66,15 +68,36 @@ export default function Footer() {
         <p className="mt-8 text-center text-base text-gray-400">
           <FormattedMessage
             id="footer.title"
-            defaultMessage="Made with {heartIcon} by Renan Sigolo."
-            values={{ heartIcon: <FontAwesomeIcon icon={faHeart} /> }}
+            defaultMessage="Made with {heartIcon} by {owner}."
+            values={{
+              heartIcon: (
+                <FontAwesomeIcon
+                  icon={faHeart}
+                  className="hover:text-red-500"
+                />
+              ),
+              owner: (
+                <a
+                  href="https://renansigolo.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="hover:underline"
+                >
+                  Renan Sigolo
+                </a>
+              ),
+            }}
           />
         </p>
         <p className="mt-6 text-center text-base text-gray-400">
-          &copy; 2021 My ADHD, Inc. All rights reserved.
+          &copy; 2021 My ADHD, Inc.{' '}
+          <FormattedMessage
+            id="footer.copyright"
+            defaultMessage="All rights reserved."
+          />
           <br />
           <Link href="/privacy-policy">
-            <a>
+            <a className="hover:underline">
               <FormattedMessage
                 id="footer.privacy-policy"
                 defaultMessage="Privacy Policy"

@@ -1,4 +1,3 @@
-// import { ContactAPI } from '../pages/api/contact'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
@@ -183,7 +182,7 @@ export default function ContactForm() {
                 id="name"
                 autoComplete="given-name"
                 placeholder={translated.name.placeholder}
-                disabled={isLoading || isSuccess}
+                disabled={isLoading}
                 className="py-3 px-4 block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 border-gray-300 rounded-md"
                 {...register('name', {
                   required: true,
@@ -212,7 +211,7 @@ export default function ContactForm() {
                 id="language"
                 name="language"
                 defaultValue={language}
-                disabled={isLoading || isSuccess}
+                disabled={isLoading}
                 className="form-select h-12 w-full py-3 px-4 text-gray-500 border-gray-300 focus:ring-purple-500 focus:border-purple-500 rounded-md"
                 {...register('language', { required: true })}
               >
@@ -236,7 +235,7 @@ export default function ContactForm() {
                 type="email"
                 autoComplete="email"
                 placeholder={translated.email.placeholder}
-                disabled={isLoading || isSuccess}
+                disabled={isLoading}
                 className="py-3 px-4 block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 border-gray-300 rounded-md"
                 {...register('email', { required: true })}
               />
@@ -262,7 +261,7 @@ export default function ContactForm() {
                 className="py-3 px-4 block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 border-gray-300 rounded-md"
                 defaultValue={''}
                 placeholder={translated.message.placeholder}
-                disabled={isLoading || isSuccess}
+                disabled={isLoading}
                 {...register('message', { required: true })}
               />
               {errors.message?.type === 'required' && (
@@ -272,7 +271,7 @@ export default function ContactForm() {
               )}
             </div>
           </div>
-          <div className="sm:col-span-2">
+          {/* <div className="sm:col-span-2">
             <div className="flex items-start ml-3">
               <p className="text-base text-gray-500">
                 This site is protected by reCAPTCHA and the Google{' '}
@@ -296,12 +295,12 @@ export default function ContactForm() {
                 apply.
               </p>
             </div>
-          </div>
+          </div> */}
 
           <div className="sm:col-span-2">
             <button
               type="submit"
-              disabled={isLoading || isSuccess}
+              disabled={isLoading}
               className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
             >
               <FormattedMessage id="contact.submit" />
