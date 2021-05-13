@@ -3,13 +3,12 @@ import Image from 'next/image'
 // import { Popover, Transition } from '@headlessui/react'
 // import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { FormattedMessage } from 'react-intl'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Hero.module.css'
 // const navigation = [
 //   { name: 'Features', href: '#features' },
 //   { name: 'Contact', href: '#contact' },
 //   { name: 'Download', href: '#download' },
 // ]
-
 export default function Hero() {
   return (
     <div className="relative bg-purple-900 overflow-hidden">
@@ -18,7 +17,6 @@ export default function Hero() {
         className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full"
         aria-hidden="true"
       ></div> */}
-
       <div
         className={`${styles.hero__bg} pt-6 py-16 flex flex-col justify-center`}
       >

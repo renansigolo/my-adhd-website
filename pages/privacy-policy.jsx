@@ -2,17 +2,18 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Divider from '../components/shared/Divider'
 import { HomeIcon } from '@heroicons/react/outline'
+import Link from 'next/link'
 
 function PrivacyPolicyContent() {
   return (
     <div className="max-w-7xl my-16 mx-auto px-4 sm:px-6 lg:px-8">
       <div className="sticky top-8">
-        <a
+        <Link
           href="/"
           className="inline-flex items-center p-3 border border-transparent rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
           <HomeIcon className="h-6 w-6" aria-hidden="true" />
-        </a>
+        </Link>
       </div>
       <div className="max-w-3xl mx-auto">
         <h1 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">

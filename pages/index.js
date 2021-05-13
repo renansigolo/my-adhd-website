@@ -7,8 +7,7 @@ import Features from '../components/Features'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import Divider from '../components/shared/Divider'
-import styles from '../styles/Home.module.css'
-
+// import Loader from '../components/shared/Loader'
 // function initializeReactGA() {
 //   ReactGA.initialize('UA-82193310-7')
 //   ReactGA.pageview(window.location.pathname + window.location.search)
@@ -35,7 +34,7 @@ export default function Home() {
 
   return (
     <React.Fragment>
-      <div className={styles.container}>
+      <div>
         <Head>
           {/* Primary Meta Tags */}
           <title>My ADHD Website</title>
@@ -83,10 +82,12 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main className={styles.main}>
+        <main>
           {isProd ? null : <EnvTag />}
 
           <Hero />
+
+          {/* <Loader show /> */}
 
           <Features />
 
