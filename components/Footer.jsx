@@ -90,12 +90,14 @@ export default function Footer() {
           />
         </p>
         <p className="mt-6 text-center text-base text-gray-400">
-          &copy; 2021 My ADHD, Inc.{' '}
+          &copy; 2021 My ADHD, Inc.
+          <br />
           <FormattedMessage
             id="footer.copyright"
             defaultMessage="All rights reserved."
           />
-          <br />
+        </p>
+        <p className="mt-3 text-center text-base text-gray-400">
           <Link href="/privacy-policy">
             <a className="hover:underline">
               <FormattedMessage
