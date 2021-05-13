@@ -1,12 +1,21 @@
 import Image from 'next/image'
 import { FormattedMessage } from 'react-intl'
-// import styles from '../styles/Hero.module.css'
+import styles from '../styles/Hero.module.css'
 
 export default function Hero() {
   return (
     // <div className="relative bg-purple-900 overflow-hidden">
-    <div className="relative bg-gradient-to-tr from-purple-900 via-purple-800 to-pink-800 overflow-hidden">
-      <div className={`pt-6 py-16 flex flex-col justify-center`}>
+    <div className="relative overflow-hidden">
+      <div className={`pt-6 pb-20 flex flex-col justify-center`}>
+        <div className={styles.bgWrap}>
+          <Image
+            alt="Mountains"
+            src="/images/header/bg-header.webp"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+          />
+        </div>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-lg md:max-w-3xl mx-auto">
             <main className="mt-16 mx-auto max-w-3xl px-4 sm:mt-20">
