@@ -9,13 +9,13 @@ const navigation = {
     {
       name: 'Facebook',
       href: 'https://facebook.com/myadhdapp',
-      color: 'blue',
+      animation: 'hover:text-blue-600',
       icon: faFacebook,
     },
     {
       name: 'Instagram',
       href: 'https://instagram.com/myadhdapp',
-      color: 'pink',
+      animation: 'hover:text-pink-600',
       icon: faInstagram,
     },
   ],
@@ -32,7 +32,7 @@ export default function Footer() {
               href={item.href}
               target="_blank"
               rel="noreferrer noopener"
-              className={`text-gray-400 transition transform hover:scale-105 hover:text-${item.color}-600`}
+              className={`text-gray-400 transition transform hover:scale-105 ${item.animation}`}
             >
               <span className="sr-only">{item.name}</span>
               <FontAwesomeIcon icon={item.icon} size="lg" />
