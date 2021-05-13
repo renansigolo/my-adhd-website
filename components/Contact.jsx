@@ -81,36 +81,28 @@ function BgPattern() {
 }
 
 export default function ContactForm() {
+  // Get the current language to pre-define the select language field
   const router = useRouter()
-  const { locale } = router
+  const language = router.locale.substring(0, 2)
+
   // Assign add the translated fields to variables
   const intl = useIntl()
-  const translated = {
-    name: {
-      title: intl.formatMessage({ id: 'contact.form.name.title' }),
-      placeholder: intl.formatMessage({ id: 'contact.form.name.placeholder' }),
-      error: intl.formatMessage({ id: 'contact.form.name.error' }),
-    },
-    email: {
-      title: intl.formatMessage({ id: 'contact.form.email.title' }),
-      placeholder: intl.formatMessage({ id: 'contact.form.email.placeholder' }),
-      error: intl.formatMessage({ id: 'contact.form.email.error' }),
-    },
-    language: {
-      title: intl.formatMessage({ id: 'contact.form.language.title' }),
-    },
-    message: {
-      title: intl.formatMessage({ id: 'contact.form.message.title' }),
-      placeholder: intl.formatMessage({
-        id: 'contact.form.message.placeholder',
-      }),
-      error: intl.formatMessage({ id: 'contact.form.message.error' }),
-    },
+  function translatedFormValues(id) {
+    this.title = intl.formatMessage({ id: `contact.form.${id}.title` })
+    this.placeholder = intl.formatMessage({
+      id: `contact.form.${id}.placeholder`,
+    })
+    this.error = intl.formatMessage({ id: `contact.form.${id}.error` })
   }
-  const language = locale.substring(0, 2)
+  const translated = {
+    name: Object(new translatedFormValues('name')),
+    email: Object(new translatedFormValues('email')),
+    message: Object(new translatedFormValues('message')),
+  }
+
+  // Config React Hooks Form
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-
   const {
     register,
     formState: { errors },
