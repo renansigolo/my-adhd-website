@@ -6,7 +6,7 @@ import { FormattedMessage } from 'react-intl'
 export default function Download() {
   return (
     <section id="download">
-      <div className="bg-gray-50">
+      <div className="bg-white">
         <div className="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-24 lg:px-8">
           <Image
             src="/images/icon-square.svg"

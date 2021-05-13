@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router'
+// import { Toaster } from 'react-hot-toast'
 import { IntlProvider } from 'react-intl'
+// import Navbar from '../components/shared/Navbar'
 import '../styles/globals.css'
 
 const languages = {
@@ -19,7 +21,9 @@ function MyApp({ Component, pageProps }) {
       locale={locale}
       defaultLocale={defaultLocale}
     >
+      {/* <Navbar /> */}
       <Component {...pageProps} />
+      {/* <Toaster /> */}
     </IntlProvider>
   )
 }
