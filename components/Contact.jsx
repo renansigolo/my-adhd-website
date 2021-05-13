@@ -173,7 +173,7 @@ export default function ContactForm() {
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             <FormattedMessage id="contact.title" />
           </h2>
-          <p className="mt-4 text-lg leading-6 text-gray-500">
+          <p className="mt-4 text-lg leading-6 text-gray-600">
             <FormattedMessage id="contact.subtitle" />
           </p>
         </div>

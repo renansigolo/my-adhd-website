@@ -99,9 +99,9 @@ export default function Features() {
           {/* Highlight 0 */}
           <div className="relative mt-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div className="relative px-4 sm:px-6 lg:px-8">
-              <h3 className="text-2xl font-extrabold text-purple-900 tracking-tight sm:text-3xl">
+              <h2 className="text-2xl font-extrabold text-purple-900 tracking-tight sm:text-3xl">
                 <FormattedMessage id="highlight.0.title" />
-              </h3>
+              </h2>
               <p className="mt-3 text-lg text-gray-500">
                 <FormattedMessage id="highlight.0.subtitle" />
               </p>
@@ -193,9 +193,9 @@ export default function Features() {
           <div className="relative mt-12 sm:mt-16 lg:mt-24">
             <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
               <div className="px-4 sm:px-6 lg:px-8 lg:col-start-2">
-                <h3 className="text-2xl font-extrabold text-purple-900 tracking-tight sm:text-3xl">
+                <h2 className="text-2xl font-extrabold text-purple-900 tracking-tight sm:text-3xl">
                   <FormattedMessage id="highlight.1.title" />
-                </h3>
+                </h2>
                 <p className="mt-3 text-lg text-gray-500">
                   <FormattedMessage id="highlight.1.subtitle" />
                 </p>
