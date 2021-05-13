@@ -19,7 +19,7 @@ export default function Download() {
               <FormattedMessage id="download.title" />
             </span>
           </h2>
-          <p className="mt-4 mb-8 text-lg leading-6 text-gray-900">
+          <p className="mb-8 text-lg leading-6 text-gray-900">
             <FormattedMessage id="download.description" />
           </p>
           <div className="mt-8 mx-auto grid grid-cols-1 gap-4 max-w-sm md:grid-cols-2 md:max-w-lg">
