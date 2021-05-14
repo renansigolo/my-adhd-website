@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div className="relative overflow-hidden">
       <div className="mt-6 flex flex-col justify-center">
-        <div className={styles.bgWrap}>
+        <div className={styles.background}>
           <Image
             alt="Background My ADHD"
             src="/images/header/bg-header.webp"

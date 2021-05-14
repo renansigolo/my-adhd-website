@@ -20,8 +20,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix .",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "check": "prettier --check .",
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "format": "prettier '**/*' --write --ignore-unknown",
     "postversion": "git push",
     "serve": "firebase serve",
     "prepare": "husky install"
@@ -51,10 +53,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-formatjs": "^2.15.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "postcss": "^8.2.15",
@@ -72,8 +72,6 @@
     "maintained node versions"
   ],
   "lint-staged": {
-    "./**/*.{js,jsx,ts,tsx,json,css,md}": [
-      "prettier --config ./.prettierrc --write"
-    ]
+    "**/*": "prettier --write --ignore-unknown"
   }
 }

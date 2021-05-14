@@ -23,9 +23,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:prettier/recommended', // Make this the last element so prettier config overrides other formatting rules
+    'prettier', // Make this the last element so prettier config overrides other formatting rules
   ],
-  plugins: ['formatjs'],
   rules: {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
@@ -37,12 +36,7 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
-    'formatjs/no-offset': 'error',
-    'prettier/prettier': [
-      'error',
-      { semi: false, singleQuote: true },
-      { usePrettierrc: false },
-    ],
+    // 'formatjs/no-offset': 'error'
     // 'arrow-body-style': 'off',
     // 'prefer-arrow-callback': 'off',
   },
