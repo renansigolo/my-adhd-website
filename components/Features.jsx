@@ -2,26 +2,26 @@ import {
   faChalkboardTeacher,
   faGrinStars,
   faStethoscope,
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Image from 'next/image'
-import { FormattedMessage } from 'react-intl'
+} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Image from "next/image"
+import { FormattedMessage } from "react-intl"
 
 const cards = [
   {
     icon: faStethoscope,
-    title: 'features.card.title',
-    subtitle: 'features.card.description',
+    title: "features.card.title",
+    subtitle: "features.card.description",
   },
   {
     icon: faChalkboardTeacher,
-    title: 'features.card.title',
-    subtitle: 'features.card.description',
+    title: "features.card.title",
+    subtitle: "features.card.description",
   },
   {
     icon: faGrinStars,
-    title: 'features.card.title',
-    subtitle: 'features.card.description',
+    title: "features.card.title",
+    subtitle: "features.card.description",
   },
 ]
 
@@ -99,9 +99,9 @@ function BulletsMobile() {
 
 function Bullets(props) {
   // Adjust the classed to match the side of the screen
-  const left = 'right-full translate-x-1/2 translate-y-12'
-  const right = 'left-full -translate-x-1/2 -translate-y-1/4'
-  const screenPosition = props.position === 'left' ? left : right
+  const left = "right-full translate-x-1/2 translate-y-12"
+  const right = "left-full -translate-x-1/2 -translate-y-1/4"
+  const screenPosition = props.position === "left" ? left : right
 
   return (
     <>

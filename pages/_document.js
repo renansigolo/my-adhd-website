@@ -1,5 +1,5 @@
-import Document, { Head, Html, Main, NextScript } from 'next/document'
-import React from 'react'
+import Document, { Head, Html, Main, NextScript } from "next/document"
+import React from "react"
 
 /**
  * Add Google Analytics to Prod build
@@ -7,7 +7,7 @@ import React from 'react'
 function AddAnalytics() {
   return (
     <>
-      {process.env.NODE_ENV === 'production' ? (
+      {process.env.NODE_ENV === "production" ? (
         <Head>
           <script
             async

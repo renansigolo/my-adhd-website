@@ -1,13 +1,13 @@
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router"
 // import Navbar from '../components/shared/Navbar'
-import { Toaster } from 'react-hot-toast'
-import { IntlProvider } from 'react-intl'
-import '../styles/globals.css'
+import { Toaster } from "react-hot-toast"
+import { IntlProvider } from "react-intl"
+import "../styles/globals.css"
 
 const languages = {
-  en: require('../locale/en.json'),
-  es: require('../locale/es.json'),
-  pt: require('../locale/pt.json'),
+  en: require("../locale/en.json"),
+  es: require("../locale/es.json"),
+  pt: require("../locale/pt.json"),
 }
 
 function MyApp({ Component, pageProps }) {

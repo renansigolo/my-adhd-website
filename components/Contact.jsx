@@ -1,12 +1,12 @@
-import axios from 'axios'
-import { useRouter } from 'next/router'
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import toast from 'react-hot-toast'
-import { FormattedMessage, useIntl } from 'react-intl'
-import BulletsBackground from './shared/ContactFormBgPattern'
-import CardSuccess from './shared/CardSuccess'
-import Spinner from './shared/Spinner'
+import axios from "axios"
+import { useRouter } from "next/router"
+import { useState } from "react"
+import { useForm } from "react-hook-form"
+import toast from "react-hot-toast"
+import { FormattedMessage, useIntl } from "react-intl"
+import BulletsBackground from "./shared/ContactFormBgPattern"
+import CardSuccess from "./shared/CardSuccess"
+import Spinner from "./shared/Spinner"
 
 export default function ContactForm() {
   // Get the current language to pre-define the select language field
@@ -23,9 +23,9 @@ export default function ContactForm() {
     this.error = intl.formatMessage({ id: `contact.form.${id}.error` })
   }
   const translated = {
-    name: Object(new translatedFormValues('name')),
-    email: Object(new translatedFormValues('email')),
-    message: Object(new translatedFormValues('message')),
+    name: Object(new translatedFormValues("name")),
+    email: Object(new translatedFormValues("email")),
+    message: Object(new translatedFormValues("message")),
   }
 
   // Config React Hooks Form
@@ -45,7 +45,7 @@ export default function ContactForm() {
     setIsLoading(true)
     // Send a POST request to Firebase Cloud Function
     try {
-      await contactAPI.post('sendContactEmail', { ...data })
+      await contactAPI.post("sendContactEmail", { ...data })
       setIsSuccess(true)
     } catch (error) {
       toast.error(
@@ -125,12 +125,12 @@ export default function ContactForm() {
                 placeholder={translated.name.placeholder}
                 disabled={isLoading}
                 className="py-3 px-4 block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 border-gray-300 rounded-md"
-                {...register('name', {
+                {...register("name", {
                   required: true,
                 })}
               />
 
-              {errors.name?.type === 'required' && (
+              {errors.name?.type === "required" && (
                 <p className="mt-2 ml-2 text-red-900">
                   {translated.name.error}
                 </p>
@@ -154,7 +154,7 @@ export default function ContactForm() {
                 defaultValue={language}
                 disabled={isLoading}
                 className="form-select h-12 w-full py-3 px-4 text-gray-500 border-gray-300 focus:ring-purple-500 focus:border-purple-500 rounded-md"
-                {...register('language', { required: true })}
+                {...register("language", { required: true })}
               >
                 <option value="en">English</option>
                 <option value="es">Español</option>
@@ -178,9 +178,9 @@ export default function ContactForm() {
                 placeholder={translated.email.placeholder}
                 disabled={isLoading}
                 className="py-3 px-4 block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 border-gray-300 rounded-md"
-                {...register('email', { required: true })}
+                {...register("email", { required: true })}
               />
-              {errors.email?.type === 'required' && (
+              {errors.email?.type === "required" && (
                 <p className="mt-2 ml-2 text-red-900">
                   {translated.email.error}
                 </p>
@@ -200,12 +200,12 @@ export default function ContactForm() {
                 name="message"
                 rows={4}
                 className="py-3 px-4 block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 border-gray-300 rounded-md"
-                defaultValue={''}
+                defaultValue={""}
                 placeholder={translated.message.placeholder}
                 disabled={isLoading}
-                {...register('message', { required: true, minLength: 20 })}
+                {...register("message", { required: true, minLength: 20 })}
               />
-              {errors.message?.type === 'required' && (
+              {errors.message?.type === "required" && (
                 <p className="mt-2 ml-2 text-red-900">
                   {translated.message.error}
                 </p>

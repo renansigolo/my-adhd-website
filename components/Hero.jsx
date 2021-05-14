@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import { FormattedMessage } from 'react-intl'
-import styles from '../styles/Hero.module.css'
+import Image from "next/image"
+import { FormattedMessage } from "react-intl"
+import styles from "../styles/Hero.module.css"
 
 export default function Hero() {
   return (
@@ -35,7 +35,7 @@ export default function Hero() {
                       id="hero.title"
                       defaultMessage="The first ADHD app with cognitive analysis!"
                     />
-                  </span>{' '}
+                  </span>{" "}
                 </h1>
 
                 <div className="mt-6 max-w-xs md:max-w-md mx-auto flex justify-center md:mt-10">

@@ -1,10 +1,10 @@
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import Link from 'next/link'
-import { Fragment } from 'react'
+import { Disclosure, Menu, Transition } from "@headlessui/react"
+import { MenuIcon, XIcon } from "@heroicons/react/outline"
+import Link from "next/link"
+import { Fragment } from "react"
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ")
 }
 
 export default function Navbar() {
@@ -77,8 +77,8 @@ export default function Navbar() {
                               <a
                                 href="#"
                                 className={classNames(
-                                  active ? 'bg-gray-100' : '',
-                                  'block px-4 py-2 text-sm text-gray-700'
+                                  active ? "bg-gray-100" : "",
+                                  "block px-4 py-2 text-sm text-gray-700"
                                 )}
                               >
                                 Your Profile
@@ -90,8 +90,8 @@ export default function Navbar() {
                               <a
                                 href="#"
                                 className={classNames(
-                                  active ? 'bg-gray-100' : '',
-                                  'block px-4 py-2 text-sm text-gray-700'
+                                  active ? "bg-gray-100" : "",
+                                  "block px-4 py-2 text-sm text-gray-700"
                                 )}
                               >
                                 Settings
@@ -103,8 +103,8 @@ export default function Navbar() {
                               <a
                                 href="#"
                                 className={classNames(
-                                  active ? 'bg-gray-100' : '',
-                                  'block px-4 py-2 text-sm text-gray-700'
+                                  active ? "bg-gray-100" : "",
+                                  "block px-4 py-2 text-sm text-gray-700"
                                 )}
                               >
                                 Sign out

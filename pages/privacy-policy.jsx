@@ -1,8 +1,8 @@
-import React from 'react'
-import Footer from '../components/Footer'
-import Divider from '../components/shared/Divider'
-import { HomeIcon } from '@heroicons/react/outline'
-import Link from 'next/link'
+import React from "react"
+import Footer from "../components/Footer"
+import Divider from "../components/shared/Divider"
+import { HomeIcon } from "@heroicons/react/outline"
+import Link from "next/link"
 
 function PrivacyPolicyContent() {
   return (

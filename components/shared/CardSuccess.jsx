@@ -1,5 +1,5 @@
-import { CheckIcon } from '@heroicons/react/solid'
-import { FormattedMessage } from 'react-intl'
+import { CheckIcon } from "@heroicons/react/solid"
+import { FormattedMessage } from "react-intl"
 
 export default function CardSuccess() {
   return (

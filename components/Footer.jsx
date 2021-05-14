@@ -1,21 +1,21 @@
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Link from 'next/link'
-import { FormattedMessage } from 'react-intl'
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { faHeart } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Link from "next/link"
+import { FormattedMessage } from "react-intl"
 
 const navigation = {
   social: [
     {
-      name: 'Facebook',
-      href: 'https://facebook.com/myadhdapp',
-      animation: 'hover:text-blue-600',
+      name: "Facebook",
+      href: "https://facebook.com/myadhdapp",
+      animation: "hover:text-blue-600",
       icon: faFacebook,
     },
     {
-      name: 'Instagram',
-      href: 'https://instagram.com/myadhdapp',
-      animation: 'hover:text-pink-600',
+      name: "Instagram",
+      href: "https://instagram.com/myadhdapp",
+      animation: "hover:text-pink-600",
       icon: faInstagram,
     },
   ],

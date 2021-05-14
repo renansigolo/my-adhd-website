@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import React from 'react'
-import Contact from '../components/Contact'
-import Disclaimer from '../components/Disclaimer'
-import Download from '../components/Download'
-import Features from '../components/Features'
-import Footer from '../components/Footer'
-import Hero from '../components/Hero'
-import Divider from '../components/shared/Divider'
+import Head from "next/head"
+import React from "react"
+import Contact from "../components/Contact"
+import Disclaimer from "../components/Disclaimer"
+import Download from "../components/Download"
+import Features from "../components/Features"
+import Footer from "../components/Footer"
+import Hero from "../components/Hero"
+import Divider from "../components/shared/Divider"
 
 /** Display a development badge to identify the current environment being used */
 function EnvTag() {
@@ -20,9 +20,9 @@ function EnvTag() {
 }
 
 export default function Home() {
-  const isProd = process.env.NODE_ENV === 'production' ? true : false
-  const title = 'My ADHD'
-  const description = 'The first ADHD app with cognitive analysis!'
+  const isProd = process.env.NODE_ENV === "production" ? true : false
+  const title = "My ADHD"
+  const description = "The first ADHD app with cognitive analysis!"
 
   return (
     <>

@@ -1,7 +1,7 @@
-import { faAppStore, faGooglePlay } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Image from 'next/image'
-import { FormattedMessage } from 'react-intl'
+import { faAppStore, faGooglePlay } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Image from "next/image"
+import { FormattedMessage } from "react-intl"
 
 export default function Download() {
   return (
@@ -31,7 +31,7 @@ export default function Download() {
             >
               <FontAwesomeIcon
                 icon={faAppStore}
-                size={'lg'}
+                size={"lg"}
                 className="-ml-1 mr-2"
                 aria-hidden="true"
               />
@@ -45,7 +45,7 @@ export default function Download() {
             >
               <FontAwesomeIcon
                 icon={faGooglePlay}
-                size={'lg'}
+                size={"lg"}
                 className="-ml-1 mr-2"
                 aria-hidden="true"
               />
