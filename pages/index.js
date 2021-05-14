@@ -12,10 +12,7 @@ import Divider from '../components/shared/Divider'
 //   ReactGA.pageview(window.location.pathname + window.location.search)
 // }
 
-/**
- * Display a development badge to identify the current environment being used
- * @returns
- */
+/** Display a development badge to identify the current environment being used */
 function EnvTag() {
   return (
     <div className="fixed bottom-5 left-5">

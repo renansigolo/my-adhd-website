@@ -57,44 +57,98 @@ function FeatureHighlights() {
   )
 }
 
+function BulletsMobile() {
+  return (
+    <>
+      <svg
+        className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
+        width={784}
+        height={404}
+        fill="none"
+        viewBox="0 0 784 404"
+        aria-hidden="true"
+      >
+        <defs>
+          <pattern
+            id="e80155a9-dfde-425a-b5ea-1f6fadd20131"
+            x={0}
+            y={0}
+            width={20}
+            height={20}
+            patternUnits="userSpaceOnUse"
+          >
+            <rect
+              x={0}
+              y={0}
+              width={4}
+              height={4}
+              className="text-gray-200"
+              fill="currentColor"
+            />
+          </pattern>
+        </defs>
+        <rect
+          width={784}
+          height={404}
+          fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
+        />
+      </svg>
+    </>
+  )
+}
+
+function Bullets(props) {
+  // Adjust the classed to match the side of the screen
+  const left = 'right-full translate-x-1/2 translate-y-12'
+  const right = 'left-full -translate-x-1/2 -translate-y-1/4'
+  const screenPosition = props.position === 'left' ? left : right
+
+  return (
+    <>
+      <svg
+        className={`hidden lg:block absolute transform ${screenPosition}`}
+        width={404}
+        height={784}
+        fill="none"
+        viewBox="0 0 404 784"
+        aria-hidden="true"
+      >
+        <defs>
+          <pattern
+            id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d"
+            x={0}
+            y={0}
+            width={20}
+            height={20}
+            patternUnits="userSpaceOnUse"
+          >
+            <rect
+              x={0}
+              y={0}
+              width={4}
+              height={4}
+              className="text-gray-200"
+              fill="currentColor"
+            />
+          </pattern>
+        </defs>
+        <rect
+          width={404}
+          height={784}
+          fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"
+        />
+      </svg>
+    </>
+  )
+}
+
 export default function Features() {
   return (
     <section id="features">
       <div className="py-12 bg-gray-50 overflow-hidden lg:py-24">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 md:max-w-7xl">
-          <svg
-            className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
-            width={404}
-            height={784}
-            fill="none"
-            viewBox="0 0 404 784"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={404}
-              height={784}
-              fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)"
-            />
-          </svg>
+          {/* <BulletsRight /> */}
+          <Bullets position="right" />
 
           {/* Highlight 0 */}
           <div className="relative mt-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
@@ -111,38 +165,7 @@ export default function Features() {
               className="mt-10 -mx-4 relative text-center lg:mt-0"
               aria-hidden="true"
             >
-              <svg
-                className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
-                width={784}
-                height={404}
-                fill="none"
-                viewBox="0 0 784 404"
-              >
-                <defs>
-                  <pattern
-                    id="ca9667ae-9f92-4be7-abcb-9e3d727f2941"
-                    x={0}
-                    y={0}
-                    width={20}
-                    height={20}
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <rect
-                      x={0}
-                      y={0}
-                      width={4}
-                      height={4}
-                      className="text-gray-200"
-                      fill="currentColor"
-                    />
-                  </pattern>
-                </defs>
-                <rect
-                  width={784}
-                  height={404}
-                  fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
-                />
-              </svg>
+              <BulletsMobile />
               <Image
                 className="relative mx-auto"
                 src="/images/highlight/learn.webp"
@@ -156,39 +179,7 @@ export default function Features() {
           <FeatureHighlights />
 
           {/* Highlight 1 */}
-          <svg
-            className="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12"
-            width={404}
-            height={784}
-            fill="none"
-            viewBox="0 0 404 784"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={404}
-              height={784}
-              fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"
-            />
-          </svg>
+          <Bullets position="left" />
 
           <div className="relative mt-12 sm:mt-16 lg:mt-24">
             <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
@@ -220,39 +211,7 @@ export default function Features() {
               </div>
 
               <div className="mt-10 -mx-4 relative text-center lg:mt-0 lg:col-start-1">
-                <svg
-                  className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
-                  width={784}
-                  height={404}
-                  fill="none"
-                  viewBox="0 0 784 404"
-                  aria-hidden="true"
-                >
-                  <defs>
-                    <pattern
-                      id="e80155a9-dfde-425a-b5ea-1f6fadd20131"
-                      x={0}
-                      y={0}
-                      width={20}
-                      height={20}
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <rect
-                        x={0}
-                        y={0}
-                        width={4}
-                        height={4}
-                        className="text-gray-200"
-                        fill="currentColor"
-                      />
-                    </pattern>
-                  </defs>
-                  <rect
-                    width={784}
-                    height={404}
-                    fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
-                  />
-                </svg>
+                <BulletsMobile />
                 <Image
                   className="relative mx-auto"
                   src="/images/highlight/what.webp"

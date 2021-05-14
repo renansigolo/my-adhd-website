@@ -4,81 +4,9 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 import { FormattedMessage, useIntl } from 'react-intl'
+import BulletsBackground from './shared/ContactFormBgPattern'
 import CardSuccess from './shared/CardSuccess'
 import Spinner from './shared/Spinner'
-
-function BgPattern() {
-  return (
-    <>
-      <svg
-        className="absolute left-full transform translate-x-1/2"
-        width={404}
-        height={404}
-        fill="none"
-        viewBox="0 0 404 404"
-        aria-hidden="true"
-      >
-        <defs>
-          <pattern
-            id="85737c0e-0916-41d7-917f-596dc7edfa27"
-            x={0}
-            y={0}
-            width={20}
-            height={20}
-            patternUnits="userSpaceOnUse"
-          >
-            <rect
-              x={0}
-              y={0}
-              width={4}
-              height={4}
-              className="text-gray-200"
-              fill="currentColor"
-            />
-          </pattern>
-        </defs>
-        <rect
-          width={404}
-          height={404}
-          fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)"
-        />
-      </svg>
-      <svg
-        className="absolute right-full bottom-0 transform -translate-x-1/2"
-        width={404}
-        height={404}
-        fill="none"
-        viewBox="0 0 404 404"
-        aria-hidden="true"
-      >
-        <defs>
-          <pattern
-            id="85737c0e-0916-41d7-917f-596dc7edfa27"
-            x={0}
-            y={0}
-            width={20}
-            height={20}
-            patternUnits="userSpaceOnUse"
-          >
-            <rect
-              x={0}
-              y={0}
-              width={4}
-              height={4}
-              className="text-gray-200"
-              fill="currentColor"
-            />
-          </pattern>
-        </defs>
-        <rect
-          width={404}
-          height={404}
-          fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)"
-        />
-      </svg>
-    </>
-  )
-}
 
 export default function ContactForm() {
   // Get the current language to pre-define the select language field
@@ -149,7 +77,7 @@ export default function ContactForm() {
     <section id="contact">
       <div className="bg-gray-100 py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-18">
         <div className="relative max-w-xl mx-auto">
-          <BgPattern />
+          <BulletsBackground />
           {!isLoading ? (
             !isSuccess ? (
               <FormValues />

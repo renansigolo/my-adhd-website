@@ -36,24 +36,11 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           {/* Google Fonts Reference https://fonts.google.com/specimen/Baloo+2?query=Balo */}
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            rel="preload"
-            as="style"
-            href="https://fonts.googleapis.com/css?family=Baloo+2:wght@400,500,600,800&display=swap"
-          />
-          <link
+            href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;800&display=swap"
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Baloo+2:wght@400,500,600,800&display=swap"
-            media="print"
-            onLoad="this.media='all'"
           />
-          <noscript>
-            <link
-              rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Baloo+2:wght@400,500,600,800&display=swap"
-            />
-          </noscript>
           <AddAnalytics />
         </Head>
         <body>
