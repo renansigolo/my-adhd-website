@@ -7,10 +7,6 @@ import Features from '../components/Features'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import Divider from '../components/shared/Divider'
-// function initializeReactGA() {
-//   ReactGA.initialize('UA-82193310-7')
-//   ReactGA.pageview(window.location.pathname + window.location.search)
-// }
 
 /** Display a development badge to identify the current environment being used */
 function EnvTag() {

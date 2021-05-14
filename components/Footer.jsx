@@ -32,14 +32,14 @@ export default function Footer() {
               href={item.href}
               target="_blank"
               rel="noreferrer noopener"
-              className={`text-gray-400 transition transform hover:scale-105 ${item.animation}`}
+              className={`text-gray-500 transition transform hover:scale-105 ${item.animation}`}
             >
               <span className="sr-only">{item.name}</span>
               <FontAwesomeIcon icon={item.icon} size="lg" />
             </a>
           ))}
         </div>
-        <p className="mt-8 text-center text-base text-gray-400">
+        <p className="mt-8 text-center text-base text-gray-500">
           <FormattedMessage
             id="footer.title"
             defaultMessage="Made with {heartIcon} by {owner}."
@@ -63,7 +63,7 @@ export default function Footer() {
             }}
           />
         </p>
-        <p className="mt-6 text-center text-base text-gray-400">
+        <p className="mt-6 text-center text-base text-gray-500">
           <Link href="/privacy-policy">
             <a className="hover:underline">
               <FormattedMessage
