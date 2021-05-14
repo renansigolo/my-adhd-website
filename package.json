@@ -1,6 +1,6 @@
 {
   "name": "my-adhd-website",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "My ADHD Website",
   "homepage": "https://myadhd.com.au",
   "bugs": {
@@ -20,8 +20,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix .",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "check": "prettier --check .",
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "format": "prettier '**/*' --write --ignore-unknown",
     "postversion": "git push",
     "serve": "firebase serve",
     "prepare": "husky install"
@@ -31,27 +33,31 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "@material-ui/core": "^4.11.4",
-    "@material-ui/lab": "^4.0.0-alpha.58",
+    "@headlessui/react": "^1.2.0",
+    "@heroicons/react": "^1.0.1",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/typography": "^0.4.0",
     "axios": "^0.21.1",
     "next": "^10.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-ga": "^3.3.0",
-    "react-hook-form": "^6.15.7",
-    "react-intl": "^5.17.4"
+    "react-hook-form": "^7.5.3",
+    "react-hot-toast": "^1.0.2",
+    "react-intl": "^5.17.5"
   },
   "devDependencies": {
-    "eslint": "^7.25.0",
+    "autoprefixer": "^10.2.5",
+    "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^6.0.0",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1"
+    "lint-staged": "^11.0.0",
+    "postcss": "^8.2.15",
+    "prettier": "2.3.0",
+    "tailwindcss": "^2.1.2"
   },
   "engines": {
     "node": ">=14.16.0",
@@ -64,8 +70,6 @@
     "maintained node versions"
   ],
   "lint-staged": {
-    "./**/*.{js,jsx,ts,tsx,json,css,md}": [
-      "prettier --config ./.prettierrc --write"
-    ]
+    "**/*": "prettier --write --ignore-unknown"
   }
 }

@@ -1,59 +1,61 @@
-import { Box, Button, Container, Grid, Typography } from '@material-ui/core'
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Image from "next/image"
+import { FormattedMessage } from "react-intl"
+import styles from "../styles/Hero.module.css"
 
-function Hero() {
+export default function Hero() {
   return (
-    <section id="hero">
-      <Grid
-        container
-        direction="column"
-        justify="center"
-        alignItems="center"
-        className={styles.hero__bg}
-      >
-        <Container maxWidth="sm">
-          <Box display="flex" justifyContent="center" alignItems="center" p={4}>
-            <Image src="/images/logo.svg" alt="logo" height={160} width={180} />
-          </Box>
+    <div className="relative overflow-hidden">
+      <div className="mt-6 flex flex-col justify-center">
+        <div className={styles.background}>
+          <Image
+            alt="Background My ADHD"
+            src="/images/header/bg-header.webp"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            priority={true}
+          />
+        </div>
+        <div className="max-w-3xl mx-auto pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-lg md:max-w-3xl mx-auto">
+            <main className="mt-16 mx-auto max-w-3xl px-4 sm:mt-20">
+              <div className="text-center">
+                <span className="sr-only">My ADHD Logo</span>
+                <Image
+                  src="/images/head/logo-outline-with-brand-underneath.svg"
+                  width={160}
+                  height={144}
+                  className="inline-block h-28 w-28 mb-10"
+                  alt="My ADHD Logo"
+                  priority={true}
+                />
+                <h1 className="text-3xl mt-4 text-white sm:text-4xl md:text-5xl">
+                  <span className="block xl:inline">
+                    <FormattedMessage
+                      id="hero.title"
+                      defaultMessage="The first ADHD app with cognitive analysis!"
+                    />
+                  </span>{" "}
+                </h1>
 
-          <Typography
-            variant="h4"
-            component="h1"
-            color="inherit"
-            align="center"
-            gutterBottom
-          >
-            <FormattedMessage
-              id="hero.title"
-              defaultMessage="The first ADHD app with cognitive analysis!"
-            />
-          </Typography>
-
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            mt={5}
-          >
-            <Button
-              variant="contained"
-              color="primary"
-              size="large"
-              href="/#download"
-            >
-              <FormattedMessage
-                id="download.title"
-                defaultMessage="Download Now"
-              />
-            </Button>
-          </Box>
-        </Container>
-      </Grid>
-    </section>
+                <div className="mt-6 max-w-xs md:max-w-md mx-auto flex justify-center md:mt-10">
+                  <div className="rounded-md shadow bg-pink-600 hover:bg-pink-700">
+                    <a
+                      href="#download"
+                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium text-white md:py-4 md:text-lg md:px-10"
+                    >
+                      <FormattedMessage
+                        id="download.title"
+                        defaultMessage="Download Now"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
-
-export default Hero

@@ -8,42 +8,29 @@ Run `npm run build` to build the project.
 
 ## Built With
 
-- [Create React App](https://facebook.github.io/create-react-app)
+- [Next.js](https://nextjs.org/)
 - [React JS](https://reactjs.org)
 - [React Intl](https://github.com/yahoo/react-intl)
-- [Material UI](https://material-ui.com)
+- [Tailwind](https://tailwindcss.com/)
 
 ## Plugins
 
 - [React Hook Form](https://www.react-hook-form.com) - React Hooks Form
-- [React GA](https://github.com/react-ga/react-ga) - React Google Analytics Module
 - [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
-
-## Authors
-
-- [Renan Sigolo](https://github.com/renansigolo)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
-## Acknowledgments
-
-- Inspiring the world to be more collaborative.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm test`
+<!-- ### `npm test` **TODO**
 
 Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information. -->
 
 ### `npm run build`
 
@@ -55,14 +42,26 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run deploy`
+## Deploy
 
-<!-- #### Dev
+#### Dev
 
-Builds the app for production to the `build` folder using `npm run build`.<br>
-Once it's completed deploys the app to Firebase at https://dev.myadhd.app -->
+Please merge your changes to the `develop` branch so a
+new development environment will be create on [Vercel](https://vercel.com/renansigolo/my-adhd-website) for testing the current states of the app.
 
 #### Prod
 
-Builds the app for production to the `build` folder using `npm run build:prod`.<br>
-Once it's completed deploys the app to Firebase at https://myadhd.app
+Please merge your changes to the `main` branch so the changes could be updated on the production environment hosted by [Vercel](https://vercel.com/renansigolo/my-adhd-website).<br>
+Once that's completed test the app at https://myadhd.app
+
+## Authors
+
+- [Renan Sigolo](https://github.com/renansigolo)
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details
+
+## Acknowledgments
+
+- Inspiring the world to be more collaborative.
