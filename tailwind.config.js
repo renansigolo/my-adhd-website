@@ -2,7 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false, // Or 'media' or 'class'
   theme: {
     fontFamily: {
       sans: ['"Baloo 2"', ...defaultTheme.fontFamily.sans],
