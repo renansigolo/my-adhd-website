@@ -11,12 +11,11 @@ Run `npm run build` to build the project.
 - [Next.js](https://nextjs.org/)
 - [React JS](https://reactjs.org)
 - [React Intl](https://github.com/yahoo/react-intl)
-- [Material UI](https://material-ui.com)
+- [Tailwind](https://tailwindcss.com/)
 
 ## Plugins
 
 - [React Hook Form](https://www.react-hook-form.com) - React Hooks Form
-- [React GA](https://github.com/react-ga/react-ga) - React Google Analytics Module
 - [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
 
 ## Available Scripts
