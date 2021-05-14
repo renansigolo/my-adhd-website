@@ -27,6 +27,7 @@ export default function Hero() {
                   height={144}
                   className="inline-block h-28 w-28 mb-10"
                   alt="My ADHD Logo"
+                  priority={true}
                 />
                 <h1 className="text-3xl mt-4 text-white sm:text-4xl md:text-5xl">
                   <span className="block xl:inline">

@@ -15,7 +15,7 @@ function PrivacyPolicyContent() {
         </Link>
       </div>
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
+        <h1 className="text-2xl font-extrabold leading-7 text-gray-900 sm:text-3xl sm:truncate">
           Privacy Policy
         </h1>
         <div>
