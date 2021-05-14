@@ -12,7 +12,7 @@ function AddAnalytics() {
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-82193310-7"
-          ></script>
+          />
           <script
             async
             dangerouslySetInnerHTML={{

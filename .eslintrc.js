@@ -19,19 +19,18 @@ module.exports = {
     node: true, // Enables Node.js global variables and Node.js scoping.
   },
   extends: [
-    /*
-     * 'eslint:recommended',
-     * 'plugin:react/recommended',
-     */
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier", // Make this the last element so prettier config overrides other formatting rules
+    "prettier", // Make this the last element so eslint-config-prettier config overrides other formatting rules
   ],
   rules: {
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
+    "react/function-component-definition": "error",
+    "react/prefer-es6-class": ["error", "always"],
+    "react/self-closing-comp": "error",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
@@ -40,10 +39,5 @@ module.exports = {
         aspects: ["invalidHref", "preferButton"],
       },
     ],
-    /*
-     * 'formatjs/no-offset': 'error'
-     * 'arrow-body-style': 'off',
-     * 'prefer-arrow-callback': 'off',
-     */
   },
 }

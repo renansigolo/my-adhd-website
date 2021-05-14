@@ -1,5 +1,4 @@
 import { useRouter } from "next/router"
-// import Navbar from '../components/shared/Navbar'
 import { Toaster } from "react-hot-toast"
 import { IntlProvider } from "react-intl"
 import "../styles/globals.css"
@@ -21,7 +20,6 @@ function MyApp({ Component, pageProps }) {
       locale={locale}
       defaultLocale={defaultLocale}
     >
-      {/* <Navbar /> */}
       <Component {...pageProps} />
       <Toaster position="top-right" />
     </IntlProvider>
