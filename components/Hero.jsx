@@ -4,7 +4,6 @@ import styles from '../styles/Hero.module.css'
 
 export default function Hero() {
   return (
-    // <div className="relative bg-purple-900 overflow-hidden">
     <div className="relative overflow-hidden">
       <div className="mt-6 flex flex-col justify-center">
         <div className={styles.bgWrap}>
@@ -14,6 +13,7 @@ export default function Hero() {
             layout="fill"
             objectFit="cover"
             quality={100}
+            priority={true}
           />
         </div>
         <div className="max-w-3xl mx-auto pb-20 px-4 sm:px-6 lg:px-8">
