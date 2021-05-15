@@ -45,10 +45,7 @@ export default function ContactForm() {
     setIsLoading(true)
     // Send a POST request to Firebase Cloud Function
     try {
-      await contactAPI.post("sendContactEmail", {
-        ...data,
-        env: process.env.NEXT_PUBLIC_FIREBASE_URL,
-      })
+      await contactAPI.post("sendContactEmail", { ...data })
       setIsSuccess(true)
     } catch (error) {
       toast.error(
@@ -59,21 +56,6 @@ export default function ContactForm() {
       setIsLoading(false)
       evt.target.reset() // reset after form submit
     }
-    // contactAPI
-    //   .post('sendContactEmail', { ...data })
-    //   .then(() => {
-    //     setIsSuccess(true)
-    //   })
-    //   .catch((error) => {
-    //     toast.error(
-    //       error.message || intl.formatMessage({ id: `contact.form.error` })
-    //     )
-    //     console.error(error)
-    //   })
-    //   .finally(() => {
-    //     setIsLoading(false)
-    //     evt.target.reset() // reset after form submit
-    //   })
   }
 
   return (
