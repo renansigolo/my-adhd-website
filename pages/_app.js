@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   const { locale, defaultLocale } = router
   const messages = languages[locale.substring(0, 2)]
-  console.log(process.env.VERCEL_ENV)
+  console.log(process.env.NEXT_PUBLIC_FIREBASE_URL)
 
   return (
     <IntlProvider
