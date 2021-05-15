@@ -45,7 +45,10 @@ export default function ContactForm() {
     setIsLoading(true)
     // Send a POST request to Firebase Cloud Function
     try {
-      await contactAPI.post("sendContactEmail", { ...data })
+      await contactAPI.post("sendContactEmail", {
+        ...data,
+        env: process.env.NEXT_PUBLIC_FIREBASE_URL,
+      })
       setIsSuccess(true)
     } catch (error) {
       toast.error(
