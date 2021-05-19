@@ -23,6 +23,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:cypress/recommended",
     "prettier", // Make this the last element so eslint-config-prettier config overrides other formatting rules
   ],
   rules: {
