@@ -23,7 +23,7 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "dev": "next dev",
-    "e2e": "cypress open",
+    "test": "(npm run build && npm start) & npm run cypress:run",
     "fix": "eslint --fix .",
     "format": "prettier '**/*' --write --ignore-unknown",
     "lint": "eslint .",
