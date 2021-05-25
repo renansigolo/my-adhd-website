@@ -23,7 +23,7 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "dev": "next dev",
-    "test": "(npm run build && npm start) & npm run cypress:run",
+    "test": "concurrently -k npm:build npm:start npm:cypress:run",
     "fix": "eslint --fix .",
     "format": "prettier '**/*' --write --ignore-unknown",
     "lint": "eslint .",
@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
+    "concurrently": "^6.2.0",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.11.3",

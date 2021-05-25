@@ -101,7 +101,7 @@ export default function ContactForm() {
             >
               <FormattedMessage id="contact.form.name.title" />
             </label>
-            <div className="mt-1">
+            <div className="mt-1" data-test="form-name">
               <input
                 type="text"
                 name="name"
@@ -154,7 +154,7 @@ export default function ContactForm() {
             >
               <FormattedMessage id="contact.form.email.title" />
             </label>
-            <div className="mt-1">
+            <div className="mt-1" data-test="form-email">
               <input
                 id="email"
                 name="email"
@@ -179,7 +179,7 @@ export default function ContactForm() {
             >
               <FormattedMessage id="contact.form.message.title" />
             </label>
-            <div className="mt-1">
+            <div className="mt-1" data-test="form-textarea">
               <textarea
                 id="message"
                 name="message"
