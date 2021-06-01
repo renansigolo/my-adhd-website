@@ -26,7 +26,7 @@ context("Contact Form", () => {
     const message = Faker.lorem.paragraph()
 
     // Intercept the Form Submit request
-    const apiURL = Cypress.env("api_url")
+    const apiURL = Cypress.env("FIREBASE_URL")
     console.log("🚀 ~ it ~ apiURL", apiURL)
     cy.intercept("POST", `${apiURL}/sendContactEmail`).as("submitForm")
 
