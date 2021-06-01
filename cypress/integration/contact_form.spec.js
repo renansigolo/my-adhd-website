@@ -27,7 +27,6 @@ context("Contact Form", () => {
 
     // Intercept the Form Submit request
     const apiURL = Cypress.env("FIREBASE_URL")
-    console.log("🚀 ~ it ~ apiURL", apiURL)
     cy.intercept("POST", `${apiURL}/sendContactEmail`).as("submitForm")
 
     // Test title
