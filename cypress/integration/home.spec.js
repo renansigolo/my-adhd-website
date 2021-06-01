@@ -10,9 +10,7 @@ context("Navigation Pages", () => {
   })
 
   it("has a privacy policy page", () => {
-    cy.location().then((loc) => {
-      console.log(loc)
-    })
+    cy.location()
 
     cy.visit("/privacy-policy")
     cy.location("pathname").should("eq", "/privacy-policy")
