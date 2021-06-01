@@ -1,0 +1,14 @@
+# Run Cypress end-to-end tests after Vercel Deploys a new Preview Environment
+name: Cypress end-to-end
+on: [deployment_status]
+jobs:
+  cypress-run:
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        env:
+          CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
