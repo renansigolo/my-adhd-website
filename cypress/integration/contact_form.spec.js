@@ -26,16 +26,15 @@ context("Contact Form", () => {
     const message = Faker.lorem.paragraph()
 
     // Intercept the Form Submit request
-    cy.intercept("POST", "/my-adhd-dev/us-central1/sendContactEmail").as(
-      "submitForm"
-    )
+    const apiURL = Cypress.env("api_url")
+    console.log("🚀 ~ it ~ apiURL", apiURL)
+    cy.intercept("POST", `${apiURL}/sendContactEmail`).as("submitForm")
 
     // Test title
     cy.contains("Share your comments").should("be.visible")
 
     // Test Name Input
     cy.get("input[name=name]").type(name).should("have.value", name)
-    // cy.get("[data-test=form-name] p").should("not.be.visible")
 
     // Test Language Inputs
     cy.get("select[name=language]")
@@ -46,11 +45,9 @@ context("Contact Form", () => {
 
     // Test Email Input
     cy.get("input[name=email]").type(email).should("have.value", email)
-    // cy.get("[data-test=form-email] p").should("not.be.visible")
 
     // Test Message Input
     cy.get("#message").type(message).should("have.value", message)
-    // cy.get("[data-test=form-textarea] p").should("not.be.visible")
 
     // Test Submit
     cy.get("button[type=submit]").click()
