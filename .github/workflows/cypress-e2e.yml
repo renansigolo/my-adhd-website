@@ -13,4 +13,3 @@ jobs:
         uses: cypress-io/github-action@v2
         env:
           CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
-          CYPRESS_FIREBASE_URL: ${{ secrets.CYPRESS_FIREBASE_URL }}
