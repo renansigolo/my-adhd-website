@@ -3,7 +3,10 @@ import { FormattedMessage } from "react-intl"
 
 export default function CardSuccess() {
   return (
-    <div className="mx-auto col-span-1 flex flex-col text-center bg-white rounded-lg shadow sm:w-3/5">
+    <div
+      className="mx-auto col-span-1 flex flex-col text-center bg-white rounded-lg shadow sm:w-3/5"
+      data-test="success-notification"
+    >
       <div className="flex-1 flex flex-col p-8">
         <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
           <CheckIcon className="h-6 w-6 text-green-600" aria-hidden="true" />
