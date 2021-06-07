@@ -49,15 +49,15 @@
     "next": "^10.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hook-form": "^7.7.1",
+    "react-hook-form": "^7.8.1",
     "react-hot-toast": "^2.0.0",
-    "react-intl": "^5.19.0"
+    "react-intl": "^5.20.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "concurrently": "^6.2.0",
     "dotenv": "^10.0.0",
-    "eslint": "^7.27.0",
+    "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-jsx-a11y": "^6.4.1",
@@ -67,7 +67,7 @@
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "postcss": "^8.3.0",
-    "prettier": "2.3.0",
+    "prettier": "2.3.1",
     "tailwindcss": "^2.1.4"
   },
   "engines": {
