@@ -1,6 +1,7 @@
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import Link from "next/link"
+import Image from "next/image"
 import { Fragment } from "react"
 
 function classNames(...classes) {
@@ -16,12 +17,12 @@ export default function Navbar() {
             <div className="flex justify-between h-16">
               <div className="flex">
                 <div className="flex-shrink-0 flex items-center">
-                  <img
+                  <Image
                     className="block lg:hidden h-8 w-auto"
                     src="/images/head/logo.svg"
                     alt="My ADHD logo"
                   />
-                  <img
+                  <Image
                     className="hidden lg:block h-8 w-auto"
                     src="/images/head/logo-with-brand-side.svg"
                     alt="My ADHD logo"
@@ -32,7 +33,7 @@ export default function Navbar() {
                   <div className="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                     <Link href="/">Home</Link>
                   </div>
-                  <div className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                  {/* <div className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                     <Link href="#">Features</Link>
                   </div>
                   <div className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
@@ -40,7 +41,7 @@ export default function Navbar() {
                   </div>
                   <div className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                     <Link href="#">Contact</Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
@@ -51,7 +52,7 @@ export default function Navbar() {
                       <div>
                         <Menu.Button className="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                           <span className="sr-only">Open user menu</span>
-                          <img
+                          <Image
                             className="h-8 w-8 rounded-full"
                             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                             alt=""
@@ -72,7 +73,7 @@ export default function Navbar() {
                           static
                           className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                         >
-                          <Menu.Item>
+                          {/* <Menu.Item>
                             {({ active }) => (
                               <a
                                 href="#"
@@ -110,7 +111,7 @@ export default function Navbar() {
                                 Sign out
                               </a>
                             )}
-                          </Menu.Item>
+                          </Menu.Item> */}
                         </Menu.Items>
                       </Transition>
                     </>
@@ -134,7 +135,7 @@ export default function Navbar() {
           <Disclosure.Panel className="sm:hidden">
             <div className="pt-2 pb-3 space-y-1">
               {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
-              <a
+              {/* <a
                 href="#"
                 className="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
               >
@@ -157,12 +158,12 @@ export default function Navbar() {
                 className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
               >
                 Calendar
-              </a>
+              </a> */}
             </div>
             <div className="pt-4 pb-3 border-t border-gray-200">
               <div className="flex items-center px-4">
                 <div className="flex-shrink-0">
-                  <img
+                  <Image
                     className="h-10 w-10 rounded-full"
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                     alt=""
@@ -184,12 +185,12 @@ export default function Navbar() {
                 <div className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100">
                   <Link href="/privacy-policy">Settings</Link>
                 </div>
-                <a
+                {/* <a
                   href="#"
                   className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100"
                 >
                   Sign out
-                </a>
+                </a> */}
               </div>
             </div>
           </Disclosure.Panel>
