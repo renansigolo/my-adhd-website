@@ -35,7 +35,9 @@ export default function ContactForm() {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm()
+  } = useForm({
+    shouldUseNativeValidation: true,
+  })
 
   const onSubmit = async (data, evt) => {
     const contactAPI = axios.create({
