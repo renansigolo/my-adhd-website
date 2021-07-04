@@ -35,11 +35,11 @@ export default function ContactForm() {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm({
-    shouldUseNativeValidation: true,
-  })
+  } = useForm()
 
-  const onSubmit = async (data, evt) => {
+  const onSubmit = async (data, event) => {
+    // console.log("🚀 ~ onSubmit ~ data", data)
+    // event.preventDefault()
     const contactAPI = axios.create({
       baseURL: process.env.NEXT_PUBLIC_FIREBASE_URL,
     })
@@ -56,7 +56,7 @@ export default function ContactForm() {
       console.error(error)
     } finally {
       setIsLoading(false)
-      evt.target.reset() // reset after form submit
+      event.target.reset() // reset after form submit
     }
   }
 
