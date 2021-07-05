@@ -5,10 +5,22 @@ context("Contact Form", () => {
     cy.visit("/")
   })
 
-  it("should display form errors", function () {
+  it("should test error messages and complete a successful contact form", () => {
+    const name = Faker.name.findName()
+    const email = Faker.internet.email()
+    const message = Faker.lorem.paragraph()
+
+    // Setup the Intercept on the Form Submit request
+    const apiURL = Cypress.env("FIREBASE_URL")
+    cy.intercept("POST", `${apiURL}/sendContactEmail`).as("submitForm")
+
+    // Test title
+    cy.contains("Share your comments").should("be.visible")
+
     // Test Invalid Fields
     cy.get("button[type=submit]").click()
 
+    // Should display form errors
     cy.get("[data-test=form-name] p")
       .should("be.visible")
       .and("contain.text", "Your name is required")
@@ -18,20 +30,8 @@ context("Contact Form", () => {
     cy.get("[data-test=form-textarea] p")
       .should("be.visible")
       .and("contain.text", "Your message is too short")
-  })
 
-  it("complete a successful contact form", () => {
-    const name = Faker.name.findName()
-    const email = Faker.internet.email()
-    const message = Faker.lorem.paragraph()
-
-    // Intercept the Form Submit request
-    const apiURL = Cypress.env("FIREBASE_URL")
-    cy.intercept("POST", `${apiURL}/sendContactEmail`).as("submitForm")
-
-    // Test title
-    cy.contains("Share your comments").should("be.visible")
-
+    // Should type the data and keep the focus
     // Test Name Input
     cy.get("input[name=name]").type(name).should("have.value", name)
 

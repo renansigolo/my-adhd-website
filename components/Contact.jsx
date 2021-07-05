@@ -7,6 +7,152 @@ import { FormattedMessage, useIntl } from "react-intl"
 import BulletsBackground from "./shared/ContactFormBgPattern"
 import CardSuccess from "./shared/CardSuccess"
 import Spinner from "./shared/Spinner"
+import styles from "../styles/Contact.module.css"
+
+const FormComponent = ({
+  language,
+  translated,
+  register,
+  onSubmit,
+  handleSubmit,
+  isLoading,
+  errors,
+}) => {
+  return (
+    <div className="my-6">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <FormattedMessage id="contact.title" />
+        </h2>
+        <p className="mt-4 text-lg leading-6 text-gray-600">
+          <FormattedMessage id="contact.subtitle" />
+        </p>
+      </div>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+      >
+        <div>
+          <label htmlFor="name" className={styles.formLabel}>
+            <FormattedMessage id="contact.form.name.title" />
+          </label>
+          <div className="mt-1" data-test="form-name">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              autoComplete="given-name"
+              placeholder={translated.name.placeholder}
+              disabled={isLoading}
+              className={styles.formField}
+              {...register("name", { required: true })}
+            />
+            {errors.name && (
+              <p className={styles.errorLabel}>{translated.name.error}</p>
+            )}
+          </div>
+        </div>
+        <div>
+          <label htmlFor="language" className={styles.formLabel}>
+            <FormattedMessage id="contact.form.language.title" />
+          </label>
+          <div className="mt-1">
+            <label htmlFor="language" className="sr-only">
+              <FormattedMessage id="contact.form.language.title" />
+            </label>
+            <select
+              id="language"
+              name="language"
+              defaultValue={language}
+              disabled={isLoading}
+              className={styles.formSelect}
+              {...register("language", { required: true })}
+            >
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="pt">Português</option>
+            </select>
+          </div>
+        </div>
+        <div className="sm:col-span-2">
+          <label htmlFor="email" className={styles.formLabel}>
+            <FormattedMessage id="contact.form.email.title" />
+          </label>
+          <div className="mt-1" data-test="form-email">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              placeholder={translated.email.placeholder}
+              disabled={isLoading}
+              className={styles.formField}
+              {...register("email", { required: true })}
+            />
+            {errors.email && (
+              <p className={styles.errorLabel}>{translated.email.error}</p>
+            )}
+          </div>
+        </div>
+        <div className="sm:col-span-2">
+          <label htmlFor="message" className={styles.formLabel}>
+            <FormattedMessage id="contact.form.message.title" />
+          </label>
+          <div className="mt-1" data-test="form-textarea">
+            <textarea
+              id="message"
+              name="message"
+              rows={4}
+              className={styles.formField}
+              defaultValue={""}
+              placeholder={translated.message.placeholder}
+              disabled={isLoading}
+              {...register("message", { required: true, minLength: 20 })}
+            />
+            {errors.message && (
+              <p className={styles.errorLabel}>{translated.message.error}</p>
+            )}
+          </div>
+        </div>
+        {/* <div className="sm:col-span-2">
+          <div className="flex items-start ml-3">
+            <p className="text-base text-gray-500">
+              This site is protected by reCAPTCHA and the Google{' '}
+              <a
+                href="https://policies.google.com/privacy"
+                className="font-medium text-gray-700 underline"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Privacy Policy
+              </a>{' '}
+              and{' '}
+              <a
+                href="https://policies.google.com/terms"
+                className="font-medium text-gray-700 underline"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Terms of Service
+              </a>{' '}
+              apply.
+            </p>
+          </div>
+        </div> */}
+
+        <div className="sm:col-span-2">
+          <button
+            type="submit"
+            disabled={isLoading}
+            className={styles.btnSubmit}
+          >
+            <FormattedMessage id="contact.submit" />
+          </button>
+        </div>
+      </form>
+    </div>
+  )
+}
 
 export default function ContactForm() {
   // Get the current language to pre-define the select language field
@@ -38,8 +184,6 @@ export default function ContactForm() {
   } = useForm()
 
   const onSubmit = async (data, event) => {
-    // console.log("🚀 ~ onSubmit ~ data", data)
-    // event.preventDefault()
     const contactAPI = axios.create({
       baseURL: process.env.NEXT_PUBLIC_FIREBASE_URL,
     })
@@ -67,7 +211,15 @@ export default function ContactForm() {
           <BulletsBackground />
           {!isLoading ? (
             !isSuccess ? (
-              <FormValues />
+              <FormComponent
+                language={language}
+                translated={translated}
+                register={register}
+                onSubmit={onSubmit}
+                handleSubmit={handleSubmit}
+                isLoading={isLoading}
+                errors={errors}
+              />
             ) : (
               <CardSuccess />
             )
@@ -80,162 +232,4 @@ export default function ContactForm() {
       </div>
     </section>
   )
-
-  function FormValues() {
-    return (
-      <div className="my-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            <FormattedMessage id="contact.title" />
-          </h2>
-          <p className="mt-4 text-lg leading-6 text-gray-600">
-            <FormattedMessage id="contact.subtitle" />
-          </p>
-        </div>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
-        >
-          <div>
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
-            >
-              <FormattedMessage id="contact.form.name.title" />
-            </label>
-            <div className="mt-1" data-test="form-name">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                autoComplete="given-name"
-                placeholder={translated.name.placeholder}
-                disabled={isLoading}
-                className="py-3 px-4 block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 border-gray-300 rounded-md"
-                {...register("name", {
-                  required: true,
-                })}
-              />
-
-              {errors.name?.type === "required" && (
-                <p className="mt-2 ml-2 text-red-900">
-                  {translated.name.error}
-                </p>
-              )}
-            </div>
-          </div>
-          <div>
-            <label
-              htmlFor="language"
-              className="block text-sm font-medium text-gray-700"
-            >
-              <FormattedMessage id="contact.form.language.title" />
-            </label>
-            <div className="mt-1">
-              <label htmlFor="language" className="sr-only">
-                <FormattedMessage id="contact.form.language.title" />
-              </label>
-              <select
-                id="language"
-                name="language"
-                defaultValue={language}
-                disabled={isLoading}
-                className="form-select h-12 w-full py-3 px-4 text-gray-500 border-gray-300 focus:ring-purple-500 focus:border-purple-500 rounded-md"
-                {...register("language", { required: true })}
-              >
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="pt">Português</option>
-              </select>
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
-            >
-              <FormattedMessage id="contact.form.email.title" />
-            </label>
-            <div className="mt-1" data-test="form-email">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                placeholder={translated.email.placeholder}
-                disabled={isLoading}
-                className="py-3 px-4 block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 border-gray-300 rounded-md"
-                {...register("email", { required: true })}
-              />
-              {errors.email?.type === "required" && (
-                <p className="mt-2 ml-2 text-red-900">
-                  {translated.email.error}
-                </p>
-              )}
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-gray-700"
-            >
-              <FormattedMessage id="contact.form.message.title" />
-            </label>
-            <div className="mt-1" data-test="form-textarea">
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                className="py-3 px-4 block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 border-gray-300 rounded-md"
-                defaultValue={""}
-                placeholder={translated.message.placeholder}
-                disabled={isLoading}
-                {...register("message", { required: true, minLength: 20 })}
-              />
-              {errors.message?.type === "required" && (
-                <p className="mt-2 ml-2 text-red-900">
-                  {translated.message.error}
-                </p>
-              )}
-            </div>
-          </div>
-          {/* <div className="sm:col-span-2">
-            <div className="flex items-start ml-3">
-              <p className="text-base text-gray-500">
-                This site is protected by reCAPTCHA and the Google{' '}
-                <a
-                  href="https://policies.google.com/privacy"
-                  className="font-medium text-gray-700 underline"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  Privacy Policy
-                </a>{' '}
-                and{' '}
-                <a
-                  href="https://policies.google.com/terms"
-                  className="font-medium text-gray-700 underline"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  Terms of Service
-                </a>{' '}
-                apply.
-              </p>
-            </div>
-          </div> */}
-
-          <div className="sm:col-span-2">
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
-            >
-              <FormattedMessage id="contact.submit" />
-            </button>
-          </div>
-        </form>
-      </div>
-    )
-  }
 }
