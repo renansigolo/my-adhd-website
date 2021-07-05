@@ -147,7 +147,6 @@ export default function Features() {
     <section id="features">
       <div className="py-12 bg-gray-50 overflow-hidden lg:py-24">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 md:max-w-7xl">
-          {/* <BulletsRight /> */}
           <Bullets position="right" />
 
           {/* Highlight 0 */}
@@ -171,7 +170,7 @@ export default function Features() {
                 src="/images/highlight/learn.webp"
                 alt="iPhone Portrait"
                 width={300}
-                height={570}
+                height={567}
               />
             </div>
           </div>
@@ -190,24 +189,6 @@ export default function Features() {
                 <p className="mt-3 text-lg text-gray-500">
                   <FormattedMessage id="highlight.1.subtitle" />
                 </p>
-
-                {/* <dl className="mt-10 space-y-10">
-                {communicationFeatures.map((item) => (
-                  <div key={item.id} className="relative">
-                    <dt>
-                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                        <item.icon className="h-6 w-6" aria-hidden="true" />
-                      </div>
-                      <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                        {item.name}
-                      </p>
-                    </dt>
-                    <dd className="mt-2 ml-16 text-base text-gray-500">
-                      {item.description}
-                    </dd>
-                  </div>
-                ))}
-              </dl> */}
               </div>
 
               <div className="mt-10 -mx-4 relative text-center lg:mt-0 lg:col-start-1">
