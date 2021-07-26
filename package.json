@@ -45,19 +45,19 @@
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
     "axios": "^0.21.1",
-    "cypress": "^7.7.0",
+    "cypress": "^8.0.0",
     "next": "^10.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hook-form": "^7.11.0",
+    "react-hook-form": "^7.12.0",
     "react-hot-toast": "^2.0.0",
-    "react-intl": "^5.20.4"
+    "react-intl": "^5.20.6"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.1",
     "concurrently": "^6.2.0",
     "dotenv": "^10.0.0",
-    "eslint": "^7.30.0",
+    "eslint": "^7.31.0",
     "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.11.3",
@@ -66,10 +66,10 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "faker": "^5.5.3",
     "husky": "^7.0.1",
-    "lint-staged": "^11.0.0",
-    "postcss": "^8.3.5",
+    "lint-staged": "^11.1.1",
+    "postcss": "^8.3.6",
     "prettier": "^2.3.2",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^2.2.7"
   },
   "engines": {
     "node": ">=14.16.0",
