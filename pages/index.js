@@ -1,5 +1,4 @@
 import Head from "next/head"
-import React from "react"
 import Contact from "../components/Contact"
 import Disclaimer from "../components/Disclaimer"
 import Download from "../components/Download"

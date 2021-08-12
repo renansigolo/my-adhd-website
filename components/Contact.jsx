@@ -16,7 +16,7 @@ const FormComponent = ({
   onSubmit,
   handleSubmit,
   isLoading,
-  errors,
+  errors
 }) => {
   return (
     <div className="my-6">
@@ -164,14 +164,14 @@ export default function ContactForm() {
   function translatedFormValues(id) {
     this.title = intl.formatMessage({ id: `contact.form.${id}.title` })
     this.placeholder = intl.formatMessage({
-      id: `contact.form.${id}.placeholder`,
+      id: `contact.form.${id}.placeholder`
     })
     this.error = intl.formatMessage({ id: `contact.form.${id}.error` })
   }
   const translated = {
     name: Object(new translatedFormValues("name")),
     email: Object(new translatedFormValues("email")),
-    message: Object(new translatedFormValues("message")),
+    message: Object(new translatedFormValues("message"))
   }
 
   // Config React Hooks Form
@@ -180,12 +180,12 @@ export default function ContactForm() {
   const {
     register,
     formState: { errors },
-    handleSubmit,
+    handleSubmit
   } = useForm()
 
   const onSubmit = async (data, event) => {
     const contactAPI = axios.create({
-      baseURL: process.env.NEXT_PUBLIC_FIREBASE_URL,
+      baseURL: process.env.NEXT_PUBLIC_FIREBASE_URL
     })
 
     setIsLoading(true)

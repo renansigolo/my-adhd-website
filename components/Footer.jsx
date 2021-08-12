@@ -10,15 +10,15 @@ const navigation = {
       name: "Facebook",
       href: "https://facebook.com/myadhdapp",
       animation: "hover:text-blue-600",
-      icon: faFacebook,
+      icon: faFacebook
     },
     {
       name: "Instagram",
       href: "https://instagram.com/myadhdapp",
       animation: "hover:text-pink-600",
-      icon: faInstagram,
-    },
-  ],
+      icon: faInstagram
+    }
+  ]
 }
 
 export default function Footer() {
@@ -59,7 +59,7 @@ export default function Footer() {
                 >
                   Renan Sigolo
                 </a>
-              ),
+              )
             }}
           />
         </p>

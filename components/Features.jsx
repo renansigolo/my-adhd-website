@@ -1,7 +1,7 @@
 import {
   faChalkboardTeacher,
   faGrinStars,
-  faStethoscope,
+  faStethoscope
 } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
@@ -11,18 +11,18 @@ const cards = [
   {
     icon: faStethoscope,
     title: "features.card.title",
-    subtitle: "features.card.description",
+    subtitle: "features.card.description"
   },
   {
     icon: faChalkboardTeacher,
     title: "features.card.title",
-    subtitle: "features.card.description",
+    subtitle: "features.card.description"
   },
   {
     icon: faGrinStars,
     title: "features.card.title",
-    subtitle: "features.card.description",
-  },
+    subtitle: "features.card.description"
+  }
 ]
 
 function FeatureHighlights() {

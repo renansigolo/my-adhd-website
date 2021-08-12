@@ -5,16 +5,16 @@ module.exports = {
   darkMode: false, // Or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['"Baloo 2"', ...defaultTheme.fontFamily.sans],
+      sans: ['"Baloo 2"', ...defaultTheme.fontFamily.sans]
     },
-    extend: {},
+    extend: {}
   },
   variants: {
-    extend: {},
+    extend: {}
   },
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/forms"),
-  ],
+    require("@tailwindcss/forms")
+  ]
 }

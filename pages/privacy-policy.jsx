@@ -1,4 +1,3 @@
-import React from "react"
 import Footer from "../components/Footer"
 import Divider from "../components/shared/Divider"
 import { HomeIcon } from "@heroicons/react/outline"

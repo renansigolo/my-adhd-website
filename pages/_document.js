@@ -1,5 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from "next/document"
-import React from "react"
 
 /**
  * Add Google Analytics to Prod build
@@ -20,7 +19,7 @@ function AddAnalytics() {
                 function gtag(){dataLayer.push(arguments);}
                 gtag("js", new Date());
 
-                gtag("config", "UA-82193310-7");`,
+                gtag("config", "UA-82193310-7");`
             }}
           />
         </Head>

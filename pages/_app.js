@@ -6,7 +6,7 @@ import "../styles/globals.css"
 const languages = {
   en: require("../locale/en.json"),
   es: require("../locale/es.json"),
-  pt: require("../locale/pt.json"),
+  pt: require("../locale/pt.json")
 }
 
 function MyApp({ Component, pageProps }) {
