@@ -4,20 +4,21 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
 import { FormattedMessage, useIntl } from "react-intl"
-import BulletsBackground from "./shared/ContactFormBgPattern"
-import CardSuccess from "./shared/CardSuccess"
-import Spinner from "./shared/Spinner"
 import styles from "../styles/Contact.module.css"
+import CardSuccess from "./shared/CardSuccess"
+import BulletsBackground from "./shared/ContactFormBgPattern"
+import Spinner from "./shared/Spinner"
 
-const FormComponent = ({
-  language,
-  translated,
-  register,
-  onSubmit,
-  handleSubmit,
-  isLoading,
-  errors
-}) => {
+const FormComponent = (props) => {
+  const {
+    language,
+    translated,
+    register,
+    onSubmit,
+    handleSubmit,
+    isLoading,
+    errors
+  } = props
   return (
     <div className="my-6">
       <div className="text-center mb-12">
