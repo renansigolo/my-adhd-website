@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
                 }}
               />
             </>
-          ) : undefined}
+          ) : null}
         </Head>
         <body>
           <Main />
