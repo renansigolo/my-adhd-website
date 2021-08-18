@@ -4,20 +4,21 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
 import { FormattedMessage, useIntl } from "react-intl"
-import BulletsBackground from "./shared/ContactFormBgPattern"
-import CardSuccess from "./shared/CardSuccess"
-import Spinner from "./shared/Spinner"
 import styles from "../styles/Contact.module.css"
+import CardSuccess from "./shared/CardSuccess"
+import BulletsBackground from "./shared/ContactFormBgPattern"
+import Spinner from "./shared/Spinner"
 
-const FormComponent = ({
-  language,
-  translated,
-  register,
-  onSubmit,
-  handleSubmit,
-  isLoading,
-  errors,
-}) => {
+const FormComponent = (props) => {
+  const {
+    language,
+    translated,
+    register,
+    onSubmit,
+    handleSubmit,
+    isLoading,
+    errors
+  } = props
   return (
     <div className="my-6">
       <div className="text-center mb-12">
@@ -164,14 +165,14 @@ export default function ContactForm() {
   function translatedFormValues(id) {
     this.title = intl.formatMessage({ id: `contact.form.${id}.title` })
     this.placeholder = intl.formatMessage({
-      id: `contact.form.${id}.placeholder`,
+      id: `contact.form.${id}.placeholder`
     })
     this.error = intl.formatMessage({ id: `contact.form.${id}.error` })
   }
   const translated = {
     name: Object(new translatedFormValues("name")),
     email: Object(new translatedFormValues("email")),
-    message: Object(new translatedFormValues("message")),
+    message: Object(new translatedFormValues("message"))
   }
 
   // Config React Hooks Form
@@ -180,12 +181,12 @@ export default function ContactForm() {
   const {
     register,
     formState: { errors },
-    handleSubmit,
+    handleSubmit
   } = useForm()
 
   const onSubmit = async (data, event) => {
     const contactAPI = axios.create({
-      baseURL: process.env.NEXT_PUBLIC_FIREBASE_URL,
+      baseURL: process.env.NEXT_PUBLIC_FIREBASE_URL
     })
 
     setIsLoading(true)

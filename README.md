@@ -2,6 +2,24 @@
 
 Landing page for the app **My ADHD**
 
+## Development
+
+If you're configuring this app for the first time
+
+1. Clone the project
+
+```
+git clone https://github.com/renansigolo/my-adhd-website.git
+```
+
+2. Grab the .env variables from the vercel server
+
+> You will need the [Vercel CLI](https://vercel.com/cli) installed on your local machine
+
+```
+vercel env pull
+```
+
 ## Build
 
 Run `npm run build` to build the project.
