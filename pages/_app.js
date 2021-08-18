@@ -11,7 +11,7 @@ const languages = {
   pt: require("../locale/pt.json")
 }
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   const router = useRouter()
   const { locale, defaultLocale } = router
   const messages = languages[locale.substring(0, 2)]
@@ -37,4 +37,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+export default App
