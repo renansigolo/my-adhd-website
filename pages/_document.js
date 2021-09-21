@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
-          <div id="fb-root"></div>
+          {/* <div id="fb-root"></div>
 
           <div id="fb-customer-chat" className="fb-customerchat"></div>
 
@@ -63,7 +63,7 @@ export default class MyDocument extends Document {
       })(document, "script", "facebook-jssdk")
     `
             }}
-          />
+          /> */}
           <Main />
           <NextScript />
         </body>

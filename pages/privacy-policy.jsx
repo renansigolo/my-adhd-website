@@ -6,7 +6,7 @@ import Link from "next/link"
 function PrivacyPolicyContent() {
   return (
     <div className="max-w-7xl my-16 mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="sticky top-8 inline-flex items-center p-3 border border-transparent rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+      <div className="sticky top-8 inline-flex items-center p-3 border border-transparent rounded-full shadow-sm text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500">
         <Link href="/">
           <a>
             <HomeIcon className="h-6 w-6" aria-hidden="true" />
