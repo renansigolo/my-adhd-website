@@ -71,9 +71,13 @@
     "yarn": "NO LONGER USED - Please use npm"
   },
   "browserslist": [
-    "defaults",
-    "not IE 11",
-    "maintained node versions"
+    "last 1 Chrome version",
+    "last 1 Firefox version",
+    "last 2 Edge major versions",
+    "last 2 Safari major versions",
+    "last 2 iOS major versions",
+    "Firefox ESR",
+    "not IE 11"
   ],
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
