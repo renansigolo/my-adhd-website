@@ -24,75 +24,68 @@ export default function Home() {
   const description = "The first ADHD app with cognitive analysis!"
 
   return (
-    <>
-      <div>
-        <Head>
-          {/* Primary Meta Tags */}
-          <title>My ADHD Website</title>
-          <meta
-            name="description"
-            content={`My ADHD Website - ${description}`}
-          />
-          <meta
-            name="keywords"
-            content="Adhd, adhd, tdah, diagnostic, medical, brain, AI"
-          />
-          <meta name="author" content="Renan Sigolo" />
+    <div>
+      <Head>
+        {/* Primary Meta Tags */}
+        <title>My ADHD Website</title>
+        <meta name="description" content={`My ADHD Website - ${description}`} />
+        <meta
+          name="keywords"
+          content="Adhd, adhd, tdah, diagnostic, medical, brain, AI"
+        />
+        <meta name="author" content="Renan Sigolo" />
 
-          {/* Open Graph / Facebook */}
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://myadhd.app/" />
-          <meta property="og:site_name" content={title} key="ogsitename" />
-          <meta property="og:title" content={title} />
-          <meta property="og:description" content={description} />
-          <meta
-            property="og:image"
-            content="https://myadhd.app/images/social-banner.png"
-          />
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://myadhd.app/" />
+        <meta property="og:site_name" content={title} key="ogsitename" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta
+          property="og:image"
+          content="https://myadhd.app/images/social-banner.png"
+        />
 
-          {/* Twitter */}
-          <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://myadhd.app/" />
-          <meta property="twitter:title" content={title} />
-          <meta property="twitter:description" content={description} />
-          <meta
-            property="twitter:image"
-            content="https://myadhd.app/images/social-banner.png"
-          />
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://myadhd.app/" />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta
+          property="twitter:image"
+          content="https://myadhd.app/images/social-banner.png"
+        />
 
-          <meta
-            name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
-          />
-          <meta name="theme-color" content="#ff4b88" />
-          <meta name="robots" content="index, follow" />
-          <meta name="apple-itunes-app" content="app-id=1375236150" />
-          <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png" />
-          <link rel="apple-touch-startup-image" href="/images/splash.png" />
-          <link rel="manifest" href="/manifest.json" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+        />
+        <meta name="theme-color" content="#ff4b88" />
+        <meta name="robots" content="index, follow" />
+        <meta name="apple-itunes-app" content="app-id=1375236150" />
+        <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png" />
+        <link rel="apple-touch-startup-image" href="/images/splash.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <main>
-          {isProd ? null : <EnvTag />}
+      <main>
+        {isProd ? null : <EnvTag />}
 
-          <Hero />
+        <Hero />
 
-          <Features />
+        <Features />
 
-          <Disclaimer />
+        <Disclaimer />
 
-          <Download />
-
-          <Divider />
-
-          <Contact />
-        </main>
+        <Download />
 
         <Divider />
 
-        <Footer />
-      </div>
-    </>
+        <Contact />
+      </main>
+
+      <Footer />
+    </div>
   )
 }

@@ -1,12 +1,11 @@
 import Image from "next/image"
 import { FormattedMessage } from "react-intl"
-import styles from "../styles/Hero.module.css"
 
 export default function Hero() {
   return (
     <div className="relative overflow-hidden">
       <div className="mt-6 flex flex-col justify-center">
-        <div className={styles.background}>
+        <div className="bg-fixed w-screen overflow-hidden z-0">
           <Image
             alt="Background My ADHD"
             src="/images/header/bg-header.webp"
@@ -16,7 +15,7 @@ export default function Hero() {
             priority={true}
           />
         </div>
-        <div className="max-w-3xl mx-auto pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto pb-20 px-4 sm:px-6 lg:px-8 z-10">
           <div className="max-w-lg md:max-w-3xl mx-auto">
             <main className="mt-16 mx-auto max-w-3xl px-4 sm:mt-20">
               <div className="text-center">
