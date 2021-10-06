@@ -11,8 +11,7 @@ context("Contact Form", () => {
     const message = Faker.lorem.paragraph()
 
     // Setup the Intercept on the Form Submit request
-    const apiURL = Cypress.env("FIREBASE_URL")
-    cy.intercept("POST", `${apiURL}/sendContactEmail`).as("submitForm")
+    cy.intercept("POST", `/sendContactEmail`).as("submitForm")
 
     // Test title
     cy.contains("Share your comments").should("be.visible")
