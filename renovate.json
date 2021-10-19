@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base", "schedule:weekends"],
+  "extends": ["config:base", "schedule:weekends", ":prHourlyLimit4"],
   "assignees": ["renansigolo"],
   "timezone": "Australia/Sydney"
 }
