@@ -17,18 +17,18 @@
   "scripts": {
     "build": "next build",
     "check": "prettier --check .",
-    "clean:install": "npm run clean && npm i",
     "clean": "rm -rf package-lock.json node_modules .next",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "dev": "next dev",
-    "test": "npm run build && concurrently -k npm:start npm:cy:run",
     "fix": "next lint --fix .",
     "format": "prettier '**/*' --write --ignore-unknown",
     "lint": "next lint",
+    "postbuild": "next-sitemap",
     "postversion": "git push",
     "prepare": "husky install",
-    "start": "next start"
+    "start": "next start",
+    "test": "npm run build && concurrently -k npm:start npm:cy:run"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.36",
@@ -66,8 +66,8 @@
     "tailwindcss": "2.2.16"
   },
   "engines": {
-    "node": ">=14.16.0",
-    "npm": ">=6.14.11",
+    "node": ">=14.15.0",
+    "npm": ">=6.14.8",
     "yarn": "NO LONGER USED - Please use npm"
   },
   "browserslist": [

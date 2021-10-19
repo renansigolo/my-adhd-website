@@ -2,6 +2,13 @@
 
 Landing page for the app **My ADHD**
 
+## Getting Started
+
+Before running this project make sure to have it installed
+
+- [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [Vercel CLI](https://vercel.com/cli)
+
 ## Development
 
 If you're configuring this app for the first time

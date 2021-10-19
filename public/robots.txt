@@ -2,5 +2,8 @@
 User-agent: *
 Allow: /
 
+# Host
+Host: https://myadhd.app
+
 # Sitemaps
 Sitemap: https://myadhd.app/sitemap.xml
