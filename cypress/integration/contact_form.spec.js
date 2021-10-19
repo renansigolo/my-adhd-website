@@ -6,7 +6,7 @@ context("Contact Form", () => {
   })
 
   it("should test error messages and complete a successful contact form", () => {
-    const name = Faker.name.findName()
+    const name = `${Faker.name.findName()} (TEST)`
     const email = Faker.internet.email()
     const message = Faker.lorem.paragraph()
 
