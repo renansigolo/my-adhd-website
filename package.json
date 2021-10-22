@@ -58,7 +58,7 @@
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "8.3.0",
     "faker": "5.5.3",
-    "husky": "7.0.2",
+    "husky": "7.0.4",
     "lint-staged": "11.2.3",
     "next-sitemap": "1.6.189",
     "postcss": "8.3.9",
