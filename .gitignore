@@ -31,18 +31,16 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# pwa files
-**/public/workbox-*.js
-**/public/sw.js
+# vercel
+.vercel
 
 # other
 .eslintcache
-.vercel
 
 # sitemap
 public/sitemap.xml
 
-### VisualStudioCode ###
+### Visual Studio Code ###
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -52,11 +50,6 @@ public/sitemap.xml
 
 # Local History for Visual Studio Code
 .history/
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
 
 # Support for Project snippet scope
 !.vscode/*.code-snippets
