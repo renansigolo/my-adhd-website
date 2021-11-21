@@ -17,12 +17,12 @@
 
 # misc
 .DS_Store
+*.pem
 
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-firebase-debug.log*
 
 # local env files
 .env
@@ -36,7 +36,27 @@ firebase-debug.log*
 **/public/sw.js
 
 # other
-.firebase
-.vscode
 .eslintcache
 .vercel
+
+# sitemap
+public/sitemap.xml
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# Support for Project snippet scope
+!.vscode/*.code-snippets
