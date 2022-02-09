@@ -1,4 +1,8 @@
-import Faker from "faker"
+// Load Chance
+import Chance from "chance"
+
+// Instantiate Chance so it can be used
+const chance = new Chance()
 
 context("Contact Form", () => {
   beforeEach(() => {
@@ -6,9 +10,9 @@ context("Contact Form", () => {
   })
 
   it("should test error messages and complete a successful contact form", () => {
-    const name = `${Faker.name.findName()} (TEST)`
-    const email = Faker.internet.email()
-    const message = Faker.lorem.paragraph()
+    const name = `${chance.name()} (TEST)`
+    const email = chance.email()
+    const message = chance.paragraph()
 
     // Setup the Intercept on the Form Submit request
     cy.intercept("POST", `/sendContactEmail`).as("submitForm")
