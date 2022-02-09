@@ -1,9 +1,9 @@
 # Run Cypress end-to-end tests after Vercel Deploys a new Preview Environment
-name: Cypress
+name: Cypress E2E
 on: [deployment_status]
 jobs:
   run_cypress:
-    name: Run Cypress End-to-End
+    name: Run Cypress
     if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
     steps:
