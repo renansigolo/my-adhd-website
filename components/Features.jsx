@@ -27,18 +27,18 @@ const cards = [
 
 function FeatureHighlights() {
   return (
-    <div className="max-w-7xl my-24 mx-auto px-4">
+    <div className="my-24 mx-auto max-w-7xl px-4">
       <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {cards.map((card, index) => (
           <li
             key={card.title + (index + 1)}
-            className="col-span-1 flex flex-col text-center bg-gradient-to-tr from-purple-800 to-pink-600 rounded-lg shadow divide-y divide-gray-200"
+            className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-gradient-to-tr from-purple-800 to-pink-600 text-center shadow"
           >
-            <div className="flex-1 flex flex-col p-8 text-white">
+            <div className="flex flex-1 flex-col p-8 text-white">
               <FontAwesomeIcon
                 icon={card.icon}
                 size="4x"
-                className="flex-shrink-0 mx-auto"
+                className="mx-auto flex-shrink-0"
               />
               <h3 className="mt-6 text-lg font-medium">
                 <FormattedMessage id={card.title + (index + 1)} />
@@ -61,7 +61,7 @@ function BulletsMobile() {
   return (
     <>
       <svg
-        className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
+        className="absolute left-1/2 -translate-x-1/2 translate-y-16 transform lg:hidden"
         width={784}
         height={404}
         fill="none"
@@ -106,7 +106,7 @@ function Bullets(props) {
   return (
     <>
       <svg
-        className={`hidden lg:block absolute transform ${screenPosition}`}
+        className={`absolute hidden transform lg:block ${screenPosition}`}
         width={404}
         height={784}
         fill="none"
@@ -145,14 +145,14 @@ function Bullets(props) {
 export default function Features() {
   return (
     <section id="features">
-      <div className="py-12 bg-gray-50 overflow-hidden lg:py-24">
-        <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 md:max-w-7xl">
+      <div className="overflow-hidden bg-gray-50 py-12 lg:py-24">
+        <div className="relative mx-auto max-w-xl px-4 sm:px-6 md:max-w-7xl lg:px-8">
           <Bullets position="right" />
 
           {/* Highlight 0 */}
-          <div className="relative mt-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+          <div className="relative mt-12 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
             <div className="relative px-4 sm:px-6 lg:px-8">
-              <h2 className="text-2xl font-extrabold text-purple-900 tracking-tight sm:text-3xl">
+              <h2 className="text-2xl font-extrabold tracking-tight text-purple-900 sm:text-3xl">
                 <FormattedMessage id="highlight.0.title" />
               </h2>
               <p className="mt-3 text-lg text-gray-500">
@@ -161,7 +161,7 @@ export default function Features() {
             </div>
 
             <div
-              className="mt-10 -mx-4 relative text-center lg:mt-0"
+              className="relative -mx-4 mt-10 text-center lg:mt-0"
               aria-hidden="true"
             >
               <BulletsMobile />
@@ -181,9 +181,9 @@ export default function Features() {
           <Bullets position="left" />
 
           <div className="relative mt-12 sm:mt-16 lg:mt-24">
-            <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
-              <div className="px-4 sm:px-6 lg:px-8 lg:col-start-2">
-                <h2 className="text-2xl font-extrabold text-purple-900 tracking-tight sm:text-3xl">
+            <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
+              <div className="px-4 sm:px-6 lg:col-start-2 lg:px-8">
+                <h2 className="text-2xl font-extrabold tracking-tight text-purple-900 sm:text-3xl">
                   <FormattedMessage id="highlight.1.title" />
                 </h2>
                 <p className="mt-3 text-lg text-gray-500">
@@ -191,7 +191,7 @@ export default function Features() {
                 </p>
               </div>
 
-              <div className="mt-10 -mx-4 relative text-center lg:mt-0 lg:col-start-1">
+              <div className="relative -mx-4 mt-10 text-center lg:col-start-1 lg:mt-0">
                 <BulletsMobile />
                 <Image
                   className="relative mx-auto"

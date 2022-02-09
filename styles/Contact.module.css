@@ -3,11 +3,11 @@
 }
 
 .formField {
-  @apply py-3 px-4 block w-full shadow-sm focus:ring-purple-500 focus:border-purple-500 border-gray-300 rounded-md;
+  @apply block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-purple-500 focus:ring-purple-500;
 }
 
 .formSelect {
-  @apply h-12 w-full py-3 px-4 text-gray-500 border-gray-300 focus:ring-purple-500 focus:border-purple-500 rounded-md;
+  @apply h-12 w-full rounded-md border-gray-300 py-3 px-4 text-gray-500 focus:border-purple-500 focus:ring-purple-500;
 }
 
 .errorLabel {
@@ -15,5 +15,5 @@
 }
 
 .btnSubmit {
-  @apply w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500;
+  @apply inline-flex w-full items-center justify-center rounded-md border border-transparent bg-pink-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2;
 }

@@ -21,7 +21,7 @@ const FormComponent = (props) => {
   } = props
   return (
     <div className="my-6">
-      <div className="text-center mb-12">
+      <div className="mb-12 text-center">
         <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
           <FormattedMessage id="contact.title" />
         </h2>
@@ -207,8 +207,8 @@ export default function ContactForm() {
 
   return (
     <section id="contact">
-      <div className="bg-gray-100 py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-18">
-        <div className="relative max-w-xl mx-auto">
+      <div className="lg:py-18 overflow-hidden bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-xl">
           <BulletsBackground />
           {!isLoading ? (
             !isSuccess ? (
@@ -225,7 +225,7 @@ export default function ContactForm() {
               <CardSuccess />
             )
           ) : (
-            <div className="h-96 grid place-items-center">
+            <div className="grid h-96 place-items-center">
               <Spinner show />
             </div>
           )}

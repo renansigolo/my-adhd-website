@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className="relative overflow-hidden">
       <div className="mt-6 flex flex-col justify-center">
-        <div className="bg-fixed w-screen overflow-hidden z-0">
+        <div className="z-0 w-screen overflow-hidden bg-fixed">
           <Image
             alt="Background My ADHD"
             src="/images/header/bg-header.webp"
@@ -15,20 +15,20 @@ export default function Hero() {
             priority={true}
           />
         </div>
-        <div className="max-w-3xl mx-auto pb-20 px-4 sm:px-6 lg:px-8 z-10">
-          <div className="max-w-lg md:max-w-3xl mx-auto">
-            <main className="mt-16 mx-auto max-w-3xl px-4 sm:mt-20">
+        <div className="z-10 mx-auto max-w-3xl px-4 pb-20 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-lg md:max-w-3xl">
+            <main className="mx-auto mt-16 max-w-3xl px-4 sm:mt-20">
               <div className="text-center">
                 <span className="sr-only">My ADHD Logo</span>
                 <Image
                   src="/images/head/logo-outline-with-brand-underneath.svg"
                   width={160}
                   height={144}
-                  className="inline-block h-28 w-28 mb-10"
+                  className="mb-10 inline-block h-28 w-28"
                   alt="My ADHD Logo"
                   priority={true}
                 />
-                <h1 className="text-3xl mt-4 text-white sm:text-4xl md:text-5xl">
+                <h1 className="mt-4 text-3xl text-white sm:text-4xl md:text-5xl">
                   <span className="block xl:inline">
                     <FormattedMessage
                       id="hero.title"
@@ -37,11 +37,11 @@ export default function Hero() {
                   </span>{" "}
                 </h1>
 
-                <div className="mt-6 max-w-xs md:max-w-md mx-auto flex justify-center md:mt-10">
-                  <div className="rounded-md shadow bg-pink-600 hover:bg-pink-700">
+                <div className="mx-auto mt-6 flex max-w-xs justify-center md:mt-10 md:max-w-md">
+                  <div className="rounded-md bg-pink-600 shadow hover:bg-pink-700">
                     <a
                       href="#download"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium text-white md:py-4 md:text-lg md:px-10"
+                      className="flex w-full items-center justify-center border border-transparent px-8 py-3 text-base font-medium text-white md:py-4 md:px-10 md:text-lg"
                     >
                       <FormattedMessage
                         id="download.title"

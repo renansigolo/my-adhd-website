@@ -23,8 +23,8 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white w-full border-t border-gray-300">
-      <div className="max-w-7xl mx-auto py-12 px-3 overflow-hidden sm:px-6 lg:px-8">
+    <footer className="w-full border-t border-gray-300 bg-white">
+      <div className="mx-auto max-w-7xl overflow-hidden py-12 px-3 sm:px-6 lg:px-8">
         <div className="flex justify-center space-x-4">
           {navigation.social.map((item) => (
             <a
@@ -32,7 +32,7 @@ export default function Footer() {
               href={item.href}
               target="_blank"
               rel="noreferrer noopener"
-              className={`text-gray-500 transition transform hover:scale-105 ${item.animation}`}
+              className={`transform text-gray-500 transition hover:scale-105 ${item.animation}`}
             >
               <span className="sr-only">{item.name}</span>
               <FontAwesomeIcon icon={item.icon} size="lg" />
@@ -47,7 +47,7 @@ export default function Footer() {
               heartIcon: (
                 <FontAwesomeIcon
                   icon={faHeart}
-                  className="hover:text-red-500 scale"
+                  className="scale hover:text-red-500"
                 />
               ),
               owner: (

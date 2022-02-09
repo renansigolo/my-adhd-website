@@ -21,7 +21,7 @@ html {
 
 /* Loader */
 .spinner {
-  @apply w-12 h-12 rounded-full animate-spin;
+  @apply h-12 w-12 animate-spin rounded-full;
 
   border: 10px solid var(--color-bg);
   border-top: 10px solid var(--color-pink-500);
