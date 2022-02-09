@@ -2,7 +2,7 @@ export default function BulletsBackground() {
   return (
     <>
       <svg
-        className="absolute left-full transform translate-x-1/2"
+        className="absolute left-full translate-x-1/2 transform"
         width={404}
         height={404}
         fill="none"
@@ -35,7 +35,7 @@ export default function BulletsBackground() {
         />
       </svg>
       <svg
-        className="absolute right-full bottom-0 transform -translate-x-1/2"
+        className="absolute right-full bottom-0 -translate-x-1/2 transform"
         width={404}
         height={404}
         fill="none"

@@ -7,14 +7,14 @@ export default function Download() {
   return (
     <section id="download">
       <div className="bg-white">
-        <div className="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-24 lg:px-8">
+        <div className="mx-auto max-w-7xl py-12 px-4 text-center sm:px-6 lg:py-24 lg:px-8">
           <Image
             src="/images/icon-square.svg"
             width={160}
             height={160}
             alt="My ADHD Logo"
           />
-          <h2 className="text-3xl font-extrabold text-gray-900 mt-8 sm:text-4xl">
+          <h2 className="mt-8 text-3xl font-extrabold text-gray-900 sm:text-4xl">
             <span className="block">
               <FormattedMessage id="download.title" />
             </span>
@@ -22,10 +22,10 @@ export default function Download() {
           <p className="mb-8 text-lg leading-6 text-gray-900">
             <FormattedMessage id="download.description" />
           </p>
-          <div className="mt-8 mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 md:max-w-xl">
+          <div className="mx-auto mt-8 grid grid-cols-1 gap-4 md:max-w-xl md:grid-cols-2">
             <a
               href="https://apps.apple.com/au/app/my-adhd/id1375236150"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base md:text-lg font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 hover:shadow"
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-pink-600 px-5 py-3 text-base font-medium text-white hover:bg-pink-700 hover:shadow md:text-lg"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -39,7 +39,7 @@ export default function Download() {
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=tk.tdah"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base md:text-lg font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 hover:shadow"
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-pink-600 px-5 py-3 text-base font-medium text-white hover:bg-pink-700 hover:shadow md:text-lg"
               target="_blank"
               rel="noopener noreferrer"
             >
