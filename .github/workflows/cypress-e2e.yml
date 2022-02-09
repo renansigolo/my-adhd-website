@@ -4,7 +4,7 @@ on: [deployment_status]
 jobs:
   run_cypress:
     name: Run Cypress
-    if: github.event.deployment_status.state == success
+    if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
