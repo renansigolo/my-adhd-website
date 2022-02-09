@@ -1,0 +1,22 @@
+# Check PR for issues with Code Style
+name: Check PR
+on: [pull_request]
+jobs:
+  code_style:
+    name: Code Style
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Check Code Style
+        run: npm run check:format
