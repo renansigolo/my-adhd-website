@@ -1,5 +1,5 @@
-import Footer from "../components/Footer"
-import Divider from "../components/shared/Divider"
+import Footer from "@components/Footer"
+import Divider from "@components/shared/Divider"
 import { HomeIcon } from "@heroicons/react/outline"
 import Link from "next/link"
 

@@ -38,7 +38,7 @@ yarn-error.log*
 .eslintcache
 
 # sitemap
-public/sitemap.xml
+public/sitemap*
 
 ### Visual Studio Code ###
 .vscode/*

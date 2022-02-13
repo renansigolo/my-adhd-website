@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "sourceRoot": ".",
+    "baseUrl": ".",
+    "inlineSourceMap": true,
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@lib/*": ["src/lib/*"],
+      "@locale/*": ["src/locale/*"],
+      "@styles/*": ["src/styles/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

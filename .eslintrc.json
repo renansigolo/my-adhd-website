@@ -1,6 +1,12 @@
 {
   "extends": ["next/core-web-vitals", "prettier"],
   "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["..*"]
+      }
+    ],
     "react/jsx-sort-props": [
       1,
       {
