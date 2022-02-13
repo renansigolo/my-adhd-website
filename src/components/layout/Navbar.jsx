@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { classNames } from "@/lib/helpers"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
+import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import { Fragment } from "react"
 
 export function Navbar() {
@@ -9,44 +9,44 @@ export function Navbar() {
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <img
                     alt="Workflow"
-                    className="block lg:hidden h-8 w-auto"
+                    className="block h-8 w-auto lg:hidden"
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                   />
                   <img
                     alt="Workflow"
-                    className="hidden lg:block h-8 w-auto"
+                    className="hidden h-8 w-auto lg:block"
                     src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
                   />
                 </div>
-                <div className="hidden sm:block sm:ml-6">
+                <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                     <a
-                      className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                      className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
                       href="#"
                     >
                       Dashboard
                     </a>
                     <a
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                       href="#"
                     >
                       Team
                     </a>
                     <a
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                       href="#"
                     >
                       Projects
                     </a>
                     <a
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                       href="#"
                     >
                       Calendar
@@ -56,18 +56,10 @@ export function Navbar() {
               </div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex items-center">
-                  <button
-                    className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                    type="button"
-                  >
-                    <span className="sr-only">View notifications</span>
-                    <BellIcon aria-hidden="true" className="h-6 w-6" />
-                  </button>
-
                   {/* Profile dropdown */}
-                  <Menu as="div" className="ml-3 relative">
+                  <Menu as="div" className="relative ml-3">
                     <div>
-                      <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                      <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span className="sr-only">Open user menu</span>
                         <img
                           alt=""
@@ -85,7 +77,7 @@ export function Navbar() {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <Menu.Item>
                           {({ active }) => (
                             <a
@@ -132,7 +124,7 @@ export function Navbar() {
               </div>
               <div className="-mr-2 flex sm:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon aria-hidden="true" className="block h-6 w-6" />
@@ -145,38 +137,38 @@ export function Navbar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="space-y-1 px-2 pt-2 pb-3">
               {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
               <Disclosure.Button
                 as="a"
-                className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
                 href="#"
               >
                 Dashboard
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 href="#"
               >
                 Team
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 href="#"
               >
                 Projects
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 href="#"
               >
                 Calendar
               </Disclosure.Button>
             </div>
-            <div className="pt-4 pb-3 border-t border-gray-700">
+            <div className="border-t border-gray-700 pt-4 pb-3">
               <div className="flex items-center px-5">
                 <div className="flex-shrink-0">
                   <img
@@ -193,32 +185,25 @@ export function Navbar() {
                     tom@example.com
                   </div>
                 </div>
-                <button
-                  className="ml-auto flex-shrink-0 bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                  type="button"
-                >
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon aria-hidden="true" className="h-6 w-6" />
-                </button>
               </div>
-              <div className="mt-3 px-2 space-y-1">
+              <div className="mt-3 space-y-1 px-2">
                 <Disclosure.Button
                   as="a"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                   href="#"
                 >
                   Your Profile
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                   href="#"
                 >
                   Settings
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                   href="#"
                 >
                   Sign out

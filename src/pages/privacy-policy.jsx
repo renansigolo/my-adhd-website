@@ -1,3 +1,4 @@
+import { ContainerSection } from "@/components/layout/Containers"
 import { Footer } from "@/components/layout/Footer"
 import { HomeIcon } from "@heroicons/react/outline"
 import Link from "next/link"
@@ -100,10 +101,10 @@ const PrivacyPolicyContent = () => {
         I want to inform you that whenever you use my Service, in a case of an
         error in the app I collect data and information (through third party
         products) on your phone called Log Data. This Log Data may include
-        information such as your device Internet Protocol (“IP”) address, device
-        name, operating system version, the configuration of the app when
-        utilizing my Service, the time and date of your use of the Service, and
-        other statistics.
+        information such as your device Internet Protocol (&quot;IP&quot;)
+        address, device name, operating system version, the configuration of the
+        app when utilizing my Service, the time and date of your use of the
+        Service, and other statistics.
       </p>
 
       <p className="mt-6 mb-1">
@@ -116,12 +117,12 @@ const PrivacyPolicyContent = () => {
         memory.
       </p>
       <p>
-        This Service does not use these “cookies” explicitly. However, the app
-        may use third party code and libraries that use “cookies” to collect
-        information and improve their services. You have the option to either
-        accept or refuse these cookies and know when a cookie is being sent to
-        your device. If you choose to refuse our cookies, you may not be able to
-        use some portions of this Service.
+        This Service does not use these &quot;cookies&quot; explicitly. However,
+        the app may use third party code and libraries that use
+        &quot;cookies&quot; to collect information and improve their services.
+        You have the option to either accept or refuse these cookies and know
+        when a cookie is being sent to your device. If you choose to refuse our
+        cookies, you may not be able to use some portions of this Service.
       </p>
 
       <p className="mt-6 mb-1">
@@ -168,7 +169,7 @@ const PrivacyPolicyContent = () => {
       </p>
 
       <p className="mt-6 mb-1">
-        <strong>Children’s Privacy</strong>
+        <strong>Children&apos;s Privacy</strong>
       </p>
       <p>
         These Services do not address anyone under the age of 13. I do not
@@ -204,9 +205,9 @@ const PrivacyPolicyContent = () => {
 export default function PrivacyPolicy() {
   return (
     <>
-      <section className="my-16 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <ContainerSection>
         <PrivacyPolicyHeader />
-      </section>
+      </ContainerSection>
 
       <Footer />
     </>

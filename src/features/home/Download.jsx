@@ -1,3 +1,4 @@
+import { ContainerSection } from "@/components/layout/Containers"
 import { faAppStore, faGooglePlay } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
@@ -26,7 +27,7 @@ export function Download() {
   return (
     <section id="download">
       <div className="bg-white">
-        <div className="mx-auto max-w-7xl py-12 px-4 text-center sm:px-6 lg:py-24 lg:px-8">
+        <ContainerSection center>
           <Image
             alt="My ADHD Logo"
             height={160}
@@ -68,7 +69,7 @@ export function Download() {
               <FormattedMessage id="download.android" />
             </a>
           </div>
-        </div>
+        </ContainerSection>
       </div>
     </section>
   )
