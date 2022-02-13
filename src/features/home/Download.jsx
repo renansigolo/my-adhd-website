@@ -1,27 +1,9 @@
 import { ContainerSection } from "@/components/layout/Containers"
+import { HeaderSection } from "@/components/layout/Headers"
 import { faAppStore, faGooglePlay } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import { FormattedMessage } from "react-intl"
-
-const SectionHeader = ({
-  id = "sectionId",
-  title = "Section Title",
-  subTitle = "Section Sub-Title"
-}) => {
-  return (
-    <div>
-      <h2 className="mt-8 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-        <span className="block">
-          <FormattedMessage defaultMessage={title} id={`${id}.title`} />
-        </span>
-      </h2>
-      <p className="mb-8 text-lg leading-6 text-gray-900">
-        <FormattedMessage defaultMessage={subTitle} id={`${id}.subtitle`} />
-      </p>
-    </div>
-  )
-}
 
 export function Download() {
   return (
@@ -34,7 +16,7 @@ export function Download() {
             src="/images/icon-square.svg"
             width={160}
           />
-          <SectionHeader
+          <HeaderSection
             id="download"
             subTitle="Available for all iOS and Android devices"
             title="Download Now"

@@ -1,26 +1,14 @@
 import { ContainerSection } from "@/components/layout/Containers"
 import { Footer } from "@/components/layout/Footer"
-import { HomeIcon } from "@heroicons/react/outline"
-import Link from "next/link"
+import { HeaderPage } from "@/components/layout/Headers"
 
 const PrivacyPolicyHeader = () => {
   return (
-    <div>
-      <Link href="/">
-        <a>
-          <div className="sticky top-8 inline-flex items-center rounded-full border border-transparent bg-pink-600 p-3 text-white shadow-sm hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2">
-            <HomeIcon aria-hidden="true" className="h-6 w-6" />
-          </div>
-        </a>
-      </Link>
-      <div className="mx-auto max-w-3xl">
-        <h1 className="text-2xl font-extrabold leading-7 text-gray-900 sm:truncate sm:text-3xl">
-          Privacy Policy
-        </h1>
-
-        <PrivacyPolicyContent />
-      </div>
-    </div>
+    <ContainerSection>
+      <HeaderPage showHome id="privacy-policy" title="Privacy Policy">
+        {<PrivacyPolicyContent />}
+      </HeaderPage>
+    </ContainerSection>
   )
 }
 
@@ -205,9 +193,7 @@ const PrivacyPolicyContent = () => {
 export default function PrivacyPolicy() {
   return (
     <>
-      <ContainerSection>
-        <PrivacyPolicyHeader />
-      </ContainerSection>
+      <PrivacyPolicyHeader />
 
       <Footer />
     </>
