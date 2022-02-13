@@ -9,7 +9,7 @@ function PrivacyPolicyContent() {
       <Link href="/">
         <a>
           <div className="sticky top-8 inline-flex items-center rounded-full border border-transparent bg-pink-600 p-3 text-white shadow-sm hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2">
-            <HomeIcon className="h-6 w-6" aria-hidden="true" />
+            <HomeIcon aria-hidden="true" className="h-6 w-6" />
           </div>
         </a>
       </Link>
@@ -64,20 +64,20 @@ function PrivacyPolicyContent() {
             <ul>
               <li>
                 <a
-                  href="https://www.google.com/policies/privacy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="underline"
+                  href="https://www.google.com/policies/privacy/"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Google Play Services
                 </a>
               </li>
               <li>
                 <a
-                  href="https://firebase.google.com/policies/analytics"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="underline"
+                  href="https://firebase.google.com/policies/analytics"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Google Analytics for Firebase
                 </a>

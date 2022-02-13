@@ -29,10 +29,10 @@ export default function Footer() {
           {navigation.social.map((item) => (
             <a
               key={item.name}
-              href={item.href}
-              target="_blank"
-              rel="noreferrer noopener"
               className={`transform text-gray-500 transition hover:scale-105 ${item.animation}`}
+              href={item.href}
+              rel="noreferrer noopener"
+              target="_blank"
             >
               <span className="sr-only">{item.name}</span>
               <FontAwesomeIcon icon={item.icon} size="lg" />
@@ -41,21 +41,21 @@ export default function Footer() {
         </div>
         <p className="mt-8 text-center text-base text-gray-500">
           <FormattedMessage
-            id="footer.title"
             defaultMessage="Made with {heartIcon} by {owner}."
+            id="footer.title"
             values={{
               heartIcon: (
                 <FontAwesomeIcon
-                  icon={faHeart}
                   className="scale hover:text-red-500"
+                  icon={faHeart}
                 />
               ),
               owner: (
                 <a
-                  href="https://renansigolo.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="hover:underline"
+                  href="https://renansigolo.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Renan Sigolo
                 </a>
@@ -67,8 +67,8 @@ export default function Footer() {
           <Link href="/privacy-policy">
             <a className="hover:underline">
               <FormattedMessage
-                id="footer.privacy-policy"
                 defaultMessage="Privacy Policy"
+                id="footer.privacy-policy"
               />
             </a>
           </Link>

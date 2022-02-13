@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           {/* Google Fonts Reference https://fonts.google.com/specimen/Baloo+2?query=Balo */}
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.gstatic.com" rel="preconnect" />
           <link
             href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;800&display=swap"
             rel="stylesheet"

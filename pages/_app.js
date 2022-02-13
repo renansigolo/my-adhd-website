@@ -27,9 +27,9 @@ function App({ Component, pageProps }) {
 
   return (
     <IntlProvider
-      messages={messages}
-      locale={locale}
       defaultLocale={defaultLocale}
+      locale={locale}
+      messages={messages}
     >
       <Component {...pageProps} />
       <Toaster position="top-right" />

@@ -28,45 +28,45 @@ export default function Home() {
       <Head>
         {/* Primary Meta Tags */}
         <title>My ADHD Website</title>
-        <meta name="description" content={`My ADHD Website - ${description}`} />
+        <meta content={`My ADHD Website - ${description}`} name="description" />
         <meta
-          name="keywords"
           content="Adhd, adhd, tdah, diagnostic, medical, brain, AI"
+          name="keywords"
         />
-        <meta name="author" content="Renan Sigolo" />
+        <meta content="Renan Sigolo" name="author" />
 
         {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://myadhd.app/" />
-        <meta property="og:site_name" content={title} key="ogsitename" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        <meta content="website" property="og:type" />
+        <meta content="https://myadhd.app/" property="og:url" />
+        <meta key="ogsitename" content={title} property="og:site_name" />
+        <meta content={title} property="og:title" />
+        <meta content={description} property="og:description" />
         <meta
-          property="og:image"
           content="https://myadhd.app/images/social-banner.png"
+          property="og:image"
         />
 
         {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://myadhd.app/" />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
+        <meta content="summary_large_image" property="twitter:card" />
+        <meta content="https://myadhd.app/" property="twitter:url" />
+        <meta content={title} property="twitter:title" />
+        <meta content={description} property="twitter:description" />
         <meta
-          property="twitter:image"
           content="https://myadhd.app/images/social-banner.png"
+          property="twitter:image"
         />
 
         <meta
-          name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+          name="viewport"
         />
-        <meta name="theme-color" content="#ff4b88" />
-        <meta name="robots" content="index, follow" />
-        <meta name="apple-itunes-app" content="app-id=1375236150" />
-        <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png" />
-        <link rel="apple-touch-startup-image" href="/images/splash.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta content="#ff4b88" name="theme-color" />
+        <meta content="index, follow" name="robots" />
+        <meta content="app-id=1375236150" name="apple-itunes-app" />
+        <link href="/images/icons/icon-192x192.png" rel="apple-touch-icon" />
+        <link href="/images/splash.png" rel="apple-touch-startup-image" />
+        <link href="/manifest.json" rel="manifest" />
+        <link href="/favicon.ico" rel="icon" />
       </Head>
 
       <main>

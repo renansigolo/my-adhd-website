@@ -36,9 +36,9 @@ function FeatureHighlights() {
           >
             <div className="flex flex-1 flex-col p-8 text-white">
               <FontAwesomeIcon
+                className="mx-auto flex-shrink-0"
                 icon={card.icon}
                 size="4x"
-                className="mx-auto flex-shrink-0"
               />
               <h3 className="mt-6 text-lg font-medium">
                 <FormattedMessage id={card.title + (index + 1)} />
@@ -61,36 +61,36 @@ function BulletsMobile() {
   return (
     <>
       <svg
-        className="absolute left-1/2 -translate-x-1/2 translate-y-16 transform lg:hidden"
-        width={784}
-        height={404}
-        fill="none"
-        viewBox="0 0 784 404"
         aria-hidden="true"
+        className="absolute left-1/2 -translate-x-1/2 translate-y-16 transform lg:hidden"
+        fill="none"
+        height={404}
+        viewBox="0 0 784 404"
+        width={784}
       >
         <defs>
           <pattern
+            height={20}
             id="e80155a9-dfde-425a-b5ea-1f6fadd20131"
+            patternUnits="userSpaceOnUse"
+            width={20}
             x={0}
             y={0}
-            width={20}
-            height={20}
-            patternUnits="userSpaceOnUse"
           >
             <rect
-              x={0}
-              y={0}
-              width={4}
-              height={4}
               className="text-gray-200"
               fill="currentColor"
+              height={4}
+              width={4}
+              x={0}
+              y={0}
             />
           </pattern>
         </defs>
         <rect
-          width={784}
-          height={404}
           fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
+          height={404}
+          width={784}
         />
       </svg>
     </>
@@ -106,36 +106,36 @@ function Bullets(props) {
   return (
     <>
       <svg
-        className={`absolute hidden transform lg:block ${screenPosition}`}
-        width={404}
-        height={784}
-        fill="none"
-        viewBox="0 0 404 784"
         aria-hidden="true"
+        className={`absolute hidden transform lg:block ${screenPosition}`}
+        fill="none"
+        height={784}
+        viewBox="0 0 404 784"
+        width={404}
       >
         <defs>
           <pattern
+            height={20}
             id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d"
+            patternUnits="userSpaceOnUse"
+            width={20}
             x={0}
             y={0}
-            width={20}
-            height={20}
-            patternUnits="userSpaceOnUse"
           >
             <rect
-              x={0}
-              y={0}
-              width={4}
-              height={4}
               className="text-gray-200"
               fill="currentColor"
+              height={4}
+              width={4}
+              x={0}
+              y={0}
             />
           </pattern>
         </defs>
         <rect
-          width={404}
-          height={784}
           fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"
+          height={784}
+          width={404}
         />
       </svg>
     </>
@@ -161,16 +161,16 @@ export default function Features() {
             </div>
 
             <div
-              className="relative -mx-4 mt-10 text-center lg:mt-0"
               aria-hidden="true"
+              className="relative -mx-4 mt-10 text-center lg:mt-0"
             >
               <BulletsMobile />
               <Image
-                className="relative mx-auto"
-                src="/images/highlight/learn.webp"
                 alt="iPhone Portrait"
-                width={300}
+                className="relative mx-auto"
                 height={567}
+                src="/images/highlight/learn.webp"
+                width={300}
               />
             </div>
           </div>
@@ -194,11 +194,11 @@ export default function Features() {
               <div className="relative -mx-4 mt-10 text-center lg:col-start-1 lg:mt-0">
                 <BulletsMobile />
                 <Image
-                  className="relative mx-auto"
-                  src="/images/highlight/what.webp"
                   alt="iPhone Portrait"
-                  width={300}
+                  className="relative mx-auto"
                   height={570}
+                  src="/images/highlight/what.webp"
+                  width={300}
                 />
               </div>
             </div>

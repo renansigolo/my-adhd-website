@@ -5,7 +5,7 @@ export default function FacebookChat() {
     <div>
       <div id="fb-root"></div>
 
-      <div id="fb-customer-chat" className="fb-customerchat"></div>
+      <div className="fb-customerchat" id="fb-customer-chat"></div>
 
       {/* <Script src="./lib/facebook-chat.js" strategy="beforeInteractive"></Script> */}
     </div>
