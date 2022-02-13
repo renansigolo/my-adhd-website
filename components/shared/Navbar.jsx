@@ -18,14 +18,14 @@ export default function Navbar() {
               <div className="flex">
                 <div className="flex flex-shrink-0 items-center">
                   <Image
+                    alt="My ADHD logo"
                     className="block h-8 w-auto lg:hidden"
                     src="/images/head/logo.svg"
-                    alt="My ADHD logo"
                   />
                   <Image
+                    alt="My ADHD logo"
                     className="hidden h-8 w-auto lg:block"
                     src="/images/head/logo-with-brand-side.svg"
-                    alt="My ADHD logo"
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -53,14 +53,13 @@ export default function Navbar() {
                         <Menu.Button className="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                           <span className="sr-only">Open user menu</span>
                           <Image
+                            alt=""
                             className="h-8 w-8 rounded-full"
                             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt=""
                           />
                         </Menu.Button>
                       </div>
                       <Transition
-                        show={open}
                         as={Fragment}
                         enter="transition ease-out duration-200"
                         enterFrom="transform opacity-0 scale-95"
@@ -68,6 +67,7 @@ export default function Navbar() {
                         leave="transition ease-in duration-75"
                         leaveFrom="transform opacity-100 scale-100"
                         leaveTo="transform opacity-0 scale-95"
+                        show={open}
                       >
                         <Menu.Items
                           static
@@ -123,9 +123,9 @@ export default function Navbar() {
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                    <XIcon aria-hidden="true" className="block h-6 w-6" />
                   ) : (
-                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                    <MenuIcon aria-hidden="true" className="block h-6 w-6" />
                   )}
                 </Disclosure.Button>
               </div>
@@ -164,9 +164,9 @@ export default function Navbar() {
               <div className="flex items-center px-4">
                 <div className="flex-shrink-0">
                   <Image
+                    alt=""
                     className="h-10 w-10 rounded-full"
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
                   />
                 </div>
                 <div className="ml-3">

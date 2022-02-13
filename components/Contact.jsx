@@ -30,22 +30,22 @@ const FormComponent = (props) => {
         </p>
       </div>
       <form
-        onSubmit={handleSubmit(onSubmit)}
         className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+        onSubmit={handleSubmit(onSubmit)}
       >
         <div>
-          <label htmlFor="name" className={styles.formLabel}>
+          <label className={styles.formLabel} htmlFor="name">
             <FormattedMessage id="contact.form.name.title" />
           </label>
           <div className="mt-1" data-test="form-name">
             <input
-              type="text"
-              name="name"
-              id="name"
               autoComplete="given-name"
-              placeholder={translated.name.placeholder}
-              disabled={isLoading}
               className={styles.formField}
+              disabled={isLoading}
+              id="name"
+              name="name"
+              placeholder={translated.name.placeholder}
+              type="text"
               {...register("name", { required: true })}
             />
             {errors.name && (
@@ -54,19 +54,19 @@ const FormComponent = (props) => {
           </div>
         </div>
         <div>
-          <label htmlFor="language" className={styles.formLabel}>
+          <label className={styles.formLabel} htmlFor="language">
             <FormattedMessage id="contact.form.language.title" />
           </label>
           <div className="mt-1">
-            <label htmlFor="language" className="sr-only">
+            <label className="sr-only" htmlFor="language">
               <FormattedMessage id="contact.form.language.title" />
             </label>
             <select
-              id="language"
-              name="language"
+              className={styles.formSelect}
               defaultValue={language}
               disabled={isLoading}
-              className={styles.formSelect}
+              id="language"
+              name="language"
               {...register("language", { required: true })}
             >
               <option value="en">English</option>
@@ -76,18 +76,18 @@ const FormComponent = (props) => {
           </div>
         </div>
         <div className="sm:col-span-2">
-          <label htmlFor="email" className={styles.formLabel}>
+          <label className={styles.formLabel} htmlFor="email">
             <FormattedMessage id="contact.form.email.title" />
           </label>
           <div className="mt-1" data-test="form-email">
             <input
+              autoComplete="email"
+              className={styles.formField}
+              disabled={isLoading}
               id="email"
               name="email"
-              type="email"
-              autoComplete="email"
               placeholder={translated.email.placeholder}
-              disabled={isLoading}
-              className={styles.formField}
+              type="email"
               {...register("email", { required: true })}
             />
             {errors.email && (
@@ -96,18 +96,18 @@ const FormComponent = (props) => {
           </div>
         </div>
         <div className="sm:col-span-2">
-          <label htmlFor="message" className={styles.formLabel}>
+          <label className={styles.formLabel} htmlFor="message">
             <FormattedMessage id="contact.form.message.title" />
           </label>
           <div className="mt-1" data-test="form-textarea">
             <textarea
-              id="message"
-              name="message"
-              rows={4}
               className={styles.formField}
               defaultValue={""}
-              placeholder={translated.message.placeholder}
               disabled={isLoading}
+              id="message"
+              name="message"
+              placeholder={translated.message.placeholder}
+              rows={4}
               {...register("message", { required: true, minLength: 20 })}
             />
             {errors.message && (
@@ -143,9 +143,9 @@ const FormComponent = (props) => {
 
         <div className="sm:col-span-2">
           <button
-            type="submit"
-            disabled={isLoading}
             className={styles.btnSubmit}
+            disabled={isLoading}
+            type="submit"
           >
             <FormattedMessage id="contact.submit" />
           </button>
@@ -213,13 +213,13 @@ export default function ContactForm() {
           {!isLoading ? (
             !isSuccess ? (
               <FormComponent
-                language={language}
-                translated={translated}
-                register={register}
-                onSubmit={onSubmit}
+                errors={errors}
                 handleSubmit={handleSubmit}
                 isLoading={isLoading}
-                errors={errors}
+                language={language}
+                register={register}
+                translated={translated}
+                onSubmit={onSubmit}
               />
             ) : (
               <CardSuccess />
