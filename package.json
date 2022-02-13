@@ -22,7 +22,7 @@
     "cy:run": "cypress run",
     "dev": "next dev",
     "format": "prettier '**/*' --write --ignore-unknown",
-    "lint:fix": "npm run lint -- --fix .",
+    "lint:fix": "npm run lint -- --fix",
     "lint": "next lint",
     "postbuild": "next-sitemap",
     "postversion": "git push && git push --tags",
