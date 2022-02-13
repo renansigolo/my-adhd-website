@@ -1,6 +1,6 @@
-import { Footer } from "@components/layout/Footer"
+import { Footer } from "@/components/layout/Footer"
+import { Faq } from "@/features/support/Faq"
 import { FormattedMessage } from "react-intl"
-import { Faq } from "src/features/support/Faq"
 
 const SupportHeader = () => {
   return (

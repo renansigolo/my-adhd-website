@@ -1,4 +1,4 @@
-import { Footer } from "@components/layout/Footer"
+import { Footer } from "@/components/layout/Footer"
 import { HomeIcon } from "@heroicons/react/outline"
 import Link from "next/link"
 

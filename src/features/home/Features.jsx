@@ -25,7 +25,7 @@ const cards = [
   }
 ]
 
-function FeatureHighlights() {
+const FeatureHighlights = () => {
   return (
     <div className="my-24 mx-auto max-w-7xl px-4">
       <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -57,7 +57,7 @@ function FeatureHighlights() {
   )
 }
 
-function BulletsMobile() {
+const BulletsMobile = () => {
   return (
     <>
       <svg
@@ -97,7 +97,7 @@ function BulletsMobile() {
   )
 }
 
-function Bullets(props) {
+const Bullets = (props) => {
   // Adjust the classed to match the side of the screen
   const left = "right-full translate-x-1/2 translate-y-12"
   const right = "left-full -translate-x-1/2 -translate-y-1/4"
@@ -142,7 +142,7 @@ function Bullets(props) {
   )
 }
 
-export default function Features() {
+export function Features() {
   return (
     <section id="features">
       <div className="overflow-hidden bg-gray-50 py-12 lg:py-24">

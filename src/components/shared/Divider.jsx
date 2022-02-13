@@ -1,4 +1,4 @@
-import { classNames } from "@lib/helpers"
+import { classNames } from "@/lib/helpers"
 
 /**
  * Divider with optional label

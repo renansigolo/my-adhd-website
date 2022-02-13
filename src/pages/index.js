@@ -1,11 +1,11 @@
-import { Footer } from "@components/layout/Footer"
-import { Divider } from "@components/shared/Divider"
+import { Footer } from "@/components/layout/Footer"
+import { Divider } from "@/components/shared/Divider"
+import { Contact } from "@/features/contact/Contact"
+import { Disclaimer } from "@/features/home/Disclaimer"
+import { Download } from "@/features/home/Download"
+import { Hero } from "@/features/home/Hero"
+import { Features } from "@headlessui/react/dist/utils/render"
 import Head from "next/head"
-import Contact from "src/features/contact/Contact"
-import Disclaimer from "src/features/home/Disclaimer"
-import Download from "src/features/home/Download"
-import Features from "src/features/home/Features"
-import Hero from "src/features/home/Hero"
 
 /** Display a development badge to identify the current environment being used */
 function EnvTag() {

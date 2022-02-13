@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { FormattedMessage } from "react-intl"
 
-export default function Hero() {
+export function Hero() {
   return (
     <div className="relative overflow-hidden">
       <div className="mt-6 flex flex-col justify-center">

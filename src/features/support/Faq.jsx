@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
+import { classNames } from "@/lib/helpers"
 import { Disclosure } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/outline"
-import { classNames } from "@lib/helpers"
 
 const faqs = [
   {

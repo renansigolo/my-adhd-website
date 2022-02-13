@@ -1,14 +1,14 @@
-import * as gtag from "@lib/gtag"
-import "@styles/globals.css"
+import * as gtag from "@/lib/gtag"
+import "@/styles/globals.css"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
 import { Toaster } from "react-hot-toast"
 import { IntlProvider } from "react-intl"
 
 const languages = {
-  en: require("@locale/en.json"),
-  es: require("@locale/es.json"),
-  pt: require("@locale/pt.json")
+  en: require("@/locale/en.json"),
+  es: require("@/locale/es.json"),
+  pt: require("@/locale/pt.json")
 }
 
 function App({ Component, pageProps }) {

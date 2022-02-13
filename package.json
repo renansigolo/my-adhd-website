@@ -50,6 +50,7 @@
     "sharp": "0.30.1"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^3.2.0",
     "autoprefixer": "10.4.2",
     "chance": "1.1.8",
     "concurrently": "7.0.0",
@@ -63,7 +64,6 @@
     "next-sitemap": "2.1.14",
     "postcss": "8.4.6",
     "prettier": "2.5.1",
-    "prettier-plugin-organize-attributes": "0.0.5",
     "prettier-plugin-tailwindcss": "0.1.7",
     "tailwindcss": "3.0.8"
   },
@@ -82,7 +82,11 @@
     "not IE 11"
   ],
   "lint-staged": {
-    "*": ["prettier --write --ignore-unknown"],
-    "*.{js,jsx}": ["eslint --fix"]
+    "*": [
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix"
+    ]
   }
 }

@@ -1,6 +1,6 @@
 import { FormattedMessage } from "react-intl"
 
-export default function Disclaimer() {
+export function Disclaimer() {
   return (
     <div className="bg-gradient-to-tl from-purple-800 to-pink-500">
       <div className="max-w-1xl mx-auto py-16 px-4 text-center sm:py-20 sm:px-6 lg:px-8">

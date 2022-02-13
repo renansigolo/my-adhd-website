@@ -22,7 +22,7 @@ const SectionHeader = ({
   )
 }
 
-export default function Download() {
+export function Download() {
   return (
     <section id="download">
       <div className="bg-white">
