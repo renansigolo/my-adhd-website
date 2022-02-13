@@ -1,4 +1,5 @@
 import { Footer } from "@/components/layout/Footer"
+import { Navbar } from "@/components/layout/Navbar"
 import { Divider } from "@/components/shared/Divider"
 import { Contact } from "@/features/contact/Contact"
 import { Disclaimer } from "@/features/home/Disclaimer"
@@ -71,6 +72,8 @@ export default function Home() {
 
       <main>
         {isProd ? null : <EnvTag />}
+
+        <Navbar />
 
         <Hero />
 
