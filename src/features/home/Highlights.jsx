@@ -142,7 +142,7 @@ const Bullets = (props) => {
   )
 }
 
-export function Features() {
+export function Highlights() {
   return (
     <section id="features">
       <div className="overflow-hidden bg-gray-50 py-12 lg:py-24">

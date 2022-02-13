@@ -4,7 +4,7 @@ import { Contact } from "@/features/contact/Contact"
 import { Disclaimer } from "@/features/home/Disclaimer"
 import { Download } from "@/features/home/Download"
 import { Hero } from "@/features/home/Hero"
-import { Features } from "@headlessui/react/dist/utils/render"
+import { Highlights } from "@/features/home/Highlights"
 import Head from "next/head"
 
 /** Display a development badge to identify the current environment being used */
@@ -74,7 +74,7 @@ export default function Home() {
 
         <Hero />
 
-        <Features />
+        <Highlights />
 
         <Disclaimer />
 
