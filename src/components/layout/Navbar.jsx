@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Fragment } from "react"
 
-export default function Navbar() {
+export function Navbar() {
   return (
     <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (

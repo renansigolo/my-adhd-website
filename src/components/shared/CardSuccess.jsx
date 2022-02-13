@@ -1,7 +1,7 @@
 import { CheckIcon } from "@heroicons/react/solid"
 import { FormattedMessage } from "react-intl"
 
-export default function CardSuccess() {
+export function CardSuccess() {
   return (
     <div
       className="col-span-1 mx-auto flex flex-col rounded-lg bg-white text-center shadow sm:w-3/5"

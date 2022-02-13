@@ -1,11 +1,11 @@
-import Contact from "@components/Contact"
-import Disclaimer from "@components/Disclaimer"
-import Download from "@components/Download"
-import Features from "@components/Features"
-import Footer from "@components/Footer"
-import Hero from "@components/Hero"
-import Divider from "@components/shared/Divider"
+import { Footer } from "@components/layout/Footer"
+import { Divider } from "@components/shared/Divider"
 import Head from "next/head"
+import Contact from "src/features/contact/Contact"
+import Disclaimer from "src/features/home/Disclaimer"
+import Download from "src/features/home/Download"
+import Features from "src/features/home/Features"
+import Hero from "src/features/home/Hero"
 
 /** Display a development badge to identify the current environment being used */
 function EnvTag() {

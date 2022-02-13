@@ -21,7 +21,7 @@ const navigation = {
   ]
 }
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="w-full border-t border-gray-300 bg-white">
       <div className="mx-auto max-w-7xl overflow-hidden py-12 px-3 sm:px-6 lg:px-8">

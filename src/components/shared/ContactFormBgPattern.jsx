@@ -1,4 +1,4 @@
-export default function BulletsBackground() {
+export function BulletsBackground() {
   return (
     <>
       <svg

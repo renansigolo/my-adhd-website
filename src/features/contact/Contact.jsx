@@ -1,13 +1,13 @@
+import { CardSuccess } from "@components/shared/CardSuccess"
+import { BulletsBackground } from "@components/shared/ContactFormBgPattern"
+import { Spinner } from "@components/shared/Spinner"
 import axios from "axios"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
 import { useIntl } from "react-intl"
-import { ContactFormFields } from "src/views/contact/ContactFormFields"
-import CardSuccess from "./shared/CardSuccess"
-import BulletsBackground from "./shared/ContactFormBgPattern"
-import Spinner from "./shared/Spinner"
+import { ContactFormFields } from "src/features/contact/ContactFormFields"
 
 export default function ContactForm() {
   // Get the current language to pre-define the select language field
