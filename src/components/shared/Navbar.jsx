@@ -1,12 +1,8 @@
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
-import Link from "next/link"
 import Image from "next/image"
+import Link from "next/link"
 import { Fragment } from "react"
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ")
-}
 
 export default function Navbar() {
   return (

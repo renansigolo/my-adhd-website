@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "sourceRoot": ".",
     "baseUrl": ".",
+    "checkJs": true,
     "inlineSourceMap": true,
+    "jsx": "react-jsx",
+    "sourceRoot": ".",
     "paths": {
       "@components/*": ["src/components/*"],
       "@lib/*": ["src/lib/*"],
@@ -10,5 +12,5 @@
       "@styles/*": ["src/styles/*"]
     }
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "**/node_modules/*"]
 }

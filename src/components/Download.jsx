@@ -3,6 +3,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import { FormattedMessage } from "react-intl"
 
+const SectionHeader = ({
+  id = "sectionId",
+  title = "Section Title",
+  subTitle = "Section Sub-Title"
+}) => {
+  return (
+    <div>
+      <h2 className="mt-8 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        <span className="block">
+          <FormattedMessage defaultMessage={title} id={`${id}.title`} />
+        </span>
+      </h2>
+      <p className="mb-8 text-lg leading-6 text-gray-900">
+        <FormattedMessage defaultMessage={subTitle} id={`${id}.subtitle`} />
+      </p>
+    </div>
+  )
+}
+
 export default function Download() {
   return (
     <section id="download">
@@ -14,14 +33,11 @@ export default function Download() {
             src="/images/icon-square.svg"
             width={160}
           />
-          <h2 className="mt-8 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            <span className="block">
-              <FormattedMessage id="download.title" />
-            </span>
-          </h2>
-          <p className="mb-8 text-lg leading-6 text-gray-900">
-            <FormattedMessage id="download.description" />
-          </p>
+          <SectionHeader
+            id="download"
+            subTitle="Available for all iOS and Android devices"
+            title="Download Now"
+          />
           <div className="mx-auto mt-8 grid grid-cols-1 gap-4 md:max-w-xl md:grid-cols-2">
             <a
               className="inline-flex items-center justify-center rounded-md border border-transparent bg-pink-600 px-5 py-3 text-base font-medium text-white hover:bg-pink-700 hover:shadow md:text-lg"

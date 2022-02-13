@@ -68,8 +68,14 @@ export default function Footer() {
             <a className="hover:underline">
               <FormattedMessage
                 defaultMessage="Privacy Policy"
-                id="footer.privacy-policy"
+                id="privacy-policy.title"
               />
+            </a>
+          </Link>
+          <span className="mx-2">|</span>
+          <Link href="/support">
+            <a className="hover:underline">
+              <FormattedMessage defaultMessage="Support" id="faq.title" />
             </a>
           </Link>
         </p>
