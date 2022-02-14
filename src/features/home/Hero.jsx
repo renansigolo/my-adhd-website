@@ -12,7 +12,7 @@ export function Hero() {
             objectFit="cover"
             priority={true}
             quality={100}
-            src="/images/header/bg-header.webp"
+            src="/images/header/bg-header.png"
           />
         </div>
         <div className="z-10 mx-auto max-w-3xl px-4 pb-20 sm:px-6 lg:px-8">

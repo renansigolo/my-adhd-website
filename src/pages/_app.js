@@ -1,3 +1,4 @@
+import "@/lib/firebase"
 import * as gtag from "@/lib/gtag"
 import "@/styles/globals.css"
 import { useRouter } from "next/router"
@@ -26,6 +27,11 @@ function App({ Component, pageProps }) {
   }, [router.events])
 
   return (
+    // <FlagsProvider
+    //   defaults={{
+    //     welcome_message: "Welcome"
+    //   }}
+    // >
     <IntlProvider
       defaultLocale={defaultLocale}
       locale={locale}
@@ -34,6 +40,7 @@ function App({ Component, pageProps }) {
       <Component {...pageProps} />
       <Toaster position="top-right" />
     </IntlProvider>
+    // </FlagsProvider>
   )
 }
 

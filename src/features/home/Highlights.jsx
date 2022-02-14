@@ -169,7 +169,7 @@ export function Highlights() {
                 alt="iPhone Portrait"
                 className="relative mx-auto"
                 height={567}
-                src="/images/highlight/learn.webp"
+                src="/images/highlight/learn.png"
                 width={300}
               />
             </div>
@@ -197,7 +197,7 @@ export function Highlights() {
                   alt="iPhone Portrait"
                   className="relative mx-auto"
                   height={570}
-                  src="/images/highlight/what.webp"
+                  src="/images/highlight/what.png"
                   width={300}
                 />
               </div>
