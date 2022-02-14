@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "checkJs": true,
     "inlineSourceMap": true,
     "jsx": "react-jsx",
@@ -13,6 +13,5 @@
       "@/locale/*": ["src/locale/*"],
       "@/styles/*": ["src/styles/*"]
     }
-  },
-  "exclude": ["node_modules", "**/node_modules/*"]
+  }
 }

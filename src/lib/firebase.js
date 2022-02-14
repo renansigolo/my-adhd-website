@@ -21,6 +21,26 @@ const firebaseApp = initializeApp(firebaseConfig)
 export const auth = getAuth(firebaseApp)
 export const firestore = getFirestore(firebaseApp)
 
+// Get/read a document once
+// const collectionRef = collection(firestore, "configs")
+// export const getDocData = async () => {
+//   const docSnap = await getDoc(documentRef)
+
+//   if (docSnap.exists()) {
+//     console.log("Document data:", docSnap.data())
+//     return docSnap.data()
+//   }
+// }
+
+// Usage
+// const runConfig = async () => {
+//   return getDocData()
+//     .then((data) => data)
+//     .catch((err) => err)
+// }
+
+// runConfig().then((data) => console.log("🚀 ~ data", data))
+
 // Initialize Configure Remote Config
 // export const remoteConfig = getRemoteConfig(firebaseApp)
 // remoteConfig.settings.minimumFetchIntervalMillis = 3600000
