@@ -1,4 +1,4 @@
-import "@/lib/firebase"
+// import "@/lib/firebase"
 import * as gtag from "@/lib/gtag"
 import "@/styles/globals.css"
 import { useRouter } from "next/router"
@@ -17,7 +17,7 @@ function App({ Component, pageProps }) {
   const { locale, defaultLocale } = router
   const messages = languages[locale.substring(0, 2)]
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = (/** @type {string} */ url) => {
       gtag.pageview(url)
     }
     router.events.on("routeChangeComplete", handleRouteChange)

@@ -72,12 +72,12 @@ export function Footer() {
               />
             </a>
           </Link>
-          <span className="mx-2">|</span>
+          {/* <span className="mx-2">|</span>
           <Link href="/support">
             <a className="hover:underline">
               <FormattedMessage defaultMessage="Support" id="faq.title" />
             </a>
-          </Link>
+          </Link> */}
         </p>
       </div>
     </footer>
