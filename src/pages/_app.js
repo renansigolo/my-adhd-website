@@ -1,14 +1,15 @@
-import * as gtag from "@lib/gtag"
-import "@styles/globals.css"
+// import "@/lib/firebase"
+import * as gtag from "@/lib/gtag"
+import "@/styles/globals.css"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
 import { Toaster } from "react-hot-toast"
 import { IntlProvider } from "react-intl"
 
 const languages = {
-  en: require("@locale/en.json"),
-  es: require("@locale/es.json"),
-  pt: require("@locale/pt.json")
+  en: require("@/locale/en.json"),
+  es: require("@/locale/es.json"),
+  pt: require("@/locale/pt.json")
 }
 
 function App({ Component, pageProps }) {
@@ -16,7 +17,7 @@ function App({ Component, pageProps }) {
   const { locale, defaultLocale } = router
   const messages = languages[locale.substring(0, 2)]
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = (/** @type {string} */ url) => {
       gtag.pageview(url)
     }
     router.events.on("routeChangeComplete", handleRouteChange)
@@ -26,6 +27,11 @@ function App({ Component, pageProps }) {
   }, [router.events])
 
   return (
+    // <FlagsProvider
+    //   defaults={{
+    //     welcome_message: "Welcome"
+    //   }}
+    // >
     <IntlProvider
       defaultLocale={defaultLocale}
       locale={locale}
@@ -34,6 +40,7 @@ function App({ Component, pageProps }) {
       <Component {...pageProps} />
       <Toaster position="top-right" />
     </IntlProvider>
+    // </FlagsProvider>
   )
 }
 

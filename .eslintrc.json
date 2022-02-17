@@ -4,7 +4,7 @@
     "no-restricted-imports": [
       "error",
       {
-        "patterns": ["..*"]
+        "patterns": ["..*", "src"]
       }
     ],
     "react/jsx-sort-props": [

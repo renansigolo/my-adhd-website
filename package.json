@@ -41,6 +41,7 @@
     "@tailwindcss/forms": "0.4.0",
     "@tailwindcss/typography": "0.5.1",
     "axios": "0.25.0",
+    "firebase": "9.6.6",
     "next": "12.0.10",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -63,7 +64,6 @@
     "next-sitemap": "2.1.14",
     "postcss": "8.4.6",
     "prettier": "2.5.1",
-    "prettier-plugin-organize-attributes": "0.0.5",
     "prettier-plugin-tailwindcss": "0.1.7",
     "tailwindcss": "3.0.8"
   },
@@ -82,7 +82,11 @@
     "not IE 11"
   ],
   "lint-staged": {
-    "*": ["prettier --write --ignore-unknown"],
-    "*.{js,jsx}": ["eslint --fix"]
+    "*": [
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix"
+    ]
   }
 }

@@ -1,3 +1,3 @@
-export default function Spinner({ show }) {
+export function Spinner({ show = false }) {
   return show ? <div className="spinner" data-test="spinner" /> : null
 }

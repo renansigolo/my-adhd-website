@@ -1,3 +1,6 @@
 {
-  "material-icon-theme.activeIconPack": "react"
+  "css.validate": false,
+  "editor.quickSuggestions": {
+    "strings": true
+  }
 }

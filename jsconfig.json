@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
-    "sourceRoot": ".",
-    "baseUrl": ".",
+    "baseUrl": "./",
+    "checkJs": true,
     "inlineSourceMap": true,
+    "jsx": "react-jsx",
+    "sourceRoot": ".",
+    "resolveJsonModule": true,
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@lib/*": ["src/lib/*"],
-      "@locale/*": ["src/locale/*"],
-      "@styles/*": ["src/styles/*"]
+      "@/components/*": ["src/components/*"],
+      "@/features/*": ["src/features/*"],
+      "@/lib/*": ["src/lib/*"],
+      "@/locale/*": ["src/locale/*"],
+      "@/styles/*": ["src/styles/*"]
     }
-  },
-  "exclude": ["node_modules"]
+  }
 }

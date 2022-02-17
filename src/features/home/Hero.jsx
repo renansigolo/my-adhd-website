@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { FormattedMessage } from "react-intl"
 
-export default function Hero() {
+export function Hero() {
   return (
     <div className="relative overflow-hidden">
       <div className="mt-6 flex flex-col justify-center">
@@ -12,7 +12,7 @@ export default function Hero() {
             objectFit="cover"
             priority={true}
             quality={100}
-            src="/images/header/bg-header.webp"
+            src="/images/header/bg-header.png"
           />
         </div>
         <div className="z-10 mx-auto max-w-3xl px-4 pb-20 sm:px-6 lg:px-8">
@@ -20,14 +20,14 @@ export default function Hero() {
             <main className="mx-auto mt-16 max-w-3xl px-4 sm:mt-20">
               <div className="text-center">
                 <span className="sr-only">My ADHD Logo</span>
-                <Image
-                  alt="My ADHD Logo"
-                  className="mb-10 inline-block h-28 w-28"
-                  height={144}
-                  priority={true}
-                  src="/images/head/logo-outline-with-brand-underneath.svg"
-                  width={160}
-                />
+                <div className="flex justify-center">
+                  <img
+                    alt="My ADHD Logo"
+                    className="flex-self-center mb-2 inline-block max-h-36 md:max-h-48"
+                    loading="eager"
+                    src="/images/head/logo-outline-with-brand-underneath.svg"
+                  />
+                </div>
                 <h1 className="mt-4 text-3xl text-white sm:text-4xl md:text-5xl">
                   <span className="block xl:inline">
                     <FormattedMessage

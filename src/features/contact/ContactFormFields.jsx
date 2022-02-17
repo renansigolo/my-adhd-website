@@ -1,24 +1,26 @@
-import styles from "@styles/Contact.module.css"
-import axios from "axios"
-import { useRouter } from "next/router"
-import { useState } from "react"
-import { useForm } from "react-hook-form"
-import toast from "react-hot-toast"
-import { FormattedMessage, useIntl } from "react-intl"
-import CardSuccess from "./shared/CardSuccess"
-import BulletsBackground from "./shared/ContactFormBgPattern"
-import Spinner from "./shared/Spinner"
+import styles from "@/styles/Contact.module.css"
+import { FormattedMessage } from "react-intl"
 
-const FormComponent = (props) => {
-  const {
-    language,
-    translated,
-    register,
-    onSubmit,
-    handleSubmit,
-    isLoading,
-    errors
-  } = props
+/**
+ * Render the ContactForm fields
+ * @param {Object} props
+ * @param {string} props.language
+ * @param {Object} props.translated
+ * @param {Function} props.register
+ * @param {Function} props.onSubmit
+ * @param {Function} props.handleSubmit
+ * @param {boolean} props.isLoading
+ * @param {Object.<string, string>} props.errors
+ */
+export const ContactFormFields = ({
+  language,
+  translated,
+  register,
+  onSubmit,
+  handleSubmit,
+  isLoading,
+  errors
+}) => {
   return (
     <div className="my-6">
       <div className="mb-12 text-center">
@@ -116,9 +118,9 @@ const FormComponent = (props) => {
           </div>
         </div>
         {/* <div className="sm:col-span-2">
-          <div className="flex items-start ml-3">
+          <div className="ml-3 flex items-start">
             <p className="text-base text-gray-500">
-              This site is protected by reCAPTCHA and the Google{' '}
+              This site is protected by reCAPTCHA and the Google{" "}
               <a
                 href="https://policies.google.com/privacy"
                 className="font-medium text-gray-700 underline"
@@ -126,8 +128,8 @@ const FormComponent = (props) => {
                 rel="noreferrer noopener"
               >
                 Privacy Policy
-              </a>{' '}
-              and{' '}
+              </a>{" "}
+              and{" "}
               <a
                 href="https://policies.google.com/terms"
                 className="font-medium text-gray-700 underline"
@@ -135,7 +137,7 @@ const FormComponent = (props) => {
                 rel="noreferrer noopener"
               >
                 Terms of Service
-              </a>{' '}
+              </a>{" "}
               apply.
             </p>
           </div>
@@ -152,85 +154,5 @@ const FormComponent = (props) => {
         </div>
       </form>
     </div>
-  )
-}
-
-export default function ContactForm() {
-  // Get the current language to pre-define the select language field
-  const router = useRouter()
-  const language = router.locale.substring(0, 2)
-
-  // Assign add the translated fields to variables
-  const intl = useIntl()
-  function translatedFormValues(id) {
-    this.title = intl.formatMessage({ id: `contact.form.${id}.title` })
-    this.placeholder = intl.formatMessage({
-      id: `contact.form.${id}.placeholder`
-    })
-    this.error = intl.formatMessage({ id: `contact.form.${id}.error` })
-  }
-  const translated = {
-    name: Object(new translatedFormValues("name")),
-    email: Object(new translatedFormValues("email")),
-    message: Object(new translatedFormValues("message"))
-  }
-
-  // Config React Hooks Form
-  const [isLoading, setIsLoading] = useState(false)
-  const [isSuccess, setIsSuccess] = useState(false)
-  const {
-    register,
-    formState: { errors },
-    handleSubmit
-  } = useForm()
-
-  const onSubmit = async (data, event) => {
-    const contactAPI = axios.create({
-      baseURL: process.env.NEXT_PUBLIC_FIREBASE_URL
-    })
-
-    setIsLoading(true)
-    // Send a POST request to Firebase Cloud Function
-    try {
-      await contactAPI.post("sendContactEmail", { ...data })
-      setIsSuccess(true)
-    } catch (error) {
-      toast.error(
-        error.message || intl.formatMessage({ id: `contact.form.error` })
-      )
-      console.error(error)
-    } finally {
-      setIsLoading(false)
-      event.target.reset() // reset after form submit
-    }
-  }
-
-  return (
-    <section id="contact">
-      <div className="lg:py-18 overflow-hidden bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
-        <div className="relative mx-auto max-w-xl">
-          <BulletsBackground />
-          {!isLoading ? (
-            !isSuccess ? (
-              <FormComponent
-                errors={errors}
-                handleSubmit={handleSubmit}
-                isLoading={isLoading}
-                language={language}
-                register={register}
-                translated={translated}
-                onSubmit={onSubmit}
-              />
-            ) : (
-              <CardSuccess />
-            )
-          ) : (
-            <div className="grid h-96 place-items-center">
-              <Spinner show />
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
   )
 }

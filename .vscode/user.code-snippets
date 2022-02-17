@@ -7,13 +7,14 @@
   // Placeholders with the same ids are connected.
 
   "component": {
-    "scope": "javascript,typescript, javascriptreact",
-    "prefix": "next-page",
+    "scope": "javascript, typescript, javascriptreact",
+    "prefix": "component",
     "body": [
-      "export default function Page({ }) {",
+      "export const ${1:Component} = (${2:props}) => {",
       "  return (",
-      "    <main>",
-      "    </main>",
+      "    <>",
+      "        $3",
+      "    </>",
       "  )",
       "}"
     ],

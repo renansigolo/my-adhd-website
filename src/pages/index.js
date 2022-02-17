@@ -1,10 +1,10 @@
-import Contact from "@components/Contact"
-import Disclaimer from "@components/Disclaimer"
-import Download from "@components/Download"
-import Features from "@components/Features"
-import Footer from "@components/Footer"
-import Hero from "@components/Hero"
-import Divider from "@components/shared/Divider"
+import { Footer } from "@/components/layout/Footer"
+import { Divider } from "@/components/shared/Divider"
+import { Contact } from "@/features/contact/Contact"
+import { Disclaimer } from "@/features/home/Disclaimer"
+import { Download } from "@/features/home/Download"
+import { Hero } from "@/features/home/Hero"
+import { Highlights } from "@/features/home/Highlights"
 import Head from "next/head"
 
 /** Display a development badge to identify the current environment being used */
@@ -74,7 +74,7 @@ export default function Home() {
 
         <Hero />
 
-        <Features />
+        <Highlights />
 
         <Disclaimer />
 
