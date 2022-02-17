@@ -2,7 +2,6 @@ import { ContainerSection } from "@/components/layout/Containers"
 import { HeaderSection } from "@/components/layout/Headers"
 import { faAppStore, faGooglePlay } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Image from "next/image"
 import { FormattedMessage } from "react-intl"
 
 export function Download() {
@@ -10,8 +9,9 @@ export function Download() {
     <section id="download">
       <div className="bg-white">
         <ContainerSection center>
-          <Image
+          <img
             alt="My ADHD Logo"
+            className="flex-self-center inline-flex"
             height={160}
             src="/images/icon-square.svg"
             width={160}
