@@ -26,7 +26,7 @@ export function Download() {
             >
               <FontAwesomeIcon
                 aria-hidden="true"
-                className="-ml-1 mr-2"
+                className="-ml-1 mr-2 max-h-6"
                 icon={faAppStore}
                 size={"lg"}
               />
@@ -40,7 +40,7 @@ export function Download() {
             >
               <FontAwesomeIcon
                 aria-hidden="true"
-                className="-ml-1 mr-2"
+                className="-ml-1 mr-2 max-h-6"
                 icon={faGooglePlay}
                 size={"lg"}
               />
