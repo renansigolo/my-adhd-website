@@ -1,3 +1,4 @@
+import { LogoOutlined } from "@/components/shared/Vectors"
 import bgHeader from "@/images/header/bg-header.png"
 import Image from "next/image"
 import { FormattedMessage } from "react-intl"
@@ -22,12 +23,7 @@ export function Hero() {
               <div className="text-center">
                 <span className="sr-only">My ADHD Logo</span>
                 <div className="flex justify-center">
-                  <img
-                    alt="My ADHD Logo"
-                    className="flex-self-center mb-2 inline-block max-h-36 md:max-h-48"
-                    loading="eager"
-                    src="/images/head/logo-outline-with-brand-underneath.svg"
-                  />
+                  <LogoOutlined />
                 </div>
                 <h1 className="mt-4 text-3xl text-white sm:text-4xl md:text-5xl">
                   <span className="block xl:inline">
