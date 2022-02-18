@@ -1,3 +1,4 @@
+import bgHeader from "@/images/header/bg-header.png"
 import Image from "next/image"
 import { FormattedMessage } from "react-intl"
 
@@ -12,7 +13,7 @@ export function Hero() {
             objectFit="cover"
             priority={true}
             quality={100}
-            src="/images/header/bg-header.png"
+            src={bgHeader}
           />
         </div>
         <div className="z-10 mx-auto max-w-3xl px-4 pb-20 sm:px-6 lg:px-8">
