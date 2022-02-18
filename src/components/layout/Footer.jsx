@@ -46,7 +46,7 @@ export function Footer() {
             values={{
               heartIcon: (
                 <FontAwesomeIcon
-                  className="scale hover:text-red-500"
+                  className="scale w-4 hover:text-red-500"
                   icon={faHeart}
                 />
               ),

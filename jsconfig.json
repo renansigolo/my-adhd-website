@@ -11,7 +11,8 @@
       "@/features/*": ["src/features/*"],
       "@/lib/*": ["src/lib/*"],
       "@/locale/*": ["src/locale/*"],
-      "@/styles/*": ["src/styles/*"]
+      "@/styles/*": ["src/styles/*"],
+      "@/images/*": ["public/images/*"]
     }
   }
 }

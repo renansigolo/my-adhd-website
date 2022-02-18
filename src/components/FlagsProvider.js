@@ -3,7 +3,7 @@ import {
   getAll,
   getRemoteConfig
 } from "firebase/remote-config"
-import React, { createContext, useContext, useEffect, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react"
 import semverSatisfies from "semver/functions/satisfies"
 
 const FlagsContext = createContext({})
@@ -44,7 +44,7 @@ const FlagsProvider = ({ defaults, children }) => {
         setFlags(newFlags)
       })
       .catch((error) => console.error(error))
-  }, [])
+  }, [defaults, flags])
 
   return <FlagsContext.Provider value={flags}>{children}</FlagsContext.Provider>
 }

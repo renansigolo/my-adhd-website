@@ -1,5 +1,6 @@
 import { ContainerSection } from "@/components/layout/Containers"
 import { HeaderSection } from "@/components/layout/Headers"
+import { AppIconSquare } from "@/components/shared/Vectors"
 import { faAppStore, faGooglePlay } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { FormattedMessage } from "react-intl"
@@ -9,13 +10,8 @@ export function Download() {
     <section id="download">
       <div className="bg-white">
         <ContainerSection center>
-          <img
-            alt="My ADHD Logo"
-            className="flex-self-center inline-flex"
-            height={160}
-            src="/images/icon-square.svg"
-            width={160}
-          />
+          <AppIconSquare />
+
           <HeaderSection
             id="download"
             subTitle="Available for all iOS and Android devices"
@@ -30,7 +26,7 @@ export function Download() {
             >
               <FontAwesomeIcon
                 aria-hidden="true"
-                className="-ml-1 mr-2"
+                className="-ml-1 mr-2 max-h-6"
                 icon={faAppStore}
                 size={"lg"}
               />
@@ -44,7 +40,7 @@ export function Download() {
             >
               <FontAwesomeIcon
                 aria-hidden="true"
-                className="-ml-1 mr-2"
+                className="-ml-1 mr-2 max-h-6"
                 icon={faGooglePlay}
                 size={"lg"}
               />

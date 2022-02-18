@@ -1,3 +1,5 @@
+import learnPic from "@/images/highlight/learn.png"
+import whatPic from "@/images/highlight/what.png"
 import {
   faChalkboardTeacher,
   faGrinStars,
@@ -36,7 +38,7 @@ const FeatureHighlights = () => {
           >
             <div className="flex flex-1 flex-col p-8 text-white">
               <FontAwesomeIcon
-                className="mx-auto flex-shrink-0"
+                className="mx-auto h-16 flex-shrink-0"
                 icon={card.icon}
                 size="4x"
               />
@@ -162,16 +164,10 @@ export function Highlights() {
 
             <div
               aria-hidden="true"
-              className="relative -mx-4 mt-10 text-center lg:mt-0"
+              className="relative mx-auto mt-10 w-80 text-center lg:mt-0"
             >
               <BulletsMobile />
-              <Image
-                alt="iPhone Portrait"
-                className="relative mx-auto"
-                height={567}
-                src="/images/highlight/learn.png"
-                width={300}
-              />
+              <Image alt="iPhone Portrait" src={learnPic} />
             </div>
           </div>
 
@@ -191,15 +187,9 @@ export function Highlights() {
                 </p>
               </div>
 
-              <div className="relative -mx-4 mt-10 text-center lg:col-start-1 lg:mt-0">
+              <div className="relative mx-auto mt-10 w-80 text-center lg:col-start-1 lg:mt-0">
                 <BulletsMobile />
-                <Image
-                  alt="iPhone Portrait"
-                  className="relative mx-auto"
-                  height={570}
-                  src="/images/highlight/what.png"
-                  width={300}
-                />
+                <Image alt="iPhone Portrait" src={whatPic} />
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-/* This example requires Tailwind CSS v2.0+ */
+/* eslint-disable @next/next/no-img-element */
 import { classNames } from "@/lib/helpers"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
