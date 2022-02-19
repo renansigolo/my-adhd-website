@@ -1,7 +1,7 @@
 import { CardSuccess } from "@/components/shared/CardSuccess"
 import { BulletsBackground } from "@/components/shared/ContactFormBgPattern"
 import { Spinner } from "@/components/shared/Spinner"
-import { ContactFormFields } from "@/features/contact/ContactFormFields"
+import { ContactFormFields } from "@/sections/contact/ContactFormFields"
 import axios from "axios"
 import { useRouter } from "next/router"
 import { useState } from "react"

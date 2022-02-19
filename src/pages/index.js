@@ -1,10 +1,10 @@
 import { Footer } from "@/components/layout/Footer"
 import { Divider } from "@/components/shared/Divider"
-import { Contact } from "@/features/contact/Contact"
-import { Disclaimer } from "@/features/home/Disclaimer"
-import { Download } from "@/features/home/Download"
-import { Hero } from "@/features/home/Hero"
-import { Highlights } from "@/features/home/Highlights"
+import { Contact } from "@/sections/contact/Contact"
+import { Disclaimer } from "@/sections/home/Disclaimer"
+import { Download } from "@/sections/home/Download"
+import { Hero } from "@/sections/home/Hero"
+import { Highlights } from "@/sections/home/Highlights"
 import Head from "next/head"
 
 /** Display a development badge to identify the current environment being used */

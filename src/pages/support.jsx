@@ -1,7 +1,7 @@
 import { ContainerSection } from "@/components/layout/Containers"
 import { Footer } from "@/components/layout/Footer"
 import { HeaderPage } from "@/components/layout/Headers"
-import { Faq } from "@/features/support/Faq"
+import { Faq } from "@/sections/support/Faq"
 
 const SupportHeader = () => {
   return (

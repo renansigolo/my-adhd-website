@@ -8,7 +8,7 @@
     "resolveJsonModule": true,
     "paths": {
       "@/components/*": ["src/components/*"],
-      "@/features/*": ["src/features/*"],
+      "@/sections/*": ["src/sections/*"],
       "@/lib/*": ["src/lib/*"],
       "@/locale/*": ["src/locale/*"],
       "@/styles/*": ["src/styles/*"],
