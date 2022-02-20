@@ -27,7 +27,7 @@
   "features.card.title2": "Guías",
   "features.card.title3": "Análisis de emociones",
   "features.title": "Caracteristicas",
-  "footer.title": "Hecho con {heartIcon} por Renan Sigolo",
+  "footer.title": "Hecho con {heartIcon} por {owner}",
   "hero.title": "¡La primera aplicación de TDAH con análisis cognitivo!",
   "highlight.0.subtitle": "Cuando se trata de TDAH, ¡la información es clave! Esta aplicación le proporciona consejos y técnicas creadas y probadas desde personas con TDAH hasta personas con TDAH. Además, tendrá acceso a un montón de tácticas utilizadas por los psicólogos para controlar el trastorno.",
   "highlight.0.title": "Desarrollar inteligencia ADHD",
