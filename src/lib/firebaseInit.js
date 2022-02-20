@@ -1,7 +1,8 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app"
+import { getApp, initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
+import { getStorage } from "firebase/storage"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -15,11 +16,24 @@ const firebaseConfig = {
 }
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig)
+const firebaseApp = createFirebaseApp(firebaseConfig)
+function createFirebaseApp(config) {
+  try {
+    return getApp()
+  } catch {
+    return initializeApp(config)
+  }
+}
 
-// Initialize auth, firestore and remote config with the 'firebaseApp' property
+// Auth exports
 export const auth = getAuth(firebaseApp)
+
+// Firestore exports
 export const firestore = getFirestore(firebaseApp)
+
+// Storage exports
+export const storage = getStorage(firebaseApp)
+export const STATE_CHANGED = "state_changed"
 
 // Get/read a document once
 // const collectionRef = collection(firestore, "configs")

@@ -16,6 +16,11 @@ const userNavigation = [
   { name: "Settings", href: "#" },
   { name: "Sign out", href: "#" }
 ]
+const userNavigation = [
+  { name: "Your Profile", href: "#" },
+  { name: "Settings", href: "#" },
+  { name: "Sign out", href: "#" }
+]
 
 const DesktopMenu = ({ user }) => {
   return (
