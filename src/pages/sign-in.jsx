@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar"
 import { Logo } from "@/components/shared/Icons"
+import { handleSignIn } from "@/lib/auth"
 import { faApple, faGoogle } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -21,9 +22,9 @@ export default function SignIn() {
           <div className="bg-white py-6 px-4 sm:px-10">
             <div className="grid grid-cols-1 gap-3">
               <div>
-                <a
+                <button
                   className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
-                  href="#"
+                  onClick={() => handleSignIn("apple")}
                 >
                   <span className="sr-only">Sign in with Apple</span>
                   <FontAwesomeIcon
@@ -33,13 +34,13 @@ export default function SignIn() {
                     size={"lg"}
                   />
                   <p>Sign in with Apple</p>
-                </a>
+                </button>
               </div>
 
               <div>
-                <a
+                <button
                   className="inline-flex w-full justify-center rounded-md border border-fuchsia-600 bg-fuchsia-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:border-fuchsia-700 hover:bg-fuchsia-700"
-                  href="#"
+                  onClick={() => handleSignIn("google")}
                 >
                   <span className="sr-only">Sign in with Google</span>
                   <FontAwesomeIcon
@@ -49,7 +50,7 @@ export default function SignIn() {
                     size={"lg"}
                   />
                   <p>Sign in with Google</p>
-                </a>
+                </button>
               </div>
             </div>
           </div>
