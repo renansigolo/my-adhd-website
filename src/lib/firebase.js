@@ -16,7 +16,6 @@ const firebaseConfig = {
 }
 
 // Initialize Firebase
-const firebaseApp = createFirebaseApp(firebaseConfig)
 function createFirebaseApp(config) {
   try {
     return getApp()
@@ -24,6 +23,7 @@ function createFirebaseApp(config) {
     return initializeApp(config)
   }
 }
+const firebaseApp = createFirebaseApp(firebaseConfig)
 
 // Auth exports
 export const auth = getAuth(firebaseApp)

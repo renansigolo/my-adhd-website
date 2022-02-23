@@ -3,7 +3,7 @@ import { doc, getFirestore, onSnapshot } from "firebase/firestore"
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import { useAuthState } from "react-firebase-hooks/auth"
-import { auth } from "./firebaseInit"
+import { auth } from "./firebase"
 
 const languages = {
   en: require("@/locale/en.json"),
