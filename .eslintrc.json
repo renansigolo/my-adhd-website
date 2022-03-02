@@ -1,5 +1,5 @@
 {
-  "extends": ["next/core-web-vitals", "prettier"],
+  "extends": ["plugin:react/recommended", "next/core-web-vitals", "prettier"],
   "rules": {
     "no-restricted-imports": [
       "error",
@@ -10,9 +10,10 @@
     "react/jsx-sort-props": [
       1,
       {
-        "callbacksLast": true,
         "reservedFirst": true,
-        "shorthandFirst": true
+        "shorthandFirst": true,
+        "callbacksLast": true,
+        "multiline": "last"
       }
     ]
   }

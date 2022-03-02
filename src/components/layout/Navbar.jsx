@@ -81,11 +81,11 @@ export function Navbar() {
                         <Menu.Item>
                           {({ active }) => (
                             <a
+                              href="#"
                               className={classNames(
                                 active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
-                              href="#"
                             >
                               Your Profile
                             </a>
@@ -94,11 +94,11 @@ export function Navbar() {
                         <Menu.Item>
                           {({ active }) => (
                             <a
+                              href="#"
                               className={classNames(
                                 active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
-                              href="#"
                             >
                               Settings
                             </a>
@@ -107,11 +107,11 @@ export function Navbar() {
                         <Menu.Item>
                           {({ active }) => (
                             <a
+                              href="#"
                               className={classNames(
                                 active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
-                              href="#"
                             >
                               Sign out
                             </a>
