@@ -63,10 +63,13 @@ export default function Home() {
         <meta content="#ff4b88" name="theme-color" />
         <meta content="index, follow" name="robots" />
         <meta content="app-id=1375236150" name="apple-itunes-app" />
+
         <link href="/images/icons/icon-192x192.png" rel="apple-touch-icon" />
         <link href="/images/splash.png" rel="apple-touch-startup-image" />
         <link href="/manifest.json" rel="manifest" />
-        <link href="/favicon.ico" rel="icon" />
+
+        <link href="/favicon.ico" rel="icon" sizes="any" />
+        <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
       </Head>
 
       <main>
