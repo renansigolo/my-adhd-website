@@ -38,14 +38,14 @@ const FeatureHighlights = () => {
           >
             <div className="flex flex-1 flex-col p-8 text-white">
               <FontAwesomeIcon
-                className="mx-auto h-16 flex-shrink-0"
+                className="mx-auto h-16 shrink-0"
                 icon={card.icon}
                 size="4x"
               />
               <h3 className="mt-6 text-lg font-medium">
                 <FormattedMessage id={card.title + (index + 1)} />
               </h3>
-              <dl className="mt-1flex-grow flex flex-col justify-between">
+              <dl className="mt-1">
                 <dt className="sr-only">Title</dt>
                 <dd className="text-sm">
                   <FormattedMessage id={card.subtitle + (index + 1)} />
@@ -64,7 +64,7 @@ const BulletsMobile = () => {
     <>
       <svg
         aria-hidden="true"
-        className="absolute left-1/2 -translate-x-1/2 translate-y-16 transform lg:hidden"
+        className="absolute left-1/2 -translate-x-1/2 translate-y-16 lg:hidden"
         fill="none"
         height={404}
         viewBox="0 0 784 404"
@@ -109,7 +109,7 @@ const Bullets = (props) => {
     <>
       <svg
         aria-hidden="true"
-        className={`absolute hidden transform lg:block ${screenPosition}`}
+        className={`absolute hidden lg:block ${screenPosition}`}
         fill="none"
         height={784}
         viewBox="0 0 404 784"

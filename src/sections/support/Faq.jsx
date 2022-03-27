@@ -44,7 +44,7 @@ export function Faq() {
                             aria-hidden="true"
                             className={classNames(
                               open ? "-rotate-180" : "rotate-0",
-                              "h-6 w-6 transform"
+                              "h-6 w-6"
                             )}
                           />
                         </span>
