@@ -3,10 +3,12 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
-    fontFamily: {
-      sans: ['"Baloo 2"', ...defaultTheme.fontFamily.sans]
-    },
-    extend: {}
+    extend: {
+      fontFamily: {
+        // @ts-ignore
+        sans: ['"Baloo 2"', ...defaultTheme.fontFamily.sans]
+      }
+    }
   },
   plugins: [
     require("@tailwindcss/typography"),

@@ -24,61 +24,67 @@ const navigation = {
 export function Footer() {
   return (
     <footer className="w-full border-t border-gray-300 bg-white">
-      <div className="mx-auto max-w-7xl overflow-hidden py-12 px-3 sm:px-6 lg:px-8">
-        <div className="flex justify-center space-x-4">
+      <div className="mx-auto flex max-w-7xl flex-col gap-4 overflow-hidden py-12 px-3 sm:px-6 lg:px-8">
+        <div className="mb-2 flex flex-row justify-center space-x-4">
           {navigation.social.map((item) => (
             <a
               key={item.name}
-              className={`transform text-gray-500 transition hover:scale-105 ${item.animation}`}
+              className={`text-gray-500 transition hover:scale-105 ${item.animation}`}
               href={item.href}
               rel="noreferrer noopener"
               target="_blank"
             >
               <span className="sr-only">{item.name}</span>
-              <FontAwesomeIcon icon={item.icon} size="lg" />
+              <FontAwesomeIcon className="h-5 w-5" icon={item.icon} />
             </a>
           ))}
         </div>
-        <p className="mt-8 text-center text-base text-gray-500">
-          <FormattedMessage
-            defaultMessage="Made with {heartIcon} by {owner}."
-            id="footer.title"
-            values={{
-              heartIcon: (
-                <FontAwesomeIcon
-                  className="scale w-4 hover:text-red-500"
-                  icon={faHeart}
+
+        <div className="flex justify-center align-middle">
+          <p className="inline-flex flex-row gap-1 self-center text-center align-middle text-base text-gray-500">
+            <FormattedMessage
+              defaultMessage="Made with {heartIcon} by {owner}"
+              id="footer.title"
+              values={{
+                heartIcon: (
+                  <FontAwesomeIcon
+                    className="scale h-4 w-4 hover:text-red-500"
+                    icon={faHeart}
+                  />
+                ),
+                owner: (
+                  <a
+                    className="hover:underline"
+                    href="https://renansigolo.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Renan Sigolo
+                  </a>
+                )
+              }}
+            />
+          </p>
+        </div>
+
+        <div>
+          <p className="text-center text-base text-gray-500">
+            <Link href="/privacy-policy">
+              <a className="hover:underline">
+                <FormattedMessage
+                  defaultMessage="Privacy Policy"
+                  id="privacy-policy.title"
                 />
-              ),
-              owner: (
-                <a
-                  className="hover:underline"
-                  href="https://renansigolo.com"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Renan Sigolo
-                </a>
-              )
-            }}
-          />
-        </p>
-        <p className="mt-6 text-center text-base text-gray-500">
-          <Link href="/privacy-policy">
-            <a className="hover:underline">
-              <FormattedMessage
-                defaultMessage="Privacy Policy"
-                id="privacy-policy.title"
-              />
-            </a>
-          </Link>
-          {/* <span className="mx-2">|</span>
+              </a>
+            </Link>
+            {/* <span className="mx-2">|</span>
           <Link href="/support">
             <a className="hover:underline">
               <FormattedMessage defaultMessage="Support" id="faq.title" />
             </a>
           </Link> */}
-        </p>
+          </p>
+        </div>
       </div>
     </footer>
   )
