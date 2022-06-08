@@ -1,4 +1,5 @@
 # Check PR for issues with Code Style
+---
 name: Check PR
 on: [pull_request]
 jobs:
