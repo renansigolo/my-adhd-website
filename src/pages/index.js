@@ -10,11 +10,8 @@ import { Highlights } from "@/sections/home/Highlights"
 import Head from "next/head"
 
 export default function Home() {
-  const title = "My ADHD"
-  const description = "The first ADHD app with cognitive analysis!"
-
   return (
-    <div>
+    <>
       <Head>
         {/* Primary Meta Tags */}
         <title>My ADHD Website</title>
@@ -81,6 +78,6 @@ export default function Home() {
       </main>
 
       <Footer />
-    </div>
+    </>
   )
 }
