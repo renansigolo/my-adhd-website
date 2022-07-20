@@ -62,8 +62,6 @@ export default function Home() {
       <Navbar />
 
       <main>
-        <EnvironmentTag />
-
         <Hero />
 
         <Highlights />
@@ -78,6 +76,9 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      {/* Floating Components */}
+      <EnvironmentTag />
     </>
   )
 }
