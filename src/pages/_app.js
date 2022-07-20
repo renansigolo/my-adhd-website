@@ -1,6 +1,7 @@
+import "@/styles/globals.css"
+
 import { UserContext } from "@/lib/context"
 import { useUserData, useUserLocale } from "@/lib/hooks"
-import "@/styles/globals.css"
 import { Toaster } from "react-hot-toast"
 import { IntlProvider } from "react-intl"
 

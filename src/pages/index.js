@@ -4,23 +4,12 @@ import { Divider } from "@/components/shared/Divider"
 import { Contact } from "@/sections/contact/Contact"
 import { Disclaimer } from "@/sections/home/Disclaimer"
 import { Download } from "@/sections/home/Download"
+import { EnvironmentTag } from "@/sections/home/EnvironmentTag"
 import { Hero } from "@/sections/home/Hero"
 import { Highlights } from "@/sections/home/Highlights"
 import Head from "next/head"
 
-/** Display a development badge to identify the current environment being used */
-function EnvTag() {
-  return (
-    <div className="fixed bottom-5 left-5">
-      <span className="inline-flex items-center rounded-full bg-purple-100 px-3 py-0.5 text-sm font-medium text-purple-800 opacity-70">
-        {process.env.NODE_ENV.toUpperCase()}
-      </span>
-    </div>
-  )
-}
-
 export default function Home() {
-  const isProd = process.env.NODE_ENV === "production" ? true : false
   const title = "My ADHD"
   const description = "The first ADHD app with cognitive analysis!"
 
@@ -76,7 +65,7 @@ export default function Home() {
       <Navbar />
 
       <main>
-        {isProd ? null : <EnvTag />}
+        <EnvironmentTag />
 
         <Hero />
 
