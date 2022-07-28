@@ -8,7 +8,7 @@ const PrivacyPolicyHeader = () => {
     <>
       <Navbar />
       <ContainerSection>
-        <HeaderPage showHome id="privacy-policy" title="Privacy Policy">
+        <HeaderPage id="privacy-policy" title="Privacy Policy">
           {<PrivacyPolicyContent />}
         </HeaderPage>
       </ContainerSection>

@@ -10,12 +10,12 @@ export default function SignIn() {
       <Navbar />
       <div className="mt-16 grid min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="mx-auto flex h-12 w-auto justify-center">
+          <div className="mx-auto flex h-24 w-auto justify-center">
             <Logo height={24} />
           </div>
         </div>
 
-        <div className="mt-6 sm:mx-auto sm:w-full sm:max-w-md">
+        <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <h2 className="mt-12 text-center text-3xl font-extrabold text-gray-900">
             Sign in to your account
           </h2>

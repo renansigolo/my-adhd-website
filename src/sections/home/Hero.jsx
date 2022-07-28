@@ -1,11 +1,13 @@
 import { LogoOutlinedWithBrandUnderneath } from "@/components/shared/Icons"
+import bgHeader from "@/images/bg-header.png"
+import Image from "next/image"
 import { FormattedMessage } from "react-intl"
 
 export function Hero() {
   return (
     <div className="relative overflow-hidden bg-purple-900">
       <div className="mt-6 flex flex-col justify-center">
-        {/* <div className="z-0 w-screen overflow-hidden bg-fixed">
+        <div className="z-0 w-screen overflow-hidden bg-fixed">
           <Image
             alt="Background My ADHD"
             layout="fill"
@@ -14,7 +16,7 @@ export function Hero() {
             quality={100}
             src={bgHeader}
           />
-        </div> */}
+        </div>
 
         <div className="z-0 mx-auto max-w-3xl px-4 pb-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-lg md:max-w-3xl">

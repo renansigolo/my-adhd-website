@@ -1,5 +1,4 @@
 import { Footer } from "@/components/layout/Footer"
-import { Navbar } from "@/components/layout/Navbar"
 import { Divider } from "@/components/shared/Divider"
 import { Contact } from "@/sections/contact/Contact"
 import { Disclaimer } from "@/sections/home/Disclaimer"
@@ -59,7 +58,7 @@ export default function Home() {
         <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
       </Head>
 
-      <Navbar />
+      {/* <Navbar /> */}
 
       <main>
         <Hero />
@@ -77,7 +76,6 @@ export default function Home() {
 
       <Footer />
 
-      {/* Floating Components */}
       <EnvironmentTag />
     </>
   )

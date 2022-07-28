@@ -8,6 +8,7 @@ import { IntlProvider } from "react-intl"
 function App({ Component, pageProps }) {
   const { locale, messages, defaultLocale } = useUserLocale()
   const userData = useUserData()
+
   return (
     <IntlProvider
       defaultLocale={defaultLocale}

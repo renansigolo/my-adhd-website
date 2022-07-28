@@ -6,12 +6,6 @@ import {
 } from "firebase/auth"
 import { auth } from "./firebase"
 
-// Sign in with popup && Google as the provider
-// const googleProvider = new GoogleAuthProvider()
-// const appleProvider = new OAuthProvider("apple.com")
-// appleProvider.addScope("email")
-// appleProvider.addScope("name")
-
 export const handleSignIn = async (providerName) => {
   providerName === "google" ? googleSignIn() : appleSignIn()
 
@@ -30,9 +24,11 @@ export const googleSignIn = async () => {
   await signInWithPopup(auth, googleProvider)
     .then((user) => {
       console.log(user)
+      return user
     })
     .catch((error) => {
       console.error(error)
+      return error
     })
 }
 
@@ -68,8 +64,10 @@ export const signOutUser = async () => {
   await signOut(auth)
     .then(() => {
       console.log("User signed out")
+      return
     })
     .catch((error) => {
       console.error("There was an error signing out")
+      return error
     })
 }

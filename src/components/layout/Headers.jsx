@@ -43,7 +43,7 @@ export const HeaderSection = ({ id = "sectionId", title, subTitle }) => {
   return (
     <>
       {id && title && (
-        <h2 className="mt-8 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        <h2 className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
           <span className="block">
             <FormattedMessage defaultMessage={title} id={`${id}.title`} />
           </span>
