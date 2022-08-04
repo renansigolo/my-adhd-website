@@ -48,7 +48,5 @@ export function useUserData() {
     return unsubscribe
   }, [user])
 
-  console.log(user)
-
   return { user, username }
 }
