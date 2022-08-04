@@ -22,7 +22,7 @@ jobs:
         run: npm install --global vercel@latest
 
       - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel env pull --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Install Dependencies
         run: npm ci --ignore-scripts
@@ -33,5 +33,5 @@ jobs:
       - name: Check Lint (ESLint)
         run: npm run lint
 
-      - name: Build Project
-        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Check Build
+        run: npm run build
