@@ -1,3 +1,4 @@
+/** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
   swcMinify: true,
@@ -12,5 +13,11 @@ module.exports = {
   i18n: {
     locales: ["en", "es", "pt-BR"],
     defaultLocale: "en"
+  },
+  experimental: {
+    newNextLinkBehavior: true,
+    images: {
+      allowFutureImage: true
+    }
   }
 }
