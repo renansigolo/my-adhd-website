@@ -10,11 +10,11 @@ export function Hero() {
         <div className="z-0 w-screen overflow-hidden bg-fixed">
           <Image
             alt="Background My ADHD"
+            className="absolute h-full w-full"
             priority={true}
             quality={100}
             sizes="100vw"
             src={bgHeader}
-            style={{ position: "absolute", height: "100%" }}
           />
         </div>
 
