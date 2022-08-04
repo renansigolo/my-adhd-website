@@ -1,9 +1,9 @@
 import * as gtag from "@/lib/gtag"
-import { doc, getFirestore, onSnapshot } from "firebase/firestore"
+// import { doc, getFirestore, onSnapshot } from "firebase/firestore"
 import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
-import { useAuthState } from "react-firebase-hooks/auth"
-import { auth } from "./firebase"
+import { useEffect } from "react"
+// import { useAuthState } from "react-firebase-hooks/auth"
+// import { auth } from "./firebase"
 
 const languages = {
   en: require("@/locale/en.json"),
@@ -28,25 +28,25 @@ export const useUserLocale = () => {
   return { locale, defaultLocale, messages }
 }
 
-export function useUserData() {
-  const [user] = useAuthState(auth)
-  const [username, setUsername] = useState(null)
+// export function useUserData() {
+//   const [user] = useAuthState(auth)
+//   const [username, setUsername] = useState(null)
 
-  useEffect(() => {
-    // turn off realtime subscription
-    let unsubscribe
+//   useEffect(() => {
+//     // turn off realtime subscription
+//     let unsubscribe
 
-    if (user) {
-      const ref = doc(getFirestore(), "users", user.uid)
-      unsubscribe = onSnapshot(ref, (doc) => {
-        setUsername(doc.data()?.username)
-      })
-    } else {
-      setUsername(null)
-    }
+//     if (user) {
+//       const ref = doc(getFirestore(), "users", user.uid)
+//       unsubscribe = onSnapshot(ref, (doc) => {
+//         setUsername(doc.data()?.username)
+//       })
+//     } else {
+//       setUsername(null)
+//     }
 
-    return unsubscribe
-  }, [user])
+//     return unsubscribe
+//   }, [user])
 
-  return { user, username }
-}
+//   return { user, username }
+// }
