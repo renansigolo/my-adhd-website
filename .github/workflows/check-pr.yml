@@ -35,6 +35,3 @@ jobs:
 
       - name: Build Project
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Check Build
-        run: npm run build
