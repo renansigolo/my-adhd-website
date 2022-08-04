@@ -4,6 +4,7 @@ module.exports = defineConfig({
   projectId: "fdr5mo",
   video: false,
   e2e: {
+    supportFile: false,
     baseUrl: "http://localhost:3000",
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
     setupNodeEvents(on, config) {
