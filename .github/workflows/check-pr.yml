@@ -1,9 +1,6 @@
 # Check PR for issues with Code Style
 ---
 name: Check PR
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on: [pull_request]
 jobs:
   code_style:
@@ -17,6 +14,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16.x"
+          cache: "npm"
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
