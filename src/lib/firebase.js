@@ -2,8 +2,8 @@
 import { initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
+import { getStorage } from "firebase/storage"
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -13,13 +13,26 @@ const firebaseConfig = {
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 }
-
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig)
+// function createFirebaseApp() {
+//   try {
+//     return getApp()
+//   } catch {
+//     return initializeApp(firebaseConfig)
+//   }
+// }
+// const firebaseApp = createFirebaseApp()
 
-// Initialize auth, firestore and remote config with the 'firebaseApp' property
+// Auth exports
 export const auth = getAuth(firebaseApp)
+
+// Firestore exports
 export const firestore = getFirestore(firebaseApp)
+
+// Storage exports
+export const storage = getStorage(firebaseApp)
+export const STATE_CHANGED = "state_changed"
 
 // Get/read a document once
 // const collectionRef = collection(firestore, "configs")

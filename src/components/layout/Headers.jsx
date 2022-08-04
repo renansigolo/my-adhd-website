@@ -29,11 +29,9 @@ export const HeaderButton = () => {
   return (
     <div className="mb-12 text-left lg:mb-24">
       <Link href="/">
-        <a>
-          <div className="sticky top-8 inline-flex items-center rounded-full border border-transparent bg-pink-600 p-3 text-white shadow-sm hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2">
-            <HomeIcon aria-hidden="true" className="h-6 w-6" />
-          </div>
-        </a>
+        <div className="sticky top-8 inline-flex items-center rounded-full border border-transparent bg-pink-600 p-3 text-white shadow-sm hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2">
+          <HomeIcon aria-hidden="true" className="h-6 w-6" />
+        </div>
       </Link>
     </div>
   )
@@ -43,7 +41,7 @@ export const HeaderSection = ({ id = "sectionId", title, subTitle }) => {
   return (
     <>
       {id && title && (
-        <h2 className="mt-8 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        <h2 className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
           <span className="block">
             <FormattedMessage defaultMessage={title} id={`${id}.title`} />
           </span>

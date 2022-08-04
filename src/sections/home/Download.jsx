@@ -1,6 +1,6 @@
 import { ContainerSection } from "@/components/layout/Containers"
 import { HeaderSection } from "@/components/layout/Headers"
-import { AppIconSquare } from "@/components/shared/Vectors"
+import { AppIconSquare } from "@/components/shared/Icons"
 import { faAppStore, faGooglePlay } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { FormattedMessage } from "react-intl"

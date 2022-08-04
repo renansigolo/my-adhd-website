@@ -1,14 +1,18 @@
 import { ContainerSection } from "@/components/layout/Containers"
 import { Footer } from "@/components/layout/Footer"
 import { HeaderPage } from "@/components/layout/Headers"
+import { Navbar } from "@/components/layout/Navbar"
 
 const PrivacyPolicyHeader = () => {
   return (
-    <ContainerSection>
-      <HeaderPage showHome id="privacy-policy" title="Privacy Policy">
-        {<PrivacyPolicyContent />}
-      </HeaderPage>
-    </ContainerSection>
+    <>
+      <Navbar />
+      <ContainerSection>
+        <HeaderPage id="privacy-policy" title="Privacy Policy">
+          {<PrivacyPolicyContent />}
+        </HeaderPage>
+      </ContainerSection>
+    </>
   )
 }
 
