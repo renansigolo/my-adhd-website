@@ -1,5 +1,5 @@
 import Script from "next/script"
-export const GA_ID_WEB = process.env.NEXT_PUBLIC_GA_ID
+const GA_ID_WEB = process.env.NEXT_PUBLIC_GA_ID
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (/** @type {string} */ url) => {
