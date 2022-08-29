@@ -2,7 +2,7 @@
 import { Logo } from "@/components/shared/Icons"
 import { UserContext } from "@/lib/context"
 import { Popover, Transition } from "@headlessui/react"
-import { MenuIcon, XIcon } from "@heroicons/react/outline"
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 import { Fragment, useContext } from "react"
 
@@ -32,7 +32,7 @@ const DesktopMenu = ({ user }) => {
           <div className="-mr-2 flex items-center lg:hidden">
             <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-pink-500">
               <span className="sr-only">Open main menu</span>
-              <MenuIcon aria-hidden="true" className="h-6 w-6" />
+              <Bars3Icon aria-hidden="true" className="h-6 w-6" />
             </Popover.Button>
           </div>
         </div>
@@ -94,7 +94,7 @@ const MobileMenu = ({ user }) => (
           <div className="-mr-2">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-500">
               <span className="sr-only">Close menu</span>
-              <XIcon aria-hidden="true" className="h-6 w-6" />
+              <XMarkIcon aria-hidden="true" className="h-6 w-6" />
             </Popover.Button>
           </div>
         </div>

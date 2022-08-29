@@ -1,4 +1,4 @@
-import { HomeIcon } from "@heroicons/react/outline"
+import { HomeIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 import { FormattedMessage } from "react-intl"
 
@@ -6,14 +6,10 @@ export const HeaderPage = ({
   id = "sectionId",
   title = null,
   subTitle = null,
-  showHome = false,
   children = null
 }) => {
   return (
     <>
-      {/* Home Button */}
-      {showHome && <HeaderButton />}
-
       {/* Section Header */}
       {(id || title || subTitle) && (
         <HeaderSection id={id} subTitle={subTitle} title={title} />
