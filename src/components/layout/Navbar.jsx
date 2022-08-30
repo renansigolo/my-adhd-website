@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import { Logo } from "@/components/shared/Icons"
 import { UserContext } from "@/lib/context"
 import { Popover, Transition } from "@headlessui/react"
-import { MenuIcon, XIcon } from "@heroicons/react/outline"
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 import { Fragment, useContext } from "react"
 
@@ -26,13 +25,15 @@ const DesktopMenu = ({ user }) => {
       >
         <div className="flex w-full items-center justify-between lg:w-auto">
           <Link href="/">
-            <span className="sr-only">My ADHD Logo</span>
-            <Logo />
+            <a>
+              <span className="sr-only">My ADHD Logo</span>
+              <Logo />
+            </a>
           </Link>
           <div className="-mr-2 flex items-center lg:hidden">
             <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-pink-500">
               <span className="sr-only">Open main menu</span>
-              <MenuIcon aria-hidden="true" className="h-6 w-6" />
+              <Bars3Icon aria-hidden="true" className="h-6 w-6" />
             </Popover.Button>
           </div>
         </div>
@@ -53,12 +54,10 @@ const DesktopMenu = ({ user }) => {
                   Sign in
                 </a>
               </Link> */}
-
-              <Link
-                className="rounded-md border border-transparent bg-fuchsia-600 py-2 px-6 text-base font-medium text-white shadow-md hover:bg-fuchsia-700"
-                href="/#download"
-              >
-                Download
+              <Link href="/#download">
+                <a className="rounded-md border border-transparent bg-fuchsia-600 py-2 px-6 text-base font-medium text-white shadow-md hover:bg-fuchsia-700">
+                  Download
+                </a>
               </Link>
             </>
           ) : (
@@ -88,13 +87,15 @@ const MobileMenu = ({ user }) => (
     >
       <div className="z-50 overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
         <div className="z-50 flex items-center justify-between px-5 pt-4">
-          <div>
-            <Logo />
-          </div>
+          <Link href="/">
+            <a>
+              <Logo />
+            </a>
+          </Link>
           <div className="-mr-2">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-500">
               <span className="sr-only">Close menu</span>
-              <XIcon aria-hidden="true" className="h-6 w-6" />
+              <XMarkIcon aria-hidden="true" className="h-6 w-6" />
             </Popover.Button>
           </div>
         </div>
@@ -112,11 +113,10 @@ const MobileMenu = ({ user }) => (
           </div>
           <div className="mt-6 px-5">
             {!user ? (
-              <Link
-                className="block w-full rounded-md border border-transparent bg-fuchsia-600 py-2 px-4 text-center font-medium text-white shadow hover:bg-fuchsia-700"
-                href="/#download"
-              >
-                Download
+              <Link href="/#download">
+                <a className="block w-full rounded-md border border-transparent bg-fuchsia-600 py-2 px-4 text-center font-medium text-white shadow hover:bg-fuchsia-700">
+                  Download
+                </a>
               </Link>
             ) : (
               <div className="border-t border-gray-700 pt-4 pb-3">
@@ -139,12 +139,10 @@ const MobileMenu = ({ user }) => (
                 </div>
                 <div className="mt-3 space-y-1">
                   {userNavigation.map((item) => (
-                    <Link
-                      key={item.displayName}
-                      className="block rounded-md px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
-                      href="#"
-                    >
-                      {item.name}
+                    <Link key={item.displayName} href="#">
+                      <a className="block rounded-md px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800">
+                        {item.name}
+                      </a>
                     </Link>
                   ))}
                 </div>
