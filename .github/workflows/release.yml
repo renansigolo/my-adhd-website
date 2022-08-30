@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - run: npm ci && npm run build && npx semantic-release
+      - run: npx semantic-release
