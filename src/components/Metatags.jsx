@@ -39,8 +39,8 @@ export function Metatags({
         rel="apple-touch-icon"
         sizes="180x180"
       />
-      <link color="#111827b3" href="/safari-pinned-tab.svg" rel="mask-icon" />
-      <link href="/images/splash.png" rel="apple-touch-startup-image" />
+      {/* <link color="#111827b3" href="/safari-pinned-tab.svg" rel="mask-icon" /> */}
+      {/* <link href="/images/splash.png" rel="apple-touch-startup-image" /> */}
 
       {/* Safari */}
       <meta content="app-id=1375236150" name="apple-itunes-app" />
