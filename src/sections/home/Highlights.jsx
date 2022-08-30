@@ -1,12 +1,9 @@
-import learnPic from "@/images/highlight/learn.png"
-import whatPic from "@/images/highlight/what.png"
 import {
   faChalkboardTeacher,
   faGrinStars,
   faStethoscope
 } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Image from "next/image"
 import { FormattedMessage } from "react-intl"
 
 const cards = [
@@ -167,10 +164,10 @@ export function Highlights() {
               className="relative mx-auto mt-10 w-80 text-center lg:mt-0"
             >
               <BulletsMobile />
-              <Image
+              <img
                 alt="iPhone Portrait"
                 height={812}
-                src={learnPic}
+                src="images/highlight/learn.png"
                 width={420}
               />
             </div>
@@ -194,10 +191,10 @@ export function Highlights() {
 
               <div className="relative mx-auto mt-10 w-80 text-center lg:col-start-1 lg:mt-0">
                 <BulletsMobile />
-                <Image
+                <img
                   alt="iPhone Portrait"
                   height={812}
-                  src={whatPic}
+                  src="images/highlight/what.png"
                   width={420}
                 />
               </div>

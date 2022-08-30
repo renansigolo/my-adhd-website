@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { Logo } from "@/components/shared/Icons"
 import { UserContext } from "@/lib/context"
 import { Popover, Transition } from "@headlessui/react"
