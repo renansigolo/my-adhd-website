@@ -28,7 +28,7 @@
     "postversion": "git push && git push --tags",
     "prepare": "husky install",
     "start": "next start",
-    "svgo": "npx svgo --multipass -f public/images -r",
+    "svgo": "npx svgo --multipass -f public -r",
     "test": "npm run build && concurrently -k npm:start npm:cy:run"
   },
   "dependencies": {
