@@ -8,6 +8,7 @@ Before running this project make sure to have it installed
 
 - [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 - [Vercel CLI](https://vercel.com/cli)
+- [Semantic Release](https://github.com/semantic-release/semantic-release)
 
 ## Development
 
