@@ -53,6 +53,8 @@
     "sharp": "0.30.7"
   },
   "devDependencies": {
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
     "@types/gtag.js": "0.0.10",
     "autoprefixer": "10.4.8",
     "chance": "1.1.8",
