@@ -167,7 +167,7 @@ export function Highlights() {
               <img
                 alt="iPhone Portrait"
                 height={812}
-                src="images/highlight/learn.png"
+                src="images/highlight/learn.webp"
                 width={420}
               />
             </div>
@@ -194,7 +194,7 @@ export function Highlights() {
                 <img
                   alt="iPhone Portrait"
                   height={812}
-                  src="images/highlight/what.png"
+                  src="images/highlight/what.webp"
                   width={420}
                 />
               </div>
