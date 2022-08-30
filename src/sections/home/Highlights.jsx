@@ -167,7 +167,12 @@ export function Highlights() {
               className="relative mx-auto mt-10 w-80 text-center lg:mt-0"
             >
               <BulletsMobile />
-              <Image alt="iPhone Portrait" src={learnPic} />
+              <Image
+                alt="iPhone Portrait"
+                height={812}
+                src={learnPic}
+                width={420}
+              />
             </div>
           </div>
 
@@ -189,7 +194,12 @@ export function Highlights() {
 
               <div className="relative mx-auto mt-10 w-80 text-center lg:col-start-1 lg:mt-0">
                 <BulletsMobile />
-                <Image alt="iPhone Portrait" src={whatPic} />
+                <Image
+                  alt="iPhone Portrait"
+                  height={812}
+                  src={whatPic}
+                  width={420}
+                />
               </div>
             </div>
           </div>

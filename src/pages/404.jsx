@@ -1,6 +1,6 @@
+import ConfusedFace from "@/images/stickers/63-confused-face.svg"
 import Image from "next/image"
 import Link from "next/link"
-import ConfusedFace from "public/images/63-confused-face.svg"
 import { FormattedMessage } from "react-intl"
 
 export default function Custom404() {

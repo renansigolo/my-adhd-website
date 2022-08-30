@@ -88,9 +88,11 @@ const MobileMenu = ({ user }) => (
     >
       <div className="z-50 overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
         <div className="z-50 flex items-center justify-between px-5 pt-4">
-          <div>
-            <Logo />
-          </div>
+          <Link href="/">
+            <a>
+              <Logo />
+            </a>
+          </Link>
           <div className="-mr-2">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-500">
               <span className="sr-only">Close menu</span>

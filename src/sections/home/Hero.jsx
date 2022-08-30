@@ -1,5 +1,5 @@
 import { LogoOutlinedWithBrandUnderneath } from "@/components/shared/Icons"
-import bgHeader from "@/images/bg-header.svg"
+import bgHeader from "@/images/backgrounds/bg-header.svg"
 import Image from "next/future/image"
 import { FormattedMessage } from "react-intl"
 
@@ -11,6 +11,7 @@ export function Hero() {
           <Image
             alt="Background My ADHD"
             className="absolute h-full w-full object-cover"
+            loading="eager"
             quality={100}
             sizes="100vw"
             src={bgHeader}
