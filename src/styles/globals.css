@@ -14,6 +14,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body,
+#__next {
+  height: 100%;
+}
+
 /* Hide Google reCaptcha */
 .grecaptcha-badge {
   visibility: hidden;

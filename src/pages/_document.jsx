@@ -1,4 +1,4 @@
-import { initGoogleAnalytics } from "@/lib/google-analytics"
+import { GoogleAnalytics } from "@/lib/google-analytics"
 import Document, { Head, Html, Main, NextScript } from "next/document"
 
 export default class MyDocument extends Document {
@@ -6,7 +6,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta charSet="utf-8" />
           {/* Google Fonts Reference https://fonts.google.com/specimen/Baloo+2?query=Balo */}
           <link href="https://fonts.gstatic.com" rel="preconnect" />
           <link
@@ -14,8 +13,9 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          {initGoogleAnalytics()}
+          <GoogleAnalytics />
         </Head>
+
         <body>
           <Main />
           <NextScript />

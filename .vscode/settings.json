@@ -2,5 +2,8 @@
   "css.validate": false,
   "editor.quickSuggestions": {
     "strings": true
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
   }
 }

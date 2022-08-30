@@ -20,7 +20,7 @@ export const event = ({ action, category, label, value }) => {
 }
 
 /** Global Site Tag (gtag.js) - Google Analytics */
-export const initGoogleAnalytics = () => {
+export const GoogleAnalytics = () => {
   return (
     <>
       <Script
