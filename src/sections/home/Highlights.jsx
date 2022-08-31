@@ -106,7 +106,7 @@ const Bullets = (props) => {
     <>
       <svg
         aria-hidden="true"
-        className={`absolute hidden lg:block ${screenPosition}`}
+        className={`absolute hidden transform lg:block ${screenPosition}`}
         fill="none"
         height={784}
         viewBox="0 0 404 784"
@@ -166,6 +166,7 @@ export function Highlights() {
               <BulletsMobile />
               <img
                 alt="iPhone Portrait"
+                className="relative mx-auto"
                 height={812}
                 src="images/highlight/learn.webp"
                 width={420}
@@ -193,6 +194,7 @@ export function Highlights() {
                 <BulletsMobile />
                 <img
                   alt="iPhone Portrait"
+                  className="relative mx-auto"
                   height={812}
                   src="images/highlight/what.webp"
                   width={420}
