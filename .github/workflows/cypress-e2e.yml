@@ -1,7 +1,9 @@
 # Run Cypress end-to-end tests after Vercel Deploys a new Preview Environment
 ---
 name: Cypress
+
 on: [deployment_status]
+
 jobs:
   run_cypress:
     name: Run E2E
