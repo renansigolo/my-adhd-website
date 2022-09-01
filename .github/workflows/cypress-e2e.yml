@@ -4,6 +4,10 @@ name: Cypress
 
 on: deployment_status
 
+concurrency:
+  group: check-pr-${{ github.head_ref }}
+  cancel-in-progress: true
+
 jobs:
   run_cypress:
     name: Cypress
