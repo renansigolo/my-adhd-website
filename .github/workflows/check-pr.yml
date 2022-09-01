@@ -21,6 +21,7 @@ jobs:
       - name: Configure Vercel CLI Environments
         run: |
           npm install --global vercel@latest
+          vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
           vercel env pull --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Install Dependencies
