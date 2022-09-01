@@ -1,17 +1,22 @@
 # Run Cypress end-to-end tests after Vercel Deploys a new Preview Environment
 ---
 name: Cypress
-on: [deployment_status]
+
+on: deployment_status
+
+concurrency:
+  group: check-pr-${{ github.head_ref }}
+  cancel-in-progress: true
+
 jobs:
   run_cypress:
-    name: Run E2E
-    if: github.event.deployment_status.state == 'success'
+    name: Cypress
+    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Preview'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Cypress run
+      - name: Run Cypress E2E
         uses: cypress-io/github-action@v4
         env:
           CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
