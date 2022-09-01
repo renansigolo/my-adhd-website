@@ -3,7 +3,8 @@
     "bradlc.vscode-tailwindcss",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "mikestead.dotenv"
+    "mikestead.dotenv",
+    "redhat.vscode-yaml"
   ],
   "unwantedRecommendations": []
 }
