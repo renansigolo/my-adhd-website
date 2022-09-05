@@ -70,15 +70,12 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Deploy
 
-#### Dev
-
-Please merge your changes to the `develop` branch so a
-new development environment will be create on [Vercel](https://vercel.com/renansigolo/my-adhd-website) for testing the current states of the app.
-
 #### Prod
 
 Please merge your changes to the `main` branch so the changes could be updated on the production environment hosted by [Vercel](https://vercel.com/renansigolo/my-adhd-website).<br>
 Once that's completed test the app at https://myadhd.app
+
+> In order to release a new version your commit message must follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
 
 ## Authors
 
