@@ -1,3 +1,10 @@
+## [3.4.5](https://github.com/renansigolo/my-adhd-website/compare/v3.4.4...v3.4.5) (2022-09-05)
+
+
+### Bug Fixes
+
+* google analytics ([#71](https://github.com/renansigolo/my-adhd-website/issues/71)) ([fcf95f1](https://github.com/renansigolo/my-adhd-website/commit/fcf95f1ec0f5b74791a878f8ff9ad3b83dc9682b))
+
 ## [3.4.4](https://github.com/renansigolo/my-adhd-website/compare/v3.4.3...v3.4.4) (2022-09-05)
 
 
