@@ -1,3 +1,10 @@
+## [3.4.4](https://github.com/renansigolo/my-adhd-website/compare/v3.4.3...v3.4.4) (2022-09-05)
+
+
+### Bug Fixes
+
+* release assets ([#70](https://github.com/renansigolo/my-adhd-website/issues/70)) ([0d0bdb1](https://github.com/renansigolo/my-adhd-website/commit/0d0bdb198226e1a0fb7d85977b84a610d7600152))
+
 ## [3.4.3](https://github.com/renansigolo/my-adhd-website/compare/v3.4.2...v3.4.3) (2022-09-05)
 
 
