@@ -1,6 +1,7 @@
 import { classNames } from "@/lib/helpers"
 import { Disclosure } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/24/outline"
+import { FormattedMessage } from "react-intl"
 
 export function Faq(props) {
   return (
@@ -8,7 +9,10 @@ export function Faq(props) {
       <div className="mx-auto max-w-7xl py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl divide-y-2 divide-gray-200">
           <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Frequently asked questions
+            <FormattedMessage
+              defaultMessage={"Frequently asked questions"}
+              id={"faq.title"}
+            />
           </h2>
           <dl className="mt-6 space-y-6 divide-y divide-gray-200">
             {props.faqs.map((faq, index) => (
