@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { getApp, initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
-import { getFirestore } from "firebase/firestore"
+import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { getStorage } from "firebase/storage"
 
 const firebaseConfig = {
@@ -28,8 +28,20 @@ const firebaseApp = createFirebaseApp()
 export const auth = getAuth(firebaseApp)
 
 // Firestore exports
-export const firestore = getFirestore(firebaseApp)
+export const db = getFirestore(firebaseApp)
 
 // Storage exports
 export const storage = getStorage(firebaseApp)
 export const STATE_CHANGED = "state_changed"
+
+// Helpers
+/**
+ * Gets firebase collection documents
+ * @param {string} collectionTitle
+ * @returns documents in the collection
+ */
+export async function getDocuments(collectionTitle) {
+  const collectionRef = collection(db, collectionTitle)
+  const collectionSnapshot = await getDocs(collectionRef)
+  return collectionSnapshot.docs.map((doc) => doc.data())
+}
