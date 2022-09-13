@@ -20,7 +20,7 @@
     "clean": "rm -rf package-lock.json node_modules .next",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "dev": "NODE_OPTIONS='--inspect' next dev",
+    "dev": "next dev",
     "format": "prettier '**/*' --write --ignore-unknown",
     "lint:fix": "npm run lint -- --fix",
     "lint": "next lint",
