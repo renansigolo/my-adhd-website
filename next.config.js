@@ -4,7 +4,7 @@ module.exports = {
   swcMinify: true,
   images: {
     domains: ["myadhd.app"]
-    //   contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
+    // contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
   },
   compiler: {
     removeConsole: {
@@ -14,10 +14,5 @@ module.exports = {
   i18n: {
     locales: ["en", "es", "pt-BR"],
     defaultLocale: "en"
-  },
-  experimental: {
-    images: {
-      allowFutureImage: true
-    }
   }
 }
