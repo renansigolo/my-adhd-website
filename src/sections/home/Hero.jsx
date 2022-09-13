@@ -9,6 +9,7 @@ export function Hero() {
       <div className="flex flex-col justify-center">
         <div className="z-0 w-screen overflow-hidden bg-fixed">
           <Image
+            priority
             alt="Background My ADHD"
             className="absolute h-full w-full object-cover"
             loading="eager"
