@@ -11,14 +11,14 @@ export function Faq(props) {
             Frequently asked questions
           </h2>
           <dl className="mt-6 space-y-6 divide-y divide-gray-200">
-            {props.faqs.map((faq) => (
-              <Disclosure key={faq.question} as="div" className="pt-6">
+            {props.faqs.map((faq, index) => (
+              <Disclosure key={index} as="div" className="pt-6">
                 {({ open }) => (
                   <>
                     <dt className="text-lg">
                       <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
                         <span className="font-medium text-gray-900">
-                          {faq.question}
+                          {faq.title}
                         </span>
                         <span className="ml-6 flex h-7 items-center">
                           <ChevronDownIcon
@@ -32,7 +32,9 @@ export function Faq(props) {
                       </Disclosure.Button>
                     </dt>
                     <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                      <p className="text-base text-gray-500">{faq.answer}</p>
+                      <p className="text-base text-gray-500">
+                        {faq.description}
+                      </p>
                     </Disclosure.Panel>
                   </>
                 )}
