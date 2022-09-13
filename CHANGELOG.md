@@ -1,3 +1,10 @@
+# [3.5.0](https://github.com/renansigolo/my-adhd-website/compare/v3.4.5...v3.5.0) (2022-09-13)
+
+
+### Features
+
+* add firebase to support page ([#72](https://github.com/renansigolo/my-adhd-website/issues/72)) ([a7ba291](https://github.com/renansigolo/my-adhd-website/commit/a7ba29150c266867a2ecdaca4d448391248c7416))
+
 ## [3.4.5](https://github.com/renansigolo/my-adhd-website/compare/v3.4.4...v3.4.5) (2022-09-05)
 
 
