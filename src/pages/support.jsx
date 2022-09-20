@@ -15,18 +15,6 @@ export async function getStaticProps({ locale }) {
   }
 }
 
-const SupportHeader = () => {
-  return (
-    <ContainerSection center>
-      <HeaderPage
-        id="support"
-        subTitle="How can we help you?"
-        title="Support"
-      />
-    </ContainerSection>
-  )
-}
-
 export default function Support({ faqs }) {
   return (
     <>
@@ -38,5 +26,17 @@ export default function Support({ faqs }) {
 
       <Footer />
     </>
+  )
+}
+
+const SupportHeader = () => {
+  return (
+    <ContainerSection center>
+      <HeaderPage
+        id="support"
+        subTitle="How can we help you?"
+        title="Support"
+      />
+    </ContainerSection>
   )
 }
