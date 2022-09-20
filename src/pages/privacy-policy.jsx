@@ -3,6 +3,15 @@ import { Footer } from "@/components/layout/Footer"
 import { HeaderPage } from "@/components/layout/Headers"
 import { Navbar } from "@/components/layout/Navbar"
 
+export default function PrivacyPolicy() {
+  return (
+    <>
+      <PrivacyPolicyHeader />
+      <Footer />
+    </>
+  )
+}
+
 const PrivacyPolicyHeader = () => {
   return (
     <>
@@ -191,15 +200,5 @@ const PrivacyPolicyContent = () => {
         hesitate to contact me at contact@myadhd.app.
       </p>
     </div>
-  )
-}
-
-export default function PrivacyPolicy() {
-  return (
-    <>
-      <PrivacyPolicyHeader />
-
-      <Footer />
-    </>
   )
 }
