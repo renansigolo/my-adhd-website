@@ -1,8 +1,13 @@
 // Import the functions you need from the SDKs you need
 import { getApp, initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
-import { collection, getDocs, getFirestore } from "firebase/firestore"
-import { getStorage } from "firebase/storage"
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where
+} from "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -31,17 +36,32 @@ export const auth = getAuth(firebaseApp)
 export const db = getFirestore(firebaseApp)
 
 // Storage exports
-export const storage = getStorage(firebaseApp)
-export const STATE_CHANGED = "state_changed"
+// export const storage = getStorage(firebaseApp)
+// export const STATE_CHANGED = "state_changed"
 
-// Helpers
+// Database Helpers
+
+// /**
+//  * Gets firebase collection documents
+//  * @param {string} collectionTitle
+//  * @returns documents in the collection
+//  */
+// export async function getDocuments(collectionTitle) {
+//   const collectionRef = collection(db, collectionTitle)
+//   const collectionSnapshot = await getDocs(collectionRef)
+//   return collectionSnapshot.docs.map((doc) => doc.data())
+// }
+
 /**
- * Gets firebase collection documents
- * @param {string} collectionTitle
+ * Gets firebase collection documents with i18n
+ * @param {string} collectionTitle - collection to query
+ * @param {string} locale - a two-letter language code
  * @returns documents in the collection
  */
-export async function getDocuments(collectionTitle) {
+export async function getDocumentsIntl(collectionTitle, locale) {
+  const languagePath = `i18n.${locale.slice(0, 2)}`
   const collectionRef = collection(db, collectionTitle)
-  const collectionSnapshot = await getDocs(collectionRef)
-  return collectionSnapshot.docs.map((doc) => doc.data())
+  const collectionQuery = query(collectionRef, where(languagePath, "!=", null))
+  const collectionSnapshot = await getDocs(collectionQuery)
+  return collectionSnapshot.docs.map((doc) => doc.get(languagePath))
 }

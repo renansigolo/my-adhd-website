@@ -2,11 +2,11 @@ import { ContainerSection } from "@/components/layout/Containers"
 import { Footer } from "@/components/layout/Footer"
 import { HeaderPage } from "@/components/layout/Headers"
 import { Navbar } from "@/components/layout/Navbar"
-import { getDocuments } from "@/lib/firebase"
+import { getDocumentsIntl } from "@/lib/firebase"
 import { Faq } from "@/sections/support/Faq"
 
-export async function getStaticProps() {
-  const faqList = await getDocuments("faq")
+export async function getStaticProps({ locale }) {
+  const faqList = await getDocumentsIntl("faq", locale)
 
   return {
     props: {
