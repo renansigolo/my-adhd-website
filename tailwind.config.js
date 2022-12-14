@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Baloo 2"', ...defaultTheme.fontFamily.sans]
+        sans: ["var(--font-baloo)", ...defaultTheme.fontFamily.sans]
       }
     }
   },

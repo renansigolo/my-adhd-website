@@ -7,13 +7,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* Google Fonts Reference https://fonts.google.com/specimen/Baloo+2?query=Balo */}
-          <link href="https://fonts.gstatic.com" rel="preconnect" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;800&display=swap"
-            rel="stylesheet"
-          />
-
           {/* Google Analytics */}
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID_WEB}`}
