@@ -1,6 +1,6 @@
 {
   "name": "my-adhd-website",
-  "version": "3.6.0",
+  "version": "3.7.0",
   "description": "My ADHD Website",
   "homepage": "https://myadhd.com.au",
   "bugs": {
@@ -42,7 +42,7 @@
     "@next/font": "13.0.6",
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/forms": "0.5.3",
-    "axios": "0.27.2",
+    "axios": "1.2.1",
     "firebase": "9.15.0",
     "next": "13.0.6",
     "react": "18.2.0",
@@ -62,7 +62,7 @@
     "autoprefixer": "10.4.13",
     "chance": "1.1.9",
     "concurrently": "7.6.0",
-    "cypress": "10.11.0",
+    "cypress": "12.1.0",
     "dotenv": "16.0.3",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",

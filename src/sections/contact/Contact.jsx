@@ -44,9 +44,10 @@ export function Contact() {
     })
 
     setIsLoading(true)
+
     // Send a POST request to Firebase Cloud Function
     try {
-      await contactAPI.post("sendContactEmail", { ...data })
+      await contactAPI.post("sendContactEmail", data)
       setIsSuccess(true)
     } catch (error) {
       toast.error(
@@ -55,7 +56,7 @@ export function Contact() {
       console.error(error)
     } finally {
       setIsLoading(false)
-      event.target.reset() // reset after form submit
+      event.target.reset()
     }
   }
 
