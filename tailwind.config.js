@@ -6,13 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Baloo 2"', ...defaultTheme.fontFamily.sans]
+        sans: ["var(--font-baloo)", ...defaultTheme.fontFamily.sans]
       }
     }
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/forms")
-  ]
+  plugins: [require("@tailwindcss/aspect-ratio"), require("@tailwindcss/forms")]
 }

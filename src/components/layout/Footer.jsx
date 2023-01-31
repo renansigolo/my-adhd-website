@@ -69,13 +69,11 @@ export function Footer() {
 
         <div>
           <p className="text-center text-base text-gray-500">
-            <Link href="/privacy-policy">
-              <a className="hover:underline">
-                <FormattedMessage
-                  defaultMessage="Privacy Policy"
-                  id="privacy-policy.title"
-                />
-              </a>
+            <Link className="hover:underline" href="/privacy-policy">
+              <FormattedMessage
+                defaultMessage="Privacy Policy"
+                id="privacy-policy.title"
+              />
             </Link>
             {/* <span className="mx-2">|</span>
           <Link href="/support">

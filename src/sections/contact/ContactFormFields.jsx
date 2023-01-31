@@ -1,17 +1,7 @@
 import styles from "@/styles/Contact.module.css"
 import { FormattedMessage } from "react-intl"
 
-/**
- * Render the ContactForm fields
- * @param {Object} props
- * @param {string} props.language
- * @param {Object} props.translated
- * @param {Function} props.register
- * @param {Function} props.onSubmit
- * @param {Function} props.handleSubmit
- * @param {boolean} props.isLoading
- * @param {Object.<string, string>} props.errors
- */
+/** Render the ContactForm fields */
 export const ContactFormFields = ({
   language,
   translated,
