@@ -1,3 +1,10 @@
+# [3.7.0](https://github.com/renansigolo/my-adhd-website/compare/v3.6.0...v3.7.0) (2023-01-31)
+
+
+### Features
+
+* upgrade to nextjs 13 ([#74](https://github.com/renansigolo/my-adhd-website/issues/74)) ([82a8706](https://github.com/renansigolo/my-adhd-website/commit/82a870637c5b45b1dc6efea5e31639c0bfe9ea34))
+
 # [3.6.0](https://github.com/renansigolo/my-adhd-website/compare/v3.5.0...v3.6.0) (2022-09-20)
 
 
