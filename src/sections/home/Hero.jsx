@@ -39,7 +39,7 @@ export function Hero() {
                 <div className="mx-auto mt-6 flex max-w-xs justify-center md:mt-10 md:max-w-md">
                   <div className="rounded-md bg-pink-600 shadow hover:bg-pink-700">
                     <a
-                      className="flex w-full items-center justify-center border border-transparent px-8 py-3 text-base font-medium text-white md:py-4 md:px-10 md:text-lg"
+                      className="flex w-full items-center justify-center border border-transparent px-8 py-3 text-base font-medium text-white md:px-10 md:py-4 md:text-lg"
                       href="#download"
                     >
                       <FormattedMessage

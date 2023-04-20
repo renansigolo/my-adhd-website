@@ -3,15 +3,15 @@
 }
 
 .formField {
-  @apply block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-purple-500 focus:ring-purple-500;
+  @apply block w-full rounded-md border-gray-300 px-4 py-3 shadow-sm focus:border-purple-500 focus:ring-purple-500;
 }
 
 .formSelect {
-  @apply h-12 w-full rounded-md border-gray-300 py-3 px-4 text-gray-500 focus:border-purple-500 focus:ring-purple-500;
+  @apply h-12 w-full rounded-md border-gray-300 px-4 py-3 text-gray-500 focus:border-purple-500 focus:ring-purple-500;
 }
 
 .errorLabel {
-  @apply mt-2 ml-2 text-red-900;
+  @apply ml-2 mt-2 text-red-900;
 }
 
 .btnSubmit {

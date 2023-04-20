@@ -24,7 +24,7 @@ const navigation = {
 export function Footer() {
   return (
     <footer className="w-full border-t border-gray-300 bg-white">
-      <div className="mx-auto flex max-w-7xl flex-col gap-4 overflow-hidden py-12 px-3 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-4 overflow-hidden px-3 py-12 sm:px-6 lg:px-8">
         <div className="mb-2 flex flex-row justify-center space-x-4">
           {navigation.social.map((item) => (
             <a

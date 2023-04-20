@@ -53,7 +53,7 @@ const DesktopMenu = ({ user }) => {
                 </a>
               </Link> */}
               <Link
-                className="rounded-md border border-transparent bg-fuchsia-600 py-2 px-6 text-base font-medium text-white shadow-md hover:bg-fuchsia-700"
+                className="rounded-md border border-transparent bg-fuchsia-600 px-6 py-2 text-base font-medium text-white shadow-md hover:bg-fuchsia-700"
                 href="/#download"
               >
                 Download
@@ -96,7 +96,7 @@ const MobileMenu = ({ user }) => (
             </Popover.Button>
           </div>
         </div>
-        <div className="z-50 pt-5 pb-6">
+        <div className="z-50 pb-6 pt-5">
           <div className="space-y-1 px-2">
             {menuItems.map(({ title, url }) => (
               <a
@@ -111,13 +111,13 @@ const MobileMenu = ({ user }) => (
           <div className="mt-6 px-5">
             {!user ? (
               <Link
-                className="block w-full rounded-md border border-transparent bg-fuchsia-600 py-2 px-4 text-center font-medium text-white shadow hover:bg-fuchsia-700"
+                className="block w-full rounded-md border border-transparent bg-fuchsia-600 px-4 py-2 text-center font-medium text-white shadow hover:bg-fuchsia-700"
                 href="/#download"
               >
                 Download
               </Link>
             ) : (
-              <div className="border-t border-gray-700 pt-4 pb-3">
+              <div className="border-t border-gray-700 pb-3 pt-4">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
                     <img
