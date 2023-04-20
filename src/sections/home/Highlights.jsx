@@ -26,7 +26,7 @@ const cards = [
 
 const FeatureHighlights = () => {
   return (
-    <div className="my-24 mx-auto max-w-7xl px-4">
+    <div className="mx-auto my-24 max-w-7xl px-4">
       <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {cards.map((card, index) => (
           <li

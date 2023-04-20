@@ -19,11 +19,11 @@ export default function SignIn() {
           <h2 className="mt-12 text-center text-3xl font-extrabold text-gray-900">
             Sign in to your account
           </h2>
-          <div className="bg-white py-6 px-4 sm:px-10">
+          <div className="bg-white px-4 py-6 sm:px-10">
             <div className="grid grid-cols-1 gap-3">
               <div>
                 <button
-                  className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
+                  className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
                   onClick={() => handleSignIn("apple")}
                 >
                   <span className="sr-only">Sign in with Apple</span>
@@ -39,7 +39,7 @@ export default function SignIn() {
 
               <div>
                 <button
-                  className="inline-flex w-full justify-center rounded-md border border-fuchsia-600 bg-fuchsia-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:border-fuchsia-700 hover:bg-fuchsia-700"
+                  className="inline-flex w-full justify-center rounded-md border border-fuchsia-600 bg-fuchsia-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:border-fuchsia-700 hover:bg-fuchsia-700"
                   onClick={() => handleSignIn("google")}
                 >
                   <span className="sr-only">Sign in with Google</span>

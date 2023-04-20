@@ -36,7 +36,7 @@ export function BulletsBackground() {
       </svg>
       <svg
         aria-hidden="true"
-        className="absolute right-full bottom-0 -translate-x-1/2"
+        className="absolute bottom-0 right-full -translate-x-1/2"
         fill="none"
         height={404}
         viewBox="0 0 404 404"
