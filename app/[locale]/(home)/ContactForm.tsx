@@ -1,10 +1,10 @@
 "use client"
 
 import { FormattedMessage } from "react-intl"
-import styles from "./Contact.module.css"
+import styles from "./ContactForm.module.css"
 
 /** Render the ContactForm fields */
-export const ContactFormFields = ({
+export const ContactForm = ({
   language,
   translated,
   register,

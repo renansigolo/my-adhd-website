@@ -5,7 +5,9 @@ import { notFound } from "next/navigation"
 import Script from "next/script"
 import { ReactNode } from "react"
 import { Providers } from "./Providers"
-import "./globals.css"
+import "./global.css"
+
+const isProduction = process.env.NODE_ENV === "production"
 
 const baloo = Baloo_2({
   subsets: ["latin"],
@@ -13,9 +15,44 @@ const baloo = Baloo_2({
 })
 
 export const metadata: Metadata = {
+  // viewport:
+  //   "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
   title: "My ADHD",
   description: "The first ADHD app with cognitive analysis!",
-  authors: [{ name: "Renan Sigolo", url: "https://renansigolo.com" }]
+  authors: [{ name: "Renan Sigolo", url: "https://renansigolo.com" }],
+  creator: "Renan Sigolo",
+  colorScheme: "light",
+  themeColor: "#ff4b88",
+  manifest: "../manifest.json",
+  robots: {
+    index: isProduction,
+    follow: isProduction
+  },
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicons/apple-touch-icon.png"
+  },
+  itunes: {
+    appId: "1375236150"
+  },
+  appleWebApp: {
+    title: "My ADHD"
+  },
+  openGraph: {
+    title: "My ADHD",
+    siteName: "My ADHD",
+    description: "The first ADHD app with cognitive analysis!",
+    url: "https://myadhd.app",
+    type: "website",
+    images: [
+      {
+        url: "https://myadhd.app/favicons/social-banner.svg",
+        width: 1200,
+        height: 627,
+        alt: "My ADHD Banner"
+      }
+    ]
+  }
 }
 
 export async function generateStaticParams() {

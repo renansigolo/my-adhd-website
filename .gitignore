@@ -39,6 +39,7 @@ yarn-error.log*
 
 # sitemap
 public/sitemap*
+public/robots.txt
 
 ### Visual Studio Code ###
 .vscode/*

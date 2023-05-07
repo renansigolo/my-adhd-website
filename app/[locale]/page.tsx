@@ -9,7 +9,6 @@ import { Download } from "./(home)/Download"
 import { EnvironmentTag } from "./(home)/EnvironmentTag"
 import { Hero } from "./(home)/Hero"
 import { Highlights } from "./(home)/Highlights"
-import "./globals.css"
 
 type IndexPageProps = {
   params: {

@@ -8,7 +8,7 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
 import { useIntl } from "react-intl"
-import { ContactFormFields } from "./ContactFormFields"
+import { ContactForm } from "./ContactForm"
 
 export function Contact() {
   // Assign add the translated fields to variables
@@ -66,7 +66,7 @@ export function Contact() {
           <BulletsBackground />
           {!isLoading ? (
             !isSuccess ? (
-              <ContactFormFields
+              <ContactForm
                 errors={errors}
                 handleSubmit={handleSubmit}
                 isLoading={isLoading}
