@@ -10,8 +10,7 @@
       "@/components/*": ["src/components/*"],
       "@/sections/*": ["src/sections/*"],
       "@/lib/*": ["src/lib/*"],
-      "@/locale/*": ["src/locale/*"],
-      "@/styles/*": ["src/styles/*"],
+      "@/translations/*": ["src/translations/*"],
       "@/images/*": ["public/images/*"]
     }
   }

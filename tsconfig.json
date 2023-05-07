@@ -22,8 +22,7 @@
       "@/components/*": ["./components/*"],
       "@/sections/*": ["./sections/*"],
       "@/lib/*": ["./lib/*"],
-      "@/locale/*": ["./locale/*"],
-      "@/styles/*": ["./styles/*"],
+      "@/translations/*": ["./translations/*"],
       "@/images/*": ["./public/images/*"]
     },
     "strictNullChecks": true

@@ -1,3 +1,8 @@
+// const withNextIntl = require("next-intl/plugin")(
+//   // This is the default (also the `src` folder is supported out of the box)
+//   "./i18n.ts"
+// )
+
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
@@ -5,9 +10,5 @@ module.exports = {
   images: {
     domains: ["myadhd.app"]
     // contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
-  },
-  i18n: {
-    locales: ["en", "es", "pt-BR"],
-    defaultLocale: "en"
   }
 }

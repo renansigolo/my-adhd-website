@@ -3,21 +3,18 @@
 import { CardSuccess } from "@/components/shared/CardSuccess"
 import { BulletsBackground } from "@/components/shared/ContactFormBgPattern"
 import { Spinner } from "@/components/shared/Spinner"
-import { ContactFormFields } from "@/sections/contact/ContactFormFields"
 import axios from "axios"
-import { useRouter } from "next/router"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
 import { useIntl } from "react-intl"
+import { ContactFormFields } from "./ContactFormFields"
 
 export function Contact() {
-  // Get the current language to pre-define the select language field
-  const router = useRouter()
-  const language = router.locale.substring(0, 2)
-
   // Assign add the translated fields to variables
   const intl = useIntl()
+  const language = intl.locale.substring(0, 2)
+
   function translatedFormValues(id) {
     this.title = intl.formatMessage({ id: `contact.form.${id}.title` })
     this.placeholder = intl.formatMessage({

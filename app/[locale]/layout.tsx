@@ -1,5 +1,7 @@
+import { Locale, i18n } from "@/lib/i18n-config"
 import { Metadata } from "next"
 import { Baloo_2 } from "next/font/google"
+import { notFound } from "next/navigation"
 import Script from "next/script"
 import { ReactNode } from "react"
 import { Providers } from "./Providers"
@@ -16,22 +18,35 @@ export const metadata: Metadata = {
   authors: [{ name: "Renan Sigolo", url: "https://renansigolo.com" }]
 }
 
-// export async function generateStaticParams() {
-//   return i18n.locales.map((locale) => ({ lang: locale }))
-// }
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }))
+}
 
 type Params = {
   children: ReactNode
   params: {
-    lang: string
+    locale: Locale
   }
 }
 
-export default function Root({ children, params }: Params) {
+export default async function LocaleLayout({ children, params }: Params) {
   const GA_ID_WEB = process.env.NEXT_PUBLIC_GA_ID
 
+  let messages
+  try {
+    messages = (await import(`../../translations/${params.locale}.json`))
+      .default
+  } catch (error) {
+    notFound()
+  }
+
+  // Show a 404 error if the user requests an unknown locale
+  // if (params.locale !== locale) {
+  //   notFound()
+  // }
+
   return (
-    <html lang={params.lang}>
+    <html lang={params.locale}>
       {/* Google Analytics */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID_WEB}`}
@@ -52,7 +67,9 @@ export default function Root({ children, params }: Params) {
         }}
       />
       <body className={`${baloo.variable} font-sans`}>
-        <Providers>{children}</Providers>
+        <Providers locale={params.locale} messages={messages}>
+          {children}
+        </Providers>
       </body>
     </html>
   )
