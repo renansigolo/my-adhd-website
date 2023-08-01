@@ -6,9 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-baloo)", ...defaultTheme.fontFamily.sans]
-      }
-    }
+        sans: ["var(--font-baloo)", ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
-  plugins: [require("@tailwindcss/forms")]
+  plugins: [require("@tailwindcss/forms")],
 }

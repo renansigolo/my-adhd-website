@@ -8,7 +8,7 @@ import { useEffect } from "react"
 const languages = {
   en: require("@/locale/en.json"),
   es: require("@/locale/es.json"),
-  pt: require("@/locale/pt.json")
+  pt: require("@/locale/pt.json"),
 }
 
 export const useUserLocale = () => {

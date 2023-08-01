@@ -1,7 +1,7 @@
 import {
   fetchAndActivate,
   getAll,
-  getRemoteConfig
+  getRemoteConfig,
 } from "firebase/remote-config"
 import { createContext, useContext, useEffect, useState } from "react"
 import semverSatisfies from "semver/functions/satisfies"
@@ -17,7 +17,7 @@ export const useFlags = () => {
 // For development only
 remoteConfig.settings.minimumFetchIntervalMillis = 3600000
 remoteConfig.defaultConfig = {
-  welcome_message: "Welcome"
+  welcome_message: "Welcome",
 }
 
 const FlagsProvider = ({ defaults, children }) => {
@@ -33,7 +33,7 @@ const FlagsProvider = ({ defaults, children }) => {
       })
       .then((remoteFlags) => {
         const newFlags = {
-          ...flags
+          ...flags,
         }
 
         for (const [key, config] of Object.entries(remoteFlags)) {

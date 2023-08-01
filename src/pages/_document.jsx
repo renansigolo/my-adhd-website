@@ -23,7 +23,7 @@ export default class MyDocument extends Document {
             gtag('config', '${GA_ID_WEB}', {
               page_path: window.location.pathname,
             });
-          `
+          `,
             }}
           />
         </Head>

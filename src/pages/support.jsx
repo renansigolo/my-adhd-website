@@ -10,8 +10,8 @@ export async function getStaticProps({ locale }) {
 
   return {
     props: {
-      faqs: faqList
-    }
+      faqs: faqList,
+    },
   }
 }
 

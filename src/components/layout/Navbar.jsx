@@ -8,12 +8,12 @@ import { Fragment, useContext } from "react"
 const menuItems = [
   { title: "Features", url: "./#features" },
   { title: "Download", url: "./#download" },
-  { title: "Contact", url: "./#contact" }
+  { title: "Contact", url: "./#contact" },
 ]
 const userNavigation = [
   { name: "Your Profile", href: "#" },
   { name: "Settings", href: "#" },
-  { name: "Sign out", href: "#" }
+  { name: "Sign out", href: "#" },
 ]
 
 const DesktopMenu = ({ user }) => {

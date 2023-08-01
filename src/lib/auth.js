@@ -2,7 +2,7 @@ import {
   GoogleAuthProvider,
   OAuthProvider,
   signInWithPopup,
-  signOut
+  signOut,
 } from "firebase/auth"
 import { auth } from "./firebase"
 

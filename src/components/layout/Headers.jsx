@@ -6,7 +6,7 @@ export const HeaderPage = ({
   id = "sectionId",
   title = null,
   subTitle = null,
-  children = null
+  children = null,
 }) => {
   return (
     <>

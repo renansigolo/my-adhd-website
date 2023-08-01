@@ -29,7 +29,7 @@ export function Faq(props) {
                             aria-hidden="true"
                             className={classNames(
                               open ? "-rotate-180" : "rotate-0",
-                              "h-6 w-6"
+                              "h-6 w-6",
                             )}
                           />
                         </span>

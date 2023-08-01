@@ -5,7 +5,7 @@ context("Navigation Pages", () => {
 
   it("has loaded the home page", () => {
     cy.contains(
-      "The first app with cognitive analysis for people with ADHD!"
+      "The first app with cognitive analysis for people with ADHD!",
     ).should("be.visible")
   })
 
@@ -23,14 +23,14 @@ context("Navigation Pages", () => {
   it("has loaded the home page title in portuguese", () => {
     cy.visit("/pt-BR")
     cy.contains("O primeiro aplicativo de TDAH com análise cognitiva!").should(
-      "be.visible"
+      "be.visible",
     )
   })
 
   it("has loaded the home page title in spanish", () => {
     cy.visit("/es")
     cy.contains(
-      "¡La primera aplicación de TDAH con análisis cognitivo!"
+      "¡La primera aplicación de TDAH con análisis cognitivo!",
     ).should("be.visible")
   })
 })
