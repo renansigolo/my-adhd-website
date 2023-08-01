@@ -19,14 +19,14 @@ export function Contact() {
   function translatedFormValues(id) {
     this.title = intl.formatMessage({ id: `contact.form.${id}.title` })
     this.placeholder = intl.formatMessage({
-      id: `contact.form.${id}.placeholder`
+      id: `contact.form.${id}.placeholder`,
     })
     this.error = intl.formatMessage({ id: `contact.form.${id}.error` })
   }
   const translated = {
     name: Object(new translatedFormValues("name")),
     email: Object(new translatedFormValues("email")),
-    message: Object(new translatedFormValues("message"))
+    message: Object(new translatedFormValues("message")),
   }
 
   // Config React Hooks Form
@@ -35,12 +35,12 @@ export function Contact() {
   const {
     register,
     formState: { errors },
-    handleSubmit
+    handleSubmit,
   } = useForm()
 
   const onSubmit = async (data, event) => {
     const contactAPI = axios.create({
-      baseURL: process.env.NEXT_PUBLIC_FIREBASE_URL
+      baseURL: process.env.NEXT_PUBLIC_FIREBASE_URL,
     })
 
     setIsLoading(true)
@@ -51,7 +51,7 @@ export function Contact() {
       setIsSuccess(true)
     } catch (error) {
       toast.error(
-        error.message || intl.formatMessage({ id: `contact.form.error` })
+        error.message || intl.formatMessage({ id: `contact.form.error` }),
       )
       console.error(error)
     } finally {

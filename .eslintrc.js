@@ -6,8 +6,8 @@ module.exports = {
     "no-restricted-imports": [
       "error",
       {
-        patterns: ["..*", "src"]
-      }
+        patterns: ["..*", "src"],
+      },
     ],
     "react/jsx-sort-props": [
       1,
@@ -15,8 +15,8 @@ module.exports = {
         reservedFirst: true,
         shorthandFirst: true,
         callbacksLast: true,
-        multiline: "last"
-      }
-    ]
-  }
+        multiline: "last",
+      },
+    ],
+  },
 }

@@ -9,7 +9,7 @@ export const ContactFormFields = ({
   onSubmit,
   handleSubmit,
   isLoading,
-  errors
+  errors,
 }) => {
   return (
     <div className="my-6">

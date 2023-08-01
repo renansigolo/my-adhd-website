@@ -8,7 +8,7 @@ import { IntlProvider } from "react-intl"
 
 const baloo = Baloo_2({
   subsets: ["latin"],
-  variable: "--font-baloo"
+  variable: "--font-baloo",
 })
 
 function App({ Component, pageProps }) {

@@ -17,7 +17,7 @@ export function Divider({ width = "full", text }) {
           <div
             className={classNames(
               width ? `w-${width}` : null,
-              "border-t border-gray-300"
+              "border-t border-gray-300",
             )}
           />
         </div>

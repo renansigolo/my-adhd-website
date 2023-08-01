@@ -11,6 +11,6 @@ module.exports = defineConfig({
       require("dotenv").config()
       config.env.FIREBASE_URL = process.env.NEXT_PUBLIC_FIREBASE_URL
       return config
-    }
-  }
+    },
+  },
 })
