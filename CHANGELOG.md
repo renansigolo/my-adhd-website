@@ -1,3 +1,10 @@
+# [3.8.0](https://github.com/renansigolo/my-adhd-website/compare/v3.7.0...v3.8.0) (2023-08-03)
+
+
+### Features
+
+* add banner ([b733d55](https://github.com/renansigolo/my-adhd-website/commit/b733d558610adad8d09cdb53b1e582898d057b7f))
+
 # [3.7.0](https://github.com/renansigolo/my-adhd-website/compare/v3.6.0...v3.7.0) (2023-01-31)
 
 
