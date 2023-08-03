@@ -1,3 +1,4 @@
+import { Banner } from "@/components/layout/Banner"
 import { Footer } from "@/components/layout/Footer"
 import { Metatags } from "@/components/Metatags"
 import { Divider } from "@/components/shared/Divider"
@@ -14,6 +15,7 @@ export default function Home() {
       <Metatags />
 
       {/* <Navbar /> */}
+      <Banner />
 
       <main>
         <Hero />
