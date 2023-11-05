@@ -2,7 +2,6 @@ import { CardSuccess } from "@/components/shared/CardSuccess"
 import { BulletsBackground } from "@/components/shared/ContactFormBgPattern"
 import { Spinner } from "@/components/shared/Spinner"
 import { ContactFormFields } from "@/sections/contact/ContactFormFields"
-import axios from "axios"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
@@ -39,15 +38,25 @@ export function Contact() {
   } = useForm()
 
   const onSubmit = async (data, event) => {
-    const contactAPI = axios.create({
-      baseURL: process.env.NEXT_PUBLIC_FIREBASE_URL,
-    })
-
     setIsLoading(true)
 
     // Send a POST request to Firebase Cloud Function
     try {
-      await contactAPI.post("sendContactEmail", data)
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_FIREBASE_URL}/sendContactEmail`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        },
+      )
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok")
+      }
+
       setIsSuccess(true)
     } catch (error) {
       toast.error(

@@ -3,7 +3,11 @@ module.exports = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["myadhd.app"],
+    remotePatterns: [
+      {
+        hostname: "myadhd.app",
+      },
+    ],
     // contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
   },
   i18n: {
