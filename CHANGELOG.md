@@ -1,3 +1,10 @@
+# [3.9.0](https://github.com/renansigolo/my-adhd-website/compare/v3.8.0...v3.9.0) (2023-11-05)
+
+
+### Features
+
+* replace axios ([#78](https://github.com/renansigolo/my-adhd-website/issues/78)) ([19c7570](https://github.com/renansigolo/my-adhd-website/commit/19c7570ccc9820c6dda69088ae32c4e36cadb8aa))
+
 # [3.8.0](https://github.com/renansigolo/my-adhd-website/compare/v3.7.0...v3.8.0) (2023-08-03)
 
 
