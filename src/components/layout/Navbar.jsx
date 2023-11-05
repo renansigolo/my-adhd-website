@@ -37,20 +37,23 @@ const DesktopMenu = ({ user }) => {
         </div>
         {/* <div className="hidden space-x-10 lg:ml-10 lg:flex">
           {menuItems.map(({ title, url }) => (
-            <Link key={title} href={url}>
-              <a className="text-base font-medium capitalize text-gray-500 hover:text-gray-600">
-                {title}
-              </a>
+            <Link
+              key={title}
+              href={url}
+              className="text-base font-medium capitalize text-gray-500 hover:text-gray-600"
+            >
+              {title}
             </Link>
           ))}
         </div> */}
         <div className="hidden lg:flex lg:items-center lg:space-x-6">
           {!user ? (
             <>
-              {/* <Link href="/sign-in">
-                <a className="text-base font-medium text-gray-500 hover:text-gray-600">
-                  Sign in
-                </a>
+              {/* <Link
+                href="/sign-in"
+                className="text-base font-medium text-gray-500 hover:text-gray-600"
+              >
+                Sign in
               </Link> */}
               <Link
                 className="rounded-md border border-transparent bg-fuchsia-600 px-6 py-2 text-base font-medium text-white shadow-md hover:bg-fuchsia-700"
