@@ -75,8 +75,8 @@ export function Footer() {
                 id="privacy-policy.title"
               />
             </Link>
-            <span className="mx-2">|</span>
-            {/* <Link href="/support" className="hover:underline">
+            {/* <span className="mx-2">|</span>
+             <Link href="/support" className="hover:underline">
               <FormattedMessage defaultMessage="Support" id="faq.title" />
             </Link> */}
           </p>
