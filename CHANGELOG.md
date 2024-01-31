@@ -1,3 +1,10 @@
+## [3.9.1](https://github.com/renansigolo/my-adhd-website/compare/v3.9.0...v3.9.1) (2024-01-31)
+
+
+### Bug Fixes
+
+* footer ([935b3a3](https://github.com/renansigolo/my-adhd-website/commit/935b3a392b882f0c13e94ac3080d4fd216f32be2))
+
 # [3.9.0](https://github.com/renansigolo/my-adhd-website/compare/v3.8.0...v3.9.0) (2023-11-05)
 
 
