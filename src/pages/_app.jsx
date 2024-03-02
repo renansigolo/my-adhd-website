@@ -2,6 +2,7 @@ import "@/styles/globals.css"
 
 import { useUserLocale } from "@/lib/hooks"
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Baloo_2 } from "next/font/google"
 import { Toaster } from "react-hot-toast"
 import { IntlProvider } from "react-intl"
@@ -23,6 +24,7 @@ function App({ Component, pageProps }) {
       >
         <Component {...pageProps} />
         <Toaster position="top-right" />
+        <SpeedInsights />
         <Analytics />
       </IntlProvider>
     </main>

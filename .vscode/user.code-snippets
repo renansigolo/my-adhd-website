@@ -16,8 +16,8 @@
       "        $3",
       "    </>",
       "  )",
-      "}"
+      "}",
     ],
-    "description": "React component"
-  }
+    "description": "React component",
+  },
 }

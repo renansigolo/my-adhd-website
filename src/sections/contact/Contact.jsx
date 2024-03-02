@@ -46,9 +46,7 @@ export function Contact() {
         `${process.env.NEXT_PUBLIC_FIREBASE_URL}/sendContactEmail`,
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
         },
       )
