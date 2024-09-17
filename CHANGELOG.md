@@ -1,3 +1,10 @@
+## [3.9.2](https://github.com/renansigolo/my-adhd-website/compare/v3.9.1...v3.9.2) (2024-09-17)
+
+
+### Bug Fixes
+
+* formatting ([3860a31](https://github.com/renansigolo/my-adhd-website/commit/3860a31e852293d79c32fda5c3efcf65b9f0a15a))
+
 ## [3.9.1](https://github.com/renansigolo/my-adhd-website/compare/v3.9.0...v3.9.1) (2024-01-31)
 
 
