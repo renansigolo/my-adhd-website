@@ -21,7 +21,7 @@ export default function Custom404() {
         </div>
         <div className="pb-16 pt-4">
           <div className="text-center">
-            <p className=" text-3xl font-semibold text-indigo-600">404</p>
+            <p className="text-3xl font-semibold text-indigo-600">404</p>
             <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
               <FormattedMessage
                 defaultMessage="Page not found."
