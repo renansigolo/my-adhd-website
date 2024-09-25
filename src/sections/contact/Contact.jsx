@@ -43,7 +43,7 @@ export function Contact() {
     // Send a POST request to Firebase Cloud Function
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_FIREBASE_URL}/sendContactEmail`,
+        process.env.NEXT_PUBLIC_FIREBASE_EMAIL_FUNCTION_URL,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
