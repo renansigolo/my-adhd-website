@@ -29,9 +29,9 @@ export function Banner() {
           }}
         />
       </div>
-      <div className="flex text-center text-sm leading-6 text-gray-900">
+      <div className="flex text-center text-sm leading-5 text-gray-900 md:leading-6">
         <FontAwesomeIcon
-          className="mr-2 hidden h-5 w-5 md:block"
+          className="mr-2 hidden size-5 md:block"
           icon={faTriangleExclamation}
         />
         <FormattedMessage id="banner.message" />

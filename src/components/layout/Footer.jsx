@@ -35,7 +35,7 @@ export function Footer() {
               target="_blank"
             >
               <span className="sr-only">{item.name}</span>
-              <FontAwesomeIcon className="h-5 w-5" icon={item.icon} />
+              <FontAwesomeIcon className="size-5" icon={item.icon} />
             </a>
           ))}
         </div>
@@ -48,7 +48,7 @@ export function Footer() {
               values={{
                 heartIcon: (
                   <FontAwesomeIcon
-                    className="scale h-4 w-4 hover:text-red-500"
+                    className="scale size-4 hover:text-red-500"
                     icon={faHeart}
                   />
                 ),

@@ -37,7 +37,7 @@ export const AppIconSquare = () => {
   return (
     <img
       alt="My ADHD Logo"
-      className="flex-self-center inline-flex h-40 w-40"
+      className="flex-self-center inline-flex size-40"
       height={160}
       loading="eager"
       src="/images/logos/logo-square.svg"

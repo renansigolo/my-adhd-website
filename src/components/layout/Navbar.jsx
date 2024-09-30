@@ -31,7 +31,7 @@ const DesktopMenu = ({ user }) => {
           <div className="-mr-2 flex items-center lg:hidden">
             <PopoverButton className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-pink-500">
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="h-6 w-6" />
+              <Bars3Icon aria-hidden="true" className="size-6" />
             </PopoverButton>
           </div>
         </div>
@@ -87,7 +87,7 @@ const MobileMenu = ({ user }) => (
         <div className="-mr-2">
           <PopoverButton className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-500">
             <span className="sr-only">Close menu</span>
-            <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+            <XMarkIcon aria-hidden="true" className="size-6" />
           </PopoverButton>
         </div>
       </div>
@@ -116,8 +116,8 @@ const MobileMenu = ({ user }) => (
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <img
-                    alt=""
-                    className="h-10 w-10 rounded-full"
+                    alt="User Image"
+                    className="size-10 rounded-full"
                     src={user.photoURL}
                   />
                 </div>

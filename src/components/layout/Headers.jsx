@@ -26,7 +26,7 @@ export const HeaderButton = () => {
     <div className="mb-12 text-left lg:mb-24">
       <Link href="/">
         <div className="sticky top-8 inline-flex items-center rounded-full border border-transparent bg-pink-600 p-3 text-white shadow-sm hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2">
-          <HomeIcon aria-hidden="true" className="h-6 w-6" />
+          <HomeIcon aria-hidden="true" className="size-6" />
         </div>
       </Link>
     </div>
