@@ -29,7 +29,7 @@ const DesktopMenu = ({ user }) => {
             <Logo />
           </Link>
           <div className="-mr-2 flex items-center lg:hidden">
-            <PopoverButton className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 focus:ring-2 focus:ring-pink-500 focus:outline-hidden">
+            <PopoverButton className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-50 p-2 text-gray-400 hover:cursor-pointer hover:bg-gray-100 focus:ring-2 focus:ring-pink-500 focus:outline-hidden">
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="size-6" />
             </PopoverButton>
@@ -85,7 +85,7 @@ const MobileMenu = ({ user }) => (
           <Logo />
         </Link>
         <div className="-mr-2">
-          <PopoverButton className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:ring-2 focus:ring-pink-500 focus:outline-hidden focus:ring-inset">
+          <PopoverButton className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:cursor-pointer hover:bg-gray-100 focus:ring-2 focus:ring-pink-500 focus:outline-hidden focus:ring-inset">
             <span className="sr-only">Close menu</span>
             <XMarkIcon aria-hidden="true" className="size-6" />
           </PopoverButton>
