@@ -31,7 +31,7 @@ const FeatureHighlights = () => {
         {cards.map((card, index) => (
           <li
             key={card.title + (index + 1)}
-            className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-gradient-to-tr from-purple-800 to-pink-600 text-center shadow"
+            className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-linear-to-tr from-purple-800 to-pink-600 text-center shadow-sm"
           >
             <div className="flex flex-1 flex-col p-8 text-white">
               <FontAwesomeIcon

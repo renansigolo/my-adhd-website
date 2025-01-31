@@ -28,7 +28,7 @@ const PrivacyPolicyHeader = () => {
 const PrivacyPolicyContent = () => {
   return (
     <div>
-      <p className="mb-1 mt-6">
+      <p className="mt-6 mb-1">
         <strong>Privacy Policy</strong>
       </p>
       <p>
@@ -54,7 +54,7 @@ const PrivacyPolicyContent = () => {
         defined in this Privacy Policy.
       </p>
 
-      <p className="mb-1 mt-6">
+      <p className="mt-6 mb-1">
         <strong>Information Collection and Use</strong>
       </p>
       <p>
@@ -95,7 +95,7 @@ const PrivacyPolicyContent = () => {
         </ul>
       </div>
 
-      <p className="mb-1 mt-6">
+      <p className="mt-6 mb-1">
         <strong>Log Data</strong>
       </p>
       <p>
@@ -108,7 +108,7 @@ const PrivacyPolicyContent = () => {
         Service, and other statistics.
       </p>
 
-      <p className="mb-1 mt-6">
+      <p className="mt-6 mb-1">
         <strong>Cookies</strong>
       </p>
       <p>
@@ -126,7 +126,7 @@ const PrivacyPolicyContent = () => {
         cookies, you may not be able to use some portions of this Service.
       </p>
 
-      <p className="mb-1 mt-6">
+      <p className="mt-6 mb-1">
         <strong>Service Providers</strong>
       </p>
       <p>
@@ -146,7 +146,7 @@ const PrivacyPolicyContent = () => {
         disclose or use the information for any other purpose.
       </p>
 
-      <p className="mb-1 mt-6">
+      <p className="mt-6 mb-1">
         <strong>Security</strong>
       </p>
       <p>
@@ -157,7 +157,7 @@ const PrivacyPolicyContent = () => {
         its absolute security.
       </p>
 
-      <p className="mb-1 mt-6">
+      <p className="mt-6 mb-1">
         <strong>Links to Other Sites</strong>
       </p>
       <p>
@@ -169,7 +169,7 @@ const PrivacyPolicyContent = () => {
         practices of any third-party sites or services.
       </p>
 
-      <p className="mb-1 mt-6">
+      <p className="mt-6 mb-1">
         <strong>Children&apos;s Privacy</strong>
       </p>
       <p>
@@ -182,7 +182,7 @@ const PrivacyPolicyContent = () => {
         be able to do necessary actions.
       </p>
 
-      <p className="mb-1 mt-6">
+      <p className="mt-6 mb-1">
         <strong>Changes to This Privacy Policy</strong>
       </p>
       <p>
@@ -192,7 +192,7 @@ const PrivacyPolicyContent = () => {
       </p>
       <p>This policy is effective as of 2020-08-08</p>
 
-      <p className="mb-1 mt-6">
+      <p className="mt-6 mb-1">
         <strong>Contact Us</strong>
       </p>
       <p>

@@ -1,5 +1,15 @@
-import styles from "@/styles/Contact.module.css"
 import { FormattedMessage } from "react-intl"
+
+const styles = {
+  formLabel: "block text-sm font-medium text-gray-700",
+  formField:
+    "block w-full rounded-md border-gray-300 px-4 py-3 shadow-xs focus:border-purple-500 focus:ring-purple-500",
+  formSelect:
+    "w-full rounded-md border-gray-300 px-4 py-3 shadow-xs text-gray-500 focus:border-purple-500 focus:ring-purple-500",
+  errorLabel: "mt-2 ml-2 text-red-900",
+  btnSubmit:
+    "inline-flex w-full items-center justify-center rounded-md border border-transparent bg-pink-600 px-6 py-3 text-base font-medium text-white shadow-xs hover:bg-pink-700 hover:cursor-pointer focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:outline-hidden",
+}
 
 /** Render the ContactForm fields */
 export const ContactFormFields = ({
