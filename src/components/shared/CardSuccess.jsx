@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl"
 export function CardSuccess() {
   return (
     <div
-      className="col-span-1 mx-auto flex flex-col rounded-lg bg-white text-center shadow sm:w-3/5"
+      className="col-span-1 mx-auto flex flex-col rounded-lg bg-white text-center shadow-sm sm:w-3/5"
       data-test="success-notification"
     >
       <div className="flex flex-1 flex-col p-8">
@@ -12,7 +12,7 @@ export function CardSuccess() {
           <CheckIcon aria-hidden="true" className="size-6 text-green-600" />
         </div>
         <div className="mt-3 text-center sm:mt-5">
-          <h3 className="text-lg font-medium leading-6 text-gray-900">
+          <h3 className="text-lg leading-6 font-medium text-gray-900">
             <FormattedMessage id="contact.form.success.title" />
           </h3>
           <div className="mt-2">

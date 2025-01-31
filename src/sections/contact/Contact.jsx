@@ -69,7 +69,7 @@ export function Contact() {
 
   return (
     <section id="contact">
-      <div className="lg:py-18 overflow-hidden bg-gray-100 px-4 py-16 sm:px-6 lg:px-8">
+      <div className="overflow-hidden bg-gray-100 px-4 py-16 sm:px-6 lg:px-8 lg:py-18">
         <div className="relative mx-auto max-w-xl">
           <BulletsBackground />
           {!isLoading ? (

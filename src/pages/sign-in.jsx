@@ -23,13 +23,13 @@ export default function SignIn() {
             <div className="grid grid-cols-1 gap-3">
               <div>
                 <button
-                  className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50"
+                  className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 shadow-xs hover:bg-gray-50"
                   onClick={() => handleSignIn("apple")}
                 >
                   <span className="sr-only">Sign in with Apple</span>
                   <FontAwesomeIcon
                     aria-hidden="true"
-                    className="-ml-1 mr-2 max-h-6"
+                    className="mr-2 -ml-1 max-h-6"
                     icon={faApple}
                     size={"lg"}
                   />
@@ -39,13 +39,13 @@ export default function SignIn() {
 
               <div>
                 <button
-                  className="inline-flex w-full justify-center rounded-md border border-fuchsia-600 bg-fuchsia-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:border-fuchsia-700 hover:bg-fuchsia-700"
+                  className="inline-flex w-full justify-center rounded-md border border-fuchsia-600 bg-fuchsia-600 px-4 py-2 text-sm font-medium text-white shadow-xs hover:border-fuchsia-700 hover:bg-fuchsia-700"
                   onClick={() => handleSignIn("google")}
                 >
                   <span className="sr-only">Sign in with Google</span>
                   <FontAwesomeIcon
                     aria-hidden="true"
-                    className="-ml-1 mr-2 max-h-6"
+                    className="mr-2 -ml-1 max-h-6"
                     icon={faGoogle}
                     size={"lg"}
                   />

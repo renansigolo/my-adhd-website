@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl"
 
 export function Disclaimer() {
   return (
-    <div className="bg-gradient-to-tl from-purple-800 to-pink-500 text-center">
+    <div className="bg-linear-to-tl from-purple-800 to-pink-500 text-center">
       <ContainerSection>
         <p className="text-2xl text-white">
           <FormattedMessage

@@ -18,7 +18,7 @@ const userNavigation = [
 
 const DesktopMenu = ({ user }) => {
   return (
-    <div className="bg-white shadow">
+    <div className="bg-white shadow-sm">
       <nav
         aria-label="Global"
         className="top relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 xl:px-8"
@@ -29,7 +29,7 @@ const DesktopMenu = ({ user }) => {
             <Logo />
           </Link>
           <div className="-mr-2 flex items-center lg:hidden">
-            <PopoverButton className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <PopoverButton className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-50 p-2 text-gray-400 hover:bg-gray-100 focus:ring-2 focus:ring-pink-500 focus:outline-hidden">
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="size-6" />
             </PopoverButton>
@@ -77,21 +77,21 @@ const MobileMenu = ({ user }) => (
   <PopoverPanel
     focus
     transition
-    className="absolute inset-x-0 top-0 origin-top transform p-2 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in lg:hidden"
+    className="absolute inset-x-0 top-0 origin-top transform p-2 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in lg:hidden"
   >
-    <div className="z-50 overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+    <div className="ring-opacity-5 z-50 overflow-hidden rounded-lg bg-white ring-1 shadow-lg ring-black">
       <div className="z-50 flex items-center justify-between px-5 pt-4">
         <Link href="/">
           <Logo />
         </Link>
         <div className="-mr-2">
-          <PopoverButton className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-500">
+          <PopoverButton className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:ring-2 focus:ring-pink-500 focus:outline-hidden focus:ring-inset">
             <span className="sr-only">Close menu</span>
             <XMarkIcon aria-hidden="true" className="size-6" />
           </PopoverButton>
         </div>
       </div>
-      <div className="z-50 pb-6 pt-5">
+      <div className="z-50 pt-5 pb-6">
         <div className="space-y-1 px-2">
           {menuItems.map(({ title, url }) => (
             <a
@@ -106,15 +106,15 @@ const MobileMenu = ({ user }) => (
         <div className="mt-6 px-5">
           {!user ? (
             <Link
-              className="block w-full rounded-md border border-transparent bg-fuchsia-600 px-4 py-2 text-center font-medium text-white shadow hover:bg-fuchsia-700"
+              className="block w-full rounded-md border border-transparent bg-fuchsia-600 px-4 py-2 text-center font-medium text-white shadow-sm hover:bg-fuchsia-700"
               href="/#download"
             >
               Download
             </Link>
           ) : (
-            <div className="border-t border-gray-700 pb-3 pt-4">
+            <div className="border-t border-gray-700 pt-4 pb-3">
               <div className="flex items-center">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <img
                     alt="User Image"
                     className="size-10 rounded-full"

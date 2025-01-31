@@ -5,9 +5,9 @@ import { FormattedMessage } from "react-intl"
 
 export default function Custom404() {
   return (
-    <div className="flex min-h-full flex-col bg-white pb-12 pt-16">
-      <main className="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-shrink-0 justify-center">
+    <div className="flex min-h-full flex-col bg-white pt-16 pb-12">
+      <main className="mx-auto flex w-full max-w-7xl grow flex-col justify-center px-4 sm:px-6 lg:px-8">
+        <div className="flex shrink-0 justify-center">
           <Link className="inline-flex" href="/">
             <span className="sr-only">Confused Face</span>
             <Image
@@ -19,7 +19,7 @@ export default function Custom404() {
             />
           </Link>
         </div>
-        <div className="pb-16 pt-4">
+        <div className="pt-4 pb-16">
           <div className="text-center">
             <p className="text-3xl font-semibold text-indigo-600">404</p>
             <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
@@ -46,7 +46,7 @@ export default function Custom404() {
           </div>
         </div>
       </main>
-      <footer className="mx-auto w-full max-w-7xl flex-shrink-0 px-4 sm:px-6 lg:px-8">
+      <footer className="mx-auto w-full max-w-7xl shrink-0 px-4 sm:px-6 lg:px-8">
         <nav className="flex justify-center space-x-4">
           <Link
             className="text-sm font-medium text-gray-500 hover:text-gray-600"
