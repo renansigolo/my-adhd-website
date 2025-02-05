@@ -77,13 +77,5 @@
   "engines": {
     "node": "^20.11.1 || ^22.12.0",
     "npm": ">=10.2.4"
-  },
-  "browserslist": [
-    "last 2 Chrome version",
-    "last 1 Firefox version",
-    "last 2 Edge major versions",
-    "last 2 Safari major versions",
-    "last 2 iOS major versions",
-    "Firefox ESR"
-  ]
+  }
 }
