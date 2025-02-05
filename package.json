@@ -53,11 +53,11 @@
     "sharp": "0.33.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.6.1",
-    "@commitlint/config-conventional": "19.6.0",
+    "@commitlint/cli": "19.7.1",
+    "@commitlint/config-conventional": "19.7.1",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@tailwindcss/postcss": "4.0.1",
+    "@tailwindcss/postcss": "4.0.3",
     "@types/gtag.js": "0.0.20",
     "chance": "1.1.12",
     "concurrently": "9.1.2",
@@ -72,7 +72,7 @@
     "prettier": "3.4.2",
     "prettier-plugin-tailwindcss": "0.6.11",
     "semantic-release": "24.2.1",
-    "tailwindcss": "4.0.1"
+    "tailwindcss": "4.0.3"
   },
   "engines": {
     "node": "^20.11.1 || ^22.12.0",

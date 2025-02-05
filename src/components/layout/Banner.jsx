@@ -30,10 +30,9 @@ export function Banner() {
         />
       </div>
       <div className="flex text-center text-sm leading-5 text-gray-900 md:leading-6">
-        <FontAwesomeIcon
-          className="mr-2 hidden size-5 md:block"
-          icon={faTriangleExclamation}
-        />
+        <div className="mr-2 hidden size-5 md:block">
+          <FontAwesomeIcon icon={faTriangleExclamation} />
+        </div>
         <FormattedMessage id="banner.message" />
       </div>
     </div>
