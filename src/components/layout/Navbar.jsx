@@ -79,7 +79,7 @@ const MobileMenu = ({ user }) => (
     transition
     className="absolute inset-x-0 top-0 origin-top transform p-2 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in lg:hidden"
   >
-    <div className="z-50 overflow-hidden rounded-lg bg-white ring-1 shadow-lg ring-gray-900/5">
+    <div className="z-50 overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5">
       <div className="z-50 flex items-center justify-between px-5 pt-4">
         <Link href="/">
           <Logo />
