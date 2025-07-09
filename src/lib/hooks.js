@@ -1,14 +1,17 @@
 import * as gtag from "@/lib/google-analytics"
 // import { doc, getFirestore, onSnapshot } from "firebase/firestore"
+import English from "@/locale/en.json"
+import Spanish from "@/locale/es.json"
+import Portuguese from "@/locale/pt.json"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
 // import { useAuthState } from "react-firebase-hooks/auth"
 // import { auth } from "./firebase"
 
 const languages = {
-  en: require("@/locale/en.json"),
-  es: require("@/locale/es.json"),
-  pt: require("@/locale/pt.json"),
+  en: English,
+  es: Spanish,
+  pt: Portuguese,
 }
 
 export const useUserLocale = () => {
