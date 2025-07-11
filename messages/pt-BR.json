@@ -41,8 +41,7 @@
     "support_subtitle": "Como podemos ajudá-lo?",
     "faq_title": "Perguntas frequentes"
   },
-  "ErrorPage": {
-    "support_title": "Supporte",
+  "NotFoundPage": {
     "404_title": "Página não encontrada.",
     "404_description": "Desculpe, não conseguimos encontrar a página que você está procurando.",
     "404_link": "Ir para página inicial"

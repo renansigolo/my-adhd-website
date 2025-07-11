@@ -9,8 +9,6 @@ import { notFound } from "next/navigation"
 import { ReactNode } from "react"
 import { Toaster } from "react-hot-toast"
 
-import "@/styles/globals.css" // Ensure to import your global styles
-// import "@/app/globals.css"
 // const { NODE_ENV, SITE_URL } = process.env
 // const isProduction = NODE_ENV === "production"
 
