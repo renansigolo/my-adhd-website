@@ -32,7 +32,7 @@ export function Download() {
                 icon={faAppStore}
                 size={"lg"}
               />
-              {t("download.ios")}
+              {t("download_ios")}
             </a>
             <a
               className="inline-flex items-center justify-center rounded-md border border-transparent bg-pink-600 px-5 py-3 text-base font-medium text-white hover:bg-pink-700 hover:shadow-sm md:text-lg"
@@ -46,7 +46,7 @@ export function Download() {
                 icon={faGooglePlay}
                 size={"lg"}
               />
-              {t("download.android")}
+              {t("download_android")}
             </a>
           </div>
         </ContainerSection>

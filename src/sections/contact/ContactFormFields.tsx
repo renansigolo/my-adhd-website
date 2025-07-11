@@ -59,7 +59,7 @@ export const ContactFormFields = ({
       >
         <div>
           <label className={styles.formLabel} htmlFor="name">
-            <FormattedMessage id="contact.form.name.title" />
+            <FormattedMessage id="contact_form.name.title" />
           </label>
           <div className="mt-1" data-test="form-name">
             <input
@@ -78,11 +78,11 @@ export const ContactFormFields = ({
         </div>
         <div>
           <label className={styles.formLabel} htmlFor="language">
-            <FormattedMessage id="contact.form.language.title" />
+            <FormattedMessage id="contact_form.language.title" />
           </label>
           <div className="mt-1">
             <label className="sr-only" htmlFor="language">
-              <FormattedMessage id="contact.form.language.title" />
+              <FormattedMessage id="contact_form.language.title" />
             </label>
             <select
               className={styles.formSelect}
@@ -99,7 +99,7 @@ export const ContactFormFields = ({
         </div>
         <div className="sm:col-span-2">
           <label className={styles.formLabel} htmlFor="email">
-            <FormattedMessage id="contact.form.email.title" />
+            <FormattedMessage id="contact_form.email.title" />
           </label>
           <div className="mt-1" data-test="form-email">
             <input
@@ -118,7 +118,7 @@ export const ContactFormFields = ({
         </div>
         <div className="sm:col-span-2">
           <label className={styles.formLabel} htmlFor="message">
-            <FormattedMessage id="contact.form.message.title" />
+            <FormattedMessage id="contact_form.message.title" />
           </label>
           <div className="mt-1" data-test="form-textarea">
             <textarea

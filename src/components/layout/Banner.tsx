@@ -35,7 +35,7 @@ export function Banner() {
         <div className="mr-2 hidden size-5 md:block">
           <FontAwesomeIcon icon={faTriangleExclamation} />
         </div>
-        {t("banner.message")}
+        {t("banner_message")}
       </div>
     </div>
   )

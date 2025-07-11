@@ -52,13 +52,13 @@ export const HeaderSection = ({ id, title, subTitle }: HeaderSectionProps) => {
     <>
       {title && (
         <h2 className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-          <span className="block">{t(`${id}.title`)}</span>
+          <span className="block">{t(`${id}_title`)}</span>
         </h2>
       )}
 
       {subTitle && (
         <p className="mb-8 text-lg leading-6 text-gray-900">
-          {t(`${id}.subtitle`)}
+          {t(`${id}_subtitle`)}
         </p>
       )}
     </>

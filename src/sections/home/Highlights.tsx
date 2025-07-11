@@ -12,18 +12,18 @@ import Image from "next/image"
 const cards = [
   {
     icon: faStethoscope,
-    title: "features.card.title",
-    subtitle: "features.card.description",
+    title: "features_card_title",
+    subtitle: "features_card_description",
   },
   {
     icon: faChalkboardTeacher,
-    title: "features.card.title",
-    subtitle: "features.card.description",
+    title: "features_card_title",
+    subtitle: "features_card_description",
   },
   {
     icon: faGrinStars,
-    title: "features.card.title",
-    subtitle: "features.card.description",
+    title: "features_card_title",
+    subtitle: "features_card_description",
   },
 ]
 
@@ -45,12 +45,12 @@ const FeatureHighlights = () => {
                 size="4x"
               />
               <h3 className="mt-6 text-lg font-medium">
-                {t(`${card.title}.${index + 1}`)}
+                {t(`${card.title}_${index + 1}`)}
               </h3>
               <dl className="mt-1">
                 <dt className="sr-only">Title</dt>
                 <dd className="text-sm">
-                  {t(`${card.subtitle}.${index + 1}`)}
+                  {t(`${card.subtitle}_${index + 1}`)}
                 </dd>
               </dl>
             </div>
@@ -162,10 +162,10 @@ export function Highlights() {
           <div className="relative mt-12 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
             <div className="relative px-4 sm:px-6 lg:px-8">
               <h2 className="text-2xl font-extrabold tracking-tight text-purple-900 sm:text-3xl">
-                {t("highlight.0.title")}
+                {t("highlight_0_title")}
               </h2>
               <p className="mt-3 text-lg text-gray-500">
-                {t("highlight.0.subtitle")}
+                {t("highlight_0_subtitle")}
               </p>
             </div>
 
@@ -191,10 +191,10 @@ export function Highlights() {
             <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
               <div className="px-4 sm:px-6 lg:col-start-2 lg:px-8">
                 <h2 className="text-2xl font-extrabold tracking-tight text-purple-900 sm:text-3xl">
-                  {t("highlight.1.title")}
+                  {t("highlight_1_title")}
                 </h2>
                 <p className="mt-3 text-lg text-gray-500">
-                  {t("highlight.1.subtitle")}
+                  {t("highlight_1_subtitle")}
                 </p>
               </div>
 

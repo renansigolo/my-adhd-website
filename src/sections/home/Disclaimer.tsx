@@ -13,7 +13,7 @@ export function Disclaimer() {
             id="disclaimer.title"
             values={{ br: <br /> }}
           /> */}
-          {t("disclaimer.title")}
+          {t("disclaimer_title")}
         </p>
       </ContainerSection>
     </div>

@@ -1,5 +1,4 @@
 import { Footer } from "@/components/layout/Footer"
-import { Navbar } from "@/components/layout/Navbar"
 import { routing } from "@/i18n/routing"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -10,6 +9,7 @@ import { notFound } from "next/navigation"
 import { ReactNode } from "react"
 import { Toaster } from "react-hot-toast"
 
+import "@/styles/globals.css" // Ensure to import your global styles
 // import "@/app/globals.css"
 // const { NODE_ENV, SITE_URL } = process.env
 // const isProduction = NODE_ENV === "production"
@@ -81,7 +81,6 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${baloo.variable} font-sans antialiased`}>
-        <Navbar />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <Footer />
 

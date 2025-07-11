@@ -71,7 +71,7 @@ export function Footer() {
         <div>
           <p className="text-center text-base text-gray-500">
             <Link className="hover:underline" href="/privacy-policy">
-              {t("privacy-policy.title")}
+              {t("privacy-policy_title")}
             </Link>
             {/* <span className="mx-2">|</span>
              <Link href="/support" className="hover:underline">

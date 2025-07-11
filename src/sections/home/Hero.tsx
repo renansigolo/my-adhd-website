@@ -31,7 +31,7 @@ export function Hero() {
                 </div>
                 <h1 className="mt-4 text-3xl text-white sm:text-4xl md:text-5xl">
                   <span className="block xl:inline">
-                    {t("hero.title")}
+                    {t("hero_title")}
                   </span>{" "}
                 </h1>
 
@@ -41,7 +41,7 @@ export function Hero() {
                       className="flex w-full items-center justify-center border border-transparent px-8 py-3 text-base font-medium text-white md:px-10 md:py-4 md:text-lg"
                       href="#download"
                     >
-                      {t("download.title")}
+                      {t("download_title")}
                     </a>
                   </div>
                 </div>

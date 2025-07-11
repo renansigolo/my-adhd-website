@@ -25,11 +25,11 @@ export function Contact() {
   // Assign add the translated fields to variables
   const intl = useIntl()
   const translatedFormValues = (id: string) => ({
-    title: intl.formatMessage({ id: `contact.form.${id}.title` }),
+    title: intl.formatMessage({ id: `contact_form.${id}.title` }),
     placeholder: intl.formatMessage({
-      id: `contact.form.${id}.placeholder`,
+      id: `contact_form.${id}.placeholder`,
     }),
-    error: intl.formatMessage({ id: `contact.form.${id}.error` }),
+    error: intl.formatMessage({ id: `contact_form.${id}.error` }),
   })
   const translated = {
     name: translatedFormValues("name"),
