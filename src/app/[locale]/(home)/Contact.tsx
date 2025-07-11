@@ -1,6 +1,6 @@
 "use client"
 
-import { ContactForm } from "@/app/[locale]/(home)/ContactFormFields"
+import { ContactForm } from "@/app/[locale]/(home)/ContactForm"
 import { BulletsBackground } from "@/components/ContactFormBgPattern"
 import { useLocale, useTranslations } from "next-intl"
 
@@ -23,9 +23,9 @@ export function Contact() {
   const translated = {
     title: t("contact_title"),
     subtitle: t("contact_subtitle"),
+    language: t("contact_form_language_title"),
     name: translatedFormValues("name"),
     email: translatedFormValues("email"),
-    language: t("contact_form_language_title"),
     message: translatedFormValues("message"),
     submit: t("contact_submit"),
   }
