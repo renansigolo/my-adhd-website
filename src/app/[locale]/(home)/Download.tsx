@@ -1,4 +1,4 @@
-import { ContainerSection } from "@/components/Containers"
+import { Container } from "@/components/Container"
 import { HeaderSection } from "@/components/Headers"
 import { AppIconSquare } from "@/components/Icons"
 import { faAppStore, faGooglePlay } from "@fortawesome/free-brands-svg-icons"
@@ -11,7 +11,7 @@ export function Download() {
   return (
     <section id="download">
       <div className="bg-white">
-        <ContainerSection center>
+        <Container center>
           <AppIconSquare />
 
           <HeaderSection
@@ -49,7 +49,7 @@ export function Download() {
               {t("download_android")}
             </a>
           </div>
-        </ContainerSection>
+        </Container>
       </div>
     </section>
   )

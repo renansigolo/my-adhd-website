@@ -1,4 +1,4 @@
-import { ContainerSection } from "@/components/Containers"
+import { Container } from "@/components/Container"
 import { HeaderPage } from "@/components/Headers"
 import { Navbar } from "@/components/Navbar"
 
@@ -6,11 +6,11 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <Navbar />
-      <ContainerSection>
+      <Container>
         <HeaderPage id="privacy-policy" title="Privacy Policy">
           {<PrivacyPolicyContent />}
         </HeaderPage>
-      </ContainerSection>
+      </Container>
     </>
   )
 }

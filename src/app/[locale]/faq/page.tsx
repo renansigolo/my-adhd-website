@@ -1,4 +1,4 @@
-import { ContainerSection } from "@/components/Containers"
+import { Container } from "@/components/Container"
 import { HeaderPage } from "@/components/Headers"
 import { Navbar } from "@/components/Navbar"
 
@@ -36,7 +36,7 @@ export default function FaqPage() {
   return (
     <>
       <Navbar />
-      <ContainerSection center>
+      <Container center>
         <HeaderPage
           id="support"
           subTitle="How can we help you?"
@@ -46,7 +46,7 @@ export default function FaqPage() {
             This is the FAQ page. Here you can find answers to common questions.
           </p>
         </HeaderPage>
-      </ContainerSection>
+      </Container>
 
       {/* <Faq faqs={faqs} /> */}
     </>
