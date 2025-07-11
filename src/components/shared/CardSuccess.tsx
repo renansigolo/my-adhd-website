@@ -1,7 +1,9 @@
 import { CheckIcon } from "@heroicons/react/20/solid"
-import { FormattedMessage } from "react-intl"
+import { useTranslations } from "next-intl"
 
 export function CardSuccess() {
+  const t = useTranslations("HomePage")
+
   return (
     <div
       className="col-span-1 mx-auto flex flex-col rounded-lg bg-white text-center shadow-sm sm:w-3/5"
@@ -13,11 +15,11 @@ export function CardSuccess() {
         </div>
         <div className="mt-3 text-center sm:mt-5">
           <h3 className="text-lg leading-6 font-medium text-gray-900">
-            <FormattedMessage id="contact.form.success.title" />
+            {t("contact.form.success.title")}
           </h3>
           <div className="mt-2">
             <p className="text-sm text-gray-500">
-              <FormattedMessage id="contact.form.success.description" />
+              {t("contact.form.success.description")}
             </p>
           </div>
         </div>

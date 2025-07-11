@@ -6,8 +6,8 @@ import {
   faStethoscope,
 } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useTranslations } from "next-intl"
 import Image from "next/image"
-import { FormattedMessage } from "react-intl"
 
 const cards = [
   {
@@ -28,6 +28,8 @@ const cards = [
 ]
 
 const FeatureHighlights = () => {
+  const t = useTranslations("HomePage")
+
   return (
     <div className="mx-auto my-24 max-w-7xl px-4">
       <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -43,12 +45,12 @@ const FeatureHighlights = () => {
                 size="4x"
               />
               <h3 className="mt-6 text-lg font-medium">
-                <FormattedMessage id={card.title + (index + 1)} />
+                {t(`${card.title}.${index + 1}`)}
               </h3>
               <dl className="mt-1">
                 <dt className="sr-only">Title</dt>
                 <dd className="text-sm">
-                  <FormattedMessage id={card.subtitle + (index + 1)} />
+                  {t(`${card.subtitle}.${index + 1}`)}
                 </dd>
               </dl>
             </div>
@@ -148,6 +150,8 @@ const Bullets = (props: BulletsProps) => {
 }
 
 export function Highlights() {
+  const t = useTranslations("HomePage")
+
   return (
     <section id="features">
       <div className="overflow-hidden bg-gray-50 py-12 lg:py-24">
@@ -158,10 +162,10 @@ export function Highlights() {
           <div className="relative mt-12 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
             <div className="relative px-4 sm:px-6 lg:px-8">
               <h2 className="text-2xl font-extrabold tracking-tight text-purple-900 sm:text-3xl">
-                <FormattedMessage id="highlight.0.title" />
+                {t("highlight.0.title")}
               </h2>
               <p className="mt-3 text-lg text-gray-500">
-                <FormattedMessage id="highlight.0.subtitle" />
+                {t("highlight.0.subtitle")}
               </p>
             </div>
 
@@ -187,10 +191,10 @@ export function Highlights() {
             <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:items-center lg:gap-8">
               <div className="px-4 sm:px-6 lg:col-start-2 lg:px-8">
                 <h2 className="text-2xl font-extrabold tracking-tight text-purple-900 sm:text-3xl">
-                  <FormattedMessage id="highlight.1.title" />
+                  {t("highlight.1.title")}
                 </h2>
                 <p className="mt-3 text-lg text-gray-500">
-                  <FormattedMessage id="highlight.1.subtitle" />
+                  {t("highlight.1.subtitle")}
                 </p>
               </div>
 

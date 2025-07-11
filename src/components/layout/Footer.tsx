@@ -1,8 +1,7 @@
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
-import { faHeart } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useTranslations } from "next-intl"
 import Link from "next/link"
-import { FormattedMessage } from "react-intl"
 
 const navigation = {
   social: [
@@ -22,6 +21,8 @@ const navigation = {
 }
 
 export function Footer() {
+  const t = useTranslations("HomePage")
+
   return (
     <footer className="w-full border-t border-gray-300 bg-white">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 overflow-hidden px-3 py-12 sm:px-6 lg:px-8">
@@ -42,7 +43,7 @@ export function Footer() {
 
         <div className="flex justify-center align-middle">
           <p className="inline-flex flex-row gap-1 self-center text-center align-middle text-base text-gray-500">
-            <FormattedMessage
+            {/* <FormattedMessage
               defaultMessage="Made with {heartIcon} by {owner}"
               id="footer.title"
               values={{
@@ -63,17 +64,14 @@ export function Footer() {
                   </a>
                 ),
               }}
-            />
+            /> */}
           </p>
         </div>
 
         <div>
           <p className="text-center text-base text-gray-500">
             <Link className="hover:underline" href="/privacy-policy">
-              <FormattedMessage
-                defaultMessage="Privacy Policy"
-                id="privacy-policy.title"
-              />
+              {t("privacy-policy.title")}
             </Link>
             {/* <span className="mx-2">|</span>
              <Link href="/support" className="hover:underline">

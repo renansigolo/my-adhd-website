@@ -1,3 +1,5 @@
+"use client"
+
 import { CardSuccess } from "@/components/shared/CardSuccess"
 import { BulletsBackground } from "@/components/shared/ContactFormBgPattern"
 import { Spinner } from "@/components/shared/Spinner"

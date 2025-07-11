@@ -1,9 +1,7 @@
 import { Logo } from "@/components/shared/Icons"
-import { UserContext } from "@/lib/context"
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
-import { useContext } from "react"
 
 const menuItems = [
   { title: "Features", url: "./#features" },
@@ -16,7 +14,7 @@ const userNavigation = [
   { name: "Sign out", href: "#" },
 ]
 
-const DesktopMenu = ({ user }) => {
+const DesktopMenu = () => {
   return (
     <div className="bg-white shadow-sm">
       <nav
@@ -47,33 +45,19 @@ const DesktopMenu = ({ user }) => {
           ))}
         </div> */}
         <div className="hidden lg:flex lg:items-center lg:space-x-6">
-          {!user ? (
-            <>
-              {/* <Link
-                href="/sign-in"
-                className="text-base font-medium text-gray-500 hover:text-gray-600"
-              >
-                Sign in
-              </Link> */}
-              <Link
-                className="rounded-md border border-transparent bg-fuchsia-600 px-6 py-2 text-base font-medium text-white shadow-md hover:bg-fuchsia-700"
-                href="/#download"
-              >
-                Download
-              </Link>
-            </>
-          ) : (
-            <button className="text-base font-medium text-gray-500 hover:text-gray-600">
-              Sign Out
-            </button>
-          )}
+          <Link
+            className="rounded-md border border-transparent bg-fuchsia-600 px-6 py-2 text-base font-medium text-white shadow-md hover:bg-fuchsia-700"
+            href="/#download"
+          >
+            Download
+          </Link>
         </div>
       </nav>
     </div>
   )
 }
 
-const MobileMenu = ({ user }) => (
+const MobileMenu = () => (
   <PopoverPanel
     focus
     transition
@@ -104,45 +88,12 @@ const MobileMenu = ({ user }) => (
           ))}
         </div>
         <div className="mt-6 px-5">
-          {!user ? (
-            <Link
-              className="block w-full rounded-md border border-transparent bg-fuchsia-600 px-4 py-2 text-center font-medium text-white shadow-sm hover:bg-fuchsia-700"
-              href="/#download"
-            >
-              Download
-            </Link>
-          ) : (
-            <div className="border-t border-gray-700 pt-4 pb-3">
-              <div className="flex items-center">
-                <div className="shrink-0">
-                  <img
-                    alt="User Image"
-                    className="size-10 rounded-full"
-                    src={user.photoURL}
-                  />
-                </div>
-                <div className="ml-3">
-                  <div className="text-base font-medium text-gray-800">
-                    {user.displayName}
-                  </div>
-                  <div className="text-sm font-medium text-gray-400">
-                    {user.email}
-                  </div>
-                </div>
-              </div>
-              <div className="mt-3 space-y-1">
-                {userNavigation.map((item) => (
-                  <Link
-                    key={item.displayName}
-                    className="block rounded-md px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
-                    href="#"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
+          <Link
+            className="block w-full rounded-md border border-transparent bg-fuchsia-600 px-4 py-2 text-center font-medium text-white shadow-sm hover:bg-fuchsia-700"
+            href="/#download"
+          >
+            Download
+          </Link>
         </div>
       </div>
     </div>
@@ -150,11 +101,39 @@ const MobileMenu = ({ user }) => (
 )
 
 export function Navbar() {
-  const { user, username } = useContext(UserContext)
   return (
     <Popover as="header" className="relative z-10">
-      <DesktopMenu user={user} />
-      <MobileMenu user={user} />
+      <DesktopMenu />
+      <MobileMenu />
     </Popover>
   )
 }
+
+// ;<div className="border-t border-gray-700 pt-4 pb-3">
+//   <div className="flex items-center">
+//     <div className="shrink-0">
+//       <img
+//         alt="User Image"
+//         className="size-10 rounded-full"
+//         src={user.photoURL}
+//       />
+//     </div>
+//     <div className="ml-3">
+//       <div className="text-base font-medium text-gray-800">
+//         {user.displayName}
+//       </div>
+//       <div className="text-sm font-medium text-gray-400">{user.email}</div>
+//     </div>
+//   </div>
+//   <div className="mt-3 space-y-1">
+//     {userNavigation.map((item) => (
+//       <Link
+//         key={item.displayName}
+//         className="block rounded-md px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
+//         href="#"
+//       >
+//         {item.name}
+//       </Link>
+//     ))}
+//   </div>
+// </div>

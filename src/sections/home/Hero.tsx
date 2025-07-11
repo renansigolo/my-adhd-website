@@ -1,9 +1,11 @@
 import bgHeader from "@/assets/images/backgrounds/bg-header.svg"
 import { LogoOutlinedWithBrandUnderneath } from "@/components/shared/Icons"
+import { useTranslations } from "next-intl"
 import Image from "next/image"
-import { FormattedMessage } from "react-intl"
 
 export function Hero() {
+  const t = useTranslations("HomePage")
+
   return (
     <div className="relative overflow-hidden bg-purple-900">
       <div className="flex flex-col justify-center">
@@ -29,10 +31,7 @@ export function Hero() {
                 </div>
                 <h1 className="mt-4 text-3xl text-white sm:text-4xl md:text-5xl">
                   <span className="block xl:inline">
-                    <FormattedMessage
-                      defaultMessage="The first ADHD app with cognitive analysis!"
-                      id="hero.title"
-                    />
+                    {t("hero.title")}
                   </span>{" "}
                 </h1>
 
@@ -42,10 +41,7 @@ export function Hero() {
                       className="flex w-full items-center justify-center border border-transparent px-8 py-3 text-base font-medium text-white md:px-10 md:py-4 md:text-lg"
                       href="#download"
                     >
-                      <FormattedMessage
-                        defaultMessage="Download Now"
-                        id="download.title"
-                      />
+                      {t("download.title")}
                     </a>
                   </div>
                 </div>

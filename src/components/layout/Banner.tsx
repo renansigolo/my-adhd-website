@@ -1,8 +1,10 @@
 import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { FormattedMessage } from "react-intl"
+import { useTranslations } from "next-intl"
 
 export function Banner() {
+  const t = useTranslations("HomePage")
+
   return (
     <div className="sticky top-0 left-0 isolate z-50 grid w-full place-content-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
       <div
@@ -33,7 +35,7 @@ export function Banner() {
         <div className="mr-2 hidden size-5 md:block">
           <FontAwesomeIcon icon={faTriangleExclamation} />
         </div>
-        <FormattedMessage id="banner.message" />
+        {t("banner.message")}
       </div>
     </div>
   )

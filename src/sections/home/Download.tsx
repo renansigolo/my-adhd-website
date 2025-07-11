@@ -3,9 +3,11 @@ import { HeaderSection } from "@/components/layout/Headers"
 import { AppIconSquare } from "@/components/shared/Icons"
 import { faAppStore, faGooglePlay } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { FormattedMessage } from "react-intl"
+import { useTranslations } from "next-intl"
 
 export function Download() {
+  const t = useTranslations("HomePage")
+
   return (
     <section id="download">
       <div className="bg-white">
@@ -30,7 +32,7 @@ export function Download() {
                 icon={faAppStore}
                 size={"lg"}
               />
-              <FormattedMessage id="download.ios" />
+              {t("download.ios")}
             </a>
             <a
               className="inline-flex items-center justify-center rounded-md border border-transparent bg-pink-600 px-5 py-3 text-base font-medium text-white hover:bg-pink-700 hover:shadow-sm md:text-lg"
@@ -44,7 +46,7 @@ export function Download() {
                 icon={faGooglePlay}
                 size={"lg"}
               />
-              <FormattedMessage id="download.android" />
+              {t("download.android")}
             </a>
           </div>
         </ContainerSection>

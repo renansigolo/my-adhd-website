@@ -1,7 +1,7 @@
 import { HomeIcon } from "@heroicons/react/24/outline"
+import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { ReactNode } from "react"
-import { FormattedMessage } from "react-intl"
 
 type HeaderPageProps = {
   id: string
@@ -46,19 +46,19 @@ type HeaderSectionProps = {
   subTitle?: string
 }
 export const HeaderSection = ({ id, title, subTitle }: HeaderSectionProps) => {
+  const t = useTranslations("HomePage")
+
   return (
     <>
       {title && (
         <h2 className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-          <span className="block">
-            <FormattedMessage defaultMessage={title} id={`${id}.title`} />
-          </span>
+          <span className="block">{t(`${id}.title`)}</span>
         </h2>
       )}
 
       {subTitle && (
         <p className="mb-8 text-lg leading-6 text-gray-900">
-          <FormattedMessage defaultMessage={subTitle} id={`${id}.subtitle`} />
+          {t(`${id}.subtitle`)}
         </p>
       )}
     </>
