@@ -51,7 +51,6 @@
     "react-firebase-hooks": "5.1.1",
     "react-hook-form": "7.60.0",
     "react-hot-toast": "2.5.2",
-    "react-intl": "7.1.11",
     "sharp": "0.34.2"
   },
   "devDependencies": {

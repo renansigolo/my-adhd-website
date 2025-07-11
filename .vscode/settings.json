@@ -2,5 +2,7 @@
   "css.validate": false,
   "editor.quickSuggestions": { "strings": true },
   "emmet.includeLanguages": { "javascript": "javascriptreact" },
-  "git.branchProtection": ["main"]
+  "git.branchProtection": ["main"],
+  "i18n-ally.localesPaths": ["messages"],
+  "i18n-ally.keystyle": "nested"
 }

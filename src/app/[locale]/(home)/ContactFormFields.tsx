@@ -1,9 +1,10 @@
 "use client"
 
 import { ContactFormSchema } from "@/app/[locale]/(home)/Contact"
-import { FormEvent } from "react"
-import { UseFormRegister } from "react-hook-form"
-import { FormattedMessage } from "react-intl"
+import { showErrorMessage } from "@/lib/helpers"
+import { Locale } from "next-intl"
+import { useState } from "react"
+import { useForm } from "react-hook-form"
 
 const styles = {
   formLabel: "block text-sm font-medium text-gray-700",
@@ -16,41 +17,71 @@ const styles = {
     "inline-flex w-full items-center justify-center rounded-md border border-transparent bg-pink-600 px-6 py-3 text-base font-medium text-white shadow-xs hover:bg-pink-700 hover:cursor-pointer focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:outline-hidden",
 }
 
-type ContactFormFieldsProps = {
-  language: string
+type ContactFormProps = {
+  locale: Locale
   translated: {
-    name: { placeholder: string; error: string }
-    email: { placeholder: string; error: string }
-    message: { placeholder: string; error: string }
+    title: string
+    subtitle: string
+    language: string
+    name: { title: string; placeholder: string; error: string }
+    email: { title: string; placeholder: string; error: string }
+    message: { title: string; placeholder: string; error: string }
+    submit: string
   }
-  register: UseFormRegister<ContactFormSchema>
-  onSubmit: (
-    data: ContactFormSchema,
-    event: FormEvent<HTMLFormElement>,
-  ) => Promise<void>
-  handleSubmit: any
-  isLoading: boolean
-  errors: Record<string, any>
 }
 
 /** Render the ContactForm fields */
-export const ContactFormFields = ({
-  language,
-  translated,
-  register,
-  onSubmit,
-  handleSubmit,
-  isLoading,
-  errors,
-}: ContactFormFieldsProps) => {
+export const ContactForm = ({ locale, translated }: ContactFormProps) => {
+  console.log(translated)
+
+  // Config React Hooks Form
+  const [isLoading, setIsLoading] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm<ContactFormSchema>()
+
+  const onSubmit = async (
+    data: ContactFormSchema,
+    // event: FormEvent<HTMLFormElement>,
+  ) => {
+    setIsLoading(true)
+
+    // Send a POST request to Firebase Cloud Function
+    try {
+      const response = await fetch(
+        String(process.env.NEXT_PUBLIC_FIREBASE_EMAIL_FUNCTION_URL),
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        },
+      )
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok")
+      }
+
+      setIsSuccess(true)
+    } catch (error) {
+      showErrorMessage(error)
+      console.error(error)
+    } finally {
+      setIsLoading(false)
+      // ;(event.target as HTMLFormElement).reset()
+    }
+  }
+
   return (
     <div className="my-6">
       <div className="mb-12 text-center">
         <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          <FormattedMessage id="contact.title" />
+          {translated.title}
         </h2>
         <p className="mt-4 text-lg leading-6 text-gray-600">
-          <FormattedMessage id="contact.subtitle" />
+          {translated.subtitle}
         </p>
       </div>
       <form
@@ -59,7 +90,7 @@ export const ContactFormFields = ({
       >
         <div>
           <label className={styles.formLabel} htmlFor="name">
-            <FormattedMessage id="contact_form.name.title" />
+            {translated.name.title}
           </label>
           <div className="mt-1" data-test="form-name">
             <input
@@ -78,15 +109,15 @@ export const ContactFormFields = ({
         </div>
         <div>
           <label className={styles.formLabel} htmlFor="language">
-            <FormattedMessage id="contact_form.language.title" />
+            {translated.language}
           </label>
           <div className="mt-1">
             <label className="sr-only" htmlFor="language">
-              <FormattedMessage id="contact_form.language.title" />
+              {translated.language}
             </label>
             <select
               className={styles.formSelect}
-              defaultValue={language}
+              defaultValue={locale}
               disabled={isLoading}
               id="language"
               {...register("language", { required: true })}
@@ -99,7 +130,7 @@ export const ContactFormFields = ({
         </div>
         <div className="sm:col-span-2">
           <label className={styles.formLabel} htmlFor="email">
-            <FormattedMessage id="contact_form.email.title" />
+            {translated.email.title}
           </label>
           <div className="mt-1" data-test="form-email">
             <input
@@ -118,7 +149,7 @@ export const ContactFormFields = ({
         </div>
         <div className="sm:col-span-2">
           <label className={styles.formLabel} htmlFor="message">
-            <FormattedMessage id="contact_form.message.title" />
+            {translated.message.title}
           </label>
           <div className="mt-1" data-test="form-textarea">
             <textarea
@@ -142,7 +173,7 @@ export const ContactFormFields = ({
             disabled={isLoading}
             type="submit"
           >
-            <FormattedMessage id="contact.submit" />
+            {translated.submit}
           </button>
         </div>
       </form>
