@@ -1,18 +1,8 @@
 import { ContainerSection } from "@/components/layout/Containers"
-import { Footer } from "@/components/layout/Footer"
 import { HeaderPage } from "@/components/layout/Headers"
 import { Navbar } from "@/components/layout/Navbar"
 
 export default function PrivacyPolicyPage() {
-  return (
-    <>
-      <PrivacyPolicyHeader />
-      <Footer />
-    </>
-  )
-}
-
-const PrivacyPolicyHeader = () => {
   return (
     <>
       <Navbar />

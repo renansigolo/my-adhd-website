@@ -4,11 +4,9 @@ import { CardSuccess } from "@/components/shared/CardSuccess"
 import { BulletsBackground } from "@/components/shared/ContactFormBgPattern"
 import { Spinner } from "@/components/shared/Spinner"
 import { showErrorMessage } from "@/lib/helpers"
-import { ContactFormFields } from "@/sections/contact/ContactFormFields"
-import { useRouter } from "next/router"
+import { useTranslations } from "next-intl"
 import { FormEvent, useState } from "react"
 import { useForm } from "react-hook-form"
-import { useIntl } from "react-intl"
 
 export type ContactFormSchema = {
   name: string
@@ -18,24 +16,18 @@ export type ContactFormSchema = {
 }
 
 export function Contact() {
-  // Get the current language to pre-define the select language field
-  const router = useRouter()
-  const language = router.locale?.substring(0, 2) || "en"
-
   // Assign add the translated fields to variables
-  const intl = useIntl()
-  const translatedFormValues = (id: string) => ({
-    title: intl.formatMessage({ id: `contact_form.${id}.title` }),
-    placeholder: intl.formatMessage({
-      id: `contact_form.${id}.placeholder`,
-    }),
-    error: intl.formatMessage({ id: `contact_form.${id}.error` }),
-  })
-  const translated = {
-    name: translatedFormValues("name"),
-    email: translatedFormValues("email"),
-    message: translatedFormValues("message"),
-  }
+  const t = useTranslations("HomePage")
+  // const translatedFormValues = (id: string) => ({
+  //   title: t(`contact_form_${id}_title`),
+  //   placeholder: t(`contact_form_${id}_placeholder`),
+  //   error: t(`contact_form_${id}_error`),
+  // })
+  // const translated = {
+  //   name: translatedFormValues("name"),
+  //   email: translatedFormValues("email"),
+  //   message: translatedFormValues("message"),
+  // }
 
   // Config React Hooks Form
   const [isLoading, setIsLoading] = useState(false)
@@ -84,16 +76,17 @@ export function Contact() {
           <BulletsBackground />
           {!isLoading ? (
             !isSuccess ? (
-              <ContactFormFields
-                errors={errors}
-                handleSubmit={handleSubmit}
-                isLoading={isLoading}
-                language={language}
-                register={register}
-                translated={translated}
-                onSubmit={onSubmit}
-              />
+              <p>Render the contact form</p>
             ) : (
+              // <ContactFormFields
+              //   errors={errors}
+              //   handleSubmit={handleSubmit}
+              //   isLoading={isLoading}
+              //   language={language}
+              //   register={register}
+              //   translated={translated}
+              //   onSubmit={onSubmit}
+              // />
               <CardSuccess />
             )
           ) : (

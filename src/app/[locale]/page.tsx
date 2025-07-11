@@ -24,7 +24,7 @@ export default function Home() {
 
         <Divider />
 
-        {/*  <Contact /> */}
+        {/* <Contact /> */}
       </main>
     </>
   )
