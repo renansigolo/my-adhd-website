@@ -1,4 +1,4 @@
-import { ContainerSection } from "@/components/layout/Containers"
+import { ContainerSection } from "@/components/Containers"
 import { useTranslations } from "next-intl"
 
 export function Disclaimer() {

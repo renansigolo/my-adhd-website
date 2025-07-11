@@ -1,6 +1,6 @@
 "use client"
 
-import { ContactFormSchema } from "@/sections/contact/Contact"
+import { ContactFormSchema } from "@/app/[locale]/(home)/Contact"
 import { FormEvent } from "react"
 import { UseFormRegister } from "react-hook-form"
 import { FormattedMessage } from "react-intl"

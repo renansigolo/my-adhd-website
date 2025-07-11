@@ -1,5 +1,5 @@
 import bgHeader from "@/assets/images/backgrounds/bg-header.svg"
-import { LogoOutlinedWithBrandUnderneath } from "@/components/shared/Icons"
+import { LogoOutlinedWithBrandUnderneath } from "@/components/Icons"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
 

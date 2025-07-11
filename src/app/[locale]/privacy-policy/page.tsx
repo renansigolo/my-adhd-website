@@ -1,6 +1,6 @@
-import { ContainerSection } from "@/components/layout/Containers"
-import { HeaderPage } from "@/components/layout/Headers"
-import { Navbar } from "@/components/layout/Navbar"
+import { ContainerSection } from "@/components/Containers"
+import { HeaderPage } from "@/components/Headers"
+import { Navbar } from "@/components/Navbar"
 
 export default function PrivacyPolicyPage() {
   return (

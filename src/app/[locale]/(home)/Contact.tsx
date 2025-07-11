@@ -1,8 +1,8 @@
 "use client"
 
-import { CardSuccess } from "@/components/shared/CardSuccess"
-import { BulletsBackground } from "@/components/shared/ContactFormBgPattern"
-import { Spinner } from "@/components/shared/Spinner"
+import { CardSuccess } from "@/components/CardSuccess"
+import { BulletsBackground } from "@/components/ContactFormBgPattern"
+import { Spinner } from "@/components/Spinner"
 import { showErrorMessage } from "@/lib/helpers"
 import { useTranslations } from "next-intl"
 import { FormEvent, useState } from "react"

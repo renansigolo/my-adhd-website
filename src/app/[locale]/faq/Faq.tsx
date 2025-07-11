@@ -5,7 +5,7 @@ import {
   DisclosurePanel,
 } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/24/outline"
-import { FormattedMessage } from "react-intl"
+import { useTranslations } from "next-intl"
 
 type FaqProps = {
   faqs: {
@@ -15,15 +15,14 @@ type FaqProps = {
 }
 
 export function Faq(props: FaqProps) {
+  const t = useTranslations("HomePage")
+
   return (
     <div className="bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto max-w-3xl divide-y-2 divide-gray-200">
           <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            <FormattedMessage
-              defaultMessage={"Frequently asked questions"}
-              id={"faq.title"}
-            />
+            {t("faq_title")}
           </h2>
           <dl className="mt-6 space-y-6 divide-y divide-gray-200">
             {props.faqs.map((faq, index) => (

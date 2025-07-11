@@ -1,4 +1,4 @@
-import { Footer } from "@/components/layout/Footer"
+import { Footer } from "@/components/Footer"
 import { routing } from "@/i18n/routing"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"

@@ -1,10 +1,11 @@
-import { Banner } from "@/components/layout/Banner"
+import { Contact } from "@/app/[locale]/(home)/Contact"
+import { Disclaimer } from "@/app/[locale]/(home)/Disclaimer"
+import { Download } from "@/app/[locale]/(home)/Download"
+import { Hero } from "@/app/[locale]/(home)/Hero"
+import { Highlights } from "@/app/[locale]/(home)/Highlights"
+import { Banner } from "@/components/Banner"
+import { Divider } from "@/components/Divider"
 import { Metatags } from "@/components/Metatags"
-import { Divider } from "@/components/shared/Divider"
-import { Disclaimer } from "@/sections/home/Disclaimer"
-import { Download } from "@/sections/home/Download"
-import { Hero } from "@/sections/home/Hero"
-import { Highlights } from "@/sections/home/Highlights"
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
 
         <Divider />
 
-        {/* <Contact /> */}
+        <Contact />
       </main>
     </>
   )
