@@ -1,9 +1,9 @@
 "use client"
 
 import { ContactFormSchema } from "@/app/[locale]/(home)/Contact"
+import { CardSuccess } from "@/components/CardSuccess"
 import { showErrorMessage } from "@/lib/helpers"
 import { Locale } from "next-intl"
-import { useState } from "react"
 import { useForm } from "react-hook-form"
 
 const styles = {
@@ -33,20 +33,17 @@ type ContactFormProps = {
 /** Render the ContactForm fields */
 export const ContactForm = ({ locale, translated }: ContactFormProps) => {
   // Config React Hooks Form
-  const [isLoading, setIsLoading] = useState(false)
-  const [isSuccess, setIsSuccess] = useState(false)
   const {
     register,
-    formState: { errors },
+    formState: { errors, isSubmitting, isSubmitSuccessful, isSubmitted },
     handleSubmit,
+    reset,
   } = useForm<ContactFormSchema>()
 
   const onSubmit = async (
     data: ContactFormSchema,
     // event: FormEvent<HTMLFormElement>,
   ) => {
-    setIsLoading(true)
-
     // Send a POST request to Firebase Cloud Function
     try {
       const response = await fetch(
@@ -61,13 +58,11 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
       if (!response.ok) {
         throw new Error("Network response was not ok")
       }
-
-      setIsSuccess(true)
     } catch (error) {
       showErrorMessage(error)
       console.error(error)
     } finally {
-      setIsLoading(false)
+      reset()
       // ;(event.target as HTMLFormElement).reset()
     }
   }
@@ -86,7 +81,7 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset
           className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
-          disabled={isLoading}
+          disabled={isSubmitting}
         >
           <div>
             <label className={styles.formLabel} htmlFor="name">
@@ -96,7 +91,6 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
               <input
                 autoComplete="given-name"
                 className={styles.formField}
-                disabled={isLoading}
                 id="name"
                 placeholder={translated.name.placeholder}
                 type="text"
@@ -119,7 +113,6 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
               <select
                 className={styles.formSelect}
                 defaultValue={locale}
-                disabled={isLoading}
                 id="language"
                 {...register("language", { required: true })}
               >
@@ -138,7 +131,6 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
               <input
                 autoComplete="email"
                 className={styles.formField}
-                disabled={isLoading}
                 id="email"
                 placeholder={translated.email.placeholder}
                 type="email"
@@ -158,7 +150,6 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
               <textarea
                 className={styles.formField}
                 defaultValue={""}
-                disabled={isLoading}
                 id="message"
                 placeholder={translated.message.placeholder}
                 rows={4}
@@ -171,16 +162,14 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
           </div>
 
           <div className="sm:col-span-2">
-            <button
-              className={styles.btnSubmit}
-              disabled={isLoading}
-              type="submit"
-            >
+            <button className={styles.btnSubmit} type="submit">
               {translated.submit}
             </button>
           </div>
         </fieldset>
       </form>
+
+      {isSubmitSuccessful && <CardSuccess />}
     </div>
   )
 }

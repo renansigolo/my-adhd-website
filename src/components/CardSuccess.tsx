@@ -15,11 +15,11 @@ export function CardSuccess() {
         </div>
         <div className="mt-3 text-center sm:mt-5">
           <h3 className="text-lg leading-6 font-medium text-gray-900">
-            {t("contact_form.success.title")}
+            {t("contact_form_success_title")}
           </h3>
           <div className="mt-2">
             <p className="text-sm text-gray-500">
-              {t("contact_form.success.description")}
+              {t("contact_form_success_description")}
             </p>
           </div>
         </div>
