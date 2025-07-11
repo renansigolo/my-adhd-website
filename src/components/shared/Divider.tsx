@@ -1,12 +1,11 @@
 import { classNames } from "@/lib/helpers"
 
-/**
- * Divider with optional label
- * @param {Object} props
- * @param {string=} props.width
- * @param {string=} props.text
- */
-export function Divider({ width = "full", text }) {
+type DividerProps = {
+  width?: string
+  text?: string
+}
+/** Divider with optional label */
+export function Divider({ width = "full", text }: DividerProps) {
   return (
     <div className="relative">
       {width && (
@@ -16,7 +15,7 @@ export function Divider({ width = "full", text }) {
         >
           <div
             className={classNames(
-              width ? `w-${width}` : null,
+              width ? `w-${width}` : "",
               "border-t border-gray-300",
             )}
           />

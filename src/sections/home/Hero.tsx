@@ -1,5 +1,5 @@
+import bgHeader from "@/assets/images/backgrounds/bg-header.svg"
 import { LogoOutlinedWithBrandUnderneath } from "@/components/shared/Icons"
-import bgHeader from "@/images/backgrounds/bg-header.svg"
 import Image from "next/image"
 import { FormattedMessage } from "react-intl"
 

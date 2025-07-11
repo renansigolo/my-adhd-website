@@ -7,7 +7,14 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/24/outline"
 import { FormattedMessage } from "react-intl"
 
-export function Faq(props) {
+type FaqProps = {
+  faqs: {
+    title: string
+    description: string
+  }[]
+}
+
+export function Faq(props: FaqProps) {
   return (
     <div className="bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">

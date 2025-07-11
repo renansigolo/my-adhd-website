@@ -4,7 +4,7 @@ import { handleSignIn } from "@/lib/auth"
 import { faApple, faGoogle } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export default function SignIn() {
+export default function SignInPage() {
   return (
     <>
       <Navbar />

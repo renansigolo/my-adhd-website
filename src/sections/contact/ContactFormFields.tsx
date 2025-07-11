@@ -1,3 +1,6 @@
+import { ContactFormSchema } from "@/sections/contact/Contact"
+import { FormEvent } from "react"
+import { UseFormRegister } from "react-hook-form"
 import { FormattedMessage } from "react-intl"
 
 const styles = {
@@ -11,6 +14,23 @@ const styles = {
     "inline-flex w-full items-center justify-center rounded-md border border-transparent bg-pink-600 px-6 py-3 text-base font-medium text-white shadow-xs hover:bg-pink-700 hover:cursor-pointer focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:outline-hidden",
 }
 
+type ContactFormFieldsProps = {
+  language: string
+  translated: {
+    name: { placeholder: string; error: string }
+    email: { placeholder: string; error: string }
+    message: { placeholder: string; error: string }
+  }
+  register: UseFormRegister<ContactFormSchema>
+  onSubmit: (
+    data: ContactFormSchema,
+    event: FormEvent<HTMLFormElement>,
+  ) => Promise<void>
+  handleSubmit: any
+  isLoading: boolean
+  errors: Record<string, any>
+}
+
 /** Render the ContactForm fields */
 export const ContactFormFields = ({
   language,
@@ -20,7 +40,7 @@ export const ContactFormFields = ({
   handleSubmit,
   isLoading,
   errors,
-}) => {
+}: ContactFormFieldsProps) => {
   return (
     <div className="my-6">
       <div className="mb-12 text-center">
@@ -45,7 +65,6 @@ export const ContactFormFields = ({
               className={styles.formField}
               disabled={isLoading}
               id="name"
-              name="name"
               placeholder={translated.name.placeholder}
               type="text"
               {...register("name", { required: true })}
@@ -68,7 +87,6 @@ export const ContactFormFields = ({
               defaultValue={language}
               disabled={isLoading}
               id="language"
-              name="language"
               {...register("language", { required: true })}
             >
               <option value="en">English</option>
@@ -87,7 +105,6 @@ export const ContactFormFields = ({
               className={styles.formField}
               disabled={isLoading}
               id="email"
-              name="email"
               placeholder={translated.email.placeholder}
               type="email"
               {...register("email", { required: true })}
@@ -107,7 +124,6 @@ export const ContactFormFields = ({
               defaultValue={""}
               disabled={isLoading}
               id="message"
-              name="message"
               placeholder={translated.message.placeholder}
               rows={4}
               {...register("message", { required: true, minLength: 20 })}
@@ -117,31 +133,6 @@ export const ContactFormFields = ({
             )}
           </div>
         </div>
-        {/* <div className="sm:col-span-2">
-          <div className="ml-3 flex items-start">
-            <p className="text-base text-gray-500">
-              This site is protected by reCAPTCHA and the Google{" "}
-              <a
-                href="https://policies.google.com/privacy"
-                className="font-medium text-gray-700 underline"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Privacy Policy
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://policies.google.com/terms"
-                className="font-medium text-gray-700 underline"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Terms of Service
-              </a>{" "}
-              apply.
-            </p>
-          </div>
-        </div> */}
 
         <div className="sm:col-span-2">
           <button

@@ -1,12 +1,9 @@
 import * as gtag from "@/lib/google-analytics"
-// import { doc, getFirestore, onSnapshot } from "firebase/firestore"
 import English from "@/locale/en.json"
 import Spanish from "@/locale/es.json"
 import Portuguese from "@/locale/pt.json"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
-// import { useAuthState } from "react-firebase-hooks/auth"
-// import { auth } from "./firebase"
 
 const languages = {
   en: English,
@@ -17,10 +14,12 @@ const languages = {
 export const useUserLocale = () => {
   const router = useRouter()
   const { locale, defaultLocale } = router
-  const messages = languages[locale.substring(0, 2)]
+  const shortLocale = (locale?.substring(0, 2) ||
+    "en") as keyof typeof languages
+  const messages = languages[shortLocale]
 
   useEffect(() => {
-    const handleRouteChange = (/** @type {string} */ url) => {
+    const handleRouteChange = (url: string) => {
       gtag.pageview(url)
     }
     router.events.on("routeChangeComplete", handleRouteChange)
@@ -33,26 +32,3 @@ export const useUserLocale = () => {
 
   return { locale, defaultLocale, messages }
 }
-
-// export function useUserData() {
-//   const [user] = useAuthState(auth)
-//   const [username, setUsername] = useState(null)
-
-//   useEffect(() => {
-//     // turn off realtime subscription
-//     let unsubscribe
-
-//     if (user) {
-//       const ref = doc(getFirestore(), "users", user.uid)
-//       unsubscribe = onSnapshot(ref, (doc) => {
-//         setUsername(doc.data()?.username)
-//       })
-//     } else {
-//       setUsername(null)
-//     }
-
-//     return unsubscribe
-//   }, [user])
-
-//   return { user, username }
-// }

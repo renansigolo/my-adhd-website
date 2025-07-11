@@ -1,9 +1,12 @@
+import LearnImage from "@/assets/images/highlight/learn.png"
+import WhatImage from "@/assets/images/highlight/what.png"
 import {
   faChalkboardTeacher,
   faGrinStars,
   faStethoscope,
 } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Image from "next/image"
 import { FormattedMessage } from "react-intl"
 
 const cards = [
@@ -96,7 +99,10 @@ const BulletsMobile = () => {
   )
 }
 
-const Bullets = (props) => {
+type BulletsProps = {
+  position: "left" | "right"
+}
+const Bullets = (props: BulletsProps) => {
   // Adjust the classed to match the side of the screen
   const left = "right-full translate-x-1/2 translate-y-12"
   const right = "left-full -translate-x-1/2 -translate-y-1/4"
@@ -164,12 +170,10 @@ export function Highlights() {
               className="relative mx-auto mt-10 w-80 text-center lg:mt-0"
             >
               <BulletsMobile />
-              <img
+              <Image
                 alt="iPhone Portrait"
                 className="relative mx-auto"
-                height={812}
-                src="images/highlight/learn.webp"
-                width={420}
+                src={LearnImage}
               />
             </div>
           </div>
@@ -192,12 +196,10 @@ export function Highlights() {
 
               <div className="relative mx-auto mt-10 w-80 text-center lg:col-start-1 lg:mt-0">
                 <BulletsMobile />
-                <img
+                <Image
                   alt="iPhone Portrait"
                   className="relative mx-auto"
-                  height={812}
-                  src="images/highlight/what.webp"
-                  width={420}
+                  src={WhatImage}
                 />
               </div>
             </div>

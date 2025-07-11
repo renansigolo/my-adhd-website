@@ -1,13 +1,20 @@
 import { HomeIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
+import { ReactNode } from "react"
 import { FormattedMessage } from "react-intl"
 
+type HeaderPageProps = {
+  id: string
+  title: string
+  subTitle?: string
+  children?: ReactNode | null
+}
 export const HeaderPage = ({
-  id = "sectionId",
-  title = null,
-  subTitle = null,
+  id,
+  title,
+  subTitle,
   children = null,
-}) => {
+}: HeaderPageProps) => {
   return (
     <>
       {/* Section Header */}
@@ -33,10 +40,15 @@ export const HeaderButton = () => {
   )
 }
 
-export const HeaderSection = ({ id = "sectionId", title, subTitle }) => {
+type HeaderSectionProps = {
+  id: string
+  title: string
+  subTitle?: string
+}
+export const HeaderSection = ({ id, title, subTitle }: HeaderSectionProps) => {
   return (
     <>
-      {id && title && (
+      {title && (
         <h2 className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
           <span className="block">
             <FormattedMessage defaultMessage={title} id={`${id}.title`} />
@@ -44,7 +56,7 @@ export const HeaderSection = ({ id = "sectionId", title, subTitle }) => {
         </h2>
       )}
 
-      {id && subTitle && (
+      {subTitle && (
         <p className="mb-8 text-lg leading-6 text-gray-900">
           <FormattedMessage defaultMessage={subTitle} id={`${id}.subtitle`} />
         </p>

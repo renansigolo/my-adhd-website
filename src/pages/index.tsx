@@ -14,7 +14,6 @@ export default function Home() {
     <>
       <Metatags />
 
-      {/* <Navbar /> */}
       <Banner />
 
       <main>

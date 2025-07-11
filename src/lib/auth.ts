@@ -6,7 +6,8 @@ import {
 } from "firebase/auth"
 import { auth } from "./firebase"
 
-export const handleSignIn = async (providerName) => {
+type HandleSingInProps = "apple" | "google"
+export const handleSignIn = async (providerName: HandleSingInProps) => {
   providerName === "google" ? googleSignIn() : appleSignIn()
 
   // await signInWithPopup(auth, provider)

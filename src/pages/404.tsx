@@ -1,9 +1,9 @@
-import ConfusedFace from "@/images/stickers/63-confused-face.svg"
+import ConfusedFace from "@/assets/images/stickers/63-confused-face.svg"
 import Image from "next/image"
 import Link from "next/link"
 import { FormattedMessage } from "react-intl"
 
-export default function Custom404() {
+export default function Custom404Page() {
   return (
     <div className="flex min-h-full flex-col bg-white pt-16 pb-12">
       <main className="mx-auto flex w-full max-w-7xl grow flex-col justify-center px-4 sm:px-6 lg:px-8">
@@ -60,7 +60,8 @@ export default function Custom404() {
           />
           <Link
             className="text-sm font-medium text-gray-500 hover:text-gray-600"
-            href="#"
+            href="https://instagram.com/myadhdapp"
+            target="_blank"
           >
             Instagram
           </Link>
@@ -70,7 +71,8 @@ export default function Custom404() {
           />
           <Link
             className="text-sm font-medium text-gray-500 hover:text-gray-600"
-            href="#"
+            href="https://facebook.com/myadhdapp"
+            target="_blank"
           >
             Facebook
           </Link>

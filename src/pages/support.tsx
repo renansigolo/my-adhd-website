@@ -4,18 +4,23 @@ import { HeaderPage } from "@/components/layout/Headers"
 import { Navbar } from "@/components/layout/Navbar"
 import { getDocumentsIntl } from "@/lib/firebase"
 import { Faq } from "@/sections/support/Faq"
+import { GetStaticProps, InferGetStaticPropsType } from "next"
 
-export async function getStaticProps({ locale }) {
-  const faqList = await getDocumentsIntl("faq", locale)
+export const getStaticProps = (async ({ locale }) => {
+  const faqList = await getDocumentsIntl("faq", locale || "en")
 
   return {
     props: {
       faqs: faqList,
     },
   }
-}
+}) satisfies GetStaticProps<{
+  faqs: any[]
+}>
 
-export default function Support({ faqs }) {
+export default function SupportPage({
+  faqs,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <Navbar />

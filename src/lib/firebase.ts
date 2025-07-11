@@ -58,7 +58,10 @@ export const db = getFirestore(firebaseApp)
  * @param {string} locale - a two-letter language code
  * @returns documents in the collection
  */
-export async function getDocumentsIntl(collectionTitle, locale) {
+export async function getDocumentsIntl(
+  collectionTitle: string,
+  locale: string,
+) {
   const languagePath = `i18n.${locale.slice(0, 2)}`
   const collectionRef = collection(db, collectionTitle)
   const collectionQuery = query(collectionRef, where(languagePath, "!=", null))

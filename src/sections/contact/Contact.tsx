@@ -1,31 +1,38 @@
 import { CardSuccess } from "@/components/shared/CardSuccess"
 import { BulletsBackground } from "@/components/shared/ContactFormBgPattern"
 import { Spinner } from "@/components/shared/Spinner"
+import { showErrorMessage } from "@/lib/helpers"
 import { ContactFormFields } from "@/sections/contact/ContactFormFields"
 import { useRouter } from "next/router"
-import { useState } from "react"
+import { FormEvent, useState } from "react"
 import { useForm } from "react-hook-form"
-import toast from "react-hot-toast"
 import { useIntl } from "react-intl"
+
+export type ContactFormSchema = {
+  name: string
+  email: string
+  message: string
+  language: "en" | "es" | "pt"
+}
 
 export function Contact() {
   // Get the current language to pre-define the select language field
   const router = useRouter()
-  const language = router.locale.substring(0, 2)
+  const language = router.locale?.substring(0, 2) || "en"
 
   // Assign add the translated fields to variables
   const intl = useIntl()
-  function translatedFormValues(id) {
-    this.title = intl.formatMessage({ id: `contact.form.${id}.title` })
-    this.placeholder = intl.formatMessage({
+  const translatedFormValues = (id: string) => ({
+    title: intl.formatMessage({ id: `contact.form.${id}.title` }),
+    placeholder: intl.formatMessage({
       id: `contact.form.${id}.placeholder`,
-    })
-    this.error = intl.formatMessage({ id: `contact.form.${id}.error` })
-  }
+    }),
+    error: intl.formatMessage({ id: `contact.form.${id}.error` }),
+  })
   const translated = {
-    name: Object(new translatedFormValues("name")),
-    email: Object(new translatedFormValues("email")),
-    message: Object(new translatedFormValues("message")),
+    name: translatedFormValues("name"),
+    email: translatedFormValues("email"),
+    message: translatedFormValues("message"),
   }
 
   // Config React Hooks Form
@@ -35,15 +42,18 @@ export function Contact() {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm()
+  } = useForm<ContactFormSchema>()
 
-  const onSubmit = async (data, event) => {
+  const onSubmit = async (
+    data: ContactFormSchema,
+    event: FormEvent<HTMLFormElement>,
+  ) => {
     setIsLoading(true)
 
     // Send a POST request to Firebase Cloud Function
     try {
       const response = await fetch(
-        process.env.NEXT_PUBLIC_FIREBASE_EMAIL_FUNCTION_URL,
+        String(process.env.NEXT_PUBLIC_FIREBASE_EMAIL_FUNCTION_URL),
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -57,13 +67,11 @@ export function Contact() {
 
       setIsSuccess(true)
     } catch (error) {
-      toast.error(
-        error.message || intl.formatMessage({ id: `contact.form.error` }),
-      )
+      showErrorMessage(error)
       console.error(error)
     } finally {
       setIsLoading(false)
-      event.target.reset()
+      ;(event.target as HTMLFormElement).reset()
     }
   }
 

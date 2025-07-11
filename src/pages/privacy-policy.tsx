@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer"
 import { HeaderPage } from "@/components/layout/Headers"
 import { Navbar } from "@/components/layout/Navbar"
 
-export default function PrivacyPolicy() {
+export default function PrivacyPolicyPage() {
   return (
     <>
       <PrivacyPolicyHeader />
