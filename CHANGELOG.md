@@ -1,3 +1,10 @@
+## [3.10.2](https://github.com/renansigolo/my-adhd-website/compare/v3.10.1...v3.10.2) (2025-07-14)
+
+
+### Bug Fixes
+
+* app description ([3acaf6e](https://github.com/renansigolo/my-adhd-website/commit/3acaf6ed7d2e1621bfeacb70fcaa389d222b982a))
+
 ## [3.10.1](https://github.com/renansigolo/my-adhd-website/compare/v3.10.0...v3.10.1) (2025-07-14)
 
 
