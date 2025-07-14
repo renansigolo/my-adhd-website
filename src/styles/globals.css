@@ -27,9 +27,9 @@ body,
 }
 
 /* Hide Google reCaptcha */
-.grecaptcha-badge {
+/* .grecaptcha-badge {
   visibility: hidden;
-}
+} */
 
 /* Loader */
 .spinner {

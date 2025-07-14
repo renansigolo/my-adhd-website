@@ -8,7 +8,9 @@ export default function PrivacyPolicyPage() {
       <Navbar />
       <Container>
         <HeaderPage id="privacy-policy" title="Privacy Policy">
-          {<PrivacyPolicyContent />}
+          <main>
+            <PrivacyPolicyContent />
+          </main>
         </HeaderPage>
       </Container>
     </>

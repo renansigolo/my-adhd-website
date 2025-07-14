@@ -155,7 +155,7 @@ export function Highlights() {
   return (
     <section id="features">
       <div className="overflow-hidden bg-gray-50 py-12 lg:py-24">
-        <div className="relative mx-auto max-w-xl px-4 sm:px-6 md:max-w-7xl lg:px-8">
+        <div className="relative mx-auto sm:px-6 md:max-w-7xl lg:px-8">
           <Bullets position="right" />
 
           {/* Highlight 0 */}

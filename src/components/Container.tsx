@@ -11,7 +11,7 @@ export const Container = ({ children, center = false }: ContainerProps) => {
     <div
       className={classNames(
         center ? "text-center" : "",
-        "mx-auto max-w-xl px-4 py-12 sm:px-6 md:max-w-7xl lg:px-8 lg:py-24",
+        "container mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-24",
       )}
     >
       {children}
