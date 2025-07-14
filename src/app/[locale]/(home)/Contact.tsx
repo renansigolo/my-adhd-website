@@ -8,7 +8,7 @@ export type ContactFormSchema = {
   name: string
   email: string
   message: string
-  language: "en" | "es" | "pt"
+  language: "en" | "es" | "pt" | string
 }
 
 export function Contact() {

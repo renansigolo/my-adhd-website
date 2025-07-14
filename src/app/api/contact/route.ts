@@ -1,9 +1,9 @@
+import { ContactFormSchema } from "@/app/[locale]/(home)/Contact"
 import {
   SendEmailCommand,
   SendEmailCommandInput,
   SESv2Client,
 } from "@aws-sdk/client-sesv2"
-import { Locale } from "next-intl"
 
 const sesClient = new SESv2Client({
   region: process.env.AWS_REGION,
@@ -13,7 +13,9 @@ const sesClient = new SESv2Client({
   },
 })
 
-function mapLanguageCodeToName(languageCode: Locale) {
+function mapLanguageCodeToName(
+  languageCode: ContactFormSchema["language"],
+): string {
   switch (languageCode) {
     case "es":
       return "Spanish"
@@ -27,7 +29,7 @@ function mapLanguageCodeToName(languageCode: Locale) {
 }
 
 export async function POST(request: Request) {
-  const body = await request.json()
+  const body: ContactFormSchema = await request.json()
 
   body.language = mapLanguageCodeToName(body.language)
 
