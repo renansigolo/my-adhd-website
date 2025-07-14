@@ -34,6 +34,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
+    "@aws-sdk/client-sesv2": "^3.844.0",
     "@fortawesome/fontawesome-svg-core": "6.7.2",
     "@fortawesome/free-brands-svg-icons": "6.7.2",
     "@fortawesome/free-solid-svg-icons": "6.7.2",

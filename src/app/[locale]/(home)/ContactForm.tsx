@@ -2,8 +2,10 @@
 
 import { ContactFormSchema } from "@/app/[locale]/(home)/Contact"
 import { CardSuccess } from "@/components/CardSuccess"
+import { Spinner } from "@/components/Spinner"
 import { showErrorMessage } from "@/lib/helpers"
 import { Locale } from "next-intl"
+import { useState } from "react"
 import { useForm } from "react-hook-form"
 
 const styles = {
@@ -32,38 +34,39 @@ type ContactFormProps = {
 
 /** Render the ContactForm fields */
 export const ContactForm = ({ locale, translated }: ContactFormProps) => {
+  const [isSuccess, setIsSuccess] = useState(false)
   // Config React Hooks Form
   const {
     register,
-    formState: { errors, isSubmitting, isSubmitSuccessful, isSubmitted },
+    formState: { errors, isSubmitting },
     handleSubmit,
     reset,
-  } = useForm<ContactFormSchema>()
+  } = useForm<ContactFormSchema>({
+    defaultValues: {
+      name: "",
+      email: "",
+      language: "en",
+      message: "",
+    },
+  })
 
-  const onSubmit = async (
-    data: ContactFormSchema,
-    // event: FormEvent<HTMLFormElement>,
-  ) => {
+  const onSubmit = async (data: ContactFormSchema) => {
     // Send a POST request to Firebase Cloud Function
     try {
-      const response = await fetch(
-        String(process.env.NEXT_PUBLIC_FIREBASE_EMAIL_FUNCTION_URL),
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        },
-      )
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
 
       if (!response.ok) {
         throw new Error("Network response was not ok")
       }
+
+      setIsSuccess(true)
+      reset()
     } catch (error) {
       showErrorMessage(error)
-      console.error(error)
-    } finally {
-      reset()
-      // ;(event.target as HTMLFormElement).reset()
     }
   }
 
@@ -78,98 +81,110 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <fieldset
-          className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
-          disabled={isSubmitting}
-        >
-          <div>
-            <label className={styles.formLabel} htmlFor="name">
-              {translated.name.title}
-            </label>
-            <div className="mt-1" data-test="form-name">
-              <input
-                autoComplete="given-name"
-                className={styles.formField}
-                id="name"
-                placeholder={translated.name.placeholder}
-                type="text"
-                {...register("name", { required: true })}
-              />
-              {errors.name && (
-                <p className={styles.errorLabel}>{translated.name.error}</p>
-              )}
-            </div>
-          </div>
+      {!isSubmitting ? (
+        !isSuccess ? (
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <fieldset
+              className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+              disabled={isSubmitting}
+            >
+              <div>
+                <label className={styles.formLabel} htmlFor="name">
+                  {translated.name.title}
+                </label>
+                <div className="mt-1" data-test="form-name">
+                  <input
+                    autoComplete="given-name"
+                    className={styles.formField}
+                    id="name"
+                    placeholder={translated.name.placeholder}
+                    type="text"
+                    {...register("name", { required: true })}
+                  />
+                  {errors.name && (
+                    <p className={styles.errorLabel}>{translated.name.error}</p>
+                  )}
+                </div>
+              </div>
 
-          <div>
-            <label className={styles.formLabel} htmlFor="language">
-              {translated.language}
-            </label>
-            <div className="mt-1">
-              <label className="sr-only" htmlFor="language">
-                {translated.language}
-              </label>
-              <select
-                className={styles.formSelect}
-                defaultValue={locale}
-                id="language"
-                {...register("language", { required: true })}
-              >
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="pt">Português</option>
-              </select>
-            </div>
-          </div>
+              <div>
+                <label className={styles.formLabel} htmlFor="language">
+                  {translated.language}
+                </label>
+                <div className="mt-1">
+                  <label className="sr-only" htmlFor="language">
+                    {translated.language}
+                  </label>
+                  <select
+                    className={styles.formSelect}
+                    defaultValue={locale}
+                    id="language"
+                    {...register("language", { required: true })}
+                  >
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                  </select>
+                </div>
+              </div>
 
-          <div className="sm:col-span-2">
-            <label className={styles.formLabel} htmlFor="email">
-              {translated.email.title}
-            </label>
-            <div className="mt-1" data-test="form-email">
-              <input
-                autoComplete="email"
-                className={styles.formField}
-                id="email"
-                placeholder={translated.email.placeholder}
-                type="email"
-                {...register("email", { required: true })}
-              />
-              {errors.email && (
-                <p className={styles.errorLabel}>{translated.email.error}</p>
-              )}
-            </div>
-          </div>
+              <div className="sm:col-span-2">
+                <label className={styles.formLabel} htmlFor="email">
+                  {translated.email.title}
+                </label>
+                <div className="mt-1" data-test="form-email">
+                  <input
+                    autoComplete="email"
+                    className={styles.formField}
+                    id="email"
+                    placeholder={translated.email.placeholder}
+                    type="email"
+                    {...register("email", { required: true })}
+                  />
+                  {errors.email && (
+                    <p className={styles.errorLabel}>
+                      {translated.email.error}
+                    </p>
+                  )}
+                </div>
+              </div>
 
-          <div className="sm:col-span-2">
-            <label className={styles.formLabel} htmlFor="message">
-              {translated.message.title}
-            </label>
-            <div className="mt-1" data-test="form-textarea">
-              <textarea
-                className={styles.formField}
-                defaultValue={""}
-                id="message"
-                placeholder={translated.message.placeholder}
-                rows={4}
-                {...register("message", { required: true, minLength: 20 })}
-              />
-              {errors.message && (
-                <p className={styles.errorLabel}>{translated.message.error}</p>
-              )}
-            </div>
-          </div>
+              <div className="sm:col-span-2">
+                <label className={styles.formLabel} htmlFor="message">
+                  {translated.message.title}
+                </label>
+                <div className="mt-1" data-test="form-textarea">
+                  <textarea
+                    className={styles.formField}
+                    defaultValue={""}
+                    id="message"
+                    placeholder={translated.message.placeholder}
+                    rows={4}
+                    {...register("message", { required: true, minLength: 20 })}
+                  />
+                  {errors.message && (
+                    <p className={styles.errorLabel}>
+                      {translated.message.error}
+                    </p>
+                  )}
+                </div>
+              </div>
 
-          <div className="sm:col-span-2">
-            <button className={styles.btnSubmit} type="submit">
-              {translated.submit}
-            </button>
-          </div>
-        </fieldset>
-      </form>
-
-      {isSubmitSuccessful && <CardSuccess />}
+              <div className="sm:col-span-2">
+                <button className={styles.btnSubmit} type="submit">
+                  {translated.submit}
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        ) : (
+          <CardSuccess />
+        )
+      ) : (
+        <div className="grid h-96 place-items-center">
+          <Spinner show />
+        </div>
+      )}
     </div>
   )
 }
