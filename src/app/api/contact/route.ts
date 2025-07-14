@@ -1,9 +1,10 @@
-import { ContactFormSchema } from "@/app/[locale]/(home)/Contact"
+import { contactFormSchema, ContactFormSchema } from "@/lib/types"
 import {
   SendEmailCommand,
   SendEmailCommandInput,
   SESv2Client,
 } from "@aws-sdk/client-sesv2"
+import z from "zod/v4"
 
 const sesClient = new SESv2Client({
   region: process.env.AWS_REGION,
@@ -31,28 +32,42 @@ function mapLanguageCodeToName(
 export async function POST(request: Request) {
   const body: ContactFormSchema = await request.json()
 
-  body.language = mapLanguageCodeToName(body.language)
+  // Validate the request body against the schema
+  const { success, error, data } = contactFormSchema.safeParse(body)
+  if (!success) {
+    const flattened = z.flattenError(error)
 
-  const emailText = `New message from My ADHD Website!\n\nName: ${body.name}\nEmail: ${body.email}\nLanguage: ${body.language}\nMessage: ${body.message}`
+    return new Response(
+      JSON.stringify({
+        success: false,
+        message: error.message,
+        errors: flattened.fieldErrors,
+      }),
+      { status: 400 },
+    )
+  }
 
+  data.language = mapLanguageCodeToName(data.language)
+
+  const emailText = `New message from My ADHD Website!\n\nName: ${data.name}\nEmail: ${data.email}\nLanguage: ${data.language}\nMessage: ${data.message}`
   const emailHtml = `
   <h2>New message from My ADHD Website!</h2>
-  <p><b>Name: </b>${body.name}</p>
-  <p><b>Email: </b>${body.email}</p>
-  <p><b>Language: </b>${body.language}</p>
-  <p><b>Message: </b>${body.message}</p>
+  <p><b>Name: </b>${data.name}</p>
+  <p><b>Email: </b>${data.email}</p>
+  <p><b>Language: </b>${data.language}</p>
+  <p><b>Message: </b>${data.message}</p>
   `
 
   const mailOptions: SendEmailCommandInput = {
     FromEmailAddress: "noreply@myadhd.app",
-    ReplyToAddresses: [body.email],
+    ReplyToAddresses: [data.email],
     Destination: {
       ToAddresses: ["renan.sigolo@gmail.com"],
     },
     Content: {
       Simple: {
         Subject: {
-          Data: `My ADHD Website | Contact from ${body.name}`,
+          Data: `My ADHD Website | Contact from ${data.name}`,
           Charset: "UTF-8",
         },
         Body: {
@@ -71,7 +86,7 @@ export async function POST(request: Request) {
 
   try {
     await sesClient.send(new SendEmailCommand(mailOptions))
-    return Response.json({ message: "OK" }, { status: 200 })
+    return Response.json({ success: true }, { status: 200 })
   } catch (error) {
     const message =
       error instanceof Error ? error.message : "Unexpected exception"

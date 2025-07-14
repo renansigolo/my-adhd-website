@@ -4,13 +4,6 @@ import { ContactForm } from "@/app/[locale]/(home)/ContactForm"
 import { BulletsBackground } from "@/components/ContactFormBgPattern"
 import { useLocale, useTranslations } from "next-intl"
 
-export type ContactFormSchema = {
-  name: string
-  email: string
-  message: string
-  language: "en" | "es" | "pt" | string
-}
-
 export function Contact() {
   const locale = useLocale()
 

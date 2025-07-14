@@ -1,9 +1,10 @@
 "use client"
 
-import { ContactFormSchema } from "@/app/[locale]/(home)/Contact"
 import { CardSuccess } from "@/components/CardSuccess"
 import { Spinner } from "@/components/Spinner"
 import { showErrorMessage } from "@/lib/helpers"
+import { ContactFormSchema, contactFormSchema } from "@/lib/types"
+import { zodResolver } from "@hookform/resolvers/zod"
 import { Locale } from "next-intl"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
@@ -40,8 +41,11 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
     register,
     formState: { errors, isValid },
     handleSubmit,
+    setError,
     reset,
-  } = useForm<ContactFormSchema>()
+  } = useForm<ContactFormSchema>({
+    resolver: zodResolver(contactFormSchema),
+  })
 
   const onSubmit = async (data: ContactFormSchema) => {
     setIsSubmitting(true)
@@ -50,7 +54,6 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
       return
     }
 
-    // Send a POST request to Firebase Cloud Function
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -59,7 +62,18 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
       })
 
       if (!response.ok) {
-        throw new Error("Network response was not ok")
+        showErrorMessage(`Error: ${response.status} - ${response.statusText}`)
+
+        const responseData = await response.json()
+        if (responseData.errors) {
+          Object.entries(responseData.errors).forEach(([key, value]) => {
+            setError(key as keyof ContactFormSchema, {
+              type: "root.serverError",
+            })
+          })
+        }
+
+        return
       }
 
       setIsSuccess(true)
@@ -105,7 +119,7 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
                   id="name"
                   placeholder={translated.name.placeholder}
                   type="text"
-                  {...register("name", { required: true })}
+                  {...register("name")}
                 />
                 {errors.name && (
                   <p className={styles.errorLabel}>{translated.name.error}</p>
@@ -125,7 +139,7 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
                   className={styles.formSelect}
                   defaultValue={locale}
                   id="language"
-                  {...register("language", { required: true })}
+                  {...register("language")}
                 >
                   <option value="en">English</option>
                   <option value="es">Español</option>
@@ -145,7 +159,7 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
                   id="email"
                   placeholder={translated.email.placeholder}
                   type="email"
-                  {...register("email", { required: true })}
+                  {...register("email")}
                 />
                 {errors.email && (
                   <p className={styles.errorLabel}>{translated.email.error}</p>
@@ -164,7 +178,7 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
                   id="message"
                   placeholder={translated.message.placeholder}
                   rows={4}
-                  {...register("message", { required: true, minLength: 20 })}
+                  {...register("message")}
                 />
                 {errors.message && (
                   <p className={styles.errorLabel}>
@@ -179,6 +193,10 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
                 {translated.submit}
               </button>
             </div>
+
+            {errors?.root?.serverError.type === 400 && (
+              <p>server response message</p>
+            )}
           </fieldset>
         </form>
       )}
