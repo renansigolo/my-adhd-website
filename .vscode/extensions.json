@@ -4,7 +4,9 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "mikestead.dotenv",
-    "redhat.vscode-yaml"
+    "redhat.vscode-yaml",
+    "lokalise.i18n-ally",
+    "inlang.vs-code-extension"
   ],
   "unwantedRecommendations": []
 }

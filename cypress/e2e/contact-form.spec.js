@@ -15,7 +15,7 @@ context("Contact Form", () => {
     const message = chance.paragraph()
 
     // Setup the Intercept on the Form Submit request
-    cy.intercept("POST", `/sendContactEmail`).as("submitForm")
+    cy.intercept("POST", `/api/contact`).as("submitForm")
 
     // Test title
     cy.contains("Share your comments").should("be.visible")
