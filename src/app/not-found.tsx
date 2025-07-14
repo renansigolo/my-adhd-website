@@ -55,7 +55,7 @@ export default function NotFoundPage() {
                 className="text-sm font-medium text-gray-500 hover:text-gray-600"
                 href="/support"
               >
-                {t("support_title")}
+                {t("404_title")}
               </Link>
               <span
                 aria-hidden="true"
