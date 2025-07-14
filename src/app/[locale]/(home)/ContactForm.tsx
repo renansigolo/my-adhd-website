@@ -35,22 +35,19 @@ type ContactFormProps = {
 /** Render the ContactForm fields */
 export const ContactForm = ({ locale, translated }: ContactFormProps) => {
   const [isSuccess, setIsSuccess] = useState(false)
-  // Config React Hooks Form
   const {
     register,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, isValid },
     handleSubmit,
     reset,
-  } = useForm<ContactFormSchema>({
-    defaultValues: {
-      name: "",
-      email: "",
-      language: "en",
-      message: "",
-    },
-  })
+  } = useForm<ContactFormSchema>()
 
   const onSubmit = async (data: ContactFormSchema) => {
+    if (!isValid) {
+      showErrorMessage("Please fill out all required fields correctly.")
+      return
+    }
+
     // Send a POST request to Firebase Cloud Function
     try {
       const response = await fetch("/api/contact", {
