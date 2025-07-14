@@ -13,7 +13,7 @@ export function Hero() {
           <Image
             priority
             alt="Background My ADHD"
-            className="absolute h-full w-full object-cover"
+            className="absolute size-full object-cover"
             loading="eager"
             quality={100}
             sizes="100vw"
