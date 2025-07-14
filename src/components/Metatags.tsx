@@ -2,7 +2,7 @@ import Head from "next/head"
 
 export function Metatags({
   title = "My ADHD",
-  description = "The first ADHD app with cognitive analysis!",
+  description = "The first ADHD app with cognitive analysis for people with ADHD!",
   image = "https://myadhd.app/favicons/social-banner.svg",
 }) {
   return (

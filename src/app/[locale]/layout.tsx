@@ -26,7 +26,8 @@ export const metadata: Metadata = {
     template: "My ADHD | %s",
   },
   applicationName: "My ADHD",
-  description: "A comprehensive resource for understanding and managing ADHD.",
+  description:
+    "The first ADHD app with cognitive analysis for people with ADHD!",
   authors: { name: "Renan Sigolo", url: "https://renansigolo.com" },
   creator: "Renan Sigolo",
   robots: {
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     title: "My ADHD",
     siteName: "My ADHD",
     description:
-      "A comprehensive resource for understanding and managing ADHD.",
+      "The first ADHD app with cognitive analysis for people with ADHD!",
     url: "https://myadhd.app",
     locale: "en-AU",
     type: "website",
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "My ADHD",
     description:
-      "A comprehensive resource for understanding and managing ADHD.",
+      "The first ADHD app with cognitive analysis for people with ADHD!",
     creator: "@renan_sigolo",
     creatorId: "23168747",
     images: "https://myadhd.app/opengraph-image.jpg",
