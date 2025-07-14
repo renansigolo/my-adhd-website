@@ -1,3 +1,10 @@
+# [3.10.0](https://github.com/renansigolo/my-adhd-website/compare/v3.9.2...v3.10.0) (2025-07-14)
+
+
+### Features
+
+* add zod validation ([00a356d](https://github.com/renansigolo/my-adhd-website/commit/00a356de331dca42795acbd7aa63c8beadc7002a))
+
 ## [3.9.2](https://github.com/renansigolo/my-adhd-website/compare/v3.9.1...v3.9.2) (2024-09-17)
 
 
