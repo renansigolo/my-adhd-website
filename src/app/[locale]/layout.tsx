@@ -78,8 +78,10 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${baloo.variable} font-sans antialiased`}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
-        <Footer />
+        <NextIntlClientProvider>
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
 
         <Analytics />
         <SpeedInsights />

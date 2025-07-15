@@ -62,15 +62,11 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
       })
 
       if (!response.ok) {
-        showErrorMessage(`Error: ${response.status} - ${response.statusText}`)
-
         const responseData = await response.json()
         if (responseData.errors) {
-          Object.entries(responseData.errors).forEach(([key, value]) => {
-            setError(key as keyof ContactFormSchema, {
-              type: "root.serverError",
-            })
-          })
+          for (const errorField of responseData.errors) {
+            setError(errorField, { type: "root.serverError" })
+          }
         }
 
         return

@@ -77,7 +77,7 @@ const PrivacyPolicyContent = () => {
           <li>
             <a
               className="underline"
-              href="https://firebase.google.com/policies/analytics"
+              href="https://www.google.com/analytics/terms/"
               rel="noopener noreferrer"
               target="_blank"
             >

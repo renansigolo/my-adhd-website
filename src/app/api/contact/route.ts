@@ -14,20 +14,11 @@ const sesClient = new SESv2Client({
   },
 })
 
-function mapLanguageCodeToName(
-  languageCode: ContactFormSchema["language"],
-): string {
-  switch (languageCode) {
-    case "es":
-      return "Spanish"
-    case "pt":
-      return "Portuguese"
-    case "en":
-      return "English"
-    default:
-      return "English"
-  }
-}
+const intlDisplayName = (locale: ContactFormSchema["language"]): string =>
+  new Intl.DisplayNames("en", {
+    type: "language",
+    languageDisplay: "standard",
+  }).of(locale) ?? locale
 
 export async function POST(request: Request) {
   const body: ContactFormSchema = await request.json()
@@ -36,18 +27,19 @@ export async function POST(request: Request) {
   const { success, error, data } = contactFormSchema.safeParse(body)
   if (!success) {
     const flattened = z.flattenError(error)
+    const fieldErrorKeys = Object.keys(flattened.fieldErrors)
 
     return new Response(
       JSON.stringify({
         success: false,
         message: error.message,
-        errors: flattened.fieldErrors,
+        errors: fieldErrorKeys,
       }),
       { status: 400 },
     )
   }
 
-  data.language = mapLanguageCodeToName(data.language)
+  data.language = intlDisplayName(data.language)
 
   const emailText = `New message from My ADHD Website!\n\nName: ${data.name}\nEmail: ${data.email}\nLanguage: ${data.language}\nMessage: ${data.message}`
   const emailHtml = `

@@ -1,7 +1,7 @@
 import ConfusedFace from "@/assets/images/stickers/63-confused-face.svg"
+import { Link } from "@/i18n/navigation"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
-import Link from "next/link"
 
 // Render the default Next.js 404 page when a route
 // is requested that doesn't match the middleware and

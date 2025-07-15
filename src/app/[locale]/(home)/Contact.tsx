@@ -1,5 +1,3 @@
-"use client"
-
 import { ContactForm } from "@/app/[locale]/(home)/ContactForm"
 import { BulletsBackground } from "@/components/ContactFormBgPattern"
 import { useLocale, useTranslations } from "next-intl"
@@ -28,12 +26,7 @@ export function Contact() {
       <div className="overflow-hidden bg-gray-100 px-4 py-16 sm:px-6 lg:px-8 lg:py-18">
         <div className="relative mx-auto max-w-xl">
           <BulletsBackground />
-
           <ContactForm locale={locale} translated={translated} />
-
-          {/* <div className="grid h-96 place-items-center">
-              <Spinner show />
-            </div> */}
         </div>
       </div>
     </section>

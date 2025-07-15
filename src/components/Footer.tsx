@@ -1,8 +1,8 @@
+import { Link } from "@/i18n/navigation"
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faHeart } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useTranslations } from "next-intl"
-import Link from "next/link"
 
 const navigation = {
   social: [

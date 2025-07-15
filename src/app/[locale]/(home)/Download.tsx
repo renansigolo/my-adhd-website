@@ -1,10 +1,10 @@
 import { Container } from "@/components/Container"
 import { HeaderSection } from "@/components/Headers"
 import { AppIconSquare } from "@/components/Icons"
+import { Link } from "@/i18n/navigation"
 import { faAppStore, faGooglePlay } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useTranslations } from "next-intl"
-import Link from "next/link"
 
 export function Download() {
   const t = useTranslations("HomePage")
