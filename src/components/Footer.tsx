@@ -47,7 +47,7 @@ export function Footer() {
             {t.rich("footer_title", {
               heartIcon: () => (
                 <FontAwesomeIcon
-                  className="size-4 hover:text-red-500"
+                  className="hover:animate-scale size-4 hover:text-red-500"
                   icon={faHeart}
                 />
               ),

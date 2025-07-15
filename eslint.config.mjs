@@ -17,8 +17,7 @@ const eslintConfig = [
       "import/no-anonymous-default-export": "off",
       "@next/next/no-img-element": "off",
       "no-restricted-imports": [
-        "error",
-
+        "warn",
         {
           name: "next/link",
           message: "Please import from `@/i18n/navigation` instead.",

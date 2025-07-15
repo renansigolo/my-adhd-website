@@ -9,6 +9,8 @@ import { notFound } from "next/navigation"
 import { ReactNode } from "react"
 import { Toaster } from "react-hot-toast"
 
+import "@/app/globals.css"
+
 const baloo = Baloo_2({
   subsets: ["latin"],
   variable: "--font-baloo",
@@ -17,6 +19,7 @@ const baloo = Baloo_2({
 export const viewport: Viewport = {
   themeColor: "#ec4899",
   colorScheme: "light",
+  minimumScale: 1,
 }
 
 export const metadata: Metadata = {
@@ -28,6 +31,7 @@ export const metadata: Metadata = {
   applicationName: "My ADHD",
   description:
     "The first ADHD app with cognitive analysis for people with ADHD!",
+  keywords: ["adhd", "tdah", "diagnostics", "medical", "brain"],
   authors: { name: "Renan Sigolo", url: "https://renansigolo.com" },
   creator: "Renan Sigolo",
   robots: {
@@ -36,7 +40,10 @@ export const metadata: Metadata = {
   },
   appleWebApp: {
     title: "My ADHD",
-    statusBarStyle: "default",
+    statusBarStyle: "black-translucent",
+  },
+  itunes: {
+    appId: "1375236150",
   },
   openGraph: {
     title: "My ADHD",
@@ -63,7 +70,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function RootLayout({
+export default async function AppLayout({
   children,
   params,
 }: {
