@@ -1,9 +1,13 @@
 "use client"
 
+import { sendContactEmail } from "@/app/[locale]/(home)/actions"
+import {
+  ContactFormSchema,
+  contactFormSchema,
+} from "@/app/[locale]/(home)/types"
 import { CardSuccess } from "@/components/CardSuccess"
 import { Spinner } from "@/components/Spinner"
 import { showErrorMessage } from "@/lib/helpers"
-import { ContactFormSchema, contactFormSchema } from "@/lib/types"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Locale } from "next-intl"
 import { useState } from "react"
@@ -12,12 +16,12 @@ import { useForm } from "react-hook-form"
 const styles = {
   formLabel: "block text-sm font-medium text-gray-700",
   formField:
-    "block w-full rounded-md border-gray-300 px-4 py-3 shadow-xs focus:border-purple-500 focus:ring-purple-500",
+    "block w-full rounded-md border-gray-300 px-4 py-3 shadow-xs focus:border-purple-500 focus:ring-purple-500 disabled:bg-gray-200 disabled:text-gray-500 disabled:cursor-not-allowed",
   formSelect:
-    "w-full rounded-md border-gray-300 px-4 py-3 shadow-xs text-gray-500 focus:border-purple-500 focus:ring-purple-500",
+    "w-full rounded-md border-gray-300 px-4 py-3 shadow-xs text-gray-500 focus:border-purple-500 focus:ring-purple-500 disabled:bg-gray-200 disabled:text-gray-500 disabled:cursor-not-allowed",
   errorLabel: "mt-2 ml-2 text-red-900",
   btnSubmit:
-    "inline-flex w-full items-center justify-center rounded-md border border-transparent bg-pink-600 px-6 py-3 text-base font-medium text-white shadow-xs hover:bg-pink-700 hover:cursor-pointer focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:outline-hidden",
+    "inline-flex w-full items-center justify-center rounded-md border border-transparent bg-pink-600 px-6 py-3 text-base font-medium text-white shadow-xs hover:bg-pink-700 hover:cursor-pointer focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:outline-hidden disabled:bg-pink-600/50 disabled:cursor-not-allowed",
 }
 
 type ContactFormProps = {
@@ -33,7 +37,6 @@ type ContactFormProps = {
   }
 }
 
-/** Render the ContactForm fields */
 export const ContactForm = ({ locale, translated }: ContactFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
@@ -48,28 +51,20 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
   })
 
   const onSubmit = async (data: ContactFormSchema) => {
-    setIsSubmitting(true)
     if (!isValid) {
-      showErrorMessage("Please fill out all required fields correctly.")
-      return
+      return showErrorMessage("Please fill out all required fields correctly.")
     }
+    setIsSubmitting(true)
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      })
+      const response = await sendContactEmail(data)
 
-      if (!response.ok) {
-        const responseData = await response.json()
-        if (responseData.errors) {
-          for (const errorField of responseData.errors) {
-            setError(errorField, { type: "root.serverError" })
-          }
+      // Error handling of the server action response
+      if (!response.success && response.errors) {
+        for (const errorField of response.errors) {
+          setError(errorField, { type: "root.serverError" })
         }
-
-        return
+        throw new Error("An error occurred while sending your message.")
       }
 
       setIsSuccess(true)
@@ -189,10 +184,6 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
                 {translated.submit}
               </button>
             </div>
-
-            {errors?.root?.serverError.type === 400 && (
-              <p>server response message</p>
-            )}
           </fieldset>
         </form>
       )}

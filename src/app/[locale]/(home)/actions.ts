@@ -1,10 +1,15 @@
-import { contactFormSchema, ContactFormSchema } from "@/lib/types"
+"use server"
+
+import {
+  contactFormSchema,
+  ContactFormSchema,
+} from "@/app/[locale]/(home)/types"
 import {
   SendEmailCommand,
   SendEmailCommandInput,
   SESv2Client,
 } from "@aws-sdk/client-sesv2"
-import z from "zod/v4"
+import { z } from "zod/v4"
 
 const sesClient = new SESv2Client({
   region: process.env.AWS_REGION,
@@ -20,23 +25,17 @@ const intlDisplayName = (locale: ContactFormSchema["language"]): string =>
     languageDisplay: "standard",
   }).of(locale) ?? locale
 
-export async function POST(request: Request) {
-  const body: ContactFormSchema = await request.json()
-
-  // Validate the request body against the schema
-  const { success, error, data } = contactFormSchema.safeParse(body)
+export async function sendContactEmail(formData: ContactFormSchema) {
+  const { success, error, data } = contactFormSchema.safeParse(formData)
   if (!success) {
     const flattened = z.flattenError(error)
     const fieldErrorKeys = Object.keys(flattened.fieldErrors)
 
-    return new Response(
-      JSON.stringify({
-        success: false,
-        message: error.message,
-        errors: fieldErrorKeys,
-      }),
-      { status: 400 },
-    )
+    return {
+      success: false,
+      message: error.message,
+      errors: fieldErrorKeys as (keyof ContactFormSchema)[],
+    }
   }
 
   data.language = intlDisplayName(data.language)
@@ -50,7 +49,7 @@ export async function POST(request: Request) {
   <p><b>Message: </b>${data.message}</p>
   `
 
-  const mailOptions: SendEmailCommandInput = {
+  const emailInputs: SendEmailCommandInput = {
     FromEmailAddress: "noreply@myadhd.app",
     ReplyToAddresses: [data.email],
     Destination: {
@@ -77,11 +76,18 @@ export async function POST(request: Request) {
   }
 
   try {
-    await sesClient.send(new SendEmailCommand(mailOptions))
-    return Response.json({ success: true }, { status: 200 })
+    const command = new SendEmailCommand(emailInputs)
+    const result = await sesClient.send(command)
+
+    return { success: true, message: result.MessageId }
   } catch (error) {
+    console.error("Error sending email:", error)
     const message =
       error instanceof Error ? error.message : "Unexpected exception"
-    return new Response(message, { status: 500 })
+
+    return {
+      success: false,
+      message,
+    }
   }
 }
