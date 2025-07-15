@@ -27,8 +27,6 @@ const styles = {
 type ContactFormProps = {
   locale: Locale
   translated: {
-    title: string
-    subtitle: string
     language: string
     name: { title: string; placeholder: string; error: string }
     email: { title: string; placeholder: string; error: string }
@@ -77,16 +75,7 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
   }
 
   return (
-    <div className="my-6">
-      <div className="mb-12 text-center">
-        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          {translated.title}
-        </h2>
-        <p className="mt-4 text-lg leading-6 text-gray-600">
-          {translated.subtitle}
-        </p>
-      </div>
-
+    <>
       {isSubmitting ? (
         <div className="grid h-96 place-items-center">
           <Spinner show />
@@ -187,6 +176,6 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
           </fieldset>
         </form>
       )}
-    </div>
+    </>
   )
 }

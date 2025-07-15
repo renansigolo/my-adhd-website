@@ -12,8 +12,6 @@ export function Contact() {
     error: t(`contact_form_${id}_error`),
   })
   const translated = {
-    title: t("contact_title"),
-    subtitle: t("contact_subtitle"),
     language: t("contact_form_language_title"),
     name: translatedFormValues("name"),
     email: translatedFormValues("email"),
@@ -24,8 +22,18 @@ export function Contact() {
   return (
     <section id="contact">
       <div className="overflow-hidden bg-gray-100 px-4 py-16 sm:px-6 lg:px-8 lg:py-18">
-        <div className="relative mx-auto max-w-xl">
+        <div className="relative mx-auto my-6 max-w-xl">
           <BulletsBackground />
+
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              {t("contact_title")}
+            </h2>
+            <p className="mt-4 text-lg leading-6 text-gray-600">
+              {t("contact_subtitle")}
+            </p>
+          </div>
+
           <ContactForm locale={locale} translated={translated} />
         </div>
       </div>

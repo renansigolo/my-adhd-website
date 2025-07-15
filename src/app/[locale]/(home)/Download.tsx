@@ -1,6 +1,7 @@
 import { Container } from "@/components/Container"
-import { HeaderSection } from "@/components/Headers"
 import { AppIconSquare } from "@/components/Icons"
+import { Subtitle } from "@/components/Subtitle"
+import { Title } from "@/components/Title"
 import { Link } from "@/i18n/navigation"
 import { faAppStore, faGooglePlay } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -14,12 +15,9 @@ export function Download() {
       <div className="bg-white">
         <Container center>
           <AppIconSquare />
+          <Title>{t("download_title")}</Title>
+          <Subtitle>{t("download_subtitle")}</Subtitle>
 
-          <HeaderSection
-            id="download"
-            subTitle="Available for all iOS and Android devices"
-            title="Download Now"
-          />
           <div className="mx-auto mt-8 grid grid-cols-1 gap-4 md:max-w-xl md:grid-cols-2">
             <Link
               className="inline-flex items-center justify-center gap-x-2 rounded-md border border-transparent bg-pink-600 px-5 py-3 text-base font-medium text-white hover:bg-pink-700 hover:shadow-sm md:text-lg"

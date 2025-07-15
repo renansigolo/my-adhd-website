@@ -1,6 +1,7 @@
 import { Container } from "@/components/Container"
-import { HeaderPage } from "@/components/Headers"
 import { Navbar } from "@/components/Navbar"
+import { Subtitle } from "@/components/Subtitle"
+import { Title } from "@/components/Title"
 
 // export const getStaticProps = (async ({ locale }) => {
 //   const faqList = await getDocumentsIntl("faq", locale || "en")
@@ -32,20 +33,13 @@ const faqs = [
   },
 ]
 
-export default function FaqPage() {
+export default function SupportPage() {
   return (
     <>
       <Navbar />
       <Container center>
-        <HeaderPage
-          id="support"
-          subTitle="How can we help you?"
-          title="Support"
-        >
-          <p className="text-lg text-gray-700">
-            This is the FAQ page. Here you can find answers to common questions.
-          </p>
-        </HeaderPage>
+        <Title>Support</Title>
+        <Subtitle>Here you can find answers to common questions.</Subtitle>
       </Container>
 
       {/* <Faq faqs={faqs} /> */}
