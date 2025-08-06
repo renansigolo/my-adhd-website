@@ -20,9 +20,9 @@ export default function HomePage({ params }: HomePageProps) {
 
   return (
     <>
-      <Banner />
-
       <main>
+        <Banner />
+
         <Hero />
 
         <Highlights />

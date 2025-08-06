@@ -40,7 +40,7 @@ const FeatureHighlights = () => {
           >
             <div className="flex flex-1 flex-col p-8 text-white">
               <FontAwesomeIcon
-                className="mx-auto h-16 shrink-0"
+                className="mx-auto size-16 shrink-0"
                 icon={card.icon}
                 size="4x"
               />
