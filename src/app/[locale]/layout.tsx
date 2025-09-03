@@ -6,7 +6,6 @@ import { hasLocale, NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
 import { Baloo_2 } from "next/font/google"
 import { notFound } from "next/navigation"
-import { ReactNode } from "react"
 import { Toaster } from "react-hot-toast"
 
 import "@/app/globals.css"
@@ -77,10 +76,7 @@ export function generateStaticParams() {
 export default async function LocaleLayout({
   children,
   params,
-}: {
-  children: ReactNode
-  params: Promise<{ locale: string }>
-}) {
+}: LayoutProps<"/[locale]">) {
   const { locale } = await params
   if (!hasLocale(routing.locales, locale)) {
     notFound()

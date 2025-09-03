@@ -5,11 +5,9 @@ import { useTranslations } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
 import { use } from "react"
 
-type PrivacyPolicyPageProps = {
-  params: Promise<{ locale: string }>
-}
-
-export default function PrivacyPolicyPage({ params }: PrivacyPolicyPageProps) {
+export default function PrivacyPolicyPage({
+  params,
+}: PageProps<"/[locale]/privacy-policy">) {
   const { locale } = use(params)
 
   // Enable static rendering

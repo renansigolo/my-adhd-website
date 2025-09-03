@@ -15,7 +15,6 @@ export function Hero() {
             alt="Background My ADHD"
             className="absolute size-full object-cover"
             loading="eager"
-            quality={100}
             sizes="100vw"
             src={bgHeader}
           />

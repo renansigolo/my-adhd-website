@@ -35,11 +35,9 @@ import { use } from "react"
 //   },
 // ]
 
-type SupportPageProps = {
-  params: Promise<{ locale: string }>
-}
-
-export default function SupportPage({ params }: SupportPageProps) {
+export default function SupportPage({
+  params,
+}: PageProps<"/[locale]/support">) {
   const { locale } = use(params)
 
   // Enable static rendering

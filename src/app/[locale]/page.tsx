@@ -8,11 +8,7 @@ import { Divider } from "@/components/Divider"
 import { setRequestLocale } from "next-intl/server"
 import { use } from "react"
 
-type HomePageProps = {
-  params: Promise<{ locale: string }>
-}
-
-export default function HomePage({ params }: HomePageProps) {
+export default function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale } = use(params)
 
   // Enable static rendering
