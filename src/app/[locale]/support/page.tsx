@@ -17,23 +17,23 @@ import { use } from "react"
 //   faqs: any[]
 // }>
 
-const faqs = [
-  {
-    title: "What is ADHD?",
-    description:
-      "ADHD stands for Attention Deficit Hyperactivity Disorder. It is a neurodevelopmental disorder that affects both children and adults.",
-  },
-  {
-    title: "How can I manage my ADHD symptoms?",
-    description:
-      "Managing ADHD symptoms can include medication, therapy, lifestyle changes, and support from family and friends.",
-  },
-  {
-    title: "Where can I find more resources on ADHD?",
-    description:
-      "You can find more resources on ADHD through medical professionals, support groups, and reputable websites dedicated to ADHD.",
-  },
-]
+// const faqs = [
+//   {
+//     title: "What is ADHD?",
+//     description:
+//       "ADHD stands for Attention Deficit Hyperactivity Disorder. It is a neurodevelopmental disorder that affects both children and adults.",
+//   },
+//   {
+//     title: "How can I manage my ADHD symptoms?",
+//     description:
+//       "Managing ADHD symptoms can include medication, therapy, lifestyle changes, and support from family and friends.",
+//   },
+//   {
+//     title: "Where can I find more resources on ADHD?",
+//     description:
+//       "You can find more resources on ADHD through medical professionals, support groups, and reputable websites dedicated to ADHD.",
+//   },
+// ]
 
 type SupportPageProps = {
   params: Promise<{ locale: string }>

@@ -24,7 +24,7 @@
     "dev": "next dev --turbopack",
     "format": "prettier '**/*' --write --ignore-unknown",
     "lint:fix": "npm run lint -- --fix",
-    "lint": "next lint",
+    "lint": "eslint .",
     "postbuild": "next-sitemap",
     "postversion": "git push && git push --tags",
     "prepare": "husky",
