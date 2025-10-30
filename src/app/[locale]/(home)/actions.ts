@@ -50,7 +50,7 @@ export async function sendContactEmail(formData: ContactFormSchema) {
   `
 
   const emailInputs: SendEmailCommandInput = {
-    FromEmailAddress: "no-reply@myadhd.app",
+    FromEmailAddress: "noreply@myadhd.app",
     ReplyToAddresses: [data.email],
     Destination: {
       ToAddresses: ["renan.sigolo@gmail.com"],
