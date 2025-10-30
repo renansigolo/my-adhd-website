@@ -1,3 +1,10 @@
+## [3.10.4](https://github.com/renansigolo/my-adhd-website/compare/v3.10.3...v3.10.4) (2025-10-30)
+
+
+### Bug Fixes
+
+* from email ([485543c](https://github.com/renansigolo/my-adhd-website/commit/485543cc0efa6e15e74027c4cee2bd944b816700))
+
 ## [3.10.3](https://github.com/renansigolo/my-adhd-website/compare/v3.10.2...v3.10.3) (2025-07-14)
 
 
