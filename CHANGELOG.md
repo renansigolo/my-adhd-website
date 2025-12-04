@@ -1,3 +1,10 @@
+## [3.10.5](https://github.com/renansigolo/my-adhd-website/compare/v3.10.4...v3.10.5) (2025-12-04)
+
+
+### Bug Fixes
+
+* nextjs vulnerability ([4b07c04](https://github.com/renansigolo/my-adhd-website/commit/4b07c0498668bbf1b3b46649834f51fff055df16))
+
 ## [3.10.4](https://github.com/renansigolo/my-adhd-website/compare/v3.10.3...v3.10.4) (2025-10-30)
 
 
