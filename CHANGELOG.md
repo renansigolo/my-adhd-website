@@ -1,3 +1,10 @@
+## [3.10.6](https://github.com/renansigolo/my-adhd-website/compare/v3.10.5...v3.10.6) (2025-12-08)
+
+
+### Bug Fixes
+
+* extension ([67e465f](https://github.com/renansigolo/my-adhd-website/commit/67e465f77c015c45feaf502454c32c24ac0b0ef6))
+
 ## [3.10.5](https://github.com/renansigolo/my-adhd-website/compare/v3.10.4...v3.10.5) (2025-12-04)
 
 
