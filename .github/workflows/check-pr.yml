@@ -13,10 +13,10 @@ jobs:
     name: Code Style
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
-          node-version: "22.x"
+          node-version: 24
 
       - name: Configure Vercel CLI Environments
         run: |

@@ -14,7 +14,7 @@ jobs:
     if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Preview'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Run Cypress E2E
         uses: cypress-io/github-action@v6
