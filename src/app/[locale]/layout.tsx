@@ -86,7 +86,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale)
 
   return (
-    <html lang={locale}>
+    <html data-scroll-behavior="smooth" lang={locale}>
       <body className={`${baloo.variable} font-sans antialiased`}>
         <NextIntlClientProvider>
           {children}

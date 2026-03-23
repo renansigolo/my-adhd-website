@@ -17,6 +17,6 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Run Cypress E2E
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7
         env:
           CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
