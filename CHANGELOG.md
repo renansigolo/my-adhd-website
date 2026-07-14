@@ -1,3 +1,10 @@
+## [3.10.7](https://github.com/renansigolo/my-adhd-website/compare/v3.10.6...v3.10.7) (2026-07-14)
+
+
+### Bug Fixes
+
+* next build ([1ffd93b](https://github.com/renansigolo/my-adhd-website/commit/1ffd93b539df6944ad12b33ce78b5618743cfa03))
+
 ## [3.10.6](https://github.com/renansigolo/my-adhd-website/compare/v3.10.5...v3.10.6) (2025-12-08)
 
 
