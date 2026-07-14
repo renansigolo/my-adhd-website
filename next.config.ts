@@ -5,6 +5,8 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   cacheComponents: true,
   reactCompiler: true,
+  poweredByHeader: false,
+  typedRoutes: true,
   images: {
     dangerouslyAllowSVG: true,
     formats: ["image/avif", "image/webp"],
