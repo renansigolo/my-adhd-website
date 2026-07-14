@@ -21,8 +21,8 @@ jobs:
       - name: Configure Vercel CLI Environments
         run: |
           npm install --global vercel@latest
-          vercel pull --environment=production --non-interactive --yes --scope=renan-sigolo --token=${{ secrets.VERCEL_TOKEN }}
-          vercel env pull --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+          vercel pull --environment=preview --non-interactive --scope=renan-sigolo --token=${{ secrets.VERCEL_TOKEN }}
+          vercel env pull --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Install Dependencies
         run: npm ci --ignore-scripts
