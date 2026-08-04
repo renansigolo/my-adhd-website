@@ -18,5 +18,6 @@
   },
   "sortTailwindcss": {
     "stylesheet": "./src/app/globals.css"
-  }
+  },
+  "ignorePatterns": ["CHANGELOG.md"]
 }
