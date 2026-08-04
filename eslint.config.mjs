@@ -20,12 +20,7 @@ const eslintConfig = defineConfig([
         },
         {
           name: "next/navigation",
-          importNames: [
-            "redirect",
-            "permanentRedirect",
-            "useRouter",
-            "usePathname",
-          ],
+          importNames: ["redirect", "permanentRedirect", "useRouter", "usePathname"],
           message: "Please import from `@/i18n/navigation` instead.",
         },
       ],

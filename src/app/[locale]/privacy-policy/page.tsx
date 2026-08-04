@@ -1,13 +1,12 @@
-import { Container } from "@/components/Container"
-import { Navbar } from "@/components/Navbar"
-import { Title } from "@/components/Title"
 import { useTranslations } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
 import { use } from "react"
 
-export default function PrivacyPolicyPage({
-  params,
-}: PageProps<"/[locale]/privacy-policy">) {
+import { Container } from "@/components/Container"
+import { Navbar } from "@/components/Navbar"
+import { Title } from "@/components/Title"
+
+export default function PrivacyPolicyPage({ params }: PageProps<"/[locale]/privacy-policy">) {
   const { locale } = use(params)
 
   // Enable static rendering

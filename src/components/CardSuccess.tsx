@@ -18,9 +18,7 @@ export function CardSuccess() {
             {t("contact_form_success_title")}
           </h3>
           <div className="mt-2">
-            <p className="text-sm text-gray-500">
-              {t("contact_form_success_description")}
-            </p>
+            <p className="text-sm text-gray-500">{t("contact_form_success_description")}</p>
           </div>
         </div>
       </div>

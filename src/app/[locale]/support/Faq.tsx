@@ -1,11 +1,8 @@
-import { classNames } from "@/lib/helpers"
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from "@headlessui/react"
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/24/outline"
 import { useTranslations } from "next-intl"
+
+import { classNames } from "@/lib/helpers"
 
 type FaqProps = {
   faqs: {
@@ -31,24 +28,17 @@ export function Faq(props: FaqProps) {
                   <>
                     <dt className="text-lg">
                       <DisclosureButton className="flex w-full items-start justify-between text-left text-gray-400">
-                        <span className="font-medium text-gray-900">
-                          {faq.title}
-                        </span>
+                        <span className="font-medium text-gray-900">{faq.title}</span>
                         <span className="ml-6 flex h-7 items-center">
                           <ChevronDownIcon
                             aria-hidden="true"
-                            className={classNames(
-                              open ? "-rotate-180" : "rotate-0",
-                              "size-6",
-                            )}
+                            className={classNames(open ? "-rotate-180" : "rotate-0", "size-6")}
                           />
                         </span>
                       </DisclosureButton>
                     </dt>
                     <DisclosurePanel as="dd" className="mt-2 pr-12">
-                      <p className="text-base text-gray-500">
-                        {faq.description}
-                      </p>
+                      <p className="text-base text-gray-500">{faq.description}</p>
                     </DisclosurePanel>
                   </>
                 )}

@@ -1,8 +1,9 @@
-import { Link } from "@/i18n/navigation"
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faHeart } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useTranslations } from "next-intl"
+
+import { Link } from "@/i18n/navigation"
 
 const navigation = {
   social: [
@@ -47,7 +48,7 @@ export function Footer() {
             {t.rich("footer_title", {
               heartIcon: () => (
                 <FontAwesomeIcon
-                  className="hover:animate-scale size-4 hover:text-red-500"
+                  className="size-4 hover:animate-scale hover:text-red-500"
                   icon={faHeart}
                 />
               ),

@@ -39,9 +39,7 @@ context("Contact Form", () => {
     cy.get("input[name=name]").type(name).should("have.value", name)
 
     // Test Language Inputs
-    cy.get("select[name=language]")
-      .select("Português")
-      .should("have.value", "pt")
+    cy.get("select[name=language]").select("Português").should("have.value", "pt")
     cy.get("select[name=language]").select("Español").should("have.value", "es")
     cy.get("select[name=language]").select("English").should("have.value", "en")
 

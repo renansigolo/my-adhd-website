@@ -1,5 +1,6 @@
-import { Container } from "@/components/Container"
 import { useTranslations } from "next-intl"
+
+import { Container } from "@/components/Container"
 
 export function Disclaimer() {
   const t = useTranslations("HomePage")

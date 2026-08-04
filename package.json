@@ -1,37 +1,37 @@
 {
   "name": "my-adhd-website",
   "version": "3.10.7",
+  "private": false,
   "description": "My ADHD Website",
   "homepage": "https://myadhd.com.au",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/renansigolo/my-adhd-website/issues",
     "email": "renan.sigolo@gmail.com"
   },
   "license": "Apache-2.0",
   "author": "Renan Sigolo <renan.sigolo@gmail.com>",
-  "private": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/renansigolo/my-adhd-website.git"
   },
+  "type": "module",
   "scripts": {
     "build": "next build",
-    "check:format": "prettier --check .",
     "clean": "rm -rf package-lock.json node_modules .next",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "dev": "next dev",
-    "format": "prettier '**/*' --write --ignore-unknown",
-    "lint:fix": "npm run lint -- --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
     "lint": "eslint",
+    "lint:fix": "npm run lint -- --fix",
     "postbuild": "next-sitemap",
     "postversion": "git push && git push --tags",
     "prepare": "husky",
+    "semantic-release": "semantic-release",
     "start": "next start",
     "svgo": "npx svgo --multipass -f public -r",
-    "test": "npm run build && concurrently -k npm:start npm:cy:run",
-    "semantic-release": "semantic-release"
+    "test": "npm run build && concurrently -k npm:start npm:cy:run"
   },
   "dependencies": {
     "@aws-sdk/client-sesv2": "3.1085.0",
@@ -73,9 +73,8 @@
     "eslint-config-prettier": "10.1.8",
     "husky": "9.1.7",
     "next-sitemap": "4.2.3",
+    "oxfmt": "0.62.0",
     "postcss": "8.5.19",
-    "prettier": "3.9.5",
-    "prettier-plugin-tailwindcss": "0.8.0",
     "semantic-release": "25.0.7",
     "tailwindcss": "4.3.2",
     "typescript": "5.9.3"

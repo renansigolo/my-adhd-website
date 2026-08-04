@@ -1,15 +1,9 @@
 "use server"
 
-import {
-  contactFormSchema,
-  ContactFormSchema,
-} from "@/app/[locale]/(home)/types"
-import {
-  SendEmailCommand,
-  SendEmailCommandInput,
-  SESv2Client,
-} from "@aws-sdk/client-sesv2"
+import { SendEmailCommand, SendEmailCommandInput, SESv2Client } from "@aws-sdk/client-sesv2"
 import { z } from "zod/v4"
+
+import { contactFormSchema, ContactFormSchema } from "@/app/[locale]/(home)/types"
 
 const sesClient = new SESv2Client({
   region: process.env.AWS_REGION,
@@ -82,8 +76,7 @@ export async function sendContactEmail(formData: ContactFormSchema) {
     return { success: true, message: result.MessageId }
   } catch (error) {
     console.error("Error sending email:", error)
-    const message =
-      error instanceof Error ? error.message : "Unexpected exception"
+    const message = error instanceof Error ? error.message : "Unexpected exception"
 
     return {
       success: false,

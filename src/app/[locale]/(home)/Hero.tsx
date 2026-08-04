@@ -1,7 +1,8 @@
-import bgHeader from "@/assets/images/backgrounds/bg-header.svg"
-import { LogoOutlinedWithBrandUnderneath } from "@/components/Icons"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
+
+import bgHeader from "@/assets/images/backgrounds/bg-header.svg"
+import { LogoOutlinedWithBrandUnderneath } from "@/components/Icons"
 
 export function Hero() {
   const t = useTranslations("HomePage")
@@ -29,9 +30,7 @@ export function Hero() {
                   <LogoOutlinedWithBrandUnderneath />
                 </div>
                 <h1 className="mt-4 text-3xl text-white sm:text-4xl md:text-5xl">
-                  <span className="block xl:inline">
-                    {t("hero_title")}
-                  </span>{" "}
+                  <span className="block xl:inline">{t("hero_title")}</span>{" "}
                 </h1>
 
                 <div className="mx-auto mt-6 flex max-w-xs justify-center md:mt-10 md:max-w-md">

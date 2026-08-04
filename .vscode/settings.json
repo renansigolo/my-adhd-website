@@ -4,5 +4,7 @@
   "emmet.includeLanguages": { "javascript": "javascriptreact" },
   "git.branchProtection": ["main"],
   "i18n-ally.localesPaths": ["messages"],
-  "i18n-ally.keystyle": "nested"
+  "i18n-ally.keystyle": "nested",
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true
 }

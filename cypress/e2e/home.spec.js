@@ -4,9 +4,7 @@ context("Navigation Pages", () => {
   })
 
   it("has loaded the home page", () => {
-    cy.contains(
-      "The first app with cognitive analysis for people with ADHD!",
-    ).should("be.visible")
+    cy.contains("The first app with cognitive analysis for people with ADHD!").should("be.visible")
   })
 
   it("has a privacy policy page", () => {
@@ -22,15 +20,11 @@ context("Navigation Pages", () => {
 
   it("has loaded the home page title in portuguese", () => {
     cy.visit("/pt-BR")
-    cy.contains("O primeiro aplicativo de TDAH com análise cognitiva!").should(
-      "be.visible",
-    )
+    cy.contains("O primeiro aplicativo de TDAH com análise cognitiva!").should("be.visible")
   })
 
   it("has loaded the home page title in spanish", () => {
     cy.visit("/es")
-    cy.contains(
-      "¡La primera aplicación de TDAH con análisis cognitivo!",
-    ).should("be.visible")
+    cy.contains("¡La primera aplicación de TDAH con análisis cognitivo!").should("be.visible")
   })
 })

@@ -1,7 +1,8 @@
-import ConfusedFace from "@/assets/images/stickers/63-confused-face.svg"
-import { Link } from "@/i18n/navigation"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
+
+import ConfusedFace from "@/assets/images/stickers/63-confused-face.svg"
+import { Link } from "@/i18n/navigation"
 
 // Render the default Next.js 404 page when a route
 // is requested that doesn't match the middleware and
@@ -31,9 +32,7 @@ export default function NotFoundPage() {
             <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
               {t("404_title")}
             </h1>
-            <p className="mt-2 text-base text-gray-500">
-              {t("404_description")}
-            </p>
+            <p className="mt-2 text-base text-gray-500">{t("404_description")}</p>
             <div className="mt-6">
               <Link
                 className="text-base font-medium text-indigo-600 hover:text-indigo-500"
@@ -65,10 +64,7 @@ export default function NotFoundPage() {
           >
             Instagram
           </Link>
-          <span
-            aria-hidden="true"
-            className="inline-block border-l border-gray-300"
-          />
+          <span aria-hidden="true" className="inline-block border-l border-gray-300" />
           <Link
             className="text-sm font-medium text-gray-500 hover:text-gray-600"
             href="https://facebook.com/myadhdapp"

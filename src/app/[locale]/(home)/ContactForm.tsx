@@ -1,17 +1,15 @@
 "use client"
 
-import { sendContactEmail } from "@/app/[locale]/(home)/actions"
-import {
-  ContactFormSchema,
-  contactFormSchema,
-} from "@/app/[locale]/(home)/types"
-import { CardSuccess } from "@/components/CardSuccess"
-import { Spinner } from "@/components/Spinner"
-import { showErrorMessage } from "@/lib/helpers"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Locale } from "next-intl"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
+
+import { sendContactEmail } from "@/app/[locale]/(home)/actions"
+import { ContactFormSchema, contactFormSchema } from "@/app/[locale]/(home)/types"
+import { CardSuccess } from "@/components/CardSuccess"
+import { Spinner } from "@/components/Spinner"
+import { showErrorMessage } from "@/lib/helpers"
 
 const styles = {
   formLabel: "block text-sm font-medium text-gray-700",
@@ -101,9 +99,7 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
                   type="text"
                   {...register("name")}
                 />
-                {errors.name && (
-                  <p className={styles.errorLabel}>{translated.name.error}</p>
-                )}
+                {errors.name && <p className={styles.errorLabel}>{translated.name.error}</p>}
               </div>
             </div>
 
@@ -141,9 +137,7 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
                   type="email"
                   {...register("email")}
                 />
-                {errors.email && (
-                  <p className={styles.errorLabel}>{translated.email.error}</p>
-                )}
+                {errors.email && <p className={styles.errorLabel}>{translated.email.error}</p>}
               </div>
             </div>
 
@@ -160,11 +154,7 @@ export const ContactForm = ({ locale, translated }: ContactFormProps) => {
                   rows={4}
                   {...register("message")}
                 />
-                {errors.message && (
-                  <p className={styles.errorLabel}>
-                    {translated.message.error}
-                  </p>
-                )}
+                {errors.message && <p className={styles.errorLabel}>{translated.message.error}</p>}
               </div>
             </div>
 

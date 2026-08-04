@@ -1,12 +1,14 @@
-import { Footer } from "@/components/Footer"
-import { routing } from "@/i18n/routing"
-import { Analytics } from "@vercel/analytics/react"
 import type { Metadata, Viewport } from "next"
+
+import { Analytics } from "@vercel/analytics/react"
 import { hasLocale, NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
 import { Baloo_2 } from "next/font/google"
 import { notFound } from "next/navigation"
 import { Toaster } from "react-hot-toast"
+
+import { Footer } from "@/components/Footer"
+import { routing } from "@/i18n/routing"
 
 import "@/app/globals.css"
 
@@ -28,8 +30,7 @@ export const metadata: Metadata = {
     template: "My ADHD | %s",
   },
   applicationName: "My ADHD",
-  description:
-    "The first ADHD app with cognitive analysis for people with ADHD!",
+  description: "The first ADHD app with cognitive analysis for people with ADHD!",
   keywords: ["adhd", "tdah", "diagnostics", "medical", "brain"],
   authors: { name: "Renan Sigolo", url: "https://renansigolo.com" },
   creator: "Renan Sigolo",
@@ -47,8 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "My ADHD",
     siteName: "My ADHD",
-    description:
-      "The first ADHD app with cognitive analysis for people with ADHD!",
+    description: "The first ADHD app with cognitive analysis for people with ADHD!",
     url: "https://myadhd.app",
     locale: "en-AU",
     type: "website",
@@ -61,8 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "My ADHD",
-    description:
-      "The first ADHD app with cognitive analysis for people with ADHD!",
+    description: "The first ADHD app with cognitive analysis for people with ADHD!",
     creator: "@renan_sigolo",
     creatorId: "23168747",
     images: "https://myadhd.app/opengraph-image.jpg",
@@ -73,10 +72,7 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
 }
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: LayoutProps<"/[locale]">) {
+export default async function LocaleLayout({ children, params }: LayoutProps<"/[locale]">) {
   const { locale } = await params
   if (!hasLocale(routing.locales, locale)) {
     notFound()

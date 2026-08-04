@@ -1,7 +1,8 @@
-import { Logo } from "@/components/Icons"
-import { Link } from "@/i18n/navigation"
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
+
+import { Logo } from "@/components/Icons"
+import { Link } from "@/i18n/navigation"
 
 const menuItems = [
   { title: "Features", url: "./#features" },

@@ -2,11 +2,11 @@
   "recommendations": [
     "bradlc.vscode-tailwindcss",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "mikestead.dotenv",
-    "redhat.vscode-yaml",
+    "inlang.vs-code-extension",
     "lokalise.i18n-ally",
-    "inlang.vs-code-extension"
+    "mikestead.dotenv",
+    "oxc.oxc-vscode",
+    "redhat.vscode-yaml"
   ],
   "unwantedRecommendations": []
 }

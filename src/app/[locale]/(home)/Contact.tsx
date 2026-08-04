@@ -1,6 +1,7 @@
+import { useLocale, useTranslations } from "next-intl"
+
 import { ContactForm } from "@/app/[locale]/(home)/ContactForm"
 import { BulletsBackground } from "@/components/ContactFormBgPattern"
-import { useLocale, useTranslations } from "next-intl"
 
 export function Contact() {
   const locale = useLocale()
@@ -29,9 +30,7 @@ export function Contact() {
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               {t("contact_title")}
             </h2>
-            <p className="mt-4 text-lg leading-6 text-gray-600">
-              {t("contact_subtitle")}
-            </p>
+            <p className="mt-4 text-lg leading-6 text-gray-600">{t("contact_subtitle")}</p>
           </div>
 
           <ContactForm locale={locale} translated={translated} />

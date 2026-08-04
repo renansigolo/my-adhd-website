@@ -1,11 +1,12 @@
+import { faAppStore, faGooglePlay } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useTranslations } from "next-intl"
+
 import { Container } from "@/components/Container"
 import { AppIconSquare } from "@/components/Icons"
 import { Subtitle } from "@/components/Subtitle"
 import { Title } from "@/components/Title"
 import { Link } from "@/i18n/navigation"
-import { faAppStore, faGooglePlay } from "@fortawesome/free-brands-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useTranslations } from "next-intl"
 
 export function Download() {
   const t = useTranslations("HomePage")

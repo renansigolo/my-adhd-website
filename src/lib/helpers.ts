@@ -1,9 +1,7 @@
 import toast from "react-hot-toast"
 
 type ClassNamesProps = string | string[] | Record<string, boolean>
-/**
- * @param {string[]} classes
- */
+/** @param {string[]} classes */
 export function classNames(...classes: ClassNamesProps[]) {
   return classes.filter(Boolean).join(" ")
 }

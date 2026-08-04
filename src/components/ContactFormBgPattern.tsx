@@ -18,21 +18,10 @@ export function BulletsBackground() {
             x={0}
             y={0}
           >
-            <rect
-              className="text-gray-200"
-              fill="currentColor"
-              height={4}
-              width={4}
-              x={0}
-              y={0}
-            />
+            <rect className="text-gray-200" fill="currentColor" height={4} width={4} x={0} y={0} />
           </pattern>
         </defs>
-        <rect
-          fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)"
-          height={404}
-          width={404}
-        />
+        <rect fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" height={404} width={404} />
       </svg>
       <svg
         aria-hidden="true"
@@ -51,21 +40,10 @@ export function BulletsBackground() {
             x={0}
             y={0}
           >
-            <rect
-              className="text-gray-200"
-              fill="currentColor"
-              height={4}
-              width={4}
-              x={0}
-              y={0}
-            />
+            <rect className="text-gray-200" fill="currentColor" height={4} width={4} x={0} y={0} />
           </pattern>
         </defs>
-        <rect
-          fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)"
-          height={404}
-          width={404}
-        />
+        <rect fill="url(#85737c0e-0916-41d7-917f-596dc7edfa27)" height={404} width={404} />
       </svg>
     </>
   )

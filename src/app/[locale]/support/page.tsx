@@ -1,9 +1,10 @@
+import { setRequestLocale } from "next-intl/server"
+import { use } from "react"
+
 import { Container } from "@/components/Container"
 import { Navbar } from "@/components/Navbar"
 import { Subtitle } from "@/components/Subtitle"
 import { Title } from "@/components/Title"
-import { setRequestLocale } from "next-intl/server"
-import { use } from "react"
 
 // export const getStaticProps = (async ({ locale }) => {
 //   const faqList = await getDocumentsIntl("faq", locale || "en")
@@ -35,9 +36,7 @@ import { use } from "react"
 //   },
 // ]
 
-export default function SupportPage({
-  params,
-}: PageProps<"/[locale]/support">) {
+export default function SupportPage({ params }: PageProps<"/[locale]/support">) {
   const { locale } = use(params)
 
   // Enable static rendering
