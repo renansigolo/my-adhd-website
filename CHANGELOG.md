@@ -1,3 +1,10 @@
+## [3.11.1](https://github.com/renansigolo/my-adhd-website/compare/v3.11.0...v3.11.1) (2026-08-04)
+
+
+### Bug Fixes
+
+* ignore rules ([32cd391](https://github.com/renansigolo/my-adhd-website/commit/32cd391b637cd5dd101a52112ce59ec03667804d))
+
 # [3.11.0](https://github.com/renansigolo/my-adhd-website/compare/v3.10.7...v3.11.0) (2026-08-04)
 
 
