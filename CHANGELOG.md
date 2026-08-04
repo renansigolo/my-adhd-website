@@ -1,3 +1,10 @@
+# [3.11.0](https://github.com/renansigolo/my-adhd-website/compare/v3.10.7...v3.11.0) (2026-08-04)
+
+
+### Features
+
+* add oxfmt instead of prettier ([0924a4a](https://github.com/renansigolo/my-adhd-website/commit/0924a4aba032d82a6c72fbc485926cafe6063c44))
+
 ## [3.10.7](https://github.com/renansigolo/my-adhd-website/compare/v3.10.6...v3.10.7) (2026-07-14)
 
 
