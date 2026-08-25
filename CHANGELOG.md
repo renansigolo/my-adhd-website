@@ -1,3 +1,10 @@
+## [3.11.2](https://github.com/renansigolo/my-adhd-website/compare/v3.11.1...v3.11.2) (2026-08-25)
+
+
+### Bug Fixes
+
+* privacy policy ([a22daa7](https://github.com/renansigolo/my-adhd-website/commit/a22daa7b47dd85e09fd756b0afe7f7ad9ea6aa43))
+
 ## [3.11.1](https://github.com/renansigolo/my-adhd-website/compare/v3.11.0...v3.11.1) (2026-08-04)
 
 
